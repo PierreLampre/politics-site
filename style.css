@@ -1,3 +1,5 @@
+/* Global */ 
+
 *{
 	padding: 0;
 	margin: 0;
@@ -11,6 +13,8 @@
 body {
     background: var(--bg-color);
 }
+
+/* Shared Nav and Jumbotron */
 
 #nav {
     display: flex;
@@ -37,4 +41,224 @@ body {
     background-image: url(/assets/trenton_capitol1.jpg);
     background-repeat: no-repeat;
     background-position-y: 50%;
+}
+
+/* Shared typography styles */
+
+.container, .container-subh {
+    display: grid;
+    justify-items: center;
+}
+
+.container-title {
+    margin: 18px 0px;
+    font-size:50px;
+}
+
+.container-subh {
+    margin-bottom: 18px;
+}
+
+.container-subh > p {
+    margin-bottom: 8px;
+}
+
+/* Homepage styles */
+
+
+
+/* Cumberland County Elections */
+
+
+/* SAMPLE BALLOT */
+
+#sample-ballot {
+    font-family: 'REM', sans-serif;
+    display: grid;
+    width: 100%;
+}
+
+.sb-top-box {
+    display: grid;
+    justify-items: center;
+    margin-top: 16px;
+}
+
+.sb-top-box > h2 {
+    color: red;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.instructions {
+    font-size: 10px;
+}
+
+.sb-top-box > h4 {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 16px;
+}
+
+.sb-top-box > h6 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+#democratic-candidates {
+    width: 1200px;
+    display: grid;
+    justify-self: center;
+}
+
+.table-titles {
+    background: #A0A0A0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.title {
+    border: 3px solid black;
+    display: grid;
+    place-items: center;
+}
+
+.title:nth-of-type(1), .title:nth-of-type(2), .title:nth-of-type(3){
+    border-right: none;
+}
+
+.title-big, .title-party-pc {
+    font-weight: 900;
+    font-size: 24px
+}
+
+.title-party-pc {
+    width: 168px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 7px;
+}
+
+.title-letter {
+    font-weight: 900;
+    font-size: 48px;
+    margin-top: -6px;
+}
+
+.title-party {
+    font-weight: 800;
+    margin-top: -14px;
+}
+
+.title-party-espanol {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.office-title, .a, .b, .personal-choice {
+    border: 3px solid black;
+    display: grid;
+}
+
+.office-title, .a, .b {
+    border-right: none;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);   
+}
+
+.row > div {
+    border-top: none;
+}
+
+.office-title {
+    place-items: center;
+    text-align: center;
+    padding: 4px 0px;
+}
+
+.ot-english > p:nth-of-type(1), .ot-espanol > p:nth-of-type(1) {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.ot-english > p:nth-of-type(2) {
+    margin-bottom: 5px;
+}
+
+.a {
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
+.a-row-1 {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 45% 35% 20%;
+}
+
+.a-row-2 {
+    grid-row-start: 2;
+    padding-bottom: 4px;
+}
+
+.org {
+    font-size: 12px;
+    padding: 5px 0px 0px 5px;
+}
+
+.first-name {
+    text-align: right;
+    display: grid;
+}
+
+.first-name > a {
+    justify-self: end;
+    align-self: end;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+
+.number-a-and-circle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.number-a-and-circle > p:nth-of-type(1) {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 7px;
+    padding-right: 8px;
+}
+
+.number-a-and-circle > p:nth-of-type(2) {
+    font-size: 28px;
+    font-weight: 100;
+    padding-top: 2px;
+    padding-right: 6px;
+}
+
+.last-name {
+    display: grid;
+}
+
+.last-name > a {
+    color: black;
+    justify-self: center;
+    font-weight: 900;
+    font-size: 36px;
+    margin-left: 16px;
+}
+
+.last-name > p:nth-of-type(1) {
+    margin-left: 16px;
+}
+
+
+
+.end-text {
+    margin-top: 20px;
 }
