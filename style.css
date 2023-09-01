@@ -368,6 +368,11 @@ a.long-name {
 
 /* Candidate profile page styles */
 
+.container {
+    display: grid;
+    justify-items: center;
+}
+
 .title-info {
     display: grid;
     font-family: 'REM', sans-serif;
@@ -427,9 +432,26 @@ a.long-name {
 .candidate-pic-box > img {
     width: 429px;
     height: 429px;
+    margin-bottom: 12px;
 } 
 
 .cover {
     object-fit: cover;
     border-radius: 6px;
+}
+
+.grey-pic-border {
+    border: 3px grey solid;
+}
+
+.candidate-agenda {
+    display: grid;
+    justify-items: center;
+    max-width: 75vw;
+}
+
+.sub-heading {
+    color: red;
+    text-transform: uppercase;
+    font-weight: 800;
 }
