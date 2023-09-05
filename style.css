@@ -45,12 +45,17 @@ body {
 
 /* Shared typography styles */
 
+.container {
+    font-family: 'Lora', serif;
+}
+
 .container, .container-subh {
     display: grid;
     justify-items: center;
 }
 
 .container-title {
+    font-family: 'Calistoga', cursive;
     margin: 18px 0px;
     font-size:50px;
 }
@@ -64,6 +69,26 @@ body {
 }
 
 /* Homepage styles */
+
+.ms-heading, .ss-heading {
+    font-family: 'Calistoga', cursive;
+    margin-bottom: 12px;
+}
+
+.ms-content, .ss-content {
+    width: 70%;
+    margin-bottom: 18px;
+    line-height: 30px;
+}
+
+.ms-content {
+    text-align: center;
+}
+
+.ss-closing-remarks {
+    margin-top: 12px;
+    text-align: center;
+}
 
 
 
