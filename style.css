@@ -70,6 +70,10 @@ body {
 
 /* Homepage styles */
 
+.logo {
+
+}
+
 .ms-heading, .ss-heading {
     font-family: 'Calistoga', cursive;
     margin-bottom: 12px;
