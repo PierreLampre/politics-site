@@ -602,3 +602,47 @@ a.long-name {
     margin-top: 12px;
     text-align: center;
 }
+
+/* Get Involved Styles */
+
+.main-content-with-box-shadow-events {
+    box-shadow:
+    3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+    -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+    3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+    -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
+    padding: 24px;
+    border-radius: 16px;
+    width: 70%;
+    display: grid;
+    justify-items: center;
+    margin-top: 24px;
+}
+
+.events-h1 {
+    margin-bottom: 18px;
+}
+
+.event-card {
+    box-shadow: inset .2rem .2rem .5rem #c8d0e7, 
+    inset -.2rem -.2rem .5rem #c8d0e7;
+    padding: 20px;
+    border-radius: 12px;
+    width: 70%;
+    margin-bottom: 18px;
+    line-height: 30px;
+    display: grid;
+    justify-items: left;
+}
+
+.event-info {
+    list-style-type: none;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.special-info {
+    font-size: 14px;
+}
