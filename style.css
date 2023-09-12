@@ -731,4 +731,48 @@ a.long-name {
 
 /* Contact Styles */
 
+.contact {
+    text-align: center;
+    font-size: 24px;
+    display: grid;
+    justify-items: center;
+    margin-top: 24px;
+    font-family: 'Lora', serif;
+}
+
+/* Issues Styles */
+
+.main-content-with-box-shadow-issues {
+    box-shadow:
+    3px 3px 6px 3px rgba(0, 0, 0, 0.1),
+    -3px -3px 3px 3px rgba(247, 251, 255, 0.5),
+    3px 3px 8px 2px rgba(0, 0, 0, 0) inset,
+    -3px -3px 7px 2px rgba(247, 251, 255, 0) inset;
+    padding: 24px;
+    border-radius: 16px;
+    width: 70%;
+    display: grid;
+    justify-items: center;
+    margin: 24px 0 24px 0;
+}
+
+.issues-content {
+    box-shadow: inset .2rem .2rem .5rem #c8d0e7, 
+               inset -.2rem -.2rem .5rem #c8d0e7;
+    padding: 20px;
+    border-radius: 12px;
+    width: 70%;
+    margin-bottom: 18px;
+    line-height: 30px;
+    display: grid;
+    justify-items: center;
+}
+
+.issues-short-description {
+    margin: 12px 0 12px 0;
+}
+
+.issues-heading {
+    margin-bottom: 8px;
+}
 /* Responsive Design */
