@@ -169,28 +169,38 @@ body {
 .container-title {
     font-family: 'Calistoga', cursive;
     margin: 18px 0px;
-    font-size:50px;
+    font-size:clamp(18px, 3vw, 50px);
+    width: 100vw;
+    text-align: center;
 }
 
 .container-subh {
     margin-bottom: 32px;
-    width: clamp(300px, 64.3vw, 987.75)
+    width: clamp(300px, 64.3vw, 987.75);
+    text-align: center;
 }
 
 .container-subh > p {
     margin-bottom: 8px;
-    padding: 0 16px 0 16px;
+    /* padding: 0 16px 0 16px; */
 }
 
 .container-subh > p:nth-of-type(1) {
     font-size: 14px;
     padding: 0 16px 0 16px;
+    width: 100vw;
     text-align: center;
 }
 
 .container-subh > p:nth-of-type(2) {
     font-size: 12px;
     text-align: center;
+}
+
+.linkbox-elections {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 5px;
 }
 
 .logo {
