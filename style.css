@@ -203,6 +203,11 @@ body {
     padding: 5px;
 }
 
+.linkbox-elections > a {
+    text-decoration: none;
+    color: black;
+}
+
 .logo {
     display: grid;
     place-items: center;
@@ -315,7 +320,7 @@ body {
 }
 
 #democratic-candidates, #republican-candidates {
-    width: 1200px;
+    width: clamp(300px, 78vw, 1200px);
     display: grid;
     justify-self: center;
 }
@@ -480,7 +485,7 @@ body {
     color: black;
     justify-self: center;
     font-weight: 900;
-    font-size: 36px;
+    font-size: clamp(18px, 4vw, 36px);
     margin-left: 16px; 
 }
 
@@ -869,7 +874,7 @@ a.long-name {
 
 .contact {
     text-align: center;
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
     display: grid;
     justify-items: center;
     margin-top: 24px;
@@ -914,19 +919,48 @@ a.long-name {
 
 /* Responsive Design */
 
-/*homepage*/
+/* Candidate page */
+
+@media screen and (max-width: 1215px) {
+
+    .table-titles, .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .table-titles .title:nth-of-type(4), .personal-choice,
+    .table-titles .title:nth-of-type(3), .b {
+        display: none;
+    }
+
+    .table-titles .title:nth-of-type(2), .a {
+        border-right: 3px solid black;
+    }
+
+    .last-name > a {
+        margin-left: clamp(16px, 10vw, 72px);
+    }
+  }
+
+
+/* Shared stock container styles for home, about, etc.*/
 
 @media screen and (max-width: 1064px) {
 
-    .main-content-box-with-shadow {
+    .main-content-box-with-shadow,
+    .main-content-box-with-shadow-gi,
+    .main-content-with-box-shadow-events,
+    .main-content-with-box-shadow-about {
         width: 95%;   
     }
   }
 
 @media screen and (max-width: 1064px) {
 
-    .ms-content, .ss-content, .ss-closing-remarks {
-        width: 95%;
+    .ms-content, .ss-content, .ss-closing-remarks,
+    .get-involved-intro-content, .get-involved-steps-content,
+    .event-card, .our-mission-content, .our-process-content,
+    .our-suggestion-content {
+        width: 97%;
     }
   }
 
