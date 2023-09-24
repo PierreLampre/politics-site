@@ -148,10 +148,8 @@ body {
 
 #jumbotronjawn {
     width: 100vw;
-    height: 65vh;
-    background-image: url(assets/trenton_capitol1.jpg);
-    background-repeat: no-repeat;
-    background-position-y: clamp(15%, 35%, 50%);
+    height: clamp(150px, 30vw, 464px);
+    object-fit: cover;
 }
 
 /* Homepage styles */
