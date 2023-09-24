@@ -919,10 +919,12 @@ a.long-name {
     line-height: 30px;
     display: grid;
     justify-items: center;
+    text-align: center;
 }
 
 .issues-short-description {
     margin: 12px 0 12px 0;
+    text-align: center;
 }
 
 .issues-heading {
@@ -1035,7 +1037,8 @@ a.long-name {
     .main-content-box-with-shadow,
     .main-content-box-with-shadow-gi,
     .main-content-with-box-shadow-events,
-    .main-content-with-box-shadow-about {
+    .main-content-with-box-shadow-about,
+    .main-content-with-box-shadow-issues {
         width: 95%;   
     }
   }
@@ -1045,7 +1048,7 @@ a.long-name {
     .ms-content, .ss-content, .ss-closing-remarks,
     .get-involved-intro-content, .get-involved-steps-content,
     .event-card, .our-mission-content, .our-process-content,
-    .our-suggestion-content {
+    .our-suggestion-content, .issues-content {
         width: 97%;
     }
   }
