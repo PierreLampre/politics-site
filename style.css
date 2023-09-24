@@ -305,7 +305,13 @@ body {
 }
 
 .instructions {
-    font-size: 10px;
+    font-size: clamp(14px, 3vw, 32px);
+    background: black;
+    color: white;
+    border-radius: 16px;
+    padding: 8px;
+    text-align: center;
+    margin-top: 8px;
 }
 
 .sb-top-box > h4 {
@@ -971,7 +977,7 @@ a.long-name {
     .a {
         padding-right: 8px;
     }
-    
+
   }
 
   @media screen and (max-width: 501px) {
@@ -1007,6 +1013,10 @@ a.long-name {
 
     .number-a-and-circle {
         max-width: 73.55px;
+    }
+
+    .instructions {
+        max-width: 350px;
     }
 
 }
