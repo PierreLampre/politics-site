@@ -655,15 +655,12 @@ a.long-name {
     margin-top: 12px;
 }
 
-.candidate-pic-box > img {
-    width: 429px;
-    height: 429px;
-    margin-bottom: 12px;
-} 
-
 .cover {
     object-fit: cover;
     border-radius: 6px;
+    width: clamp(300px, 27.9vw, 429px);
+    height: clamp(300px, 27.9vw, 429px);
+    margin-bottom: 12px;
 }
 
 .grey-pic-border {
@@ -674,12 +671,14 @@ a.long-name {
     display: grid;
     justify-items: center;
     max-width: 75vw;
+    text-align: center;
 }
 
 .sub-heading {
     color: red;
     text-transform: uppercase;
     font-weight: 800;
+    margin: 8px 0 8px 0;
 }
 
 /* Get Involved Styles */
@@ -933,7 +932,7 @@ a.long-name {
 
 /* Responsive Design */
 
-/* Candidate page */
+/* Ballot Page */
 
 @media screen and (max-width: 1215px) {
 
@@ -1028,6 +1027,18 @@ a.long-name {
     }
 
 }
+
+/* individual Candidate Pages */
+
+@media screen and (max-width: 501px) {
+
+    .running-for {
+        flex-direction: column;
+        text-align: center;
+    }
+
+  }
+
 
 
 /* Shared stock container styles for home, about, etc.*/
