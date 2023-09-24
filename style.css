@@ -461,7 +461,6 @@ body {
     align-self: end;
     font-weight: 700;
     font-size: 20px;
-    color: black;
 }
 
 .number-a-and-circle {
@@ -488,11 +487,20 @@ body {
 }
 
 .last-name > a {
-    color: black;
     justify-self: center;
     font-weight: 900;
     font-size: clamp(22px, 4vw, 36px);
     margin-left: 16px; 
+}
+
+div#democratic-candidates > .row > .a > .a-row-1 > .first-name > a,
+div#democratic-candidates > .row > .a > .a-row-2 > .last-name > a {
+    color: #0000cd;
+}
+
+div#republican-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#republican-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: red;
 }
 
 a.long-name {
