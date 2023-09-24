@@ -672,6 +672,7 @@ a.long-name {
     justify-items: center;
     max-width: 75vw;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .sub-heading {
