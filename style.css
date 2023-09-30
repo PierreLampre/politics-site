@@ -681,6 +681,16 @@ a.long-name {
     max-width: 330px;
 }
 
+.agenda-thesis > ul > li > ol {
+    margin-left: 18px;
+}
+
+.testa-agenda, .policy-positions > ol {
+    padding: 0 !important;
+    max-width: 800px !important;
+    text-align: start;
+}
+
 .sub-heading {
     color: red;
     text-transform: uppercase;
