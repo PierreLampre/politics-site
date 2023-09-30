@@ -14,6 +14,10 @@ body {
     background: var(--bg-color);
 }
 
+.construction {
+    width: clamp(250px, 45.5vw, 700px)
+}
+
 /* Shared Nav and Jumbotron */
 
 .menu-wrap {
