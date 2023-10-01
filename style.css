@@ -961,8 +961,15 @@ a.long-name {
 }
 
 .issues-sub-content {
+    display: grid;
     padding: 12px;
     font-size: 14px;
+}
+
+.sub-issues-ol {
+    max-width: 300px;
+    text-align: start;
+    justify-self: center;
 }
 
 /* Unanswered questions */
