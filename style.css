@@ -306,6 +306,10 @@ body {
     font-weight: 900;
 }
 
+.sb-top-box > h3 {
+    margin: 12px 0 12px 0;
+}
+
 .instructions {
     font-size: clamp(14px, 3vw, 32px);
     background: black;
