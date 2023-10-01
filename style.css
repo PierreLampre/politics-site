@@ -956,6 +956,15 @@ a.long-name {
     margin-bottom: 8px;
 }
 
+.issues-sub-heading {
+    text-transform: uppercase;
+}
+
+.issues-sub-content {
+    padding: 12px;
+    font-size: 14px;
+}
+
 /* Unanswered questions */
 
 .main-content-with-box-shadow-ua {
