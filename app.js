@@ -5,6 +5,8 @@ let month = date.getMonth() + 1;
 let day = date.getDate();
 let year = date.getFullYear();
 
+//remove events in a past month or day 
+
 function cleanEvents() {
 
     let htmlCollection = document.getElementsByClassName('date-and-time');
@@ -21,8 +23,6 @@ function cleanEvents() {
             let grandpa = dad.parentElement;
             grandpa.remove();
         }
-
-        //remove events in a past month or day 
 
         if (eventMonth.slice(0, 1) == 0) {
             eventMonth = eventMonth.slice(1, 2);
