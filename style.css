@@ -704,11 +704,18 @@ a.long-name {
     text-transform: uppercase;
     font-weight: 800;
     margin: 8px 0 8px 0;
+    width: 100%;
 }
 
 .website {
     display: flex;
     flex-direction: column;
+    font-size: clamp(14px, 2vw, 16px);
+    max-width: 330px;
+}
+
+.website > a {
+    margin-bottom: 6px;
 }
 
 /* Get Involved Styles */
