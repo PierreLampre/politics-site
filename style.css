@@ -958,6 +958,7 @@ a.long-name {
 
 .issues-heading {
     margin-bottom: 8px;
+    width: 100%;
 }
 
 .issues-sub-heading {
@@ -1003,6 +1004,7 @@ a.long-name {
     display: grid;
     justify-items: start;
     text-align: start;
+    font-size: clamp(12px, 2vw, 16px);
 }
 
 .ua-content > p {
@@ -1012,11 +1014,18 @@ a.long-name {
 .ua-short-description {
     margin: 12px 0 12px 0;
     text-align: center;
-    padding: 16px;
+    padding: clamp(10px, 2vw, 16px);
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.ua-short-description > p {
+    margin-bottom: 6px;
 }
 
 .ua-h1 {
     margin-bottom: 8px;
+    text-align: center;
+    font-size: clamp(24px, 3vw, 32px);
 }
 
 /* Responsive Design */
