@@ -681,6 +681,8 @@ a.long-name {
     max-width: 75vw;
     text-align: center;
     margin-bottom: 16px;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(21px, 4vw, 26px);
 }
 
 .agenda-thesis > ul {
@@ -701,9 +703,11 @@ a.long-name {
 
 .sub-heading {
     color: red;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-size: clamp(23px, 4vw, 32px);
+    line-height: clamp(36px, 4vw, 52px);
     font-weight: 800;
-    margin: 8px 0 8px 0;
+    padding: 8px 0 8px 0;
     width: 100%;
 }
 
@@ -792,7 +796,7 @@ a.long-name {
     text-align: center;
 }
 
-/* Get Involved Styles */
+/* Events Styles */
 
 .main-content-with-box-shadow-events {
     box-shadow:
@@ -1140,6 +1144,13 @@ a.long-name {
     .running-for {
         flex-direction: column;
         text-align: center;
+    }
+
+    .candidate-agenda,
+    .agenda-thesis,
+    .website {
+        text-align: start;
+        justify-items: start;
     }
 
   }
