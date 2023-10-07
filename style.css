@@ -686,6 +686,12 @@ a.long-name {
     line-height: clamp(21px, 4vw, 26px);
 }
 
+.agenda-thesis > p,
+.policy-positions > p,
+.experience > p {
+    margin-bottom: 11px;
+}
+
 .agenda-thesis > ul {
     text-align: start;
     padding: 20px;
@@ -694,6 +700,11 @@ a.long-name {
 
 .agenda-thesis > ul > li > ol {
     margin-left: 18px;
+}
+
+.agenda-per-party-site > ul {
+    margin-left: 14px;
+    text-align: start;
 }
 
 .testa-agenda, .policy-positions > ol {
@@ -931,6 +942,15 @@ a.long-name {
     justify-items: center;
     margin-top: 24px;
     font-family: 'Lora', serif;
+    padding: 0px 12px 0 12px;
+}
+
+.contact > p {
+    margin-bottom: 10px;
+}
+
+.contact > p:nth-of-type(2) {
+    font-size: 14px;
 }
 
 /* Issues Styles */
@@ -1151,6 +1171,10 @@ a.long-name {
     .website {
         text-align: start;
         justify-items: start;
+    }
+
+    .candidate-agenda {
+        max-width: 85vw;
     }
 
   }
