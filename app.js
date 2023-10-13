@@ -45,7 +45,29 @@ function cleanEvents() {
                     wipeIt(event);
                 }
             }
+        } else {
+            eventMonth = eventMonth.slice(0, 2);
+
+            eventMonth = parseInt(eventMonth);
+            month = parseInt(month);
+
+            if (eventMonth < month) {
+                wipeIt(event);
+            } else if (eventMonth == month) {
+                let eventDay = event.textContent.slice(3, 5);
+                if (parseInt(eventDay.slice(0, 1)) == 0) {
+                    eventDay = parseInt(event.textContent.slice(1, 2));
+                    day = parseInt(day);
+                    console.log(day)
+                    if (eventDay < day) {
+                        wipeIt(event);
+                    }
+                } else if (eventDay < day) {
+                    wipeIt(event);
+                }
+            }
         }
+
     }
 }
 
