@@ -159,45 +159,56 @@ body {
 
 /* Homepage styles */
 
-.container {
-    font-family: 'Lora', serif;
-    max-width: 100vw;
+.cta-landing {
+    background-image: url('assets/lighthouse.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.container, .container-subh {
+.logo {
     display: grid;
     justify-items: center;
+    width: 100%;
 }
 
-.container-title {
-    font-family: 'Calistoga', cursive;
-    margin: 18px 0px;
-    font-size:clamp(18px, 3vw, 50px);
-    width: 100vw;
-    text-align: center;
+.logo > img {
+    width: clamp(313px, 52vw, 800px);
+    height: clamp(112.5px, 20vw, 310px);
 }
 
 .container-subh {
-    margin-bottom: 32px;
-    width: clamp(300px, 64.3vw, 987.75);
     text-align: center;
+    background: #3e5fb1;
+    color: white;
+    font-weight: 900;
+    width: clamp(313px, 52vw, 800px);
+    height: 50%;
+    display: grid;
+    align-items: center;
+    border-radius: 12px;
+    padding: 14px;
+    letter-spacing: 1px;
+}
+
+.container-subh > section {
+    font-size: clamp(20px, 3vw, 36px);
+    line-height: clamp(26px, 3vw, 47px);
 }
 
 .container-subh > p {
-    margin-bottom: 8px;
-    /* padding: 0 16px 0 16px; */
-}
-
-.container-subh > p:nth-of-type(1) {
     font-size: 14px;
-    padding: 0 16px 0 16px;
-    width: 100vw;
-    text-align: center;
 }
 
-.container-subh > p:nth-of-type(2) {
-    font-size: 12px;
-    text-align: center;
+.container {
+    display: grid;
+    justify-items: center;
+    font-family: 'Lora', serif;
+    max-width: 100vw;
 }
 
 .linkbox-elections {
@@ -209,15 +220,6 @@ body {
 .linkbox-elections > a {
     text-decoration: none;
     color: black;
-}
-
-.logo {
-    display: grid;
-    place-items: center;
-}
-
-.logo, .logo-img {
-    width: clamp(300px, 29.2vw, 449px);
 }
 
 .main-content-box-with-shadow {
@@ -1211,3 +1213,12 @@ a.long-name {
     }
   }
 
+/* Homepage MQs */
+
+@media screen and (max-width: 501px) {
+
+    .logo {
+        margin-top: 56px;
+    }
+
+  }
