@@ -667,10 +667,10 @@ a.long-name {
 }
 
 .candidate-pic-box {
-    display: grid;
-    justify-items: center;
+    display: flex;
     width: 100%;
     margin-top: 12px;
+    justify-content: center;
 }
 
 .cover {
@@ -679,6 +679,27 @@ a.long-name {
     width: clamp(300px, 27.9vw, 429px);
     height: clamp(300px, 27.9vw, 429px);
     margin-bottom: 12px;
+}
+
+.left-arrow {
+    width: 30px;
+    height: 30px;
+    rotate: 180deg;
+    margin-right: 15px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.right-arrow, .next-candidate {
+    width: 30px;
+    height: 30px;
+    margin-left: 7.5px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.hide {
+    visibility: hidden;
 }
 
 .grey-pic-border {
