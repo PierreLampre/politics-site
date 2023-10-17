@@ -8,6 +8,8 @@
 
 :root {
 	--bg-color: #f8f8ff;
+    --itv-blue: #3d61af;
+    --itv-red: #bf1b2d;
 }
 
 body {
@@ -50,7 +52,7 @@ body {
     border-radius: 18px;
     align-items: center;
     justify-content: center;
-    background: #3d61af;
+    background: var(--itv-red);
 }
 
 .menu-wrap .hamburger > div {
@@ -245,12 +247,11 @@ body {
 }
 
 .ms-content, .ss-content, .ss-closing-remarks {
-    width: 70%;
     margin-bottom: 18px;
     line-height: 30px;
     display: grid;
     justify-items: center;
-    font-size: clamp(12px, 1vw, 16px);
+    font-size: clamp(16px, 1vw, 20px);
 }
 
 .ms-content, .ss-content {
@@ -258,14 +259,28 @@ body {
                inset -.2rem -.2rem .5rem #c8d0e7;
     padding: 20px;
     border-radius: 12px;
+    width: 70%;
+}
+
+.ms-content-p,
+.ss-li {
+    margin-bottom: 14px;
+}
+
+.ms-content-p:nth-of-type(3),
+.ss-li:nth-of-type(7) {
+    margin-bottom: 0;
 }
 
 .ss-content > ul {
     list-style: none;
 }
 
-.ss-closing-remarks {
-    width: 60% !important;
+.ss-li > strong > a {
+    display: block;
+    margin-bottom: 8px;
+    font-size: clamp(18px, 3vw, 20px);
+    color: var(--itv-blue);
 }
 
 .ss-closing-remarks > p {
@@ -279,6 +294,7 @@ body {
 .ss-closing-remarks {
     margin-top: 12px;
     text-align: center;
+    width: 60%;
 }
 
 .line-break {
@@ -305,7 +321,7 @@ body {
 }
 
 .sb-top-box > h2 {
-    color: red;
+    color: var(--itv-red);
     font-size: 36px;
     font-weight: 900;
 }
@@ -511,12 +527,12 @@ body {
 
 div#democratic-candidates > .row > .a > .a-row-1 > .first-name > a,
 div#democratic-candidates > .row > .a > .a-row-2 > .last-name > a {
-    color: #0000cd;
+    color: var(--itv-blue);
 }
 
 div#republican-candidates  > .row > .a > .a-row-1 > .first-name > a,
 div#republican-candidates  > .row > .a > .a-row-2 > .last-name > a {
-    color: red;
+    color: var(--itv-red);
 }
 
 a.long-name {
@@ -626,7 +642,7 @@ a.long-name {
 }
 
 .title-info > h2 {
-    color: red;
+    color: var(--itv-red);
     font-size: 32px;
     font-weight: 900;
     text-transform: uppercase;
@@ -650,7 +666,7 @@ a.long-name {
 }
 
 .active {
-    background: red;
+    background: var(--itv-red);
     color: white;
     border-radius: 6px;
     border: 2px solid grey;
@@ -744,7 +760,7 @@ a.long-name {
 }
 
 .sub-heading {
-    color: red;
+    color: var(--itv-red);
     text-transform: capitalize;
     font-size: clamp(23px, 4vw, 32px);
     line-height: clamp(36px, 4vw, 52px);
@@ -1241,6 +1257,31 @@ a.long-name {
 
     .logo {
         margin-top: 56px;
+    }
+
+    .main-content-box-with-shadow {
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+        width: 94%;
+        display: grid;
+        justify-items: center;
+    }
+
+    .ms-heading, .ss-heading {
+        justify-self: start;
+        text-transform: none;
+        padding: 0 26px 0 26px;
+    }
+
+    .ms-content, .ss-content {
+        text-align: start;
+        line-height: 21px;
+    }
+
+    .ss-closing-remarks {
+        width: 90%;
+        line-height: 21px;
     }
 
   }
