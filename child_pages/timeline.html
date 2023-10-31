@@ -1,79 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="timeline-style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script defer src="timeline.js"></script>
-    <title>Inform The Vote</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Timeline</title>
 </head>
-
 <body>
-    <!-- <div class="menu-wrap">
-        <input type="checkbox" autocomplete='off' class="toggler">
-        <div class="hamburger">
-            <div></div>
-        </div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul class="links">
-                        <li class="link"><a href="../index.html">Home</a></li>
-                        <li class="link"><a href="cc-elections/cc_election_candidates.html">Cumberland County Elections</a></li>
-                        <li class="link"><a href="cc-elections/cc_election_issues.html">County Issues</a></li>
-                        <li class="link"><a href="vsb-elections/vsb_election_candidates.html">Vineland School Board Elections</a></li>
-                        <li class="link"><a href="vsb-elections/vsb_election_issues.html">School Board Issues</a></li>
-                        <li class="link"><a href="cc-elections/unanswered_questions.html">Unanswered Questions</a></li>
-                        <li class="link"><a href="get-involved.html">Get Involved</a></li>
-                        <li class="link"><a href="events.html">Events</a></li>
-                        <li class="link"><a href="candidates-forum-op-ed.html">Candidates Forum Op-Ed</a></li>
-                        <li class="link"><a href="about.html">About</a></li>
-                        <li class="link"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
+<div id="timeline-container">
+    <div class="timeline-event" onclick="displayEventInfo('event1')">
+        <div class="timeline-date">2000</div>
+        <div class="timeline-dot"></div>
     </div>
+    <div class="timeline-event" onclick="displayEventInfo('event2')">
+        <div class="timeline-date">2005</div>
+        <div class="timeline-dot"></div>
+    </div>
+    <div class="timeline-event" onclick="displayEventInfo('event3')">
+        <div class="timeline-date">2010</div>
+        <div class="timeline-dot"></div>
+    </div>
+    <!-- Add more events as needed -->
+</div>
 
-    <img src="../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn"> -->
+<div id="eventInfo">
+    <!-- Event details will appear here -->
+</div>
 
-    
-    <div class="container">
-        <div class="swiper-container-wrapper swiper-container-wrapper--timeline">
-          <!-- Timeline -->
-          <ul class="swiper-pagination-custom">
-            <li class='swiper-pagination-switch first active'><span class='switch-title'>1911</span></li>
-            <li class='swiper-pagination-switch'><span class='switch-title'>1970</span></li>
-            <li class='swiper-pagination-switch'><span class='switch-title'>2021</span></li>
-            <li class='swiper-pagination-switch last'><span class='switch-title'>3000</span></li>
-          </ul>
-          <!-- Progressbar -->
-          <div class="swiper-pagination swiper-pagination-progressbar swiper-pagination-horizontal"></div>
-          <!-- Swiper -->
-          <div class="swiper swiper-container swiper-container--timeline">
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><span class="title">Swiper Timeline Progressbar</span></div>
-              <div class="swiper-slide"><span class="title">Title 2</span></div>
-              <div class="swiper-slide"><span class="title">Title 3</span></div>
-              <div class="swiper-slide"><span class="title">Title 4</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
+<script src="script.js"></script>
 </body>
 </html>
     
