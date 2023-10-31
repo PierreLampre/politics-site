@@ -14,10 +14,20 @@ html, body {
   border-radius: 10px;
 }
 
-.swiper-container-wrapper .swiper-slide .title {
+.swiper-container-wrapper .swiper-slide  {
   font-size: 18px;
   opacity: 0;
   transition: 0.5s ease 0.5s;
+}
+
+.title {
+  font-size: 18px;
+  opacity: 1;
+  transition: 0.5s ease 0.5s;
+}
+
+.title.visible {
+  opacity: 1;
 }
 
 .swiper-container-wrapper .swiper-slide-active .title {
