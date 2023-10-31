@@ -32,3 +32,11 @@
   text-align: center;
   font-size: 18px;
 }
+
+.timeline-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  max-width: 100px; /* Adjust the width as per your design */
+  text-align: center;
+}
