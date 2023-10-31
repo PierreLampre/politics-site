@@ -26,6 +26,9 @@ $(document).ready(function () {
         slideChangeTransitionStart: function () {
           $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
           $(".swiper-pagination-custom .swiper-pagination-switch").eq(mySwiper.realIndex).addClass("active");
+
+          $(".swiper-slide .title").removeClass("visible");
+          $(".swiper-slide-active .title").addClass("visible");
         }
       }
     });
