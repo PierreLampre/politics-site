@@ -41,11 +41,13 @@
 }
 
 /* Use this to manually set horizontal positions of each event */
-.timeline-event:nth-child(1) { left: 0px; }
-.timeline-event:nth-child(2) { left: 200px; }
-.timeline-event:nth-child(3) { left: 400px; }
-.timeline-event:nth-child(4) { left: 600px; }
-.timeline-event:nth-child(5) { left: 800px; }
-.timeline-event:nth-child(6) { left: 1000px; }
+.timeline-event:nth-child(1) { left: 0%; }
+.timeline-event:nth-child(2) { left: 14%; }
+.timeline-event:nth-child(3) { left: 28%; }
+.timeline-event:nth-child(4) { left: 42%; }
+.timeline-event:nth-child(5) { left: 56%; }
+.timeline-event:nth-child(6) { left: 70%; }
+.timeline-event:nth-child(7) { left: 84%; }
+
 
 /* Add more as needed */
