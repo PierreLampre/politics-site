@@ -37,7 +37,7 @@
 }
 
 .timeline-event:nth-child(even) {
-  top: 50px; /* Even events appear lower */
+  top:75px; /* Even events appear lower */
 }
 
 /* Use this to manually set horizontal positions of each event */
