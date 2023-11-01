@@ -1,24 +1,14 @@
 #timeline-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to start to create zig-zag */
-  position: relative; /* To position the line correctly */
+  position: relative;
+  width: 100%;
 }
 
 .timeline-event {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 60px; /* Increase spacing between events */
-  width: 100%;
-}
-
-.timeline-event:nth-child(even) {
-  align-self: flex-end; /* Align even items to the end */
-}
-
-.timeline-date {
-  font-size: 16px;
-  margin-bottom: 10px;
+  width: 200px; /* Set a fixed width for each event */
+  position: absolute; /* Absolute positioning to allow custom placement */
 }
 
 .timeline-dot {
@@ -26,38 +16,36 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  position: relative; /* To position the line correctly */
+  z-index: 2; /* Ensure dot appears above the line */
+  position: absolute; /* Absolute positioning to allow custom placement */
 }
 
-.timeline-dot:after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 100%;
+.timeline-line {
+  width: 4px;
   background-color: blue;
-  left: 50%;
-  z-index: -1; /* Position behind the dots */
+  position: absolute; /* Absolute positioning to allow custom placement */
+  z-index: 1; /* Ensure line appears below the dot */
 }
 
 .timeline-date, .timeline-description {
-    margin-left: 20px; /* Add spacing between dot and text */
-}
-
-.timeline-date {
-  font-weight: bold;
-}
-
-/* Style for displaying event details */
-#eventInfo {
-  margin-top: 30px;
   text-align: center;
-  font-size: 18px;
+  padding-top: 30px; /* Add space above the text */
 }
 
-.timeline-description {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #555;
-  max-width: 200px; /* Adjust the width as per your design */
-  text-align: center;
+.timeline-event:nth-child(odd) {
+  top: 0; /* Odd events appear at the top */
 }
+
+.timeline-event:nth-child(even) {
+  top: 50px; /* Even events appear lower */
+}
+
+/* Use this to manually set horizontal positions of each event */
+.timeline-event:nth-child(1) { left: 0px; }
+.timeline-event:nth-child(2) { left: 200px; }
+.timeline-event:nth-child(3) { left: 400px; }
+.timeline-event:nth-child(4) { left: 600px; }
+.timeline-event:nth-child(5) { left: 800px; }
+.timeline-event:nth-child(6) { left: 1000px; }
+
+/* Add more as needed */
