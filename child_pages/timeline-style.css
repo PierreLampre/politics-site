@@ -12,6 +12,7 @@
 }
 
 .timeline-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +29,7 @@
   width: 20px;
   height: 20px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .timeline-description {
@@ -39,5 +41,9 @@
 }
 
 .timeline-event:nth-child(even) .timeline-content {
-  bottom: 75px; /* Adjust this based on your design needs */
+  top: 75px; /* Adjust this based on your design needs */
+}
+
+.eventInfo {
+  text-align: center;
 }
