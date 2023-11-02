@@ -4,11 +4,19 @@
 }
 
 .timeline-event {
+  position: relative; /* Relative positioning for the line connector */
+  margin-bottom: 60px; /* Adjust space between events */
+}
+
+.timeline-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px; /* Set a fixed width for each event */
-  position: absolute; /* Absolute positioning to allow custom placement */
+  flex-direction: column; /* Arrange content vertically */
+  align-items: center; /* Center-align the content */
+}
+
+.timeline-date {
+  margin-bottom: 10px; /* Space between date and dot */
+  text-align: center;
 }
 
 .timeline-dot {
@@ -16,20 +24,11 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  z-index: 2; /* Ensure dot appears above the line */
-  position: absolute; /* Absolute positioning to allow custom placement */
+  margin-bottom: 10px; /* Space between dot and description */
 }
 
-.timeline-line {
-  width: 4px;
-  background-color: blue;
-  position: absolute; /* Absolute positioning to allow custom placement */
-  z-index: 1; /* Ensure line appears below the dot */
-}
-
-.timeline-date, .timeline-description {
+.timeline-description {
   text-align: center;
-  padding-top: 30px; /* Add space above the text */
 }
 
 .timeline-event:nth-child(odd) {
