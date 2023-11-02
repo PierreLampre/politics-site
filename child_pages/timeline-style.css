@@ -9,6 +9,7 @@
 .timeline-event {
   position: relative;
   width: 12%; /* Adjust width based on your preference */
+  align-items: center;
 }
 
 .timeline-content {
@@ -29,19 +30,18 @@
   width: 20px;
   height: 20px;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 .timeline-description {
   text-align: center;
 }
 
-.timeline-event:nth-child(odd) .timeline-content {
+.timeline-event:nth-child(odd) {
   top: 0;
 }
 
-.timeline-event:nth-child(even) .timeline-content {
-  top: 75px; /* Adjust this based on your design needs */
+.timeline-event:nth-child(even) {
+  bottom: 75px; /* Adjust this based on your design needs */
 }
 
 .eventInfo {
