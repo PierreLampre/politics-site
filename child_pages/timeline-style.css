@@ -68,3 +68,17 @@
 #eventDetails {
   text-align: center;
 }
+
+.modal-content h2, .modal-content h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Additional styles for spacing, size, etc., can be added here */
+.modal-content h2 {
+  margin-top: 10px;
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+}
