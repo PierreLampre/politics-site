@@ -1,31 +1,11 @@
-function displayEventInfo(eventId) {
-  const eventInfo = document.getElementById('eventInfo');
-  switch (eventId) {
-      case 'event1':
-          eventInfo.innerHTML = "On June 2nd I received a sample primary ballot in the mail. Having been increasingly interested in politics over the years, I decided to do some research on the candidates before casting my vote. However, there was no direction to a website or any other source of information included on the sample ballot. So I decided to do some google searching and still came up empty handed. I then decided to see if I could find the candidates contact information online and message them directly. After messaging all of the candidates who had contact info online, only one replied indicating that they did not have a website yet. So on June 2nd, I casted a blind, ignorant vote.";
-          break;
-      case 'event2':
-          eventInfo.innerHTML = "Given that there would still be 5 months to learn about the candidates, I decided to follow through with a deeper dive to find candidate contact information. So for one week I looked for whatever emails and social media contacts I could find. After writing them all, I received no repsonses. Then the next week I tried all their phone numbers. No responses. Then the next week I wrote them all letters. No response. Feeling as though this might be turning into a story for the local paper and also feeling as though they may already be covering the election, I decided to try contacting our local paper, The Daily Journal. So I drove over to their building and found it vacant. Turns out they have been absorbed by a parent company. So I looked online and tried contacting all their email addresses and phone numbers. Also no response.";
-          break;
-      case 'event3':
-          eventInfo.innerHTML = "On July 6th I wrote an email to Mayor Fanucci of Vineland and he responded the same day. We spoke on the phone the next day regarding my experience and he told me he would reach out to both parties regarding their need to be more accessible. The Republican Party reached out to me about a week later, where I was able to confirm I was able to attend a public bi-weekly breakfast, which would be my start to scratching the surface of candidate information. The Democrat party never reached out to me.";
-          break;
-      case 'event4':
-          eventInfo.innerHTML = "Now that I had some type of direct path towards actually finding candidate information, I planned to attend the bi-weekly republican breakfast. At that meeting I was able to get a general stance of the overall vibe of the republican party in Cumberland County, but didn't necessarily find direct candidate information. I was able to speak to someone who let me know about Deerfield Day, an event happening that same day where the candidates would be able to speak with me. So I went there and was able to meet 4 of the 16 candidates. A few of them gave me quite a bit of info about themselves, the other two not so much. Even when asking a democrat candidate where I might learn how to follow their event schedule so I could learn more, they said that they just wing it. When randomly discussing my experiences with a friend later that month, he suggested that I start going to the commissioner meetings, where I would be able to bring up the issue and learn about county issues. So I started going to these meetings and other county events, slowly piecing some things together regarding local politics and the candidates. The democrats and republicans eventually put some information about their candidates on their party sites, but much of it was surface level.";
-          break;
-      case 'event5':
-          eventInfo.innerHTML = "After spending a few months trying to simply show up as a curious citizen and learn the ropes about local politics so that I could cast an informed vote, I really started to understand the depth of the problem and decided to be more directly vocal about it. After all, our government is supposed to react to our concerns and I had gotten my feet wet a bit participating in the Middle Mile Grant discussions, so why not continue participating? I delivered a 5 minute speech at a commissioner's meeting where I outline my experience, I identified the problem, and suggested some solutions such as a candidate/election information hub on a website and legislation setting up a minimum standard for candidates to make their platforms transparent. The response from the commissioners was along the lines of 'we agree that there is a problem, but we can't legislate it because it will turn into a slippery slope of micromanagement. They also suggested writing to the state level representatives. Another few weeks went by as I continued showing up to county meetings and writing the state level representatives. At the next county meeting I brought the issue back up and they said they had not heard back from the state level, nor did their seem to be any urgency to address the lack of transparency.";
-          break;
-      case 'event6':
-          eventInfo.innerHTML = "As one would expect, once election season really started getting closer, the amount of events and accessibility to the candidates increased. The republican breakfasts got busier, so I was able to meet a few more candidates there, and the NAACP Candidates Forum would theoretically all be there (although it's worth noting that I saw no advertising for this event, a candidate texted me this information by chance since they were at the commissioners meeting where I gave my initial speech). While attending the candidates forum was informative, it would be more helpful to the average voter, not someone who was truly following along like myself. Several very obvious questions were missed, and lots of the questions/answers were still very surface level. I again brought up the lack of press coverage in the county, and the candidates themselves echoed similar responses that were essentially 'you're correct, there is a problem, but we might not do anything about it.' Several days later there was a Democrat meet and greet, one of the only opportunities I knew where Democrats would be available to speak, as their event page on cumberlandnjdems.com hasn't been updated in months. I marked the day on my calendar and prepared many questions, as this might be my last opportunity to find out what their platforms and policy proposals were, and to ask glaringly obvious questions such as 'So did Charles Laspata actually ghost the campaign? What's the story with him?' I was told I was not welcome at the event pretty much as soon as I walked in.";
-          break;
-      case 'event7':
-          eventInfo.innerHTML = "After spending months pro-actively searching for comprehensive candidate info, I ultimately only had about half the information I really needed to feel as though I was truly informed. So I made my voting decision with many unanswered questions and lots of speculatively formed opinions. I truly wanted to give everyone the benefit of the doubt, especially considering today's political climate. Perhaps those candidates who have trouble figuring out why it is so hard getting people to get more involved with politics and not only vote, but cast an informed vote... Perhaps they should take a look at this 5 month timeline.";
-          break;
-      // Add more cases as needed
-      default:
-          eventInfo.innerHTML = "";
-          break;
-  }
+document.querySelectorAll('.timeline-event').forEach(event => {
+  event.addEventListener('click', function() {
+      document.getElementById('eventDetails').innerText = this.dataset.eventInfo;
+      document.getElementById('eventModal').style.display = 'block';
+  });
+});
+
+document.getElementsByClassName('close')[0].onclick = function() {
+  document.getElementById('eventModal').style.display = 'none';
 }
   
