@@ -1,21 +1,24 @@
 #timeline-container {
   position: relative;
   width: 100%;
+  display: flex; /* Using flex to layout events horizontally */
+  flex-wrap: nowrap; /* Prevent events from wrapping to the next line */
+  justify-content: space-between; /* Evenly space out the events */
 }
 
 .timeline-event {
-  position: relative; /* Relative positioning for the line connector */
-  margin-bottom: 60px; /* Adjust space between events */
+  position: relative;
+  width: 12%; /* Adjust width based on your preference */
 }
 
 .timeline-content {
   display: flex;
-  flex-direction: column; /* Arrange content vertically */
-  align-items: center; /* Center-align the content */
+  flex-direction: column;
+  align-items: center;
 }
 
 .timeline-date {
-  margin-bottom: 10px; /* Space between date and dot */
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -24,29 +27,17 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  margin-bottom: 10px; /* Space between dot and description */
+  margin-bottom: 10px;
 }
 
 .timeline-description {
   text-align: center;
 }
 
-.timeline-event:nth-child(odd) {
-  top: 0; /* Odd events appear at the top */
+.timeline-event:nth-child(odd) .timeline-content {
+  top: 0;
 }
 
-.timeline-event:nth-child(even) {
-  top:75px; /* Even events appear lower */
+.timeline-event:nth-child(even) .timeline-content {
+  bottom: 75px; /* Adjust this based on your design needs */
 }
-
-/* Use this to manually set horizontal positions of each event */
-.timeline-event:nth-child(1) { left: 0%; }
-.timeline-event:nth-child(2) { left: 14%; }
-.timeline-event:nth-child(3) { left: 28%; }
-.timeline-event:nth-child(4) { left: 42%; }
-.timeline-event:nth-child(5) { left: 56%; }
-.timeline-event:nth-child(6) { left: 70%; }
-.timeline-event:nth-child(7) { left: 84%; }
-
-
-/* Add more as needed */
