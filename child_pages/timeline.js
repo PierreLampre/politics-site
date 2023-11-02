@@ -30,7 +30,7 @@ document.querySelectorAll('.timeline-event').forEach(event => {
 var closeButton = document.querySelector('.close');
 closeButton.onclick = function() {
   var modalContent = document.querySelector('.modal-content');
-  modalContent.classList.remove('show-modal'); // Hide the modal by scaling down
+  // modalContent.classList.remove('show-modal'); // Hide the modal by scaling down
   modalContent.style.display = 'none'; // Hide the content after the transition
 };
   
