@@ -24,12 +24,17 @@
   text-align: center;
 }
 
+:root {
+  --dot-radius: 10px; 
+}
+
 .timeline-dot {
   background-color: blue;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: calc(var(--dot-radius)*2);
+  height: calc(var(--dot-radius)*2);
   margin-bottom: 10px;
+  margin-left: calc(50% - var(--dot-radius));
 }
 
 .timeline-description {
@@ -41,7 +46,7 @@
 }
 
 .timeline-event:nth-child(even) {
-  bottom: 75px; /* Adjust this based on your design needs */
+  bottom: -150px; /* Adjust this based on your design needs */
 }
 
 .eventInfo {
