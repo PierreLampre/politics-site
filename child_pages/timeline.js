@@ -4,6 +4,8 @@ document.querySelectorAll('.timeline-event').forEach(event => {
       // temporarily cache the date and description texts
       var eventDate = this.querySelector('.timeline-date').innerText;
       var eventDescription = this.querySelector('.timeline-description').innerText;
+      console.log("eventDate: " + eventDate);
+      console.log("eventDescription: " + eventDescription);
 
       // Set the content of the modal headers
       document.getElementById('modalDate').innerText = eventDate;
