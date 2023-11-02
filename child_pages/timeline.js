@@ -34,10 +34,7 @@ closeButton.onclick = function() {
 
   modalContent.classList.remove('show-modal'); // Hide the modal by scaling down
   setTimeout(() => {
-    modalContent.style.display = 'none'; // Hide the content after the transition
+    modalDiv.style.display = 'none'; // Hide the content after the transition
   }, 1000); // Delay should match the duration of the transition
-
-  //force gray out of modal to go away
-  modalDiv.style.display = 'none';
 };
   
