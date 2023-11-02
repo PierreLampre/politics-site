@@ -16,11 +16,23 @@ document.querySelectorAll('.timeline-event').forEach(event => {
 
       // Display the modal when clicking the blue circle
       document.getElementById('eventModal').style.display = 'block';
+
+      var modalContent = document.querySelector('.modal-content');
+      modalContent.style.display = 'block'; // Make sure the content is displayed
+      setTimeout(() => { // Timeout to allow the display property to take effect
+        modalContent.classList.add('show-modal'); // Add class to start the transition
+      }, 10); // A slight delay is sometimes necessary for the transition to trigger
+      
   });
 });
 
-document.getElementsByClassName('close')[0].onclick = function() {
-  // close the modal when clicking on the x
-  document.getElementById('eventModal').style.display = 'none';
-}
+// Close modal logic
+var closeButton = document.querySelector('.close');
+closeButton.onclick = function() {
+  var modalContent = document.querySelector('.modal-content');
+  modalContent.classList.remove('show-modal'); // Hide the modal by scaling down
+  setTimeout(() => {
+    modalContent.style.display = 'none'; // Hide the content after the transition
+  }, 1000); // Delay should match the duration of the transition
+};
   

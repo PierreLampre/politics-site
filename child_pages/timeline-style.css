@@ -49,6 +49,18 @@
   border: 1px solid #888;
   width: 80%;
   text-align: center;
+
+  transform: scale(0); /* Start with the modal scaled down */
+  transition: transform 1s; /* Animate the transform property over 1 second */
+  /* Center the modal on the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* Center and scale down */
+}
+
+.modal-content.show-modal {
+  transform: translate(-50%, -50%) scale(1); /* Scale up to full size */
 }
 
 .close {
