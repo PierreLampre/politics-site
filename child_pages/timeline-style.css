@@ -57,6 +57,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0); /* Center and scale down */
+
+  /*scrolling of timeline modals fix*/
+  max-height: 90vh; /* 90% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  /* Add padding to the bottom to ensure content isn't cut off by overflow */
+  padding-bottom: 1em;
+}
+
+/*further fixing of timeline modal scrolling*/
+@media (max-width: 768px) { /* or whatever breakpoint suits your design */
+  .modal-content {
+    max-height: 80vh; /* You can make this value larger on mobile */
+    overflow-y: auto;
+  }
 }
 
 .modal-content.show-modal {
