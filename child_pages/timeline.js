@@ -23,6 +23,8 @@ document.querySelectorAll('.timeline-event').forEach(event => {
         modalContent.classList.add('show-modal'); // Add class to start the transition
       }, 10); // A slight delay is sometimes necessary for the transition to trigger
       
+      document.body.style.overflow = 'hidden'; // Prevent scrolling on the background
+
   });
 });
 
@@ -35,6 +37,7 @@ closeButton.onclick = function() {
   modalContent.classList.remove('show-modal'); // Hide the modal by scaling down
   setTimeout(() => {
     modalDiv.style.display = 'none'; // Hide the content after the transition
+    document.body.style.overflow = ''; // Re-enable scrolling on the background
   }, 750); // Delay should match the duration of the transition
 };
   
