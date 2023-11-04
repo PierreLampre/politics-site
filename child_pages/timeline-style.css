@@ -43,6 +43,17 @@
 }
 
 .modal-content {
+  margin-bottom: 18px;
+  line-height: 30px;
+  display: grid;
+  justify-items: center;
+  font-size: clamp(16px, 1vw, 20px);
+  box-shadow: inset .2rem .2rem .5rem #c8d0e7, 
+              inset -.2rem -.2rem .5rem #c8d0e7;
+  padding: 20px;
+  border-radius: 12px;
+  width: 70%;
+
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
