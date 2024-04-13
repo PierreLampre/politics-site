@@ -1284,4 +1284,9 @@ a.long-name {
         line-height: 21px;
     }
 
+    .menu-wrap .menu > div > div > ul > li {
+        font-size: 1rem;
+        padding: .75rem;
+    }
+
   }
