@@ -120,7 +120,7 @@ body {
 }
 
 .menu-wrap .menu > div {
-    background-color: rgba(26, 39, 208, 0.7);
+    background-color: #3e5fb1;
     border-radius: 50%;
     width: 200vw;
     height: 200vw;
@@ -1282,6 +1282,11 @@ a.long-name {
     .ss-closing-remarks {
         width: 90%;
         line-height: 21px;
+    }
+
+    .menu-wrap .menu > div > div > ul > li {
+        font-size: 1rem;
+        padding: .75rem;
     }
 
   }
