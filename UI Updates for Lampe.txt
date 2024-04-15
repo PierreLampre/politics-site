@@ -1,0 +1,18 @@
+1. Summary/TL;DR pop-ups on each candidate's page
+2. Summary/TL;DR pop-ups on each primary ballot page
+
+***Basically, I'm anticipating most people don't want to read the whole site,
+so there should be summaries. I think maybe even having videos of me reading the summaries
+could make it even more palatable... Lots of people don't like to read anymore.
+
+3. Section off the burger menus
+4. Update sections on candidate's pages to make them:
+   a. Visually more clear as sections
+   b. More modern
+5. Look for more modern/flashy ways to present the data, such as:
+   a. Embedding the YouTube videos instead of having links to them
+   b. Use icons for candidate social media pages instead of blue underlined links
+   c. Change traditional html elements like unordered lists to something more modern,
+      perhaps they can be styled or have some other modern list tags instead of plain text
+      style tags
+6. Email subscription service
