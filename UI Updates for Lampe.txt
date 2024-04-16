@@ -1,3 +1,20 @@
+1. You may want to consider making access to the different site sections one of the first 
+things that appears on the site. In other words, the purpose of the site is to quickly find 
+info on the elections, but when I open it, I see the logo, eastpoint lighthouse, and a brief
+description of the site. I then either have to notice the burger menu or scroll past the 
+mission statement to dig into the info. Perhaps making it abundantly clear how to immediately
+access the sought after information would be appropriate. Like maybe,
+ 
+Inform the Vote Logo
+Small/Very small description of the site
+
+Big Site Sections section
+  a. County Commissioner Primary
+  b. Repub US Senate Primary
+  c. Etc.
+
+Mission Statement 
+
 1. Centering of names on ballot pages
 
 1. Summary/TL;DR pop-ups on each candidate's page
@@ -11,6 +28,12 @@ so there should be summaries. I think maybe even having videos of me reading the
 could make it even more palatable... Lots of people don't like to read anymore.
 
 3. Section off the burger menus
+   a. Maybe add logos or other visual indicator to help differentiate a section. Perhaps
+adding the Elephant to republican sections and the Donkey to democrat sections could help
+differentiate republican and democrat primaries. 
+   b. Similarly, you could add something to differentiate the House of Representatives
+and Senate, but I'm having trouble finding something that clearly differentiates them at the
+moment.
 
 4. Update sections on candidate's pages to make them:
    a. Visually more clear as sections
