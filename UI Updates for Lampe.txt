@@ -3,7 +3,7 @@ things that appears on the site. In other words, the purpose of the site is to q
 info on the elections, but when I open it, I see the logo, eastpoint lighthouse, and a brief
 description of the site. I then either have to notice the burger menu or scroll past the 
 mission statement to dig into the info. Perhaps making it abundantly clear how to immediately
-access the sought after information would be appropriate. Like maybe,
+access the sought after information would be appropriate. Like maybe:
  
 Inform the Vote Logo
 Small/Very small description of the site
@@ -15,7 +15,21 @@ Big Site Sections section
 
 Mission Statement 
 
+1. Refocusing of content
+   A. What is the position for which you are running?
+      1. Technical/legal definition
+      2. How you personally define it
+   B. What about your experience and skill-set directly applies to the position for which
+you are running?
+   C. What are the top issues in relation to the position which you seek?
+   D. What is your take on those issues and how does your stance differentiate you from your
+opponents?
+   E. What other information can you volunteer which could help the average voter differentiate
+you from your opponents so that they can make a clear choice on election day?
+
 1. Centering of names on ballot pages
+
+1. Description of position on ballot pages
 
 1. Summary/TL;DR pop-ups on each candidate's page
    A. Or perhaps over-top of the Eastpoint Lighthouse pic
