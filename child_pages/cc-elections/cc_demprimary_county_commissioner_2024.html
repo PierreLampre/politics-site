@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="../../app.js" async></script>
     <title>Inform The Vote</title>
 </head>
 <body>
@@ -42,15 +43,14 @@
         </div>
     </div>
 
-    <br>
-    <br>
-
-    <div id="myModal" class="modal">
+    <dialog id="myModal" class="modal">
 
         <!-- Modal content -->
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>The quick summary for the Democrat Primary for County Commissioner: This year 2 seats are open on the County Commissioner board. The reppublicans
+          <img src="../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+          <h4 class="quick-sum">quick summary</h4>
+          <h6 class="page-title">Democrat Primary for County Commissioner</h6>
+          <p>This year 2 seats are open on the County Commissioner board. The reppublicans
             are running two incumbents, and the democrats appear to have two separate two person teams: Former Sheriff Austino and former Commissioner Capizola
             'vs' Dr. Perella and Ms. La Rae Smith. The two republican incumbents inherently have experience, so it is the opinion of Inform the Vote that there 
             ought to be some kind of discussion as to why challengers would be significantly better or different. Capizola and Austino have more direct experience 
@@ -59,15 +59,13 @@
           </p>
         </div>
       
-      </div>
-
-      <br>
-      <br>
+      </dialog>
 
     <img src="../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn">
 
 
     <div id="sample-ballot">
+        <button class="quick-summary-reopen">quick summary</button>
         <div class="sb-top-box"> 
             <h3>ELECTION DATE: June 4th, 2024</h3>
             <h2>SAMPLE BALLOT</h2>

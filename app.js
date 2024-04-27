@@ -73,4 +73,26 @@ function cleanEvents() {
 
 cleanEvents();
 
+//Modal Script
+
+let theModal = document.getElementById('myModal');
+let closeModalButton = document.querySelector('.close');
+let quickSummaryButton = document.querySelector('.quick-summary-reopen');
+
+window.onload = () => {
+    theModal.showModal();
+}
+
+closeModalButton.onclick = () => {
+    theModal.close();
+    theModal.style.display = 'none';
+    quickSummaryButton.style.display = 'grid';
+}
+
+quickSummaryButton.onclick = () => {
+    quickSummaryButton.style.display = 'none';
+    theModal.style.display = 'grid';
+    theModal.showModal();
+}
+
 
