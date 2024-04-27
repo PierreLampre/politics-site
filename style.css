@@ -662,26 +662,6 @@ a.long-name {
     margin-top: 20px;
 }
 
-#simonsen-last-name {
-    margin-left: 80px;
-}
-
-#donato-last-name {
-    margin-left: 24px;
-}
-
-#luisi-last-name {
-    margin-left: 56px;
-}
-
-#taylor-last-name {
-    margin-left: 78px;
-}
-
-#sauro-last-name {
-    margin-left: 48px;
-}
-
 /* Candidate profile page styles */
 
 .container {
@@ -1347,6 +1327,10 @@ a.long-name {
 
     .quick-sum {
         margin-bottom: 7px;
+    }
+
+    #austinoLN { 
+        margin-top: 10px;
     }
 
   }
