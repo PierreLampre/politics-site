@@ -13,6 +13,10 @@ Big Site Sections section
   b. Repub US Senate Primary
   c. Etc.
 
+1. 'Back to Ballot' button. This would serve like a 'back' button, but would probably be 
+more clear to less tech savvy users how to go directly back to the election they are focused
+on.
+
 Mission Statement 
 
 1. Refocusing of content
