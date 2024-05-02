@@ -20,7 +20,65 @@ body {
     width: clamp(250px, 45.5vw, 700px)
 }
 
-/* Shared Nav and Jumbotron */
+/* Large screen nav */
+
+.nav-2-electric-buggalo {
+    display: flex;
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    width: 313px;
+    height: 112.5px;
+}
+
+#navBoxToggle {
+    cursor: pointer;
+}
+
+#navBoxToggle > span {
+    text-decoration: underline;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav-buttons > div > div > a {
+    color: black;
+}
+
+.nav-buttons-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.nav-buttons-2 {
+    position: relative;
+}
+
+.elections-dropdown-links {
+    display: none;
+    flex-direction: column;
+    background: rgb(186, 189, 193);
+    position: absolute;
+    z-index: 1;
+    padding: 12px;
+}
+
+/* Tablet/Mobile Nav and Jumbotron */
+
+.menu-wrap-homepage {
+    display: none;
+}
 
 .menu-wrap {
     position: fixed;
@@ -227,17 +285,6 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 18px;
-}
-
-.logo {
-    display: grid;
-    justify-items: center;
-    width: 100%;
-}
-
-.logo > img {
-    width: clamp(313px, 52vw, 800px);
-    height: clamp(112.5px, 20vw, 310px);
 }
 
 .container-subh {
@@ -1284,6 +1331,19 @@ a.long-name {
     .event-card, .our-mission-content, .our-process-content,
     .our-suggestion-content, .issues-content, .ua-content {
         width: 97%;
+    }
+  }
+
+/* Swap Navs */
+
+@media screen and (max-width: 800px) {
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .menu-wrap-homepage {
+        display: block;
     }
   }
 
