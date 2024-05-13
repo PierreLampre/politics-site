@@ -273,6 +273,23 @@ body {
     display: none;
 }
 
+/* Video Embeds */
+
+.video-box {
+    display: grid;
+    justify-items: center;
+    padding: 16px;
+}
+
+.video-heading {
+    margin-bottom: 10px;
+}
+
+.video-box > iframe {
+    width: clamp(300px, 37vw, 560px);
+    height: clamp(168px, 20vw, 315px)
+}
+
 /* Homepage styles */
 
 .cta-landing {
