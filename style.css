@@ -275,7 +275,7 @@ body {
 
 /* Video Embeds */
 
-.video-box {
+.video-box, .video-box-modal {
     display: grid;
     justify-items: center;
     padding: 16px;
@@ -288,6 +288,11 @@ body {
 .video-box > iframe {
     width: clamp(300px, 37vw, 560px);
     height: clamp(168px, 20vw, 315px)
+}
+
+.video-box-modal > iframe {
+    width: clamp(250px, 37vw, 560px);
+    height: clamp(140.6px, 20vw, 315px)
 }
 
 /* Homepage styles */
@@ -1410,24 +1415,7 @@ a.long-name {
         margin-top: 10px;
     }
 
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0;
-        overflow: hidden;
-    }
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-        .video-container {
-            padding-bottom: 75%; /* Adjusting for more vertical aspect ratios on smaller screens */
-        }
+    .incum-or-challenger {
+        width: 60%;
     }
   }
