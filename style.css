@@ -50,6 +50,7 @@ body {
 
 .nav-buttons > div > div > a {
     color: black;
+    margin: 0 10px;
 }
 
 .nav-buttons-1 {
