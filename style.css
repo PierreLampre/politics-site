@@ -1413,6 +1413,10 @@ a.long-name {
         margin-top: 56px;
     }
 
+    .hp-video-box {
+        justify-content: center;
+    }
+
     .main-content-box-with-shadow {
         box-shadow: none;
         padding: 0;
