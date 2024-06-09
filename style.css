@@ -302,7 +302,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: clamp(500px, 85vw, 1200px);
+    width: clamp(300px, 85vw, 1200px);
     padding: 40px;
 }
 
