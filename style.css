@@ -30,7 +30,7 @@ body {
 }
 
 .logo-img {
-    width: 313px;
+    width: clamp(263px, 21vw, 313px);
     height: 112.5px;
 }
 
@@ -57,7 +57,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 700px;
     justify-content: space-between;
     margin-top: 45px;
 }
@@ -1359,7 +1359,7 @@ a.long-name {
 
 /* Swap Navs */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 966px) {
 
     .nav-buttons {
         display: none;
@@ -1367,6 +1367,11 @@ a.long-name {
 
     .menu-wrap-homepage {
         display: block;
+    }
+
+    .logo-img {
+        width: 313px;
+        height: 112.5px;
     }
   }
 
