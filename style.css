@@ -221,7 +221,7 @@ body {
 /* Quick Summary Modal Styles */
 
 .modal {
-    display: grid;
+    display: none;
     place-self: center;
     width: 75%;
     padding: 1rem;
@@ -274,7 +274,7 @@ body {
     display: none;
 }
 
-/* Video Embeds */
+/* Video Embed for large, centered video */
 
 .video-box, .video-box-modal {
     display: grid;
@@ -294,6 +294,28 @@ body {
 .video-box-modal > iframe {
     width: clamp(250px, 37vw, 560px);
     height: clamp(140.6px, 20vw, 315px)
+}
+
+/*Video Embeds for small videos on homepage*/
+
+.hp-video-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: clamp(500px, 85vw, 1200px);
+    padding: 40px;
+}
+
+.video-box-sm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.video-heading-sm {
+    text-align: center;
+    margin: 5px 0 5px 0;
 }
 
 /* Homepage styles */
@@ -1264,6 +1286,14 @@ a.long-name {
 
     .a {
         padding-right: 8px;
+    }
+
+  }
+
+  @media screen and (max-width: 1190px) {
+
+    .video-box-sm {
+        margin-bottom: 10px;
     }
 
   }

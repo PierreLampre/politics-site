@@ -81,7 +81,9 @@ let closeModalButton = document.querySelector('.close');
 let quickSummaryButton = document.querySelector('.quick-summary-reopen');
 
 window.onload = () => {
-    theModal.showModal();
+    if (quickSummaryButton !== null) {
+        quickSummaryButton.style.display = 'grid';
+    }
 }
 
 closeModalButton.onclick = () => {
