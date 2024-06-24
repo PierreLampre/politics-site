@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../../style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>Inform The Vote</title>
+    </head>
+    <body>
+        <div class="menu-wrap">
+            <input type="checkbox" autocomplete='off' class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul class="links">
+                            <li class="link"><a href="../../../index.html">Home</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_candidates.html">Cumberland County Elections</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_issues.html">County Issues</a></li>
+                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_candidates.html">Vineland School Board Elections</a></li>
+                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_issues.html">School Board Issues</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/unanswered_questions.html">Unanswered Questions</a></li>
+                            <li class="link"><a href="../../../child_pages/get-involved.html">Get Involved</a></li>
+                            <li class="link"><a href="../../../child_pages/events.html">Events</a></li>
+                            <li class="link"><a href="../../../child_pages/candidates-forum-op-ed.html">Candidates Forum Op-Ed</a></li>
+                            <li class="link"><a href="../../../child_pages/about.html">About</a></li>
+                            <li class="link"><a href="../../../child_pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+                <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">Victoria Lods</h6>
+              <p>
+                Commissioner Lods is running as a challenger against Celeste Riley for the County Clerk seat. She has been involved in politics for decades, having previously held positions 
+                such as Chief of Staff for a State Senator and she was the Executive Director for Habitat for Humanity. She is currently a County Commissioner. Like many local politicians this 
+                year, she appears to be running slate with the republicans (following the Republican agenda). While Commissioner Lods does seem to be a strong, qualified candidate, it is not 
+                quite clear how she is presented as different or better than the incumbent. She has been reached out to via offical government email to clarify her individual agenda in terms 
+                of the specific County Clerk position, with no response. When asked in person about the email, she said she would look for it. When asked in person about what the specific role 
+                is of the County Clerk and how she would differentiate herself from the incumbent, she responded "If you don't know what the County Clerk does, that should tell you enough about 
+                how the role is being executed.", which I believe implies that the County Clerk should be acting as the known liason between the public and the government. 
+                Click the x at the top red of this box to go back to the page.
+              </p>
+            </div>
+          
+          </dialog>
+    
+        <img src="../../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn">
+<div class="container">
+    <div class="title-info">
+        <h2>Victoria Lods</h2>
+        <div class="running-for">
+            <div class="running-title">Running for: </div>
+            <div class="position">Cumberland County Clerk</div>
+        </div>
+        <div class="incum-or-challenger">
+            <div class="incumbent active">Incumbent</div>
+            <div class="challenger inactive">Challenger</div> 
+        </div>
+    </div>
+    <div class="candidate-pic-box">
+        <img class="cover" src="../../../assets/candidates/Tori Lods.webp" class="candidate-pic">
+    </div>
+    <div class="candidate-agenda">
+        <h4 class="sub-heading">Website</h4>
+        <div class="website">
+            <a href="https://www.ccrrogop.org/cumberlandcountyclerk2024" target="_blank" rel="noopener noreferrer" class="website-link">Cumberland County Republicans Site</a>
+        </div>
+        <h4 class="sub-heading">individual agenda</h4>
+            <div class="agenda-thesis">
+                <ul>
+                    <li>Funding for quality education</li>
+                    <li>Quality recreation for children</li>
+                    <li>Improve the affordability and quality of the county for future generations</li>
+                </ul>
+
+            </div>
+            <h4 class="sub-heading">party messaging</h4>
+            <div class="agenda-per-party-site">
+                
+
+            </div>
+            <h4 class="sub-heading">policy positions</h4>
+            <div class="policy-positions">
+                
+                
+            </div>
+            <h4 class="sub-heading">experience</h4>
+            <div class="experience">
+                <ul>
+                    <li>Bachelor's degree in Communications and Journalism</li>
+                    <li>Former executive director for Cumberland County Habitat for Humanity</li>
+                    <li>Member of the Greater Vineland NAACP</li>
+                    <li>Served as Chief of Staff to State Senator Nicholas Asselta</li>
+                    <li>Current County Commissioner</li>
+                </ul>
+                
+            </div>
+            <h4 class="sub-heading">Candidates Forum Statements</h4>
+            <div class="experience">
+                
+                
+            </div>
+    </div>
+ </div>   
+</body>
+</html>
