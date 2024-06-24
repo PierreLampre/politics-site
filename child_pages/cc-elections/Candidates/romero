@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../../style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>Inform The Vote</title>
+    </head>
+    <body>
+        <div class="menu-wrap">
+            <input type="checkbox" autocomplete='off' class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul class="links">
+                            <li class="link"><a href="../../../index.html">Home</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_candidates.html">Cumberland County Elections</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_issues.html">County Issues</a></li>
+                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_candidates.html">Vineland School Board Elections</a></li>
+                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_issues.html">School Board Issues</a></li>
+                            <li class="link"><a href="../../../child_pages/cc-elections/unanswered_questions.html">Unanswered Questions</a></li>
+                            <li class="link"><a href="../../../child_pages/get-involved.html">Get Involved</a></li>
+                            <li class="link"><a href="../../../child_pages/events.html">Events</a></li>
+                            <li class="link"><a href="../../../child_pages/candidates-forum-op-ed.html">Candidates Forum Op-Ed</a></li>
+                            <li class="link"><a href="../../../child_pages/about.html">About</a></li>
+                            <li class="link"><a href="../../../child_pages/contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+                <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">Tony Romero</h6>
+              <p>
+                Commissioner Romero is up for re-election this year as the only person of color running at the county level. Being that he is an incumbent, he inherently has more 
+                experience than his democrat challengers. Being of Cuban descent, he is particularly focused on standing against communism by upholding the constitution. He is also 
+                particularly passionate about cutting red tape for businesses. Like most candidates at the local level, Romero seems to be running slate (as part of the overall republican 
+                team) and there is little forward facing information about how he is directly different from his democrat challengers. He has been reached out to via his government email to
+                clarify his individual stances and how he differentiates himself from his opponents, with no response. He was also asked in person about whether he received the email, to which
+                he said he would look for it. Click the x at the top red of this box to go back to the page.
+              </p>
+            </div>
+          
+          </dialog>
+    
+        <img src="../../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn">
+<div class="container">
+    <div class="title-info">
+        <h2>ANTONIO ROMERO</h2>
+        <div class="running-for">
+            <div class="running-title">Running for: </div>
+            <div class="position">Cumberland County Commissioner</div>
+        </div>
+        <div class="incum-or-challenger">
+            <div class="incumbent active">Incumbent</div>
+            <div class="challenger inactive">Challenger</div> 
+        </div>
+    </div>
+    <div class="candidate-pic-box">
+        <img class="cover" src="../../../assets/candidates/romero.png" class="candidate-pic">
+    </div>
+    <div class="candidate-agenda">
+        <h4 class="sub-heading">Website</h4>
+        <div class="website">
+            <a href="https://www.ccrrogop.org/county-commissioner" target="_blank" rel="noopener noreferrer" class="website-link">Cumberland County Republicans Site</a>
+        </div>
+        <h4 class="sub-heading">individual agenda</h4>
+            <div class="agenda-thesis">
+                <ul>
+                    <li>As a former Cuban, he is anti-communist.</li>
+                    <li>Will stand up for the Constitution</li>
+                    <li>Will stand up for the New Jersey Constituion</li>
+                    <li>Will stand up for Cumberland County as a freeholder</li>
+                    <li>Does not believe in one party ruling the county</li>
+                    <li>Wants to cut red tape for businesses</li>
+                </ul>
+
+            </div>
+            <h4 class="sub-heading">party messaging</h4>
+            <div class="agenda-per-party-site">
+                
+
+            </div>
+            <h4 class="sub-heading">policy positions</h4>
+            <div class="policy-positions">
+                
+                
+            </div>
+            <h4 class="sub-heading">experience</h4>
+            <div class="experience">
+                <ul>
+                    <li>Owned Budget Auto Care for 25 years, which gives him experience navigating state and county regulations</li>
+                    <li>Has various certifications and awards in business, politics, and the community</li>
+                </ul>
+                
+            </div>
+            <h4 class="sub-heading">Candidates Forum Statements</h4>
+            <div class="experience">
+                
+                
+            </div>
+    </div>
+ </div>   
+</body>
+</html>
