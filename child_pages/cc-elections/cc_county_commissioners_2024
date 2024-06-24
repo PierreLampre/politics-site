@@ -191,6 +191,7 @@
                 </div>
 
                 <div id="sample-ballot">
+
                     <div class="sb-top-box"> 
                         <h3>ELECTION DATE: November 7th, 2023</h3>
                         <h2>SAMPLE BALLOT</h2>
@@ -200,11 +201,13 @@
                     </div>
                     
                     
-                        <div class="sb-top-box"> 
-                            <h4>REPUBLICAN</h4>
-                            <h6>REPUBLICANO</h6>  
-                        </div>
+                    <div class="sb-top-box"> 
+                        <h4>REPUBLICAN</h4>
+                        <h6>REPUBLICANO</h6>  
+                    </div>
+
                         <div id="republican-candidates">
+
                             <div class="table-titles">
                                 <div class="title">
                                     <p class="title-big">OFFICE TITLE</p>
@@ -258,8 +261,8 @@
                                             <a href="Candidates/sileo.html">Sileo</a>
                                         </div>
                                     </div>
-                
                                 </div>
+
                                 <div class="b"></div>
                                 <div class="personal-choice">
                                     <div class='pc-col-1'>
@@ -312,8 +315,9 @@
                                 </div>
                             </div>
             
-                            </div>
-                            </div>  
+                        </div>
+                </div>  
+                </div>
             <div class="end-text">Form 14 - Vineland W6 D-4</div>
         </div>
     </div>
