@@ -62,8 +62,10 @@ body {
     margin-top: 45px;
 }
 
-.nav-buttons-2 {
+.nav-buttons-2, .nav-buttons-3 {
     position: relative;
+    font-family: 'Lora', serif;
+    -webkit-text-stroke: 2px (186, 189, 193, 0);
 }
 
 .elections-dropdown-links {
@@ -73,6 +75,17 @@ body {
     position: absolute;
     z-index: 1;
     padding: 12px;
+    -webkit-text-stroke: 0;
+}
+
+.county-dropdown-links {
+    display: none;
+    flex-direction: column;
+    background: rgb(186, 189, 193);
+    position: absolute;
+    z-index: 1;
+    padding: 12px;
+    -webkit-text-stroke: 0;
 }
 
 /* Tablet/Mobile Nav and Jumbotron */
@@ -109,6 +122,7 @@ body {
     padding: 1rem;
     display: flex;
     border-radius: 18px;
+    border: 1px solid white;
     align-items: center;
     justify-content: center;
     background: var(--itv-red);
@@ -218,6 +232,47 @@ body {
     object-fit: cover;
 }
 
+.child-page-jumbo {
+    width: 100vw;
+    height: clamp(150px, 30vw, 464px);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.get-involved-jumbo {
+    background-image: url('assets/get_involved.jpg');
+}
+
+.events-jumbo {
+    background-image: url('assets/events.jpg');
+}
+
+.extra-info-jumbo {
+    background-image: url('assets/extra_info.jpg');
+    background-position-y: 45%;
+}
+
+.about-jumbo {
+    background-image: url('assets/about.jpg');
+    background-position-y: 45%;
+}
+
+.contact-jumbo {
+    background-image: url('assets/contact.jpg');
+    background-position-y: 25%;
+}
+
+.child-page-jumbo-msg {
+    font-family: "Anton SC", sans-serif;
+    font-size: clamp(36px, 8vw, 76px);
+    color: var(--bg-color);
+    -webkit-text-stroke: 2px #030104;
+    padding: 12px;
+}
+
 /* Quick Summary Modal Styles */
 
 .modal {
@@ -258,6 +313,7 @@ body {
     right: 5px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 .quick-summary-reopen {
@@ -465,7 +521,6 @@ body {
     padding: 16px;
     font-family: "Anton SC", sans-serif;
     color: var(--bg-color);
-    -webkit-text-stroke: 2px #030104;
     display: flex;
     align-items: center;
     justify-content: space-between
@@ -473,6 +528,7 @@ body {
 
 .home {
     font-size: 36px;
+    -webkit-text-stroke: 2px #030104;
 }
 
 .other-links {
@@ -489,9 +545,13 @@ body {
     margin-top: 10px;
 }
 
+.nav-buttons-2 {
+    position: relative;
+}
+
 .jumbotron-message {
     font-family: "Anton SC", sans-serif;
-    font-size: 76px;
+    font-size: clamp(36px, 8vw, 76px);
     color: var(--bg-color);
     -webkit-text-stroke: 2px #030104;
     padding: 12px;
@@ -1516,21 +1576,61 @@ a.long-name {
 
 /* Swap Navs */
 
-@media screen and (max-width: 966px) {
+@media screen and (max-width: 1142px) {
+
+/* Old to delete */
 
     .nav-buttons {
         display: none;
-    }
-
-    .menu-wrap-homepage {
-        display: block;
     }
 
     .logo-img {
         width: 313px;
         height: 112.5px;
     }
+
+/*Current to keep */
+
+    .menu-wrap-homepage {
+        display: block;
+    }
+
+    .other-links {
+        display: none;
+    }
+
+    .cta-banner {
+        padding-top: 56px;
+    }
+
   }
+
+@media screen and (max-width: 1215px) {
+
+    .mission-section {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .mission-text,
+    .mission-image-box,
+    .mission-img {
+        width: 90vw;
+    }
+
+}
+
+@media screen and (max-width: 1215px) {
+
+    .cta-content {
+        flex-direction: column;
+    }
+
+    .cta-link-box {
+        margin-top: 6px;
+    }
+
+}
 
 /* Homepage MQs */
 

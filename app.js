@@ -74,11 +74,13 @@ function cleanEvents() {
 cleanEvents();
 
 
-//Modal Script
+//Common Modal Script
 
 let theModal = document.getElementById('myModal');
 let closeModalButton = document.querySelector('.close');
 let quickSummaryButton = document.querySelector('.quick-summary-reopen');
+
+//if a quiek summary button exists, display it
 
 window.onload = () => {
     if (quickSummaryButton !== null) {
