@@ -87,6 +87,7 @@ body {
     z-index: 1;
     padding: 12px;
     -webkit-text-stroke: 0;
+    min-width: 477px;
 }
 
 /* Tablet/Mobile Nav and Jumbotron */
