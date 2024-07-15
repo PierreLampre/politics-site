@@ -258,6 +258,7 @@ label::before {
 
 .nested-burger-links > li {
     padding: 10px 0 0 10px; 
+    list-style-type: none;
 }
 
 .accordion input[type='checkbox']:checked + label + .nested-burger-links {
@@ -1739,7 +1740,8 @@ a.long-name {
         line-height: 21px;
     }
 
-    .menu-wrap .menu > div > div > ul > li {
+    .menu-wrap .menu > div > div > ul > li,
+    .menu-wrap .menu > div > div > ul > li, .accordion > label     {
         font-size: 1rem;
         padding: .75rem;
     }
