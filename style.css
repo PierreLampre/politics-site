@@ -214,11 +214,59 @@ body {
     transition: opacity 0.4s ease;
 }
 
-.menu-wrap .menu > div > div > ul > li {
+.menu-wrap .menu > div > div > ul > li,
+.accordion > label {
     list-style: none;
     color: white;
     font-size: 1.5rem;
     padding: 1rem;
+}
+
+/* Hamburger Accordions */
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion input[type='checkbox'] {
+    display: none;
+}
+
+.nested-burger-links {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.nested-burger-links > li > a {
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.nested-burger-links > li {
+    padding: 10px 0 0 10px; 
+}
+
+.accordion input[type='checkbox']:checked + label + .nested-burger-links {
+    max-height: 400px;
+    padding: 10px;
+}
+
+.accordion input[type='checkbox']:checked + label::before {
+    content: '-';
 }
 
 .menu-wrap .menu > div > div > ul > li > a {
