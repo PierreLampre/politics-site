@@ -559,6 +559,43 @@ label::before {
     padding: 0 8px 8px 0;
 }
 
+.hp-banner-button {
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid var(--bg-color);
+    background: var(--itv-red);
+    color: var(--bg-color);
+    border-radius: 3px;
+    z-index: 1;
+    position: relative;
+    transition: color 300ms ease-in-out;
+}
+
+.hp-banner-button:hover,
+.hp-banner-button:focus {
+    color: var(--itv-red);
+}
+
+.hp-banner-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.hp-banner-button:hover::before,
+.hp-banner-button:focus::before {
+    transform: scaleX(1);
+    color: var(--itv-red);
+}
+
 .jumbotron {
     background-image: url('assets/blue_court.jpg');
     height: 100vh;
