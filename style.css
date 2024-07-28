@@ -100,14 +100,14 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-wrap .toggler {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -118,7 +118,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     width: 60px;
     height: 60px;
     padding: 1rem;
@@ -145,7 +145,7 @@ body {
 .menu-wrap .hamburger > div:after {
     content: '';
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: -10px;
     width: 100%;
     height: 2.4px;
