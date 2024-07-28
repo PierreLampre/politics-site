@@ -21,6 +21,28 @@ body {
     width: clamp(250px, 45.5vw, 700px)
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--itv-red);
+    color: var(--bg-color);
+    width: calc(100vw - (100vw - 100%));
+    padding: 0 15px 0 15px;
+}
+
+.lampe-plug > a{
+    color: var(--bg-color);
+}
+
+.youtube-icon {
+    margin-top: 6px;
+}
+
+.fb-icon {
+    margin-bottom: 4px;
+}
+
 /* Large screen nav */
 
 .nav-2-electric-buggalo {
