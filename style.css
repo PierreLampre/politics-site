@@ -1817,4 +1817,18 @@ a.long-name {
     .incum-or-challenger {
         width: 60%;
     }
+
+
+    details {
+        max-width: 80vw;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    details img {
+        width: 100%;
+        max-width: 80vw;
+        margin-top: 10px;
+    }
+    
   }
