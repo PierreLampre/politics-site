@@ -1138,9 +1138,16 @@ a.long-name {
 
 .candidate-pic-box {
     display: flex;
-    width: 100%;
+    max-width: 75vw;
     margin-top: 12px;
     justify-content: center;
+}
+
+.candidate-pic-box-content {
+    margin-left: 16px;
+    font-size: clamp(16px, 4vw, 20px);
+    line-height: clamp(23px, 4vw, 26px);
+    font-family: 'Lora' serif;
 }
 
 .cover {
@@ -1706,9 +1713,13 @@ a.long-name {
 
     .website {
         flex-direction: column;
+        align-self: start;
+        flex-wrap: nowrap;
     }
 
-    .candidate-agenda {
+    .candidate-agenda,
+    .candidate-pic-box-content,
+    .candidate-pic-box {
         max-width: 85vw;
     }
 
@@ -1738,6 +1749,23 @@ a.long-name {
     .our-suggestion-content, .issues-content, .ua-content {
         width: 97%;
     }
+
+    .candidate-pic-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .candidate-pic-box-content {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-heading {
+        text-align: center;
+    }
+
   }
 
 /* Swap Navs */
@@ -1865,5 +1893,10 @@ a.long-name {
         max-width: 80vw;
         margin-top: 10px;
     }
+
+    .sub-heading {
+        text-align: start;
+    }
+
     
   }
