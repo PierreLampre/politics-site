@@ -407,6 +407,8 @@ label::before {
     font-style: italic;
     cursor: pointer;
     display: none;
+    max-width: 280.74px;
+    justify-self: center;
 }
 
 /* Video Embed for large, centered video */
