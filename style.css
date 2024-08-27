@@ -1933,5 +1933,8 @@ a.long-name {
         text-align: start;
     }
 
-    
+    i {
+        font-size: 24px; /* Adjust the size as needed */
+        margin-right: 15px; /* Adjust the spacing as needed */
+    }
   }
