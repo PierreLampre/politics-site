@@ -12,6 +12,9 @@
     --itv-red: #bf1b2d;
     --itv-purple: #9966cc;
     --itv-green: #00FF00;
+    --itv-yellow: #FFFF00;
+    --itv-pinkish: #C41E3A;
+    --itv-black: #000000;
 }
 
 body {
@@ -1013,6 +1016,21 @@ div#independent-candidates  > .row > .a > .a-row-2 > .last-name > a {
 div#green-candidates  > .row > .a > .a-row-1 > .first-name > a,
 div#green-candidates  > .row > .a > .a-row-2 > .last-name > a {
     color: var(--itv-green);
+}
+
+div#libertarian-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#libertarian-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-yellow);
+}
+
+div#voterBetter-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#voterBetter-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-pinkish);
+}
+
+div#socialistWorkersParty-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#socialistWorkersParty-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-black);
 }
 
 a.long-name {
