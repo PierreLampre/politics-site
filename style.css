@@ -12,7 +12,7 @@
     --itv-red: #bf1b2d;
     --itv-purple: #9966cc;
     --itv-green: #00FF00;
-    --itv-yellow: #FFD700;
+    --itv-yellow: #fff200;
     --itv-pinkish: #FF69B4;
     --itv-black: #000000;
 }
@@ -1023,8 +1023,8 @@ div#libertarian-candidates  > .row > .a > .a-row-2 > .last-name > a {
     color: var(--itv-yellow);
 }
 
-div#voterBetter-candidates  > .row > .a > .a-row-1 > .first-name > a,
-div#voterBetter-candidates  > .row > .a > .a-row-2 > .last-name > a {
+div#voteBetter-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#voteBetter-candidates  > .row > .a > .a-row-2 > .last-name > a {
     color: var(--itv-pinkish);
 }
 
