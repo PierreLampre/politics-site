@@ -15,6 +15,9 @@
     --itv-yellow: #B8860B;
     --itv-pinkish: #FF69B4;
     --itv-black: #000000;
+    --itv-orange: #FFA500;
+    --itv-maroon: #800000;
+    --itv-turqouise: #40E0D0;
 }
 
 body {
@@ -1031,6 +1034,21 @@ div#voteBetter-candidates  > .row > .a > .a-row-2 > .last-name > a {
 div#socialistWorkersParty-candidates  > .row > .a > .a-row-1 > .first-name > a,
 div#socialistWorkersParty-candidates  > .row > .a > .a-row-2 > .last-name > a {
     color: var(--itv-black);
+}
+
+div#socialismAndLiberation-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#socialismAndLiberation-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-orange);
+}
+
+div#socialistEquality-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#socialistEquality-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-maroon);
+}
+
+div#usConstitutionParty-candidates  > .row > .a > .a-row-1 > .first-name > a,
+div#usConstitutionParty-candidates  > .row > .a > .a-row-2 > .last-name > a {
+    color: var(--itv-turqouise);
 }
 
 a.long-name {
