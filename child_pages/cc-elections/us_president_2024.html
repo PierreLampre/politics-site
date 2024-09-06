@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="../../../app.js" async></script>    
+<title>Inform The Vote</title>
+</head>
+<body>
+    <div class="menu-wrap">
+        <input type="checkbox" autocomplete='off' class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul class="links">
+                        <li class="link"><a id="home" href="../../index.html">Home</a></li>
+                        <div class="accordion">
+                            <input type="checkbox" name="accordion" id="first">
+                            <label for="first">Elections</label>
+                            <div class="nested-burger-links">
+                                <li class="link"><a href="../cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a></li>
+                                <li class="link"><a href="../cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a></li>
+                                <li class="link"><a href="../cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
+                                <li class="link"><a href="../cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li>
+                                <li class="link"><a href="../cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a></li>
+                                <li class="link"><a href="../cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/lawrence_school_board_2024.html">Lawrence Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/vsb_2024.html">Vineland School Board</a></li>
+                                <li class="link"><a href="../cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a></li>
+                                <li class="link"><a href="../cc-elections/us_senate_2024.html">US Senate, NJ</a></li>
+                                <li class="link"><a href="../cc-elections/cc_vice_president_2024.html">US Vice President</a></li>
+                                <li class="link"><a href="../cc-elections/us_president_2024.html">US President</a></li>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <input type="checkbox" name="accordion" id="second">
+                            <label for="second">Issues</label>
+                            <div class="nested-burger-links">
+                                <li class="link"><a href="../cc-elections/cc_election_issues.html">Cumberland County Issues</a></li>
+                                <li class="link"><a href="../cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a></li>
+                                <li class="link"><a href="../cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_senate_issues.html">US Senate Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_vice_president_issues.html">Vice President Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_president_issues.html">President Issues</a></li>
+                            </div>
+                        </div>
+                        <li class="link"><a href="../get-involved.html">Get Involved</a></li>
+                        <li class="link"><a href="../events.html">Events</a></li>
+                        <li class="link"><a href="../resources-archives-and-rabbit-holes.html">Extra Info</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                        <li class="link"><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+          <h4 class="quick-sum">quick summary</h4>
+          <h6 class="page-title">US President</h6>
+          <p>
+            This year the US Presidential seat is open for election. After concerns about President Biden's mental decline were highlighted at the debate, the Democrat party has switched in 
+            Vice President <a href="Candidates/harris.html">Kamala Harris</a> as the new nominee, and she has recently picked Minnesota Governor Tim Walz as her running mate. 
+            Former president <a href="Candidates/trump.html">Donald J. Trump</a> is the nominee for the Republicans. <a href="Candidates/kennedy.html">Robert F. Kennedy Jr.</a> 
+            is also on the NJ ballot, but he has recently taken his name off the ballot in several states and endorsed Donald Trump. Given that this site is mainly focused on local 
+            politics and that the presidential election generally receives lots of coverage, you may want to take a look at the 3rd party candidates if you're not happy with the 
+            candidates presented from the major 2 parties. We have come across one <a href="https://rumble.com/v56o6np-free-and-equal-presidential-debate-at-freedomfest-2024.html">debate</a> with 
+            candidates Chase Oliver, Jill Stein, and Randall Terry. Hopefully with advertising this site prior to early voting, you will have the chance to look into the other candidates
+            if you wish. 
+            Click the red x at the top of this box and then scroll down down for more in-depth information and sources.                    
+          </p>
+        </div>
+    </dialog>
+
+    <!-- <img src="../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn"> -->
+
+    <div id="sample-ballot">
+
+        <h4 class="sub-heading-ballot">What does the President do?</h4>
+        <div class="job-description can-sec">
+
+            The President of the United States holds the highest executive office in the country and has a wide range of responsibilities and powers. Here’s an overview of the key 
+            duties of the President:           
+             <br>
+
+            <details>
+                <summary style="cursor:pointer; color:blue; text-decoration:underline;">Learn More</summary>
+                Chief Executive: The President serves as the head of the executive branch of the federal government. This role involves overseeing the implementation and enforcement 
+                of federal laws, managing the operations of federal agencies and departments, and appointing key officials, including Cabinet members, federal judges, and ambassadors 
+                (with Senate approval).
+                <br>
+                <br>
+                Commander in Chief: The President is the Commander in Chief of the U.S. Armed Forces. This role grants the President authority over military operations and decisions, 
+                including the deployment of troops, military strategy, and the use of nuclear weapons. However, the President’s ability to engage in military action is subject to 
+                Congressional oversight, particularly in terms of declaring war and funding military operations.
+                <br>
+                <br>
+                Chief Diplomat: The President directs U.S. foreign policy and represents the country in diplomatic matters. This includes negotiating treaties (which require Senate 
+                ratification), meeting with foreign leaders, and making decisions on international relations. The President also appoints ambassadors and other diplomatic officials.
+                <br>
+                <br>
+                Legislative Leader: Although the President cannot introduce legislation directly, they play a significant role in shaping the legislative agenda. The President can 
+                propose bills, work with Congress to pass legislation, and use the veto power to reject bills passed by Congress. The President also delivers the annual State of the 
+                Union address, outlining the administration’s priorities and goals.
+                <br>
+                <br>
+                Head of State: As the ceremonial leader of the country, the President represents the United States at official events and functions. This role includes hosting foreign 
+                dignitaries, bestowing honors and awards, and symbolizing national unity.
+                <br>
+                <br>
+                Economic Leader: The President is responsible for guiding the nation’s economic policy. This includes preparing the federal budget, recommending fiscal policies, and 
+                addressing economic issues such as unemployment, inflation, and taxation. The President also works with the Federal Reserve and other economic advisors to influence 
+                monetary policy.
+                <br>
+                <br>
+                Party Leader: The President often serves as the leader of their political party, helping to shape the party’s platform, support party candidates in elections, and 
+                influence party policies.
+                <br>
+                <br>
+                Crisis Manager: In times of national emergency or crisis, the President is expected to provide leadership and direction. This can involve responding to natural 
+                disasters, managing national security threats, or addressing public health emergencies.
+                <br>
+                <br>
+                Pardons and Clemencies: The President has the power to grant pardons and clemencies for federal offenses. This allows the President to forgive or lessen the sentences 
+                of individuals convicted of federal crimes.
+                <br>
+                <br>
+                Public Communicator: The President plays a key role in communicating with the American people, using speeches, press conferences, and social media to inform, persuade, 
+                and rally public support for policies and initiatives.
+            </details>
+        </div>
+
+        <button class="quick-summary-reopen">quick election summary</button>
+
+        <div class="sb-top-box"> 
+            <h3>ELECTION DATE: November 5th, 2024</h3>
+            <h2>SAMPLE BALLOT</h2>
+            <p class="instructions">( Click or tap on candidate name to learn more about them )</p>
+            <h3>US PRESIDENT</h3>
+            <h4>DEMOCRATIC</h4>
+            <h6>DEMOCRATA</h6>  
+        </div>
+        
+        <div id="democratic-candidates">
+            <div class="table-titles">
+                <div class="title">
+                    <p class="title-big">OFFICE TITLE</p>
+                    <p class="title-small">TITULO OFICIAL</p>
+                </div>
+                <div class="title">
+                    <p class="title-letter">A</p>
+                    <p class="title-party">Democratic</p>
+                    <p class="title-party-espanol">Democrata</p>
+                </div>
+                <div class="title">
+                    <p class="title-letter">B</p>
+                    <p class="title-party">Democratic</p>
+                    <p class="title-party-espanol">Democrata</p>
+                </div>
+                <div class="title">
+                    <p class="title-party-pc">PERSONAL CHOICE</p>
+                    <p class="title-party-espanol">SELECCION PERSONAL</p>
+                </div>
+            </div>
+
+
+            <div class="row state-senator">
+                <div class="office-title">
+                    <div class="ot-english">
+                        <p>US President</p>
+                        <p>Vote for One</p>
+                    </div>
+                    <div class="ot-espanol">
+                        <p>Presidente</p>
+                        <p>Vota por Uno</p>
+                    </div>
+                </div>
+                <div class="a">
+                    <div class="a-row-1">
+                        <div class="org">
+                            <p>Democrat</p> 
+                            
+                        </div>
+                        <div class="first-name">
+                            <a href="Candidates/harris.html">Kamala</a>
+                        </div>
+                        <div class="number-a-and-circle"> 
+                            <p>1A</p>
+                            <p>0</p>
+                        </div>   
+                    </div>
+                    <div class="a-row-2">
+                        <div class="last-name  push-down-last-name">
+                            <a href="Candidates/harris.html">Harris</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="b"></div>
+                <div class="personal-choice">
+                    <div class='pc-col-1'>
+                        <p class="pc-line-1">Personal Choice</p>
+                        <p class="pc-line-2">Seleccion Personal</p>
+                    </div>
+                    <div class="pc-col-2">0</div>
+                </div>
+            </div>
+
+
+            <div class="sb-top-box"> 
+                <h4>REPUBLICAN</h4>
+                <h6>REPUBLICANO</h6>  
+            </div>
+            <div id="republican-candidates">
+                <div class="table-titles">
+                    <div class="title">
+                        <p class="title-big">OFFICE TITLE</p>
+                        <p class="title-small">TITULO OFICIAL</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-letter">A</p>
+                        <p class="title-party">Republican</p>
+                        <p class="title-party-espanol">Republicano</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-letter">B</p>
+                        <p class="title-party">Republican</p>
+                        <p class="title-party-espanol">Republicano</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-party-pc">PERSONAL CHOICE</p>
+                        <p class="title-party-espanol">SELECCION PERSONAL</p>
+                    </div>
+                </div>
+
+
+                <div class="state-senator row">
+                    <div class="office-title">
+                        <div class="ot-english">
+                            <p>US President</p>
+                            <p>Vote for One</p>
+                        </div>
+                        <div class="ot-espanol">
+                            <p>Presidente</p>
+                            <p>Vota por Uno</p>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="a-row-1">
+                            <div class="org">
+                                <p>Republican</p> 
+                            </div>
+                            <div class="first-name">
+                                <a href="Candidates/trump.html">Donald J.</a>
+                            </div>
+                            <div class="number-a-and-circle"> 
+                                <p>1A</p>
+                                <p>0</p>
+                            </div>   
+                        </div>
+                        <div class="a-row-2">
+                            <div class="last-name push-down-last-name">
+                                <a href="Candidates/trump.html">Trump</a>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="b"></div>
+                    <div class="personal-choice">
+                        <div class='pc-col-1'>
+                            <p class="pc-line-1">Personal Choice</p>
+                            <p class="pc-line-2">Seleccion Personal</p>
+                        </div>
+                        <div class="pc-col-2">0</div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+                <div class="sb-top-box"> 
+                    <h4>INDEPENDENT</h4>
+                    <h6>INDEPENDIENTE</h6>  
+                </div>
+                <div id="independent-candidates">
+                    <div class="table-titles">
+                        <div class="title">
+                            <p class="title-big">OFFICE TITLE</p>
+                            <p class="title-small">TITULO OFICIAL</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-letter">A</p>
+                            <p class="title-party">Independent</p>
+                            <p class="title-party-espanol">Independiente</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-letter">B</p>
+                            <p class="title-party">Independent</p>
+                            <p class="title-party-espanol">Independiente</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-party-pc">PERSONAL CHOICE</p>
+                            <p class="title-party-espanol">SELECCION PERSONAL</p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="state-senator row">
+                        <div class="office-title">
+                            <div class="ot-english">
+                                <p>US President</p>
+                                <p>Vote for One</p>
+                            </div>
+                            <div class="ot-espanol">
+                                <p>Presidente</p>
+                                <p>Vota por Uno</p>
+                            </div>
+                        </div>
+                        <div class="a">
+                            <div class="a-row-1">
+                                <div class="org">
+                                    <p>Independent</p> 
+                                </div>
+                                <div class="first-name">
+                                    <a href="Candidates/kennedy.html">Robert F.</a>
+                                </div>
+                                <div class="number-a-and-circle"> 
+                                    <p>1A</p>
+                                    <p>0</p>
+                                </div>   
+                            </div>
+                            <div class="a-row-2">
+                                <div class="last-name push-down-last-name">
+                                    <a href="Candidates/kennedy.html">Kennedy</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="b"></div>
+                        <div class="personal-choice">
+                            <div class='pc-col-1'>
+                                <p class="pc-line-1">Personal Choice</p>
+                                <p class="pc-line-2">Seleccion Personal</p>
+                            </div>
+                            <div class="pc-col-2">0</div>
+                        </div>
+                    </div>
+    
+                    
+                </div>
+
+                    <div class="sb-top-box"> 
+                        <h4>Socialism and Liberation</h4>
+                        <h6>Socialismo y Liberación</h6>  
+                    </div>
+                    <div id="socialismAndLiberation-candidates">
+                        <div class="table-titles">
+                            <div class="title">
+                                <p class="title-big">OFFICE TITLE</p>
+                                <p class="title-small">TITULO OFICIAL</p>
+                            </div>
+                            <div class="title">
+                                <p class="title-letter">A</p>
+                                <p class="title-party">Socialism and Liberation</p>
+                                <p class="title-party-espanol">Socialismo y Liberación</p>
+                            </div>
+                            <div class="title">
+                                <p class="title-letter">B</p>
+                                <p class="title-party">Socialism and Liberation</p>
+                                <p class="title-party-espanol">Socialismo y Liberación</p>
+                            </div>
+                            <div class="title">
+                                <p class="title-party-pc">PERSONAL CHOICE</p>
+                                <p class="title-party-espanol">SELECCION PERSONAL</p>
+                            </div>
+                        </div>
+        
+        
+                        <div class="state-senator row">
+                            <div class="office-title">
+                                <div class="ot-english">
+                                    <p>US President</p>
+                                    <p>Vote for One</p>
+                                </div>
+                                <div class="ot-espanol">
+                                    <p>Presidente</p>
+                                    <p>Vota por Uno</p>
+                                </div>
+                            </div>
+                            <div class="a">
+                                <div class="a-row-1">
+                                    <div class="org">
+                                        <p>Socialism and Liberation</p> 
+                                    </div>
+                                    <div class="first-name">
+                                        <a href="Candidates/de-la-cruz.html">Claudia</a>
+                                    </div>
+                                    <div class="number-a-and-circle"> 
+                                        <p>1A</p>
+                                        <p>0</p>
+                                    </div>   
+                                </div>
+                                <div class="a-row-2">
+                                    <div class="last-name push-down-last-name">
+                                        <a href="Candidates/de-la-cruz.html">De La Cruz</a>
+                                    </div>
+                                </div>
+            
+                            </div>
+                            <div class="b"></div>
+                            <div class="personal-choice">
+                                <div class='pc-col-1'>
+                                    <p class="pc-line-1">Personal Choice</p>
+                                    <p class="pc-line-2">Seleccion Personal</p>
+                                </div>
+                                <div class="pc-col-2">0</div>
+                            </div>
+                        </div>
+
+                        <div class="sb-top-box"> 
+                            <h4>Socialist Workers Party</h4>
+                            <h6>Partido Socialista de los Trabajadores</h6>  
+                        </div>
+                        <div id="socialistWorkersParty-candidates">
+                            <div class="table-titles">
+                                <div class="title">
+                                    <p class="title-big">OFFICE TITLE</p>
+                                    <p class="title-small">TITULO OFICIAL</p>
+                                </div>
+                                <div class="title">
+                                    <p class="title-letter">A</p>
+                                    <p class="title-party">Socialist Workers Party</p>
+                                    <p class="title-party-espanol">Partido Socialista de los Trabajadores</p>
+                                </div>
+                                <div class="title">
+                                    <p class="title-letter">B</p>
+                                    <p class="title-party">Socialist Workers Party</p>
+                                    <p class="title-party-espanol">Partido Socialista de los Trabajadores</p>
+                                </div>
+                                <div class="title">
+                                    <p class="title-party-pc">PERSONAL CHOICE</p>
+                                    <p class="title-party-espanol">SELECCION PERSONAL</p>
+                                </div>
+                            </div>
+            
+            
+                            <div class="state-senator row">
+                                <div class="office-title">
+                                    <div class="ot-english">
+                                        <p>US President</p>
+                                        <p>Vote for One</p>
+                                    </div>
+                                    <div class="ot-espanol">
+                                        <p>Presidente</p>
+                                        <p>Vota por Uno</p>
+                                    </div>
+                                </div>
+                                <div class="a">
+                                    <div class="a-row-1">
+                                        <div class="org">
+                                            <p>Socialist Workers Party</p> 
+                                        </div>
+                                        <div class="first-name">
+                                            <a href="Candidates/fruit.html">Rachele</a>
+                                        </div>
+                                        <div class="number-a-and-circle"> 
+                                            <p>1A</p>
+                                            <p>0</p>
+                                        </div>   
+                                    </div>
+                                    <div class="a-row-2">
+                                        <div class="last-name push-down-last-name">
+                                            <a href="Candidates/fruit.html">Fruit</a>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                                <div class="b"></div>
+                                <div class="personal-choice">
+                                    <div class='pc-col-1'>
+                                        <p class="pc-line-1">Personal Choice</p>
+                                        <p class="pc-line-2">Seleccion Personal</p>
+                                    </div>
+                                    <div class="pc-col-2">0</div>
+                                </div>
+                            </div>
+
+
+                            <div class="sb-top-box"> 
+                                <h4>Socialist Equality</h4>
+                                <h6>Igualdad Socialista</h6>  
+                            </div>
+                            <div id="socialistEquality-candidates">
+                                <div class="table-titles">
+                                    <div class="title">
+                                        <p class="title-big">OFFICE TITLE</p>
+                                        <p class="title-small">TITULO OFICIAL</p>
+                                    </div>
+                                    <div class="title">
+                                        <p class="title-letter">A</p>
+                                        <p class="title-party">Socialist Equality</p>
+                                        <p class="title-party-espanol">Igualdad Socialista</p>
+                                    </div>
+                                    <div class="title">
+                                        <p class="title-letter">B</p>
+                                        <p class="title-party">Socialist Equality</p>
+                                        <p class="title-party-espanol">Igualdad Socialista</p>
+                                    </div>
+                                    <div class="title">
+                                        <p class="title-party-pc">PERSONAL CHOICE</p>
+                                        <p class="title-party-espanol">SELECCION PERSONAL</p>
+                                    </div>
+                                </div>
+                
+                
+                                <div class="state-senator row">
+                                    <div class="office-title">
+                                        <div class="ot-english">
+                                            <p>US President</p>
+                                            <p>Vote for One</p>
+                                        </div>
+                                        <div class="ot-espanol">
+                                            <p>Presidente</p>
+                                            <p>Vota por Uno</p>
+                                        </div>
+                                    </div>
+                                    <div class="a">
+                                        <div class="a-row-1">
+                                            <div class="org">
+                                                <p>Socialist Equality</p> 
+                                            </div>
+                                            <div class="first-name">
+                                                <a href="Candidates/kishore.html">Joseph</a>
+                                            </div>
+                                            <div class="number-a-and-circle"> 
+                                                <p>1A</p>
+                                                <p>0</p>
+                                            </div>   
+                                        </div>
+                                        <div class="a-row-2">
+                                            <div class="last-name push-down-last-name">
+                                                <a href="Candidates/kishore.html">Kishore</a>
+                                            </div>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="b"></div>
+                                    <div class="personal-choice">
+                                        <div class='pc-col-1'>
+                                            <p class="pc-line-1">Personal Choice</p>
+                                            <p class="pc-line-2">Seleccion Personal</p>
+                                        </div>
+                                        <div class="pc-col-2">0</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="sb-top-box"> 
+                                    <h4>Libertarian Party</h4>
+                                    <h6>Partido Libertario</h6>  
+                                </div>
+                                <div id="libertarian-candidates">
+                                    <div class="table-titles">
+                                        <div class="title">
+                                            <p class="title-big">OFFICE TITLE</p>
+                                            <p class="title-small">TITULO OFICIAL</p>
+                                        </div>
+                                        <div class="title">
+                                            <p class="title-letter">A</p>
+                                            <p class="title-party">Libertarian Party</p>
+                                            <p class="title-party-espanol">Partido Libertario</p>
+                                        </div>
+                                        <div class="title">
+                                            <p class="title-letter">B</p>
+                                            <p class="title-party">Libertarian Party</p>
+                                            <p class="title-party-espanol">Partido Libertario</p>
+                                        </div>
+                                        <div class="title">
+                                            <p class="title-party-pc">PERSONAL CHOICE</p>
+                                            <p class="title-party-espanol">SELECCION PERSONAL</p>
+                                        </div>
+                                    </div>
+                    
+                    
+                                    <div class="state-senator row">
+                                        <div class="office-title">
+                                            <div class="ot-english">
+                                                <p>US President</p>
+                                                <p>Vote for One</p>
+                                            </div>
+                                            <div class="ot-espanol">
+                                                <p>Presidente</p>
+                                                <p>Vota por Uno</p>
+                                            </div>
+                                        </div>
+                                        <div class="a">
+                                            <div class="a-row-1">
+                                                <div class="org">
+                                                    <p>Libertarian</p> 
+                                                </div>
+                                                <div class="first-name">
+                                                    <a href="Candidates/oliver.html">Chase</a>
+                                                </div>
+                                                <div class="number-a-and-circle"> 
+                                                    <p>1A</p>
+                                                    <p>0</p>
+                                                </div>   
+                                            </div>
+                                            <div class="a-row-2">
+                                                <div class="last-name push-down-last-name">
+                                                    <a href="Candidates/oliver.html">Oliver</a>
+                                                </div>
+                                            </div>
+                        
+                                        </div>
+                                        <div class="b"></div>
+                                        <div class="personal-choice">
+                                            <div class='pc-col-1'>
+                                                <p class="pc-line-1">Personal Choice</p>
+                                                <p class="pc-line-2">Seleccion Personal</p>
+                                            </div>
+                                            <div class="pc-col-2">0</div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="sb-top-box"> 
+                                        <h4>Green Party</h4>
+                                        <h6>Partido Verde</h6>  
+                                    </div>
+                                    <div id="green-candidates">
+                                        <div class="table-titles">
+                                            <div class="title">
+                                                <p class="title-big">OFFICE TITLE</p>
+                                                <p class="title-small">TITULO OFICIAL</p>
+                                            </div>
+                                            <div class="title">
+                                                <p class="title-letter">A</p>
+                                                <p class="title-party">Green Party</p>
+                                                <p class="title-party-espanol">Partido Verde</p>
+                                            </div>
+                                            <div class="title">
+                                                <p class="title-letter">B</p>
+                                                <p class="title-party">Green Party</p>
+                                                <p class="title-party-espanol">Partido Verde</p>
+                                            </div>
+                                            <div class="title">
+                                                <p class="title-party-pc">PERSONAL CHOICE</p>
+                                                <p class="title-party-espanol">SELECCION PERSONAL</p>
+                                            </div>
+                                        </div>
+                        
+                        
+                                        <div class="state-senator row">
+                                            <div class="office-title">
+                                                <div class="ot-english">
+                                                    <p>US President</p>
+                                                    <p>Vote for One</p>
+                                                </div>
+                                                <div class="ot-espanol">
+                                                    <p>Presidente</p>
+                                                    <p>Vota por Uno</p>
+                                                </div>
+                                            </div>
+                                            <div class="a">
+                                                <div class="a-row-1">
+                                                    <div class="org">
+                                                        <p>Green Party</p> 
+                                                    </div>
+                                                    <div class="first-name">
+                                                        <a href="Candidates/stein.html">Jill</a>
+                                                    </div>
+                                                    <div class="number-a-and-circle"> 
+                                                        <p>1A</p>
+                                                        <p>0</p>
+                                                    </div>   
+                                                </div>
+                                                <div class="a-row-2">
+                                                    <div class="last-name push-down-last-name">
+                                                        <a href="Candidates/stein.html">Stein</a>
+                                                    </div>
+                                                </div>
+                            
+                                            </div>
+                                            <div class="b"></div>
+                                            <div class="personal-choice">
+                                                <div class='pc-col-1'>
+                                                    <p class="pc-line-1">Personal Choice</p>
+                                                    <p class="pc-line-2">Seleccion Personal</p>
+                                                </div>
+                                                <div class="pc-col-2">0</div>
+                                            </div>
+                                        </div>
+        
+
+                                        <div class="sb-top-box"> 
+                                            <h4>US Constitution Party</h4>
+                                            <h6>Partido de la Constitución de EE. UU.</h6>  
+                                        </div>
+                                        <div id="usConstitutionParty-candidates">
+                                            <div class="table-titles">
+                                                <div class="title">
+                                                    <p class="title-big">OFFICE TITLE</p>
+                                                    <p class="title-small">TITULO OFICIAL</p>
+                                                </div>
+                                                <div class="title">
+                                                    <p class="title-letter">A</p>
+                                                    <p class="title-party">US Constitution Party</p>
+                                                    <p class="title-party-espanol">Partido de la Constitución de EE. UU.</p>
+                                                </div>
+                                                <div class="title">
+                                                    <p class="title-letter">B</p>
+                                                    <p class="title-party">US Constitution Party</p>
+                                                    <p class="title-party-espanol">Partido de la Constitución de EE. UU.</p>
+                                                </div>
+                                                <div class="title">
+                                                    <p class="title-party-pc">PERSONAL CHOICE</p>
+                                                    <p class="title-party-espanol">SELECCION PERSONAL</p>
+                                                </div>
+                                            </div>
+                            
+                            
+                                            <div class="state-senator row">
+                                                <div class="office-title">
+                                                    <div class="ot-english">
+                                                        <p>US President</p>
+                                                        <p>Vote for One</p>
+                                                    </div>
+                                                    <div class="ot-espanol">
+                                                        <p>Presidente</p>
+                                                        <p>Vota por Uno</p>
+                                                    </div>
+                                                </div>
+                                                <div class="a">
+                                                    <div class="a-row-1">
+                                                        <div class="org">
+                                                            <p>U.S. Constitution Party</p> 
+                                                        </div>
+                                                        <div class="first-name">
+                                                            <a href="Candidates/terry.html">Randall A.</a>
+                                                        </div>
+                                                        <div class="number-a-and-circle"> 
+                                                            <p>1A</p>
+                                                            <p>0</p>
+                                                        </div>   
+                                                    </div>
+                                                    <div class="a-row-2">
+                                                        <div class="last-name push-down-last-name">
+                                                            <a href="Candidates/terry.html">Terry</a>
+                                                        </div>
+                                                    </div>
+                                
+                                                </div>
+                                                <div class="b"></div>
+                                                <div class="personal-choice">
+                                                    <div class='pc-col-1'>
+                                                        <p class="pc-line-1">Personal Choice</p>
+                                                        <p class="pc-line-2">Seleccion Personal</p>
+                                                    </div>
+                                                    <div class="pc-col-2">0</div>
+                                                </div>
+                                            </div>
+                        
+                    </div>
+            <div class="end-text">Form 14 - Vineland W6 D-4</div>
+        </div>
+    </div>
+</body>
+</html>

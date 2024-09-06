@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
+<script src="../../../app.js" async></script>    
+<title>Inform The Vote</title>
+</head>
+<body>
+    <div class="menu-wrap">
+        <input type="checkbox" autocomplete='off' class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul class="links">
+                        <li class="link"><a id="home" href="../../index.html">Home</a></li>
+                        <div class="accordion">
+                            <input type="checkbox" name="accordion" id="first">
+                            <label for="first">Elections</label>
+                            <div class="nested-burger-links">
+                                <li class="link"><a href="../cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a></li>
+                                <li class="link"><a href="../cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a></li>
+                                <li class="link"><a href="../cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
+                                <li class="link"><a href="../cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li>
+                                <li class="link"><a href="../cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a></li>
+                                <li class="link"><a href="../cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/lawrence_school_board_2024.html">Lawrence Township School Board</a></li>
+                                <li class="link"><a href="../cc-elections/vsb_2024.html">Vineland School Board</a></li>
+                                <li class="link"><a href="../cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a></li>
+                                <li class="link"><a href="../cc-elections/us_senate_2024.html">US Senate, NJ</a></li>
+                                <li class="link"><a href="../cc-elections/cc_vice_president_2024.html">US Vice President</a></li>
+                                <li class="link"><a href="../cc-elections/us_president_2024.html">US President</a></li>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <input type="checkbox" name="accordion" id="second">
+                            <label for="second">Issues</label>
+                            <div class="nested-burger-links">
+                                <li class="link"><a href="../cc-elections/cc_election_issues.html">Cumberland County Issues</a></li>
+                                <li class="link"><a href="../cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a></li>
+                                <li class="link"><a href="../cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_senate_issues.html">US Senate Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_vice_president_issues.html">Vice President Issues</a></li>
+                                <li class="link"><a href="../cc-elections/us_president_issues.html">President Issues</a></li>
+                            </div>
+                        </div>
+                        <li class="link"><a href="../get-involved.html">Get Involved</a></li>
+                        <li class="link"><a href="../events.html">Events</a></li>
+                        <li class="link"><a href="../resources-archives-and-rabbit-holes.html">Extra Info</a></li>
+                        <li class="link"><a href="../about.html">About</a></li>
+                        <li class="link"><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+          <h4 class="quick-sum">quick summary</h4>
+          <h6 class="page-title">US Senate NJ</h6>
+          <p>
+            This year 1 seat is open for the US Senate in NJ. The incumbent, <a href="Candidates/menendez.html">Bob Menendez</a> has dropped out after a court battle involving 
+            corruption. The Republicans have nominated <a href="Candidates/bashaw.html">Curtis Bashaw</a> in a somewhat unexpected victory over Trump endorsed candidate 
+            Serrano-Glassner. The Democrats nominated current Congressman <a href="Candidates/kim.html">Andy Kim</a>. This looks like it will be quite an interesting race, as 
+            Andy Kim appears to be a somewhat moderate Democrat, while Bashaw is backed by our local Republicans who seem to have had a winning strategy over the past 
+            several years. We are also aware of many independent and 3rd party candidates who may shake things up, including 
+            Patricia Mooneyham, an independent whose message is about being a candidate of the working class rather than "a career politicain" (Kim) or someone 
+            who was "born with a silver spoon in their mouth" (Bashaw) (quotes taken from a conversation at Deerfield Day). 
+            Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+          </p>
+        </div>
+    </dialog>
+
+    <!-- <img src="../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn"> -->
+    <div id="sample-ballot">
+
+        <h4 class="sub-heading-ballot">What does a US Senator do?</h4>
+        <div class="job-description can-sec">
+
+            U.S. Senators play a critical role in the federal government, with duties that are distinct from those of Representatives in the House. Here's an overview of their responsibilities:
+            <br>
+            <br>
+
+            <details>
+                <summary style="cursor:pointer; color:blue; text-decoration:underline;">Learn More</summary>
+                Legislative Responsibilities: Senators participate in drafting, debating, and voting on federal legislation. They have the power to introduce bills and resolutions, 
+                and they play a significant role in shaping national policies across various areas, including the economy, healthcare, defense, and education.
+                <br>
+                <br>
+                Representation of States: Each U.S. Senator represents an entire state, unlike Representatives who serve specific districts. This means they must consider the interests 
+                of all their state's residents when making decisions and casting votes. Each state has two Senators, regardless of its population size, which balances representation 
+                between larger and smaller states.
+                <br>
+                <br>
+                Committee Work: Senators serve on various Senate committees, where much of the detailed work of the Senate is conducted. Committees review proposed legislation, 
+                hold hearings to gather information, and make recommendations on bills that should be considered by the full Senate. Key committees include those focused on finance, 
+                foreign relations, the judiciary, and defense.
+                <br>
+                <br>
+                Advice and Consent: One of the Senate's unique powers is to provide "advice and consent" on certain presidential actions. This includes confirming or rejecting 
+                presidential appointments to the federal judiciary, cabinet positions, and other key executive branch roles. The Senate also ratifies treaties with foreign nations, 
+                which requires a two-thirds vote.
+                <br>
+                <br>
+                Impeachment Trials: The Senate is responsible for conducting impeachment trials for federal officials, including the President, who has been impeached by the House of 
+                Representatives. Senators serve as jurors in these trials and determine whether the official should be removed from office.
+                <br>
+                <br>
+                Budget and Appropriations: While both the House and Senate are involved in the budget process, the Senate plays a crucial role in reviewing and amending the federal 
+                budget, as well as in appropriating funds for government programs and services. Senators help decide how federal funds are allocated and ensure that the budget reflects 
+                the priorities of their constituents.
+                <br>
+                <br>
+                National and International Influence: Senators often have significant influence on both national and international issues due to the Senate's role in foreign policy, 
+                defense, and high-profile legislative matters. They frequently work on complex and long-term policy challenges that require bipartisan cooperation.
+                <br>
+                <br>
+                Constituent Services: Like Representatives, Senators provide various services to their constituents, including assistance with federal agencies, responding to concerns 
+                and inquiries, and helping navigate issues related to federal programs.
+                <br>
+                <br>
+                Oversight and Investigations: The Senate has the power to conduct investigations into issues of national importance, often through its committees. This oversight 
+                function helps ensure that federal agencies and officials are operating within the law and serving the public interest.
+            </details>
+        </div>
+
+        <button class="quick-summary-reopen">quick election summary</button>
+
+        <div class="sb-top-box"> 
+            <h3>ELECTION DATE: November 7th, 2023</h3>
+            <h2>SAMPLE BALLOT</h2>
+            <p class="instructions">( Click or tap on candidate name to learn more about them )</p>
+            <h3>US SENATE</h3>
+            <h4>DEMOCRATIC</h4>
+            <h6>DEMOCRATA</h6>  
+        </div>
+        
+        <div id="democratic-candidates">
+            <div class="table-titles">
+                <div class="title">
+                    <p class="title-big">OFFICE TITLE</p>
+                    <p class="title-small">TITULO OFICIAL</p>
+                </div>
+                <div class="title">
+                    <p class="title-letter">A</p>
+                    <p class="title-party">Democratic</p>
+                    <p class="title-party-espanol">Democrata</p>
+                </div>
+                <div class="title">
+                    <p class="title-letter">B</p>
+                    <p class="title-party">Democratic</p>
+                    <p class="title-party-espanol">Democrata</p>
+                </div>
+                <div class="title">
+                    <p class="title-party-pc">PERSONAL CHOICE</p>
+                    <p class="title-party-espanol">SELECCION PERSONAL</p>
+                </div>
+            </div>
+
+
+            <div class="row state-senator">
+                <div class="office-title">
+                    <div class="ot-english">
+                        <p>US Senate</p>
+                        <p>Vote for One</p>
+                    </div>
+                    <div class="ot-espanol">
+                        <p>Senadora</p>
+                        <p>Vota por Uno</p>
+                    </div>
+                </div>
+                <div class="a">
+                    <div class="a-row-1">
+                        <div class="org">
+                            <p>Democrat</p> 
+                            
+                        </div>
+                        <div class="first-name">
+                            <a href="Candidates/kim.html">Andy</a>
+                        </div>
+                        <div class="number-a-and-circle"> 
+                            <p>1A</p>
+                            <p>0</p>
+                        </div>   
+                    </div>
+                    <div class="a-row-2">
+                        <div class="last-name  push-down-last-name">
+                            <a href="Candidates/kim.html">Kim</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="b"></div>
+                <div class="personal-choice">
+                    <div class='pc-col-1'>
+                        <p class="pc-line-1">Personal Choice</p>
+                        <p class="pc-line-2">Seleccion Personal</p>
+                    </div>
+                    <div class="pc-col-2">0</div>
+                </div>
+            </div>
+
+            <div class="sb-top-box"> 
+                <h4>REPUBLICAN</h4>
+                <h6>REPUBLICANO</h6>  
+            </div>
+            <div id="republican-candidates">
+                <div class="table-titles">
+                    <div class="title">
+                        <p class="title-big">OFFICE TITLE</p>
+                        <p class="title-small">TITULO OFICIAL</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-letter">A</p>
+                        <p class="title-party">Republican</p>
+                        <p class="title-party-espanol">Republicano</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-letter">B</p>
+                        <p class="title-party">Republican</p>
+                        <p class="title-party-espanol">Republicano</p>
+                    </div>
+                    <div class="title">
+                        <p class="title-party-pc">PERSONAL CHOICE</p>
+                        <p class="title-party-espanol">SELECCION PERSONAL</p>
+                    </div>
+                </div>
+
+
+                <div class="state-senator row">
+                    <div class="office-title">
+                        <div class="ot-english">
+                            <p>US Senator</p>
+                            <p>Vote for One</p>
+                        </div>
+                        <div class="ot-espanol">
+                            <p>Senadora</p>
+                            <p>Vota por Uno</p>
+                        </div>
+                    </div>
+                    <div class="a">
+                        <div class="a-row-1">
+                            <div class="org">
+                                <p>Republican</p> 
+                            </div>
+                            <div class="first-name">
+                                <a href="Candidates/bashaw.html">Curtis</a>
+                            </div>
+                            <div class="number-a-and-circle"> 
+                                <p>1A</p>
+                                <p>0</p>
+                            </div>   
+                        </div>
+                        <div class="a-row-2">
+                            <div class="last-name push-down-last-name">
+                                <a href="Candidates/bashaw.html">Bashaw</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b"></div>
+                    <div class="personal-choice">
+                        <div class='pc-col-1'>
+                            <p class="pc-line-1">Personal Choice</p>
+                            <p class="pc-line-2">Seleccion Personal</p>
+                        </div>
+                        <div class="pc-col-2">0</div>
+                    </div>
+                </div>   
+            </div>
+
+                <div class="sb-top-box"> 
+                    <h4>3rd Parties</h4>
+                    <h6>Terceros</h6>  
+                </div>
+                <div id="libertarian-candidates">
+                    <div class="table-titles">
+                        <div class="title">
+                            <p class="title-big">OFFICE TITLE</p>
+                            <p class="title-small">TITULO OFICIAL</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-letter">A</p>
+                            <p class="title-party">3rd Parties</p>
+                            <p class="title-party-espanol">Terceros</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-letter">B</p>
+                            <p class="title-party">3rd Parties</p>
+                            <p class="title-party-espanol">Terceros</p>
+                        </div>
+                        <div class="title">
+                            <p class="title-party-pc">PERSONAL CHOICE</p>
+                            <p class="title-party-espanol">SELECCION PERSONAL</p>
+                        </div>
+                    </div>
+                
+
+                
+                    <div class="state-senator row">
+                        <div class="office-title">
+                            <div class="ot-english">
+                                <p>US Senator</p>
+                                <p>Vote for One</p>
+                            </div>
+                            <div class="ot-espanol">
+                                <p>Senadora</p>
+                                <p>Vota por Uno</p>
+                            </div>
+                        </div>
+                        <div class="a">
+                            <div class="a-row-1">
+                                <div class="org">
+                                    <p>Libertarian Party</p> 
+                                </div>
+                                <div class="first-name">
+                                    <a href="Candidates/kaplan.html">Kenneth R.</a>
+                                </div>
+                                <div class="number-a-and-circle"> 
+                                    <p>1A</p>
+                                    <p>0</p>
+                                </div>   
+                            </div>
+                            <div class="a-row-2">
+                                <div class="last-name push-down-last-name">
+                                    <a href="Candidates/kaplan.html">Kaplan</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="b"></div>
+                        <div class="personal-choice">
+                            <div class='pc-col-1'>
+                                <p class="pc-line-1">Personal Choice</p>
+                                <p class="pc-line-2">Seleccion Personal</p>
+                            </div>
+                            <div class="pc-col-2">0</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="voteBetter-candidates">
+                    <div class="state-senator row">
+                        <div class="office-title">
+                            <div class="ot-english">
+                                <p>US Senator</p>
+                                <p>Vote for One</p>
+                            </div>
+                            <div class="ot-espanol">
+                                <p>Senadora</p>
+                                <p>Vota por Uno</p>
+                            </div>
+                        </div>
+                        <div class="a">
+                            <div class="a-row-1">
+                                <div class="org">
+                                    <p>Vote Better</p> 
+                                </div>
+                                <div class="first-name">
+                                    <a href="Candidates/mooneyham.html">Patricia</a>
+                                </div>
+                                <div class="number-a-and-circle"> 
+                                    <p>1A</p>
+                                    <p>0</p>
+                                </div>   
+                            </div>
+                            <div class="a-row-2">
+                                <div class="last-name push-down-last-name">
+                                    <a href="Candidates/mooneyham.html">Mooneyham</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="b"></div>
+                        <div class="personal-choice">
+                            <div class='pc-col-1'>
+                                <p class="pc-line-1">Personal Choice</p>
+                                <p class="pc-line-2">Seleccion Personal</p>
+                            </div>
+                            <div class="pc-col-2">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="green-candidates">
+                    <div class="state-senator row">
+                        <div class="office-title">
+                            <div class="ot-english">
+                                <p>US Senator</p>
+                                <p>Vote for One</p>
+                            </div>
+                            <div class="ot-espanol">
+                                <p>Senadora</p>
+                                <p>Vota por Uno</p>
+                            </div>
+                        </div>
+                        <div class="a">
+                            <div class="a-row-1">
+                                <div class="org">
+                                    <p>Green Party</p> 
+                                </div>
+                                <div class="first-name" id="green-candidates">
+                                    <a href="Candidates/khalil.html">Christina</a>
+                                </div>
+                                <div class="number-a-and-circle"> 
+                                    <p>1A</p>
+                                    <p>0</p>
+                                </div>   
+                            </div>
+                            <div class="a-row-2">
+                                <div class="last-name push-down-last-name" id="green-candidates">
+                                    <a href="Candidates/khalil.html">Khalil</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="b"></div>
+                        <div class="personal-choice">
+                            <div class='pc-col-1'>
+                                <p class="pc-line-1">Personal Choice</p>
+                                <p class="pc-line-2">Seleccion Personal</p>
+                            </div>
+                            <div class="pc-col-2">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="socialistWorkersParty-candidates">
+                    <div class="state-senator row">
+                        <div class="office-title">
+                            <div class="ot-english">
+                                <p>US Senator</p>
+                                <p>Vote for One</p>
+                            </div>
+                            <div class="ot-espanol">
+                                <p>Senadora</p>
+                                <p>Vota por Uno</p>
+                            </div>
+                        </div>
+                        <div class="a">
+                            <div class="a-row-1">
+                                <div class="org">
+                                    <p>Socialist Workers Party</p> 
+                                </div>
+                                <div class="first-name">
+                                    <a href="Candidates/kuniansky.html">Joanne</a>
+                                </div>
+                                <div class="number-a-and-circle"> 
+                                    <p>1A</p>
+                                    <p>0</p>
+                                </div>   
+                            </div>
+                            <div class="a-row-2">
+                                <div class="last-name push-down-last-name">
+                                    <a href="Candidates/kuniansky.html">Kuniansky</a>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <div class="b"></div>
+                        <div class="personal-choice">
+                            <div class='pc-col-1'>
+                                <p class="pc-line-1">Personal Choice</p>
+                                <p class="pc-line-2">Seleccion Personal</p>
+                            </div>
+                            <div class="pc-col-2">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                    
+                    
+            </div>
+            
+            <div class="end-text">Form 14 - Vineland W6 D-4</div>
+        </div>
+    </div>
+</body>
+</html>

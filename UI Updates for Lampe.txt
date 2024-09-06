@@ -1,0 +1,67 @@
+1. You may want to consider making access to the different site sections one of the first 
+things that appears on the site. In other words, the purpose of the site is to quickly find 
+info on the elections, but when I open it, I see the logo, eastpoint lighthouse, and a brief
+description of the site. I then either have to notice the burger menu or scroll past the 
+mission statement to dig into the info. Perhaps making it abundantly clear how to immediately
+access the sought after information would be appropriate. Like maybe:
+ 
+Inform the Vote Logo
+Small/Very small description of the site
+
+Big Site Sections section
+  a. County Commissioner Primary
+  b. Repub US Senate Primary
+  c. Etc.
+
+Mission Statement 
+
+1. Refocusing of content
+   A. What is the position for which you are running?
+      1. Technical/legal definition
+      2. How you personally define it
+   B. What about your experience and skill-set directly applies to the position for which
+you are running?
+   C. What are the top issues in relation to the position which you seek?
+   D. What is your take on those issues and how does your stance differentiate you from your
+opponents?
+   E. What other information can you volunteer which could help the average voter differentiate
+you from your opponents so that they can make a clear choice on election day?
+
+1. Centering of names on ballot pages
+
+1. Description of position on ballot pages
+
+1. Summary/TL;DR pop-ups on each candidate's page
+   A. Or perhaps over-top of the Eastpoint Lighthouse pic
+
+2. Summary/TL;DR pop-ups on each primary ballot page
+   A. Or perhaps over-top of the Eastpoint Lighthouse pic
+
+***Basically, I'm anticipating most people don't want to read the whole site,
+so there should be summaries. I think maybe even having videos of me reading the summaries
+could make it even more palatable... Lots of people don't like to read anymore.
+
+3. Section off the burger menus
+   a. Maybe add logos or other visual indicator to help differentiate a section. Perhaps
+adding the Elephant to republican sections and the Donkey to democrat sections could help
+differentiate republican and democrat primaries. 
+   b. Similarly, you could add something to differentiate the House of Representatives
+and Senate, but I'm having trouble finding something that clearly differentiates them at the
+moment.
+
+4. Update sections on candidate's pages to make them:
+   a. Visually more clear as sections
+   b. More modern
+
+5. Look for more modern/flashy ways to present the data, such as:
+   a. Embedding the YouTube videos instead of having links to them
+   b. Use icons for candidate social media pages instead of blue underlined links
+   c. Change traditional html elements like unordered lists to something more modern,
+      perhaps they can be styled or have some other modern list tags instead of plain text
+      style tags
+
+6. Email subscription service
+
+logo proportion -> height to width .3875
+300
+116.25
