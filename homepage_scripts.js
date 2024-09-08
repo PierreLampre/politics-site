@@ -51,6 +51,11 @@ let actualVideo = document.getElementById('actualVideo');
 let close1 = document.getElementById('close1');
 let close2 = document.getElementById('close2');
 
+console.log(Modal1);
+console.log(Modal2);
+console.log(videoSummary);
+console.log(actualVideo);
+
 close1.onclick = () => {
     Modal1.close();
     Modal1.style.display = 'none';
