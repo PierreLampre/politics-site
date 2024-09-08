@@ -51,11 +51,6 @@ let actualVideo = document.getElementById('actualVideo');
 let close1 = document.getElementById('close1');
 let close2 = document.getElementById('close2');
 
-console.log(Modal1);
-console.log(Modal2);
-console.log(videoSummary);
-console.log(actualVideo);
-
 close1.onclick = () => {
     Modal1.close();
     Modal1.style.display = 'none';
@@ -67,13 +62,11 @@ close2.onclick = () => {
 }
 
 videoSummary.onclick = () => {
-    console.log("video summary click recognized");
     Modal1.style.display = 'grid';
     Modal1.showModal();
 }
 
 actualVideo.onclick = () => {
-    console.log("actual video click recognized");
     Modal2.style.display = 'grid';
     Modal2.showModal();
 }
