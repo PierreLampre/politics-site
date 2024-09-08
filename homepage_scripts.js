@@ -62,13 +62,13 @@ close2.onclick = () => {
 }
 
 videoSummary.onclick = () => {
-
+    console.log("video summary click recognized");
     Modal1.style.display = 'grid';
     Modal1.showModal();
 }
 
 actualVideo.onclick = () => {
-
+    console.log("actual video click recognized");
     Modal2.style.display = 'grid';
     Modal2.showModal();
 }
