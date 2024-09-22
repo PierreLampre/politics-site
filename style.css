@@ -1087,6 +1087,10 @@ a.long-name {
     grid-column-end: 5;
 }
 
+.millville-no-left-border {
+    border-left: none;
+}
+
 .pc-col-1 {
     padding: 5px 0px 0px 5px;
 }
@@ -1694,7 +1698,8 @@ a.long-name {
     }
 
     .table-titles .title:nth-of-type(4), .personal-choice,
-    .table-titles .title:nth-of-type(3), .b, .personal-choice-millville {
+    .table-titles .title:nth-of-type(3), .b, .personal-choice-millville,
+    .millville-no-left-border {
         display: none;
     }
 
