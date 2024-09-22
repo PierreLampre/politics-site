@@ -883,7 +883,8 @@ label::before {
     margin-bottom: 3px;
 }
 
-.office-title, .a, .b, .personal-choice {
+.office-title, .a, .b, .personal-choice,
+.personal-choice-millville {
     border: 3px solid black;
     display: grid;
 }
@@ -940,7 +941,7 @@ label::before {
 
 .a {
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 40% 40% 20%;
 }
 
 .a-row-1 {
@@ -952,6 +953,17 @@ label::before {
 .a-row-2 {
     grid-row-start: 2;
     padding-bottom: 4px;
+}
+
+.a-row-3 {
+    grid-row-start: 3;
+    padding: 4px 0 4px 0;
+}
+
+.slogan {
+    display: grid;
+    justify-items: center;
+    font-size: 11px;
 }
 
 .org {
@@ -1068,6 +1080,11 @@ a.long-name {
 .personal-choice {
     display: flex;
     justify-content: space-between;
+}
+
+.personal-choice-millville {
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
 .pc-col-1 {
@@ -1677,7 +1694,7 @@ a.long-name {
     }
 
     .table-titles .title:nth-of-type(4), .personal-choice,
-    .table-titles .title:nth-of-type(3), .b {
+    .table-titles .title:nth-of-type(3), .b, .personal-choice-millville {
         display: none;
     }
 
@@ -1978,5 +1995,9 @@ a.long-name {
     i {
         font-size: 50px; /* Adjust the size as needed */
         margin-right: 35px; /* Adjust the spacing as needed */
+    }
+
+    .slogan {
+        font-size: 9px;
     }
   }
