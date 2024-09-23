@@ -845,6 +845,10 @@ label::before {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.only-three {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
 .title {
     border: 3px solid black;
     display: grid;
