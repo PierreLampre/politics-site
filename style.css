@@ -845,8 +845,8 @@ label::before {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.only-three {
-    grid-template-columns: repeat(3, 1fr) !important;
+#only-three {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .title {
@@ -1697,7 +1697,7 @@ a.long-name {
 
 @media screen and (max-width: 1215px) {
 
-    .table-titles, .row {
+    .table-titles, .row, #only-three {
         grid-template-columns: repeat(2, 1fr);
     }
 
