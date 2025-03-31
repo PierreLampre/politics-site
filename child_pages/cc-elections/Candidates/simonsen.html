@@ -7,7 +7,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script src="../../../app.js" async></script>
         <title>Inform The Vote</title>
+        <meta property="og:title" content="Inform The Vote NJ - Erik K. Simonsen">
+        <meta property="og:description" content="Election information about Erik K. Simonsen">
+        <meta property="og:image" content="https://i.postimg.cc/hGHsKm2M/informthevotepreviewimg.png">
+        <meta property="og:url" content="http://www.informthevotenj.com/child_pages/cc-elections/candidates/simonsen">
     </head>
     <body>
         <div class="menu-wrap">
@@ -19,52 +24,150 @@
                 <div>
                     <div>
                         <ul class="links">
-                            <li class="link"><a href="../../../index.html">Home</a></li>
-                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_candidates.html">Cumberland County Elections</a></li>
-                            <li class="link"><a href="../../../child_pages/cc-elections/cc_election_issues.html">County Issues</a></li>
-                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_candidates.html">Vineland School Board Elections</a></li>
-                            <li class="link"><a href="../../../child_pages/vsb-elections/vsb_election_issues.html">School Board Issues</a></li>
-                            <li class="link"><a href="../../../child_pages/cc-elections/unanswered_questions.html">Unanswered Questions</a></li>
+
+                            <li class="link"><a id="home" href="https://www.informthevotenj.com/index.html">Home</a></li>
+                        
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="first">
+                                <label for="first">County And Municipal Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a></li>
+                                    <!-- <li class="link"><a href="../../../child_pages/cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/vineland_city_council_2024.html">Vineland City Council</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/vineland_mayor_2024.html">Vineland Mayor</a></li>                                 -->
+                                </div>
+                            </div>
+
+                            <!-- <div class="accordion">
+                                <input type="checkbox" name="accordion" id="second">
+                                <label for="second">School Board Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/lawrence_school_board_2024.html">Lawrence Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/vsb_2024.html">Vineland School Board</a></li>
+                                </div>
+                            </div> -->
+
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="third">
+                                <label for="third">Governor and State Assembly Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_1.html">State Assembly - 1st Legislative District</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_3.html">State Assembly - 3rd Legislative District</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/governor.html">Governor</a></li>
+                                    <!-- <li class="link"><a href="../../../child_pages/cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_senate_2024.html">US Senate, NJ</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/cc_vice_president_2024.html">US Vice President</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_president_2024.html">US President</a></li> -->
+                                </div>
+                            </div>
+
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="fourth">
+                                <label for="fourth">Issues</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/cc_election_issues.html">Cumberland County Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_1_issues.html">State Assembly - Legislative District 1 Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_3.html_issues">State Assembly - Legislative District 3 Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/governor_issues.html">Governor Issues</a></li>
+                                    <!-- <li class="link"><a href="../../../child_pages/cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/millville_city_issues.html">Millville City Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_senate_issues.html">US Senate Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_vice_president_issues.html">Vice President Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/us_president_issues.html">President Issues</a></li> -->
+                                </div>
+                            </div>
+
                             <li class="link"><a href="../../../child_pages/get-involved.html">Get Involved</a></li>
                             <li class="link"><a href="../../../child_pages/events.html">Events</a></li>
-                            <li class="link"><a href="../../../child_pages/candidates-forum-op-ed.html">Candidates Forum Op-Ed</a></li>
+                            <li class="link"><a href="../../../child_pages/resources-archives-and-rabbit-holes.html">Extra Info</a></li>
                             <li class="link"><a href="../../../child_pages/about.html">About</a></li>
                             <li class="link"><a href="../../../child_pages/contact.html">Contact</a></li>
-                        </ul>
+                    </ul>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <img src="../../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn">
-<div class="container">
-    <div class="title-info">
-        <h2>ERIK SIMONSEN</h2>
-        <div class="running-for">
-            <div class="running-title">Running for: </div>
-            <div class="position">Cumberland County Commissioner</div>
-        </div>
-        <div class="incum-or-challenger">
-            <div class="incumbent active">Incumbent</div>
-            <div class="challenger inactive">Challenger</div> 
-        </div>
-    </div>
-    <div class="candidate-pic-box">
-        <img class="cover" src="../../../assets/candidates/simonsen.webp" class="candidate-pic">
-    </div>
-    <div class="candidate-agenda">
-        <h4 class="sub-heading">Website</h4>
-        <div class="website">
-            <a href="https://www.ccrrogop.org/newjersey-assembly" target="_blank" rel="noopener noreferrer" class="website-link">Cumberland County Republicans Site</a>
-            <a href="https://www.facebook.com/AsmSimo43" target="_blank" rel="noopener noreferrer" class="website-link">Facebook</a>
-            <a href="https://www.instagram.com/simotwelve01/?hl=en" target="_blank" rel="noopener noreferrer" class="website-link">Instagram</a>
-            <a href="https://twitter.com/eriksimonsene?lang=en" target="_blank" rel="noopener noreferrer" class="website-link">Twitter/X</a>
-            <a href="https://en.wikipedia.org/wiki/Erik_K._Simonsen" target="_blank" rel="noopener noreferrer" class="website-link">Wikipedia</a>
-        </div>
-        <h4 class="sub-heading">agenda</h4>
 
-            <div class="agenda-thesis">
-                Supports parents rights to make decisions about their children's health and wellness.<a href="https://twitter.com/TestaForNJ/status/1709190819075309773" target="_blank" rel="noopener noreferrer" class="website-link"> Twitter/X</a>
+        
+        <dialog id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">Erik K. Simonsen</h6>
+              <p>          
+
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+
+
+<div class="container">
+
+    
+
+     <div class="title-info">
+        <h2>Erik K. Simonsen</h2>
+         <div class="running-for">
+             <div class="running-title">Running for: </div>
+             <div class="position">State Assembly - Legislative District 1</div>
+         </div>
+         <div class="incum-or-challenger">
+             <div class="incumbent inactive">Incumbent</div>
+             <div class="challenger active">Challenger</div> 
+         </div>
+     </div>
+     <div class="candidate-pic-box">
+         <img class="cover" src="../../../assets/candidates/simonsen.jpg" class="candidate-pic">
+         <div class="candidate-pic-box-content">
+             <h4 class="sub-heading">Websites</h4>
+             <div class="website">
+                 
+                <a href="https://www.ccrrogop.org/newjersey-assembly" target="_blank" rel="noopener noreferrer" class="website-link">Cumberland County Republicans Site</a>
+                <a href="https://www.facebook.com/AsmSimo43" target="_blank" rel="noopener noreferrer" class="website-link">Facebook</a>
+                <a href="https://www.instagram.com/simotwelve01/?hl=en" target="_blank" rel="noopener noreferrer" class="website-link">Instagram</a>
+                <a href="https://twitter.com/eriksimonsene?lang=en" target="_blank" rel="noopener noreferrer" class="website-link">Twitter/X</a>
+                <a href="https://en.wikipedia.org/wiki/Erik_K._Simonsen" target="_blank" rel="noopener noreferrer" class="website-link">Wikipedia</a>
+             </div>
+
+             <button class="quick-summary-reopen">quick summary</button>
+
+             <div class="election-date">
+                 <p>This election is on June 10th, 2025</p>
+             </div>
+
+             <div class="animal-box">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+             </div>
+         </div>
+     </div>
+
+        
+            
+     <div class="candidate-agenda">
+
+            <h4 class="sub-heading">Agenda</h4>
+            <div class="experience can-sec">
+                <ul>
+                    Supports parents rights to make decisions about their children's health and wellness.<a href="https://twitter.com/TestaForNJ/status/1709190819075309773" target="_blank" rel="noopener noreferrer" class="website-link"> Twitter/X</a>
                 <br>
                 Supports the troops. Gleaned from <a href="https://www.facebook.com/NJRFTF/posts/pfbid08yQkHTkFzkSd7p6agCWAnGZxGmbsPmoh4Tx7VsKTULodwcrX9NDhmXLqHRVow366l" target="_blank" rel="noopener noreferrer" class="website-link"> Facebook</a> reposts.
                 <br>
@@ -79,9 +182,13 @@
                 Supports introducing more black history into schools. Gleaned from <a href="https://mosaic.nj.com/education/2023/09/are-you-learning-black-history-its-been-a-law-to-teach-it-in-new-jersey-for-21-years.html?fbclid=IwAR3QtFuyY4RKX-b7mMwG1REN6Va9kGvRW-ySVgS5ipYQvwJaAdrW6aJhrbM#:~:text=Assemblyman%20Antwan%20McClellan,traditional%20history%20lessons" target="_blank" rel="noopener noreferrer" class="website-link"> Facebook</a>
                 <br>
                 Advocates for small business. Posted on <a href="https://www.insidernj.com/press-release/nfib-new-jersey-endorses-pro-small-business-candidates-for-legislature/?fbclid=IwAR02oK2CIDIhZ_NoriGG7MWb27RjrDxUU-esxh_pvb2JwP24M_jCCpJ0_mo" target="_blank" rel="noopener noreferrer" class="website-link"> Facebook</a>
-            </div>
-            <h4 class="sub-heading">party messaging</h4>
-            <div class="agenda-per-party-site">
+            
+
+                </ul>
+
+                <br>
+                <br>
+
                 Opposes the executive overreach of Governor Murphy and the Democrats' increasingly radical 
                 agenda in Trenton.  It’s time for the 1st District to put decades of broken Democrat promises 
                 behind us, restore fiscal sanity and drain the Trenton Swamp!Reduce Taxes, Spending & Mounting Debt
@@ -94,27 +201,25 @@
                
                 Stand with Law Enforcement
             </div>
-            <h4 class="sub-heading">policy positions</h4>
-            <div class="policy-positions">
-                Inform the Vote could find no available public information explaining the details of this agenda.
-                Inform The Vote has reached out to this candidate through numerous means and have
-                yet to be in contact with them. Visit the  <a href="../../about.html">About page</a> for more information regarding our processes
+            
+            <h4 class="sub-heading">Background and Campaign Message</h4>
+            <div class="experience can-sec">
+                
             </div>
-            <h4 class="sub-heading">experience</h4>
-            <div class="experience">
-                NJ District 1 Assemblyman - Sworn in on January 14th 2020
+
+            <h4 class="sub-heading">Experience</h4>
+                <div class="experience can-sec">
+                    NJ District 1 Assemblyman - Sworn in on January 14th 2020
 
                 Serving on the following Committees: Community Development and Affairs/Education/State and Local Government
     
                 Mayor, Lower Township - 2016-2020; Former Ward 2 and ward 3 Councilman
     
                 Master’s Degree in Education Administration, University of Scranton; Bachelor’s degree, The College of New Jersey, Special Education Degree, Rutgers University
-            </div>
-            <h4 class="sub-heading">Candidates Forum Statements</h4>
-            <div class="experience">
-                Erik Simonsen did not attend the candidates forum.
-            </div>
+            
+                </div>
+   
     </div>
- </div>   
+</div>   
 </body>
 </html>
