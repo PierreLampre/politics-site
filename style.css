@@ -596,6 +596,18 @@ label::before {
     padding: 0 8px 8px 0;
 }
 
+.cta-banner2 {
+    background: var(--bg-color);
+    color: var(--itv-black);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .hp-banner-button {
     padding: 8px;
     cursor: pointer;
@@ -1896,7 +1908,7 @@ a.long-name {
         display: none;
     }
 
-    .cta-banner {
+    .cta-banner, .cta-banner2 {
         padding-top: 56px;
     }
 
