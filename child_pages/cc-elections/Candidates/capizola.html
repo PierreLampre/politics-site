@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - John P. Capizola">
         <meta property="og:description" content="Election information about John P. Capizola">
@@ -15,6 +15,11 @@
         <meta property="og:url" content="http://www.informthevotenj.com/child_pages/cc-elections/candidates/capizola">
     </head>
     <body>
+        <!--Steps to add gauge and dual modal functionality to other candidate pages:
+        1) Change script tag on line 10
+        2) Replace existing modal with 2 modals on line 113
+        3) Add in gauge at line 191
+        -->
         <div class="menu-wrap">
             <input type="checkbox" autocomplete='off' class="toggler">
             <div class="hamburger">
@@ -106,11 +111,25 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
+              <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">John P. Capizola</h6>
+              <p>          
+
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
               <h4 class="quick-sum">quick summary</h4>
               <h6 class="page-title">John P. Capizola</h6>
               <p>          
@@ -149,7 +168,7 @@
             
             </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -169,7 +188,11 @@
          </div>
      </div>
 
-        
+    <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Inform The Vote Transparency Rating</h4>
+        <img class="gauge" src="../../../assets/gauge_kinda_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">rating explanation</button>
+    </div> 
             
      <div class="candidate-agenda">
 
