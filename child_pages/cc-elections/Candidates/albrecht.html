@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Douglas A. Albreacht">
         <meta property="og:description" content="Election information about Douglas A. Albrecht">
@@ -105,10 +105,95 @@
             </div>
         </div>
 
-        
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
+              <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">Douglas Albrecht</h6>
+              <p>          
+
+                Douglas Albrecht is a two-term Cumberland County Commissioner running for re-election. He brings a background in business and public service, with past roles on Vineland 
+                City Council and current leadership on various county-level boards and committees, including Finance, Recreation, the Library Board, and the Board of Elections. His public 
+                messaging often emphasizes fiscal conservatism, economic development, literacy, and commonsense solutions to county-wide issues.
+                <br>
+                <br>
+                Albrecht is a familiar face in the community and regularly attends the Republican organization’s bi-weekly breakfast events—offering consistent, in-person access to 
+                constituents. However, his campaign remains light on comprehensive public materials, with no formal website or detailed policy documentation currently available for the 
+                2025 race. Despite his visibility, voters without direct access to local events may struggle to clearly understand his full platform or how it compares to his opponents.
+                <br>
+                <br>
+                As it stands, Albrecht is more accessible than most—but still leaves room for improvement when it comes to transparency in the digital space.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">John P. Capizola</h6>
+              <p>          
+
+                Douglas Albrecht is currently serving his second term on the Cumberland County Board of Commissioners and is seeking a third. With extensive involvement in local 
+                governance—including roles on the county Finance Committee, Library Board, Board of Elections, and the Recreation and Bayshore Councils—he presents as a knowledgeable, 
+                civically active representative with strong community ties and a deep understanding of county-level challenges.
+                <br>
+                <br>
+                Which makes it all the more important to assess his transparency through the lens of not whether he’s active, but how effectively he communicates his campaign platform to 
+                the public at large.
+                <br>
+                <br>
+                In many ways, Albrecht is among the more visible candidates in Cumberland County. He is known to be highly present in the community and regularly attends the Cumberland 
+                County Regular Republican Organization’s bi-weekly breakfasts—events that offer roughly two dozen opportunities a year for voters to engage directly with Republican leaders 
+                and candidates. By comparison to the sporadic or non-existent outreach from the local Democratic Party, this structure alone is a significant advantage in accessibility.
+                <br>
+                <br>
+                However, accessibility in-person does not automatically translate to accessibility in messaging. While Albrecht has had multiple opportunities to participate in this 
+                platform’s efforts to document candidate agendas, policy stances, and side-by-side comparisons, he has not provided comprehensive campaign materials, filled out 
+                questionnaires, or shared detailed updates that would allow voters to easily review his comprehensive views on well known county issues outside of attending a breakfast or 
+                reading general summaries on the CCRRO website.
+                <br>
+                <br>
+                Shortly after one of our speech's was given at one of the County Commissioner meetings encouraging countywide participation in a nonpartisan information process like the one 
+                on this site, Albrecht expressed that such a proposal might risk "micro-managing campaigns." While that’s a valid concern in the abstract, it doesn't change the reality that 
+                public officials—especially incumbents—should already be making their stances easy to find and compare. Furthermore, at a similar meeting, former Commissioner Director Sileo 
+                suggested doing a quarterly report to let the public know where we're at with progress on ongoing issues. That would be great, but we are unaware if that has actually 
+                been started. Similarly, current Commissioner Director Sauro stated the Commissioner Board is working on a general PR campaign, though we are not sure if that is still a 
+                work in progress, or is in reference to sporadic press releases on the County Site's homepage.
+                <br>
+                <br>
+                It’s also worth noting that Albrecht, as a long-serving commissioner, should be one of the most equipped candidates to provide issue-based comparisons between himself and his 
+                opponents. He has the context, the background, and the experience. So why not write it down? Why not give voters something they can digest, revisit, and share with others?
+                <br>
+                <br>
+                To be clear: Albrecht's public presence and general availability place him above many of his peers when it comes to accessibility. He attends events, speaks to constituents, 
+                and provides periodic updates. But in a digital age where voters need centralized, persistent, and easily shareable campaign information, these in-person efforts, while 
+                commendable, aren’t enough on their own.
+                <br>
+                <br>
+                That said, the door is always open to raise this rating. Submitting a completed candidate questionnaire, participating in a podcast-style interview, or providing a formal 
+                breakdown of positions on major county issues would go a long way in making his campaign more transparent and accessible to the public—particularly for those who can’t 
+                attend bi-weekly breakfasts or don’t travel in political circles.
+                <br>
+                <br>
+                For these reasons, Albrecht currently receives a rating that falls between average and above average for transparency and accessibility.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+
+        <!-- <dialog id="myModal" class="modal">
+
+            
             <div class="modal-content">
               <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
               <h4 class="quick-sum">quick summary</h4>
@@ -139,7 +224,7 @@
 
               </p>
             </div>
-        </dialog>
+        </dialog> -->
 
 
 <div class="container">
@@ -169,7 +254,7 @@
                 
             </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+            <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -189,35 +274,38 @@
          </div>
      </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+     <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
      <div class="candidate-agenda">
 
