@@ -1307,8 +1307,8 @@ is a variable (viewport width) to maintain the responsive size. It is the deskto
 viewport size. If you change the desktop size, you have to re-calculate the variable size. */
 
 .gauge {
-    height: clamp(80px, 16vw, 250px);
-    width: clamp(80px, 16vw, 250px);
+    height: clamp(80px, 16vw, 180px);
+    width: clamp(80px, 16vw, 180px);
 }
 
 .extra-long {
