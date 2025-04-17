@@ -10,25 +10,41 @@
 
     <style>
         .comparison-wrapper {
-          max-width: 800px;
+          max-width: 100%;
           margin: 0 auto;
-          padding: 1rem;
+          padding: 3rem 1rem 1rem 1rem;
           font-family: Arial, sans-serif;
+          text-align: center;
         }
       
         .comparison-wrapper h2 {
-          text-align: center;
           color: #004080;
-          margin-bottom: 2rem;
+          margin-bottom: 0.5rem;
+        }
+      
+        .summary-note {
+          font-size: 1rem;
+          background: #eef5ff;
+          padding: 0.75rem;
+          margin: 0 auto 2rem auto;
+          border-left: 5px solid #004080;
+          border-radius: 6px;
+          color: #333;
+          max-width: 600px;
         }
       
         .candidate-card {
+          display: inline-block;
+          text-align: center;
+          vertical-align: top;
           border: 1px solid #ccc;
           border-radius: 10px;
           padding: 1rem;
-          margin: 1rem 0;
+          margin: 1rem;
           background-color: #f9f9f9;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          max-width: 350px;
+          width: 100%;
         }
       
         .candidate-card h3 {
@@ -45,21 +61,20 @@
         .label {
           font-weight: bold;
           color: #555;
+          display: block;
           margin-top: 0.5rem;
         }
       
         .value {
-          margin-left: 0.5rem;
+          display: block;
+          margin-bottom: 0.5rem;
         }
       
-        .summary-note {
-          margin-top: 2rem;
-          font-size: 1rem;
-          background: #eef5ff;
-          padding: 1rem;
-          border-left: 5px solid #004080;
-          border-radius: 6px;
-          color: #333;
+        @media screen and (max-width: 768px) {
+          .candidate-card {
+            display: block;
+            margin: 1rem auto;
+          }
         }
       </style>
 
@@ -162,50 +177,48 @@
 
     <div class="comparison-wrapper">
         <h2>Quick Transparency Breakdown</h2>
+        <div class="summary-note">
+          Based on available information, Sean Pignatelli is the only candidate providing a clear, accessible campaign.
+        </div>
       
         <div class="candidate-card">
           <h3>Sean Pignatelli</h3>
-          <div><span class="label">Public Platform:</span><span class="value">✅ Detailed written platform shared</span></div>
-          <div><span class="label">Response to Outreach:</span><span class="value">✅ Prompt & thorough</span></div>
-          <div><span class="label">Voter Info Participation:</span><span class="value">⚠️ Interview planned, partial materials shared</span></div>
-          <div><span class="label">Public Appearances:</span><span class="value">✅ Regular at GOP breakfasts</span></div>
-          <div><span class="label">Local Issue Messaging:</span><span class="value">✅ Strong, multi-issue agenda</span></div>
+          <span class="label">Public Platform:</span><span class="value">✅ Detailed & issue-driven</span>
+          <span class="label">Response to Outreach:</span><span class="value">✅ Prompt & thorough</span>
+          <span class="label">Voter Info Participation:</span><span class="value">⚠️ Interview planned</span>
+          <span class="label">Public Appearances:</span><span class="value">✅ Regular at GOP breakfasts</span>
+          <span class="label">Local Issue Messaging:</span><span class="value">✅ Strong and specific</span>
           <div class="rating">Rating: <strong>Above Average</strong></div>
         </div>
       
         <div class="candidate-card">
           <h3>Trevor Spiotto</h3>
-          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Public Appearances:</span><span class="value">❌ Unknown</span></div>
-          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Unknown</span></div>
+          <span class="label">Public Platform:</span><span class="value">❌ None</span>
+          <span class="label">Response to Outreach:</span><span class="value">❌ No response</span>
+          <span class="label">Voter Info Participation:</span><span class="value">❌ None</span>
+          <span class="label">Public Appearances:</span><span class="value">❌ Unknown</span>
+          <span class="label">Local Issue Messaging:</span><span class="value">❌ Unknown</span>
           <div class="rating">Rating: <strong>Low</strong></div>
         </div>
       
         <div class="candidate-card">
           <h3>Michael Rothman</h3>
-          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
-          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+          <span class="label">Public Platform:</span><span class="value">❌ None</span>
+          <span class="label">Response to Outreach:</span><span class="value">❌ No response</span>
+          <span class="label">Voter Info Participation:</span><span class="value">❌ None</span>
+          <span class="label">Public Appearances:</span><span class="value">❌ Not observed</span>
+          <span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span>
           <div class="rating">Rating: <strong>Below Average</strong></div>
         </div>
       
         <div class="candidate-card">
           <h3>Larry Jordan</h3>
-          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-          <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
-          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+          <span class="label">Public Platform:</span><span class="value">❌ None</span>
+          <span class="label">Response to Outreach:</span><span class="value">❌ No response</span>
+          <span class="label">Voter Info Participation:</span><span class="value">❌ None</span>
+          <span class="label">Public Appearances:</span><span class="value">❌ Not observed</span>
+          <span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span>
           <div class="rating">Rating: <strong>Below Average</strong></div>
-        </div>
-      
-        <div class="summary-note">
-          Based on available information, <strong>Sean Pignatelli is currently the only candidate in this race who has clearly communicated his platform, responded to outreach, and 
-            shared a detailed local agenda</strong>. The other candidates have not provided any public information to support meaningful evaluation.
         </div>
       </div>
 
