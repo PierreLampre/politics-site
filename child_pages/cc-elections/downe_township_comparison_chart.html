@@ -7,6 +7,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        .candidate-card {
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          padding: 1rem;
+          margin: 1rem 0;
+          background-color: #f9f9f9;
+          font-family: Arial, sans-serif;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+      
+        .candidate-card h3 {
+          margin-top: 0;
+          color: #004080;
+        }
+      
+        .rating {
+          font-weight: bold;
+          color: #222;
+          margin-top: 0.5rem;
+        }
+      
+        .label {
+          font-weight: bold;
+          color: #555;
+          margin-top: 0.5rem;
+        }
+      
+        .value {
+          margin-left: 0.5rem;
+        }
+      </style>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -104,59 +138,45 @@
         </div>
     </div>
 
-    <div style="overflow-x:auto;">
-        <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; margin: 2rem 0;">
-          <thead style="background-color: #004080; color: white;">
-            <tr>
-              <th style="padding: 10px; text-align: left;">Candidate</th>
-              <th style="padding: 10px; text-align: left;">Public Platform</th>
-              <th style="padding: 10px; text-align: left;">Response to Outreach</th>
-              <th style="padding: 10px; text-align: left;">Engaged in Voter Info Efforts</th>
-              <th style="padding: 10px; text-align: left;">Public Appearances</th>
-              <th style="padding: 10px; text-align: left;">Local Issue Messaging</th>
-              <th style="padding: 10px; text-align: left;">Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 10px;">Sean Pignatelli</td>
-              <td style="padding: 10px;">✅ Strong written platform via correspondence</td>
-              <td style="padding: 10px;">✅ Prompt & detailed</td>
-              <td style="padding: 10px;">⚠️ Participating, podcast interview planned</td>
-              <td style="padding: 10px;">✅ Attends GOP breakfasts</td>
-              <td style="padding: 10px;">✅ Fully documented, multi-issue agenda</td>
-              <td style="padding: 10px;"><strong>Above Average</strong></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 10px;">Trevor Spiotto</td>
-              <td style="padding: 10px;">❌ None</td>
-              <td style="padding: 10px;">❌ No response</td>
-              <td style="padding: 10px;">❌ No participation</td>
-              <td style="padding: 10px;">❌ Unknown</td>
-              <td style="padding: 10px;">❌ Unknown</td>
-              <td style="padding: 10px;"><strong>Low</strong></td>
-            </tr>
-            <tr style="border-bottom: 1px solid #ddd;">
-              <td style="padding: 10px;">Michael Rothman</td>
-              <td style="padding: 10px;">❌ None</td>
-              <td style="padding: 10px;">❌ No response</td>
-              <td style="padding: 10px;">❌ No participation</td>
-              <td style="padding: 10px;">❌ No public appearances</td>
-              <td style="padding: 10px;">❌ No platform shared</td>
-              <td style="padding: 10px;"><strong>Below Average</strong></td>
-            </tr>
-            <tr>
-              <td style="padding: 10px;">Larry Jordan</td>
-              <td style="padding: 10px;">❌ None</td>
-              <td style="padding: 10px;">❌ No response</td>
-              <td style="padding: 10px;">❌ No participation</td>
-              <td style="padding: 10px;">❌ No public appearances</td>
-              <td style="padding: 10px;">❌ No platform shared</td>
-              <td style="padding: 10px;"><strong>Below Average</strong></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="candidate-card">
+        <h3>Sean Pignatelli</h3>
+        <div><span class="label">Public Platform:</span><span class="value">✅ Detailed written platform shared</span></div>
+        <div><span class="label">Response to Outreach:</span><span class="value">✅ Prompt & thorough</span></div>
+        <div><span class="label">Voter Info Participation:</span><span class="value">⚠️ Interview planned, partial materials shared</span></div>
+        <div><span class="label">Public Appearances:</span><span class="value">✅ Regular at GOP breakfasts</span></div>
+        <div><span class="label">Local Issue Messaging:</span><span class="value">✅ Strong, multi-issue agenda</span></div>
+        <div class="rating">Rating: <strong>Above Average</strong></div>
+        </div>
+
+        <div class="candidate-card">
+        <h3>Trevor Spiotto</h3>
+        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Public Appearances:</span><span class="value">❌ Unknown</span></div>
+        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Unknown</span></div>
+        <div class="rating">Rating: <strong>Low</strong></div>
+        </div>
+
+        <div class="candidate-card">
+        <h3>Michael Rothman</h3>
+        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
+        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+        <div class="rating">Rating: <strong>Below Average</strong></div>
+        </div>
+
+        <div class="candidate-card">
+        <h3>Larry Jordan</h3>
+        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+        <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
+        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+        <div class="rating">Rating: <strong>Below Average</strong></div>
+        </div>
 
     
     </body>
