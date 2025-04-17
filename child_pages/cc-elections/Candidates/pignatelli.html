@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Sean M. Pignatelli">
         <meta property="og:description" content="Election information about Sean M. Pignatelli">
@@ -106,28 +106,67 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Sean M. Pignatelli</h6>
-              
-              Sean Pignatelli is a long-time advocate for Downe Township, known for his active, hands-on approach to community service. As a father, volunteer, and leader, he’s built a track 
-              record of tackling real problems with practical solutions — whether it’s preserving the local school, expanding recreational opportunities, or ensuring residents have a voice in 
-              local decisions. He currently serves on the Downe Township School Board and chairs the Recreation and Tourism Committee, where he’s secured funding, launched a township 
-              newsletter, and partnered with local organizations to foster civic engagement.
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
 
-              Sean’s campaign is rooted in transparency, family values, and sustainable development. His priorities include reinstating open communication through public newsletters and 
-              live-streamed meetings, revitalizing public spaces like Dividing Creek Park, and building a permanent veterans memorial. He’s committed to defending the township’s local school 
-              from closure attempts and promoting year-round events that bring youth, seniors, and families together.
-              
-              With a strong belief in rural preservation, Sean plans to protect farmland and wetlands while supporting eco-tourism and small local businesses. He also champions better support 
-              for first responders, including increased funding, safety resources, and public recognition. Across all areas, Sean’s guiding principle is simple but clear: "Building a Better 
-              Downe, Together."
-              
-              
+                Sean Pignatelli is a hands-on community advocate and longtime resident of Downe Township, currently serving on both the local School Board and the Recreation & Tourism Committee. 
+                His platform is one of the most thoroughly documented and detailed among local candidates, covering transparency, infrastructure upgrades, education, environmental protection, and 
+                support for first responders.
+                <br>
+                <br>
+                Pignatelli responded promptly to outreach, shared extensive background and campaign materials, and plans to participate in a podcast-style interview closer to the 
+                election. While he hasn’t relaunched a formal campaign website, he’s been consistently cooperative and accessible, with every indication that more structured outreach 
+                is forthcoming.
+                <br>
+                <br>
+                His guiding principle—“Building a Better Downe, Together”—is reflected not only in his messaging, but in the time and effort he’s already invested in engaging with 
+                residents and sharing his vision.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
+
+                Sean Pignatelli is a candidate for Downe Township Committee who has demonstrated one of the strongest commitments to transparency and public engagement of any local 
+                candidate evaluated so far. He responded promptly to outreach, provided detailed background information, and clearly articulated his agenda and vision for Downe Township 
+                in long-form written correspondence.
+                <br>
+                <br>
+                While he has not yet launched a dedicated campaign website for this race, his willingness to engage directly, provide information proactively, and plan for future 
+                participation in a podcast-style interview reflects a strong and growing level of accessibility. He currently uses his personal Facebook page for public communication 
+                and has indicated that he regularly attends the Cumberland County Republican Organization’s bi-weekly breakfasts, which offers voters a consistent chance to interact 
+                with him in person.
+                <br>
+                <br>
+                That said, a few components are still pending that would push his rating even higher, including the revival of a centralized campaign platform, documented comparison 
+                to opponents, and public events or materials that extend beyond the party circle. But the key difference here is his attitude: Pignatelli has shown genuine willingness 
+                to cooperate with information-sharing efforts and improve his accessibility over time.
+                <br>
+                <br>
+                It’s also notable that all four candidates in the Downe Township race were previously unfamiliar to the broader public, yet two—Michael Rothman and Larry Jordan—have 
+                already received endorsements from the Republican Organization. As with similar races, this again raises the question: If a candidate like Pignatelli can go out of his 
+                way to be transparent and present, why aren't the endorsed candidates doing the same?
+                <br>
+                <br>
+                For these reasons, Sean Pignatelli currently receives an above-average rating for transparency and accessibility, with a clear trajectory toward a top score if 
+                follow-through continues.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -160,7 +199,7 @@
 
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -180,7 +219,13 @@
          </div>
      </div>
 
-     <br>
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Very Low</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
+
+        <img class="gauge" src="../../../assets/gauge_real_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
 
      <details>
         <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
