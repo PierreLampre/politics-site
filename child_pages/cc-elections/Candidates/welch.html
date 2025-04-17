@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Robert E. Welch">
         <meta property="og:description" content="Election information about Robert E. Welch">
@@ -106,15 +106,62 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Robert E. Welch</h6>
-              
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
 
+                Robert Welch is running for the Commercial Township Committee and has received the endorsement of the Cumberland County Regular Republican Organization. However, there 
+                is no publicly available campaign information about his platform, qualifications, or background. Despite being endorsed, he has not made himself visible through public 
+                events, websites, or voter outreach.
+                <br>
+                <br>
+                Even for those actively following local politics, Welch remains largely unknown—raising questions about the transparency of both his campaign and the party’s endorsement 
+                process.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
+
+                Robert Welch is currently a candidate for the Commercial Township Committee and has received the official endorsement of the Cumberland County Regular Republican 
+                Organization. However, beyond that party endorsement, there is no publicly available campaign information—no website, no social media, no event notices, and no clear 
+                platform outlining his goals or qualifications for the role.
+                <br>
+                <br>
+                Welch’s endorsement suggests that the party knows who he is, yet the public does not. Despite two years of attending the bi-weekly Republican breakfasts, which often 
+                feature active candidates and sitting officials, no clear introduction or campaign messaging from Welch has been made available through those channels.
+                <br>
+                <br>
+                This highlights a broader issue with the transparency of the endorsement process itself. The Cumberland County Republican endorsement convention, held in March, was 
+                open only to party committee members and insiders—not the general public. As a result, while the party infrastructure has clearly advanced Welch's candidacy, engaged 
+                residents and politically curious voters have been left entirely out of the loop.
+                <br>
+                <br>
+                It’s one thing for a candidate to remain under the radar during a quiet campaign season—but it’s another when that candidate is handpicked by party leadership without 
+                any corresponding effort to engage the public. That disconnect undermines the spirit of open elections, particularly at the local level where direct engagement should 
+                be the norm, not the exception.
+                <br>
+                <br>
+                Welch may very well be qualified and have valuable ideas—but without sharing them publicly, voters are left guessing.
+                <br>
+                <br>
+                For these reasons, Robert Welch receives a very low rating for transparency and accessibility.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -146,7 +193,7 @@
                  
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -166,37 +213,49 @@
          </div>
      </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Very Low</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <img class="gauge" src="../../../assets/gauge_real_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
+    
+     <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
-     <div class="candidate-agenda">
+     <!-- <div class="candidate-agenda">
 
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
@@ -217,7 +276,7 @@
                      
                 </div>
    
-    </div>
+    </div> -->
 </div>   
 </body>
 </html>
