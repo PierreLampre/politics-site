@@ -9,14 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
 
     <style>
+        .comparison-wrapper {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 1rem;
+          font-family: Arial, sans-serif;
+        }
+      
+        .comparison-wrapper h2 {
+          text-align: center;
+          color: #004080;
+          margin-bottom: 2rem;
+        }
+      
         .candidate-card {
           border: 1px solid #ccc;
           border-radius: 10px;
           padding: 1rem;
           margin: 1rem 0;
           background-color: #f9f9f9;
-          font-family: Arial, sans-serif;
-          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
         }
       
         .candidate-card h3 {
@@ -38,6 +50,16 @@
       
         .value {
           margin-left: 0.5rem;
+        }
+      
+        .summary-note {
+          margin-top: 2rem;
+          font-size: 1rem;
+          background: #eef5ff;
+          padding: 1rem;
+          border-left: 5px solid #004080;
+          border-radius: 6px;
+          color: #333;
         }
       </style>
 
@@ -138,45 +160,54 @@
         </div>
     </div>
 
-    <div class="candidate-card">
-        <h3>Sean Pignatelli</h3>
-        <div><span class="label">Public Platform:</span><span class="value">✅ Detailed written platform shared</span></div>
-        <div><span class="label">Response to Outreach:</span><span class="value">✅ Prompt & thorough</span></div>
-        <div><span class="label">Voter Info Participation:</span><span class="value">⚠️ Interview planned, partial materials shared</span></div>
-        <div><span class="label">Public Appearances:</span><span class="value">✅ Regular at GOP breakfasts</span></div>
-        <div><span class="label">Local Issue Messaging:</span><span class="value">✅ Strong, multi-issue agenda</span></div>
-        <div class="rating">Rating: <strong>Above Average</strong></div>
-        </div>
-
+    <div class="comparison-wrapper">
+        <h2>Quick Transparency Breakdown</h2>
+      
         <div class="candidate-card">
-        <h3>Trevor Spiotto</h3>
-        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Public Appearances:</span><span class="value">❌ Unknown</span></div>
-        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Unknown</span></div>
-        <div class="rating">Rating: <strong>Low</strong></div>
+          <h3>Sean Pignatelli</h3>
+          <div><span class="label">Public Platform:</span><span class="value">✅ Detailed written platform shared</span></div>
+          <div><span class="label">Response to Outreach:</span><span class="value">✅ Prompt & thorough</span></div>
+          <div><span class="label">Voter Info Participation:</span><span class="value">⚠️ Interview planned, partial materials shared</span></div>
+          <div><span class="label">Public Appearances:</span><span class="value">✅ Regular at GOP breakfasts</span></div>
+          <div><span class="label">Local Issue Messaging:</span><span class="value">✅ Strong, multi-issue agenda</span></div>
+          <div class="rating">Rating: <strong>Above Average</strong></div>
         </div>
-
+      
         <div class="candidate-card">
-        <h3>Michael Rothman</h3>
-        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
-        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
-        <div class="rating">Rating: <strong>Below Average</strong></div>
+          <h3>Trevor Spiotto</h3>
+          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Public Appearances:</span><span class="value">❌ Unknown</span></div>
+          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Unknown</span></div>
+          <div class="rating">Rating: <strong>Low</strong></div>
         </div>
-
+      
         <div class="candidate-card">
-        <h3>Larry Jordan</h3>
-        <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
-        <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
-        <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
-        <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
-        <div class="rating">Rating: <strong>Below Average</strong></div>
+          <h3>Michael Rothman</h3>
+          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
+          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+          <div class="rating">Rating: <strong>Below Average</strong></div>
         </div>
+      
+        <div class="candidate-card">
+          <h3>Larry Jordan</h3>
+          <div><span class="label">Public Platform:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Response to Outreach:</span><span class="value">❌ No response</span></div>
+          <div><span class="label">Voter Info Participation:</span><span class="value">❌ None</span></div>
+          <div><span class="label">Public Appearances:</span><span class="value">❌ Not observed</span></div>
+          <div><span class="label">Local Issue Messaging:</span><span class="value">❌ Not available</span></div>
+          <div class="rating">Rating: <strong>Below Average</strong></div>
+        </div>
+      
+        <div class="summary-note">
+          Based on available information, <strong>Sean Pignatelli is currently the only candidate in this race who has clearly communicated his platform, responded to outreach, and 
+            shared a detailed local agenda</strong>. The other candidates have not provided any public information to support meaningful evaluation.
+        </div>
+      </div>
 
     
     </body>
