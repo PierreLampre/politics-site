@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Warren M. Vizzard">
         <meta property="og:description" content="Election information about Warren M. Vizzard">
@@ -106,15 +106,63 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Warren M. Vizzard</h6>
-              
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
 
+                Warren M. Vizzard is listed as a candidate for the Commercial Township Committee, but as of now, there is no public information available about his background, platform, 
+                or campaign. He has no website, social media presence, or public statements, and has not participated in any forums or outreach efforts.
+                <br>
+                <br>
+                At this point, he appears to be just a name on the ballot, leaving voters with no way to evaluate his qualifications or positions.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Warren Vizzard</h6>
+              <p>          
+
+                Warren M. Vizzard is currently listed as a candidate for the Commercial Township Committee race, but as of this writing, no information is publicly available about his 
+                campaign, background, platform, or qualifications. He has no campaign website, no social media presence, no media coverage, and no participation in any candidate forums 
+                or public outreach efforts. A Google search yields no photo, biographical information, or context.
+                <br>
+                <br>
+                In short, as far as we know, Vizzard exists only as a name on the ballot.
+                <br>
+                <br>
+                This complete lack of public presence raises a concern beyond just transparency—it leaves voters with no ability to evaluate the candidate at all, unless they happen 
+                to know him personally. Even basic information such as a photo, past experience, or reason for running is entirely absent. This is particularly alarming in small-town 
+                elections, where local leaders often make critical decisions that impact residents' daily lives.
+                <br>
+                <br>
+                It’s also worth noting that Vizzard’s opponent, Robert Welch, similarly lacks public campaign materials—but was endorsed by the Cumberland County Regular Republican 
+                Organization. While endorsements usually suggest some level of vetting or familiarity within the party, this decision appears to have occurred behind closed doors at 
+                the Republican endorsement convention in March, which was only open to party committee members and leadership—not the public.
+                <br>
+                <br>
+                This raises broader transparency concerns. While the party holds bi-weekly breakfasts that are relatively open and well-attended, the endorsement process still operates 
+                within an inner circle—leaving even actively engaged voters unaware of who is being nominated or why. After two years of regularly attending political events, even we 
+                have no idea who Robert Welch is—despite the party's clear support of his candidacy.
+                <br>
+                <br>
+                So when a voter sees a name on the ballot—like Warren M. Vizzard—and has no context, and then sees that the alternative candidate is known only to an internal party 
+                structure, it creates a broken feedback loop for public accountability.
+                <br>
+                <br>
+                For these reasons, Warren M. Vizzard currently receives the lowest possible rating for transparency and accessibility.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -146,7 +194,7 @@
                  
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -166,37 +214,49 @@
          </div>
      </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Very Low</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <img class="gauge" src="../../../assets/gauge_real_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+     <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
-     <div class="candidate-agenda">
+     <!-- <div class="candidate-agenda">
 
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
@@ -217,7 +277,7 @@
                      
                 </div>
    
-    </div>
+    </div> -->
 </div>   
 </body>
 </html>
