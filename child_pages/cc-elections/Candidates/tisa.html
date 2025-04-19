@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - John Tisa">
         <meta property="og:description" content="Election information about John Tisa">
@@ -106,15 +106,79 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
               <h6 class="page-title">John Tisa</h6>
-              
+              <p>          
 
+                Incumbent John Tisa is a familiar face in Lawrence Township, with regular attendance at Republican events and a record of public service. Longtime residents may already have a 
+                sense of his values and approach, and his continued involvement suggests a genuine commitment to the role. That said, for newer residents, younger voters, and independents 
+                hoping to fairly compare both candidates, there’s currently a lack of accessible, campaign-specific information. With no public website, no policy outline, and minimal 
+                participation in broader outreach efforts, Tisa falls short of modern transparency standards—not due to absence, but due to an outdated communication model. A few intentional 
+                steps—such as a published platform and participation in a public candidates forum—would make his candidacy much more accessible to today’s voter expectations.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">John Tisa</h6>
+              <p>          
+
+                John Tisa is the incumbent candidate for Lawrence Township Committee and is currently seeking reelection. As a sitting official, Tisa benefits from the built-in visibility 
+                that comes with public office—he attends township meetings, participates in votes, and interacts regularly with local officials. In theory, this should make him one of the 
+                most transparent figures on the ballot.
+                <br>
+                <br>
+                However, the utility of that default transparency depends on whether the information is well maintained and easily accessible. Without a centralized campaign site, many voters 
+                that don't regularly pay attention may have no idea about his platform, and those that do might only have scattered impressions about where he stands on specific issues. 
+                <br>
+                <br>
+                For example, with our interactions with Lawrence Township, it has become clear that there is an issue with maintaining the township site, especially with meeting minutes.
+                Tisa has said that he is in the process of working on that, but we wouldn't have known that without attending the bi-weekly Republican breakfasts, and we don't know what 
+                the current status of those efforts are. In other words, how is the average voter supposed to know any of this when reviewing their choices near elections?
+                <br>
+                <br>
+                Tisa does attend Republican breakfasts frequently, has placed lawn signs, and has at least one known meet-and-greet scheduled—but that event was only discoverable through 
+                partisan word-of-mouth, not any formal public-facing campaign effort that we're aware of.
+                <br>
+                <br>
+                He has:
+                <ul>
+                    <li>No campaign website</li>
+                    <li>Not responded to information requests</li>
+                    <li>Not identified or clarified where he stands on key local issues
+                    </li>
+                    <li>Offered no formal messaging beyond casual comments at breakfast events</li>
+                </ul>
+
+                <br>
+                <br>
+                This isn't just about checking boxes—it’s about recognizing that voters like those following InformTheVoteNJ are actively seeking information and coming up empty because 
+                candidates like Tisa haven’t prioritized outreach beyond the party structure, at least to our knowledge. If the overall county infrastructure for public information were 
+                stronger, perhaps these communication gaps would be less noticeable. But in the absence of a robust county-wide PR system, candidates bear more responsibility to close the 
+                loop themselves.
+                <br>
+                <br>
+                For these reasons, John Tisa receives a below-average to average transparency rating. He’s not completely absent—but his approach remains rooted in a status quo that no longer meets 
+                the public’s expectations for open, accessible, and voter-focused communication in the modern, fast-paced, tech-based culture.
+                <br>
+                <br>
+                A campaign website, clear policy statements, and participation in a candidate forum would quickly elevate him to a much more favorable transparency tier—and would help 
+                voters understand what he’s done, where he stands, and how he plans to handle his potential tenure moving forward.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -146,7 +210,7 @@
                  
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -166,45 +230,56 @@
          </div>
      </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Below Average to Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <img class="gauge" src="../../../assets/gauge_dead_center.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Tisa and McClellan Meet n Greet, Cedarville Fire Hall</strong></li>
-            <li class="description">Meet candidates John Tisa and Antwan McClellan</li>
-            <li class="date-and-time">05/14/25 - 4:00pm</li>
-            <li class="location">30 Maple Ave, Cedarville, NJ 08311</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+     <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Tisa and McClellan Meet n Greet, Cedarville Fire Hall</strong></li>
+                <li class="description">Meet candidates John Tisa and Antwan McClellan</li>
+                <li class="date-and-time">05/14/25 - 4:00pm</li>
+                <li class="location">30 Maple Ave, Cedarville, NJ 08311</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
      <div class="candidate-agenda">
 
