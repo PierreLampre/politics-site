@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Charlie Woody">
         <meta property="og:description" content="Election information about Charlie Woody">
@@ -108,57 +108,80 @@
         
         <dialog id="myModal" class="modal">
 
-            <!-- Modal content -->
-            <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
-              <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Charlie N. Woody</h6>
-              <p>
-                Candidate Woody is a lifelong resident of Cedarville who wants to restore a sense of pride throughout his community. While growing up, he believes there was a strong sense of 
-                community where everyone knew each other, the township residents could leave their doors unlocked, and there were things to do. He feels as though that standard has slipped 
-                through the years. In that direct vein, he wants to invest in creating engaging spaces for children, including using the local senior center for kids activities during after
-                school hours and looking into the successful plans of neighboring districts building skate parks. Furthermore, he wants to provide a stronger sense of transparency in local 
-                government by doing things such as live-streaming and posting recordings of committee meetings, having residents post questions for the committee online when they don't have a 
-                chance to make it to meetings, and raising the online presence of local government through updating its website and leveraging social media. A few examples regarding needing to 
-                update the township website are an
-                <br>
-                <br>
-                <details>
-                    <summary style="cursor:pointer; color:blue; text-decoration:underline;">Incorrect Mayor Position Listing</summary>
-                        <img src="../../../assets/screenshots/mayorMixup.png" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
-                        As shown in the image, you can see the listing of Lawrence Township elected positions found in the Cumberland County Directory of 2024, that Elmer "Skip" Bowman 
-                        is the mayor and Joseph Miletta is a committeeman... while on the right you can see on the Lawrence Township website that Joseph Miletta is listed as mayor and 
-                        Elmer Skip Bowman is listed as Deputy Mayor. It is our understanding that Bowman became mayor at the beginning of 2024. While some might see this as a small 
-                        oversight regarding website maintenance, modernizing and digitizing local government has been a common priority, as mentioned in last year's surrogate race and 
-                        this year's County Clerk's race. It is 2024 after all, and this is just one example that Woody points out... and he sometimes gets asked by residents who even is 
-                        the mayor, because they are unsure.
-                    </details>
-                    , and a
-                <br>
-                <br>
-                <details>
-                    <summary style="cursor:pointer; color:blue; text-decoration:underline;">Lack of Posted Minutes</summary>
-                        <img src="../../../assets/screenshots/lawrenceMinutes.png" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
-                        As shown in the image, you can see the a bunch of empty white boxes with our question marks over top of them. And if you look at the dates of the posted minutes,
-                        it seems as though minutes weren't posted from about September 11th, 2023 until April 4-8 2024, and none afterwards. To be fair, apparently you can request minutes 
-                        that have not been posted, but that might not be obvious to users, as it is visually inconsistent. In other words, in 2024, Woody feels this is another example of 
-                        modern digitalization expectations not being met. And we here at InformTheVoteNJ generally agree, while the county has been making progress at digitalization, 
-                        there is still much work to be done, and regular website maintenance is key to providing the public easily accessible information.
-                    </details>
-                    . Watch the interview below and read Woody's full candidate page for more in-depth information.
-                
+            <dialog id="Modal1" class="modal">
 
-                <div class="video-box-modal can-sec">
-                    <h3 class="video-heading">InformTheVoteNJ Interview With Charlie Woody</h3>
-            
-                    <iframe src="https://www.youtube.com/embed/m2c0H2agSyc?si=y5JXmnrnrvlmAl81" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-                </div>   
-
-                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
-
-              </p>
-            </div>
-        </dialog>
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
+                  <h4 class="quick-sum">quick summary</h4>
+                  <h6 class="page-title">Charlie Woody</h6>
+                  <p>          
+    
+                    Charlie Woody is a lifelong resident of Cedarville whose campaign focuses on community service, local pride, and practical problem-solving. His platform includes 
+                    proposals for improving government transparency, cleaning up abandoned properties, addressing concerns over Route 553 and 393 Main Street, and creating safer spaces 
+                    for children—all while emphasizing open communication and taxpayer accountability. With a campaign website, consistent township meeting attendance, and a commitment 
+                    to participating in a public forum, Woody receives an above-average transparency rating. While there's still room to improve the frequency of updates and finalization 
+                    of public events, his willingness to engage and address specific local concerns makes him one of the more accessible candidates in the county.
+                    <br>
+                    <br>
+                    Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+    
+                  </p>
+                </div>
+            </dialog>
+            <dialog id="Modal2" class="modal">
+    
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+                  <h4 class="quick-sum">Rating Explanation</h4>
+                  <h6 class="page-title">Charlie Woody</h6>
+                  <p>          
+    
+                    Charlie Woody is a returning candidate for Lawrence Township Committee who has made a clear effort to raise the standard for local campaign transparency. While he hasn’t 
+                    reached the top tier yet, he consistently demonstrates a willingness to communicate, share ideas, and engage with the public in ways that remain uncommon in local politics.
+                    <br>
+                    <br>
+                    During his last campaign, Woody proactively reached out with a full campaign message and committed to a podcast-style interview—an uncommon level of outreach among local 
+                    candidates. Since then, he has maintained ongoing communication with InformTheVoteNJ and has shared informal updates on township concerns such as the 393 Main Street 
+                    issue, a recent meeting cancellation, and other developments that otherwise wouldn’t be widely known.
+                    <br>
+                    <br>
+                    So far in the 2025 cycle:
+                    <ul>
+                        <li>-He maintains a campaign website with issue-based messaging, though updates are sometimes slow to reflect new developments
+                        </li>
+                        <br>
+                        <li>-He has agreed to a new podcast-style interview and remains open to long-form discussion
+                        </li>
+                        <br>
+                        <li>He plans to hold a meet-and-greet, though final details are pending
+                        </li>
+                        <br>
+                        <li>-He has committed to participating in a candidate forum, pending coordination with the municipal clerk and opponent
+                        </li>
+                        <br>
+                        <li>-He sparingly attends Republican breakfasts, showing some visibility in party spaces but not as regularly as his opponent
+                        </li>
+                        <br>
+                        <li>Importantly, he consistently attends Lawrence Township Committee meetings, demonstrating civic involvement and attention to current issues
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    Compared to incumbent John Tisa, Woody’s campaign feels more accessible, more organized, and better suited to modern voter expectations—but still not fully complete. 
+                    A more consistent update cycle for his website and more timely confirmation of public events would bring his transparency rating to the top tier.
+                    <br>
+                    <br>
+                    For now, Charlie Woody earns an above-average transparency rating—recognized for his clear effort, ongoing engagement, and strong foundation for a fully open and 
+                    accessible campaign.
+                    <br>
+                    <br>
+                    Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+    
+                  </p>
+                </div>
+            </dialog>
 
 
 
@@ -189,7 +212,7 @@
                  
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on November 5th, 2024</p>
@@ -209,41 +232,54 @@
          </div>
      </div>
 
+     
      <div class="video-box-modal can-sec">
         <h3 class="video-heading">InformTheVoteNJ Interview With Charlie Woody</h3>
 
         <iframe src="https://www.youtube.com/embed/m2c0H2agSyc?si=OHKMTDASdFpMG7u9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+    <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Above Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <img class="gauge" src="../../../assets/gauge_okay.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+     <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
      <div class="candidate-agenda">
 
