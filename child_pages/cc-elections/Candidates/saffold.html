@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Brandon Saffold">
         <meta property="og:description" content="Election information about Brandon Saffold">
@@ -106,15 +106,76 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
               <h6 class="page-title">Brandon Saffold</h6>
               <p>          
 
+                Brandon Saffold brings a mix of lived experience and policy focus to his campaign for the NJ General Assembly. A military veteran and advocate for mental health reform, 
+                Brandon’s campaign is rooted in personal struggles with New Jersey’s broken guardianship system, which inspired his proposed “Save Nina Act.” He aims to improve mental 
+                health access, inspect failing psychiatric and rehab facilities with undercover teams, and ensure no resident is turned away from treatment. Brandon supports reproductive 
+                rights, emphasizing safeguards that respect medical professionals over politicians. He supports transgender rights but proposes fairness-based 
+                solutions for sports, like establishing separate divisions to maintain inclusivity and equity. On policing, Brandon acknowledges the need to rebuild trust, increase training, 
+                and modernize expectations. He’s also passionate about reintroducing civics education, establishing a centralized, nonpartisan candidate platform, and ensuring real local 
+                journalism exists. While not a career politician, he emphasizes transparency, cost-effectiveness, and a commitment to voting his conscience over party pressure.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Brandon Saffold</h6>
+              <p>          
+
+                Brandon Saffold and Carolyn Rush are Democratic candidates for the New Jersey General Assembly in Legislative District 1. So far, their campaign shows clear signs of energy 
+                and openness—but is still in the early-to-mid stages of becoming fully transparent and organized.
+                <br>
+                <br>
+                They’ve launched a joint campaign website, which includes biographical information but does not yet provide written policy positions or a clearly articulated platform. 
+                However, both candidates participated in a lengthy, in-depth 2.5 hour interview with InformTheVoteNJ, where they discussed numerous issues with a level of detail and 
+                openness not often seen at this stage in a local campaign.
+                <br>
+                <br>
+                They’ve also:
+                <ul>
+                    <li>-Agreed to follow-up interviews to further clarify positions
+                    </li>
+                    <br>
+                    <li>-Expressed willingness to participate in a public candidate forum alongside their primary opponent, Carol Sabo (though contact has not yet been established)
+                    </li>
+                    <br>
+                    <br>
+                    <li>Participated in at least one campaign event with gubernatorial candidate Steven Fulop, though the event was not widely advertised and was only discovered through 
+                        personal social media connections
+                    </li>
+                </ul>
+
+                <br>
+                <br>
+
+                As it stands, Saffold and Rush come across as highly willing to engage, but it remains unclear how fully developed their campaign strategy and outreach efforts are. 
+                There’s no obvious event calendar, limited messaging visibility beyond direct engagement, and no public repository of clear stances on core legislative issues—despite the 
+                candidates demonstrating strong awareness of them in conversation.
+
+                <br>
+                <br>
+
+                For these reasons, both candidates currently receive an average to above-average transparency rating, based on their direct engagement and willingness to participate in open 
+                discussion. A fully developed public-facing platform—supported by consistent updates, better event promotion, and broader accessibility—would solidify them as top-tier in 
+                transparency.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -149,7 +210,7 @@
 
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -169,6 +230,14 @@
          </div>
      </div>
 
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Average to Above Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
+
+        <img class="gauge" src="../../../assets/gauge_good.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
+
      <div class="video-box-modal can-sec">
         <h3 class="video-heading">InformTheVoteNJ Interview With Charlie Woody</h3>
 
@@ -179,27 +248,43 @@
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
                 <ul>
-                    <li><b>Item 1</b>
+                    <li>Increase transparency in government and campaigning</li>
                     <br>
+                    <li>Improve mental health care and reform guardianship laws (Save Nina Act)</li>
                     <br>
-                    
-                    </li>
+                    <li>Create undercover inspection teams for psych, rehab, and long-term care facilities</li>
                     <br>
+                    <li>Decriminalize turning away rehab patients; prosecute negligent facilities</li>
                     <br>
-                    <li><b>Item 2</b>
+                    <li>Reintroduce local civics education in NJ public schools</li>
                     <br>
+                    <li>Support a state-backed, nonpartisan public platform for candidate exposure</li>
                     <br>
-                    
-                    </li>
+                    <li>Support reproductive rights with doctor-patient discussions for tough decisions</li>
                     <br>
+                    <li>Supports LGBTQ rightws along with ideas like fairness in women's sports through separate categories for trans athletes</li>
                     <br>
-                    <li><b>Item 3</b>
+                    <li>Support restorative public safety approaches and enhanced police training</li>
                     <br>
-                    <br>
-                    
-                    </li>
+                    <li>Restore SALT deduction and protect NJ from federal budget cuts</li>
+                  </ul>
+            </div>
 
-                </ul>
+            <h4 class="sub-heading">Issue Stances</h4>
+            <div class="experience can-sec">
+                <ul>
+                    <li><strong>Fiscal Responsibility:</strong> Oppose vague tax-cut rhetoric; support transparent budgeting.</li>
+                    <li><strong>Reproductive Rights:</strong> Support abortion rights with medical viability as a possible limit.</li>
+                    <li><strong>Mental Health & Long-Term Care:</strong> Advocate for reform, oversight, and patient-first policies.</li>
+                    <li><strong>Law Enforcement & Crime:</strong> Support better training, root-cause crime reduction, and mental health intervention.</li>
+                    <li><strong>LGBTQ+ Rights:</strong> Defend individual choice and privacy; reject forced outings of trans students.</li>
+                    <li><strong>Education & Civics:</strong> Reintroduce civics education and local government instruction in schools.</li>
+
+                    <li>Proposes the “Save Nina Act” for guardianship reform based on Florida's model</li>
+                    <li>Calls for creation of anonymous critical mission inspection teams for psych/rehab care</li>
+                    <li>Supports legal accountability for rehabs that turn away individuals seeking help</li>
+                    <li>Advocates fairness in women’s sports by proposing separate competition categories for trans athletes</li>
+                  </ul>
             </div>
             
             <h4 class="sub-heading">Related Media</h4>
@@ -207,9 +292,12 @@
                 <a href="https://www.insidernj.com/press-release/ld1-candidates-brandon-saffold-carolyn-rush-oppose-a5117-fighting-for-fair-ballot-access/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="website-link">Insider NJ Article</a> about Assembly Bill A5117, which increased the number of signatures needed to gain ballot access.
             </div>
 
-            <h4 class="sub-heading">Experience</h4>
+            <h4 class="sub-heading">Bio and Experience</h4>
                 <div class="experience can-sec">
-                    
+                    Brandon Saffold is a U.S. Army veteran, former congressional candidate, and community advocate who has remained engaged in public service, even after withdrawing from a 
+                    previous race due to family health issues. A member of the LGBTQ+ community and a proud representative of Gen Z, Brandon brings firsthand experience with mental health 
+                    care failures in New Jersey, inspiring his commitment to legislative reform. His campaign emphasizes fiscal responsibility, accessibility, and support for vulnerable 
+                    populations.
                 </div>
    
     </div>
