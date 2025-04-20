@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Carolyn Rush">
         <meta property="og:description" content="Election information about Carolyn Rush">
@@ -106,21 +106,77 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Carolyn Rush</h6>
+              <h6 class="page-title">Brandon Saffold</h6>
               <p>          
 
-                Candidate Rush has extensive experience in engineering and management which she says she will use to help break down the 
-                problems in Washington and help politicians begin to collaborate more effectively. She has lots of detailed policy positions 
-                and proposals on her site for topics such as climate change, women's reproductive rights, LGBTQ rights, and much more. Inform 
-                the vote would like to highlight that Rush points to specific differences in policy approach in comparison to that of the 
-                incumbent Van Drew, such as voting differently on HR-1280 "The George Floyd Justice in Policing Act", HR-1 "The For the People 
-                Act", and HR-5 "The Equality Act". 
+                Carolyn Rush is a self-described “citizen candidate,” offering thoughtful, measured responses grounded in empathy and transparency. A mother who’s experienced firsthand the 
+                failures of New Jersey’s mental health system, she shares Brandon’s passion for reform. Carolyn supports reproductive rights, backing New Jersey’s protections but open to 
+                viability-based limitations—so long as doctors, not lawmakers, make the final call. She champions healthcare as a basic right, is skeptical of the for-profit system, and 
+                emphasizes better services over corporate profit. On crime, she sees poverty and lack of opportunity—not a lack of police—as root causes and wants mental health professionals 
+                integrated into law enforcement responses. Carolyn strongly supports LGBT rights and opposes punitive legislation or culture wars targeting trans youth, favoring individual 
+                case-by-case approaches. She also supports civics education, centralized candidate information, and reinstating meaningful press coverage as foundational to a functioning 
+                democracy. Her platform rests on open-mindedness, conscience over conformity, and a belief that everyday citizens deserve a voice in shaping the future.
+
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Brandon Saffold</h6>
+              <p>          
+
+                Brandon Saffold and Carolyn Rush are Democratic candidates for the New Jersey General Assembly in Legislative District 1. So far, their campaign shows clear signs of energy 
+                and openness—but is still in the early-to-mid stages of becoming fully transparent and organized.
+                <br>
+                <br>
+                They’ve launched a joint campaign website, which includes biographical information but does not yet provide written policy positions or a clearly articulated platform. 
+                However, both candidates participated in a lengthy, in-depth 2.5 hour interview with InformTheVoteNJ, where they discussed numerous issues with a level of detail and 
+                openness not often seen at this stage in a local campaign.
+                <br>
+                <br>
+                They’ve also:
+                <ul>
+                    <li>-Agreed to follow-up interviews to further clarify positions
+                    </li>
+                    <br>
+                    <li>-Expressed willingness to participate in a public candidate forum alongside their primary opponent, Carol Sabo (though contact has not yet been established)
+                    </li>
+                    <br>
+                    <br>
+                    <li>Participated in at least one campaign event with gubernatorial candidate Steven Fulop, though the event was not widely advertised and was only discovered through 
+                        personal social media connections
+                    </li>
+                </ul>
+
+                <br>
+                <br>
+
+                As it stands, Saffold and Rush come across as highly willing to engage, but it remains unclear how fully developed their campaign strategy and outreach efforts are. 
+                There’s no obvious event calendar, limited messaging visibility beyond direct engagement, and no public repository of clear stances on core legislative issues—despite the 
+                candidates demonstrating strong awareness of them in conversation.
+
+                <br>
+                <br>
+
+                For these reasons, both candidates currently receive an average to above-average transparency rating, based on their direct engagement and willingness to participate in open 
+                discussion. A fully developed public-facing platform—supported by consistent updates, better event promotion, and broader accessibility—would solidify them as top-tier in 
+                transparency.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -161,7 +217,7 @@
 
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -181,54 +237,63 @@
          </div>
      </div>
 
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Average to Above Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
+
+        <img class="gauge" src="../../../assets/gauge_good.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
+
      <div class="video-box-modal can-sec">
         <h3 class="video-heading">InformTheVoteNJ Interview With Charlie Woody</h3>
 
         <iframe src="https://www.youtube.com/embed/vIXRZufrri4?si=7kdk8fk8EvnamUIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
     </div>
             
-     <div class="candidate-agenda">
+     
             
      <div class="candidate-agenda">
 
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
                 <ul>
-                    <ul>
-                    <li>Supports economic policies which favor low and middle class families.</li>
-                    <li>Supports social programs.</li>
-                    <li>Supports training and educational opportunities.</li>
-                    <li>Supports a minimum wage which keeps working people above the poverty line.</li>
-                    <li>Wants to balance military spending with taking care of people at home.</li>
-                    <li>Wants to combat climate change and use it to create new jobs.</li>
-                    <li>Supports fair trade.</li>
-                    <li>Supports a progressive tax system to address the national debt.</li>
-                    <li>Wants a tax policy similar to Clinton's in the 90's.</li>
-                    <li>Opposes the debt ceiling.</li>
-                    <li>Supports Murphy's proposed Atlantic Shores wind turbines.</li>
-                    <li>Advocates for people of color, low-income families, and Indigenous communities.</li>
-                    <li>Wants to create an environmental justice fund for addressing concerns such as replacing lead water-service lines.</li>
-                    <li>Wants to mandate that birth control be provided by insurance companies at no cost.</li>
-                    <li>Strongly supports LGBTQ+ rights.</li>
-                    <li>Wants to expand Medicare.</li>
-                    <li>Wants assault weapons bans, universal background checks, mental health screenings, and a national red flag law.</li>
-                    <li>Wants to strengthen veterans financial security, stabilize their housing, and more.</li>
-                    <li>Would have voted for HR-1, the 'For the People Act'.</li>
-                    <li>Wants automatic and same-day registration for voting.</li>
-                    <li>Wants vote-by-mail, early voting, and limitations to removing voters from voter rolls.</li>
-                    <li>Wants independent redistricting commissions for elections.</li>
-                    <li>Wants to improve election security, stronger measures on campaign financing, and disclosure of taxes from candidates for previous 10 years.</li>
-                    <li>Wants to reform, not defund, the police.</li>
-                    <li>Would have voted for HR-1280, the 'George Floyd Justice in Policing Act'</li>
-                    <li>Wants a two-state solution to the Israel-Palestine conflict and to end occupation in the West Bank.</li>
-                    <li>Wants a marijuana opportunity reinvestment and expungement act.</li>
-                    <li>Wants more rail infrastructure.</li>
-                    <li>Wants 9 billion dollars for sewer maintenance.</li>
-                    <li>Wants to increase funding for open space and farmland.</li>
-                    
-                </ul>
+                    <li>Increase transparency in government and campaigning</li>
+                    <br>
+                    <li>Promote fiscal responsibility and conscientious tax policy</li>
+                    <br>
+                    <li>Reintroduce local civics education in NJ public schools</li>
+                    <br>
+                    <li>Support reproductive rights with viability-based limits enforced by doctors</li>
+                    <br>
+                    <li>Support public safety reforms with a focus on mental health response integration</li>
+                    <br>
+                    <li>Restore SALT deduction and protect NJ from federal budget cuts</li>
+                    <br>
+                    <li>Commit to voting conscience over party pressure, even under threat of funding retaliation</li>
+                    <br>
+                    <li>Encourage rebuilding of trust in democracy through openness and accountability</li>
+                    <br>
+                    <li>Explore “mandatory minimum” community press presence to prevent misinformation</li>
+                  </ul>
 
-                </ul>
+                
+            </div>
+
+            <h4 class="sub-heading">Issue Stances</h4>
+            <div class="experience can-sec">
+                <ul>
+                    <li><strong>Fiscal Responsibility:</strong> Oppose vague tax-cut rhetoric; support transparent budgeting.</li>
+                    <li><strong>Reproductive Rights:</strong> Support abortion rights with medical viability as a possible limit.</li>
+                    <li><strong>Mental Health & Long-Term Care:</strong> Advocate for reform, oversight, and patient-first policies.</li>
+                    <li><strong>Law Enforcement & Crime:</strong> Support better training, root-cause crime reduction, and mental health intervention.</li>
+                    <li><strong>LGBTQ+ Rights:</strong> Defend individual choice and privacy; reject forced outings of trans students.</li>
+                    <li><strong>Education & Civics:</strong> Reintroduce civics education and local government instruction in schools.</li>
+
+                    <li>Refuses to vote against her conscience even under party pressure</li>
+                    <li>Wants to expose party coercion through press and public transparency</li>
+                    <li>Open to proposals for increasing trusted local press as a democratic safeguard</li>
+                  </ul>
             </div>
             
             <h4 class="sub-heading">Related Media</h4>
@@ -236,9 +301,11 @@
                 <a href="https://www.insidernj.com/press-release/ld1-candidates-brandon-saffold-carolyn-rush-oppose-a5117-fighting-for-fair-ballot-access/?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" class="website-link">Insider NJ Article</a> about Assembly Bill A5117, which increased the number of signatures needed to gain ballot access.
             </div>
 
-            <h4 class="sub-heading">Experience</h4>
+            <h4 class="sub-heading">Bio and Experience</h4>
                 <div class="experience can-sec">
-                    Candidate Rush has an extensive experience engineering and management.
+                    Carolyn Rush is a passionate advocate for transparency and integrity in public service. A mother who has personally faced challenges with the state’s health care and 
+                    mental health systems, Carolyn brings a deeply personal perspective to public policy. With a strong sense of accountability and moral conviction, she pledges to vote 
+                    with her conscience rather than follow party pressure, and prioritizes building public trust in government.
                 </div>
    
     </div>
