@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Lawrence A. Moore">
         <meta property="og:description" content="Election information about Lawrence A. Moore">
@@ -106,15 +106,52 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
-              <h6 class="page-title">Lawrence A. Moore</h6>
+              <h6 class="page-title">Lawrence Moore</h6>
               <p>          
 
+                Lawrence Moore is the Deputy Mayor of Harrison Township and a Republican candidate for the New Jersey General Assembly in Legislative District 3. While currently serving in local 
+                government, Moore has not established a campaign website or provided public documentation of his platform. He briefly introduced himself at a Republican breakfast, but beyond 
+                that, voters have limited information about his candidacy. At present, there is no known issue-based messaging or public schedule of campaign events.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Lawrence Moore</h6>
+              <p>          
+                While Lawrence Moore does not have a dedicated campaign website, there is more publicly available information about his candidacy than initially assumed. Moore serves as the 
+                Deputy Mayor of Harrison Township and has been featured in several local news articles and press releases. He has made public statements regarding his priorities, including 
+                controlling government spending, lowering taxes, and increasing school funding. This level of media engagement provides voters with a general sense of his political perspective, 
+                even in the absence of direct outreach or a formal campaign platform.
+                <br>
+                <br>
+                However, he has not responded to our direct outreach, nor has he participated in our voter information initiative. He has made at least one brief public appearance at a local 
+                Republican breakfast, which aligns with the general trend of accessibility seen among other Republican candidates in the area. Still, more proactive participation and centralized 
+                voter information would improve clarity and ease of access for constituents.
+                <br>
+                <br>
+                Note: While this is technically still the primary phase, both parties are running unopposed slates, meaning all four current candidates are expected to advance to the general election. 
+                This creates a valuable opportunity for candidates to begin clearly communicating their platforms early, giving voters more time to learn and engage. We encourage all candidates to take 
+                advantage of this head start by providing accessible, detailed information about their agendas and priorities.
+                <br>
+                <br>
+                For these reasons, Konawell receives a low rating for transparency and accessibility.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -148,7 +185,7 @@
 
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -168,73 +205,67 @@
          </div>
      </div>
 
-     <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">04/26/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>    
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Below Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/10/25 - 8:30am</li>
-            <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+        <img class="gauge" src="../../../assets/gauge_real_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
 
-    <div class="event-card">
-        <ul class="event-info">
-            <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
-            <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
-            <li class="date-and-time">05/24/25 - 8:30am</li>
-            <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
-            <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
-        </ul>
-    </div>  
+    <details>
+        <summary style="font-size: 2em; cursor:pointer; color:blue; text-decoration:underline;">Events</summary>
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">04/26/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>    
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/10/25 - 8:30am</li>
+                <li class="location">Eastlyn Golf Course, 4049 Italia Ave, Vineland, NJ, 08361</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+
+        <div class="event-card">
+            <ul class="event-info">
+                <li class="name"><strong>Cumberland County Regular Republican Organization Breakfast</strong></li>
+                <li class="description">Listen to party messaging and potentially meet Republican candidates<a href="https://www.ccrrogop.org/event-calendar"> Party Site</a></li>
+                <li class="date-and-time">05/24/25 - 8:30am</li>
+                <li class="location">Mauricetown Fire Company, 9544 Noble St. Mauricetown, NJ 08349</li>
+                <li class="RSVP">RSVP: dgeno2383@gmail.com on or before that week's Tuesday</li>
+            </ul>
+        </div>  
+    </details>
             
      <div class="candidate-agenda">
 
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
-                <ul>
-                    <li><b>Item 1</b>
-                    <br>
-                    <br>
-                    
-                    </li>
-                    <br>
-                    <br>
-                    <li><b>Item 2</b>
-                    <br>
-                    <br>
-                    
-                    </li>
-                    <br>
-                    <br>
-                    <li><b>Item 3</b>
-                    <br>
-                    <br>
-                    
-                    </li>
-
-                </ul>
+                Lawrence Moore has not published a formal campaign website or detailed policy platform. However, based on public statements and his professional background, Moore emphasizes 
+                affordability, public safety, and efficient governance. He advocates for reducing wasteful government spending, cutting taxes, and reforming school funding to ensure equitable 
+                education opportunities. Moore also supports the use of nuclear energy as a cost-effective solution for the state's energy needs. While these positions provide a glimpse into his 
+                priorities, a comprehensive campaign platform would offer voters a more detailed understanding of his legislative objectives.​
             </div>
             
             <h4 class="sub-heading">Background and Campaign Message</h4>
             <div class="experience can-sec">
-                
+                Lawrence Moore serves as the Deputy Mayor of Harrison Township, where he leads initiatives focused on economic development, infrastructure improvement, and sustainable growth. 
+                He also holds the position of Deputy Municipal Clerk for South Harrison Township, managing planning and zoning, tax collection, vital records, and administrative operations. 
+                Moore's experience includes serving as a legislative aide for former New Jersey Assemblywoman Beth Sawyer, providing him with insight into policy development and constituent 
+                services. Academically, he holds a bachelor's degree in political science from Rutgers-Camden University and is pursuing a master's in public administration at the University of 
+                Pennsylvania's Fels Institute of Government. With over 12 years of service as a volunteer firefighter and as captain of the Harmony Fire Company, Moore demonstrates a strong 
+                commitment to public safety and community engagement.
             </div>
-
-            <h4 class="sub-heading">Experience</h4>
-                <div class="experience can-sec">
-                    
-                </div>
    
     </div>
 </div>   
