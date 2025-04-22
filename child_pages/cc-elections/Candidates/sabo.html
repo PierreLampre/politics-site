@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <script src="../../../app.js" async></script>
+        <script src="../../../dual_model_candidate.js" async></script>
         <title>Inform The Vote</title>
         <meta property="og:title" content="Inform The Vote NJ - Carol Sabo">
         <meta property="og:description" content="Election information about Carol Sabo">
@@ -106,15 +106,46 @@
         </div>
 
         
-        <dialog id="myModal" class="modal">
+        <dialog id="Modal1" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close1" class="close">
               <h4 class="quick-sum">quick summary</h4>
               <h6 class="page-title">Carol Sabo</h6>
               <p>          
 
+                Carol Sabo is a Democratic candidate for the New Jersey General Assembly in Legislative District 1 and currently serves as Mayor of West Cape May. While her background 
+                includes decades of public service in local government and social work, her campaign has remained relatively quiet. She has not responded to outreach, held public events, 
+                or provided any detailed public messaging beyond a sparse campaign website. Compared to her primary opponents, who are more actively engaging with voters, Sabo's campaign 
+                currently lacks transparency and accessibility.
+                <br>
+                <br>
+                Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
+              </p>
+            </div>
+        </dialog>
+        <dialog id="Modal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id="close2" class="close">
+              <h4 class="quick-sum">Rating Explanation</h4>
+              <h6 class="page-title">Carol Sabo</h6>
+              <p>          
+
+                Carol Sabo is running for NJ General Assembly in Legislative District 1 and recently launched a campaign website, though it appears to be a work-in-progress with limited 
+                detail. She has not responded to any direct outreach attempts, and there are no known public events or community information efforts associated with her campaign. Her 
+                issue-based messaging is confined to her website and lacks depth or specificity compared to other candidates in the race.
+                <br>
+                <br>
+                While her background in local government and social work offers voters some insight, her current campaign has not demonstrated meaningful transparency or public engagement. 
+                At this stage, Sabo remains largely inaccessible to voters seeking to understand her platform or priorities beyond surface-level introductions.
+                <br>
+                <br>
+                For these reasons, Sabo receives a below-average rating for transparency and accessibility.
+                <br>
+                <br>
                 Click the red x at the top of this box and then scroll down down for more in-depth information and sources.
 
               </p>
@@ -138,17 +169,18 @@
          </div>
      </div>
      <div class="candidate-pic-box">
-         <img class="cover" src="../../../assets/candidates/sabo.jpg" class="candidate-pic">
+         <img class="cover" src="../../../assets/candidates/sabo.avif" class="candidate-pic">
          <div class="candidate-pic-box-content">
              <h4 class="sub-heading">Websites</h4>
              <div class="website">
                  
+                <a href="https://www.saboforassembly.org/" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Campaign Site</button></a>
                  <a href="https://ballotpedia.org/Carol_Sabo" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Ballotpedia</button></a>
                  <a href="https://pressofatlanticcity.com/news/local/government-politics/elections/article_ca24dd44-d90b-11ef-abeb-2bd7de46f4a6.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">AC Press Article</button></a>
 
              </div>
 
-             <button class="quick-summary-reopen">quick summary</button>
+             <button id="quick-summary-reopen" class="quick-sum">quick summary</button>
 
              <div class="election-date">
                  <p>This election is on June 10th, 2025</p>
@@ -168,45 +200,58 @@
          </div>
      </div>
 
-        
+     <div class="gauge-box">
+        <h4 class="sub-heading extra-long">Transparency/Accessibility Rating: Below Average</h4>
+        <a href="../../../child_pages/cc-elections/transparency_standards_page.html" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Transparency Standards Explained</button></a>                 
+
+        <img class="gauge" src="../../../assets/gauge_kinda_bad.svg" alt="">
+        <button id="rating-exp" class="rating-exp">anecdotal rating explanation</button>
+    </div> 
             
      <div class="candidate-agenda">
 
             <h4 class="sub-heading">Agenda</h4>
             <div class="experience can-sec">
                 <ul>
-                    <li><b>Item 1</b>
-                    <br>
-                    <br>
-                    
+                    <li>
+                      <strong>Affordability & Housing:</strong>
+                      Sabo has championed affordable housing initiatives in West Cape May, notably facilitating the construction of Habitat for Humanity homes. She aims to extend 
+                      such efforts to ensure more families can afford to live in the district.
                     </li>
                     <br>
-                    <br>
-                    <li><b>Item 2</b>
-                    <br>
-                    <br>
-                    
+                    <li>
+                      <strong>Labor & Workers' Rights:</strong>
+                      As a long-time union member, Sabo has been active in labor advocacy, participating in negotiation teams and government relations committees. She is committed 
+                      to supporting pro-labor policies and protecting workers' rights.
                     </li>
                     <br>
-                    <br>
-                    <li><b>Item 3</b>
-                    <br>
-                    <br>
-                    
+                    <li>
+                      <strong>Environmental Protection & Sustainable Growth:</strong>
+                      During her tenure as mayor, Sabo has prioritized environmental protections and sustainable economic development to maintain West Cape May as a thriving and 
+                      inclusive community.
                     </li>
-
-                </ul>
+                    <br>
+                    <li>
+                      <strong>Healthcare & Education:</strong>
+                      With a background in social work and education, Sabo understands the challenges families face regarding access to quality healthcare and education. She is 
+                      dedicated to addressing these issues to improve economic stability and opportunities for residents.
+                    </li>
+                  </ul>
+                  <br>
+                  <p>
+                    While her campaign website outlines these focus areas, it currently lacks detailed policy proposals or specific legislative plans. As the campaign progresses, 
+                    further information may become available to provide a more comprehensive understanding of her agenda.
+                  </p>
             </div>
             
-            <h4 class="sub-heading">Background and Campaign Message</h4>
+            <h4 class="sub-heading">Background and Experience</h4>
             <div class="experience can-sec">
-                
+                Carol Sabo brings over 35 years of experience in social work, education, and local government. She has served as Mayor of West Cape May since 2019 and has been a member of 
+                the borough's governing body since 2013. Professionally, Sabo has worked extensively with families and children, including 14 years with the New Jersey Division of Youth 
+                and Family Services and 23 years with the Cape May County Schools for Special Services. Her commitment to community advocacy is evident in initiatives like facilitating 
+                the construction of Habitat for Humanity homes in West Cape May. Sabo's leadership emphasizes affordability, environmental protection, and sustainable economic growth.
             </div>
 
-            <h4 class="sub-heading">Experience</h4>
-                <div class="experience can-sec">
-                    
-                </div>
    
     </div>
 </div>   
