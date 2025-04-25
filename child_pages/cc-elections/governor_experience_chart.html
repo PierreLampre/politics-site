@@ -59,10 +59,10 @@
         }
       
         .label {
-          font-weight: bold;
-          color: #555;
-          display: block;
-          margin-top: 0.5rem;
+            font-weight: bold;
+            color: #222; /* Darker for better contrast */
+            display: block;
+            margin-top: 0.5rem;
         }
       
         .value {
@@ -79,17 +79,22 @@
 
         .card-header {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 0.5rem;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+            text-align: left;
         }
 
         .card-header img {
-            width: 60px;
-            height: 60px;
+            width: 66px; /* 10% larger than 60px */
+            height: 66px;
             object-fit: cover;
             border-radius: 50%;
+            flex-shrink: 0;
         }
+
+
       </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
