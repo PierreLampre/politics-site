@@ -76,6 +76,20 @@
             margin: 1rem auto;
           }
         }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-header img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
       </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -176,59 +190,30 @@
     </div>
 
     <div class="comparison-wrapper">
+
+        <h3>Democrats</h3>
+
+        <br>
+
         <h2>Quick Background and Experience Breakdown</h2>
+
+        <br>
+
         <div class="summary-note">
           
-            <h3>Democrats</h3>
+            This chart combines each Democratic gubernatorial candidate’s leadership background with a clear summary of their top strengths and fair limitations. It highlights 
+            who brings executive experience, who has shaped major policy, and who operates with grassroots, business, military, or federal expertise. The goal is to help voters 
+            quickly distinguish between polished résumés, real-world achievements, and future potential — without needing weeks of personal research.
+            
         </div>
-      
-        <div class="summary-note">
-            <strong>Key Differentiators – Democratic Candidates</strong><br>
-            This section summarizes what makes each candidate stand out, as well as key limitations to help voters make informed comparisons. Candidates are evaluated on credentials, experience, visibility, and leadership scope.
-          </div>
-          
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Steven Fulop</h3>
-              <span class="label">Strength:</span><span class="value">✅ Most credentialed, internationally recognized urban executive</span>
-              <span class="label">Limitation:</span><span class="value">—</span>
-            </div>
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Ras Baraka</h3>
-              <span class="label">Strength:</span><span class="value">✅ Deeply rooted civic leader with equity-driven urban reform</span>
-              <span class="label">Limitation:</span><span class="value">⚠️ Less nationally visible than Fulop or Gottheimer</span>
-            </div>
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Steve Sweeney</h3>
-              <span class="label">Strength:</span><span class="value">✅ Most seasoned insider; unmatched Trenton & labor experience</span>
-              <span class="label">Limitation:</span><span class="value">⚠️ No higher ed credentials; no city-level executive experience</span>
-            </div>
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Mikie Sherrill</h3>
-              <span class="label">Strength:</span><span class="value">✅ Military veteran, federal prosecutor, and policy-focused legislator</span>
-              <span class="label">Limitation:</span><span class="value">⚠️ No city/state executive background</span>
-            </div>
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Josh Gottheimer</h3>
-              <span class="label">Strength:</span><span class="value">✅ Federal dealmaker with bipartisan leadership and private sector experience</span>
-              <span class="label">Limitation:</span><span class="value">⚠️ No direct public-sector executive experience</span>
-            </div>
-          
-            <div class="candidate-card" style="max-width: 340px;">
-              <h3>Sean Spiller</h3>
-              <span class="label">Strength:</span><span class="value">✅ Mayor and statewide union leader with policy clarity</span>
-              <span class="label">Limitation:</span><span class="value">⚠️ Smaller municipality base; less national visibility</span>
-            </div>
-          
-          </div>
-          
+
         <div class="candidate-card">
-            <h3>Steve Sweeney</h3>
+            <div class="card-header">
+                <h3>Steve Sweeney</h3>
+                <img src="../../assets/candidates/S_Sweeney.jpg" alt="Steve Sweeney">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Most seasoned insider; unmatched Trenton & labor experience</span>
+            <span class="label">Limitation:</span><span class="value">⚠️ No higher ed credentials; no city-level executive experience</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ NJ Senate President (2010–2022); Gloucester County Freeholder Director (1998–2010)</span>
             <span class="label">Professional Background:</span><span class="value">✅ Union ironworker; General Vice President of the International Association of Ironworkers</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Advocate for disability rights and education reform; established a school for autistic children</span>
@@ -238,7 +223,12 @@
           </div>
 
           <div class="candidate-card">
-            <h3>Ras Baraka</h3>
+            <div class="card-header">
+                <h3>Ras Baraka</h3>
+                <img src="../../assets/candidates/baraka.jpg" alt="Ras Baraka">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Deeply rooted civic leader with equity-driven urban reform</span>
+            <span class="label">Limitation:</span><span class="value">⚠️ Less nationally visible than Fulop or Gottheimer</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ Mayor of Newark (2014–present); previously a councilman and principal of Central High School</span>
             <span class="label">Professional Background:</span><span class="value">✅ Educator, school principal; deep roots in Newark community leadership</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Strong focus on equity, public safety reform, housing, environmental justice, and community empowerment</span>
@@ -248,7 +238,12 @@
           </div>
 
           <div class="candidate-card">
-            <h3>Steven Fulop</h3>
+            <div class="card-header">
+                <h3>Steven Fulop</h3>
+                <img src="../../assets/candidates/fulop.jpg" alt="Steven Fulop">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Most credentialed, internationally recognized urban executive</span>
+            <span class="label">Limitation:</span><span class="value">None</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ Mayor of Jersey City (2013–present); Jersey City Council (2005–2013)</span>
             <span class="label">Professional Background:</span><span class="value">✅ Former Goldman Sachs analyst; U.S. Marine Corps Iraq War veteran; public/private sector blend</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Spearheaded healthcare, veteran, immigrant, and small business initiatives with national recognition</span>
@@ -258,7 +253,12 @@
           </div>
 
           <div class="candidate-card">
-            <h3>Mikie Sherrill</h3>
+            <div class="card-header">
+                <h3>Mikie Sherrill</h3>
+                <img src="../../assets/candidates/sherrill.jpg" alt="Mikie Sherrill">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Military veteran, federal prosecutor, and policy-focused legislator</span>
+            <span class="label">Limitation:</span><span class="value">⚠️ No city/state executive background</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ U.S. Congresswoman (2019–present); former Navy helicopter pilot and federal prosecutor</span>
             <span class="label">Professional Background:</span><span class="value">✅ U.S. Navy (10 years, Iraq War, NATO missions); Assistant U.S. Attorney for New Jersey</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Advocates for family affordability, reproductive rights, reentry programs, and infrastructure development</span>
@@ -268,7 +268,12 @@
           </div>
 
           <div class="candidate-card">
-            <h3>Josh Gottheimer</h3>
+            <div class="card-header">
+                <h3>Josh Gottheimer</h3>
+                <img src="../../assets/candidates/gottheimer.jpg" alt="Josh Gottheimer">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Federal dealmaker with bipartisan leadership and private sector experience</span>
+            <span class="label">Limitation:</span><span class="value">⚠️ No direct public-sector executive experience</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ U.S. Congressman (2017–present); former Clinton and Obama administration official</span>
             <span class="label">Professional Background:</span><span class="value">✅ Lawyer, nonprofit founder, executive roles at Ford and Microsoft</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Co-chair of bipartisan Problem Solvers Caucus; advocate for SALT relief, infrastructure, and child tax credits</span>
@@ -278,7 +283,12 @@
           </div>
 
           <div class="candidate-card">
-            <h3>Sean Spiller</h3>
+            <div class="card-header">
+                <h3>Sean Spiller</h3>
+                <img src="../../assets/candidates/spiller.jpg" alt="Sean Spiller">
+              </div>
+            <span class="label">Strength:</span><span class="value">✅ Mayor and statewide union leader with policy clarity</span>
+            <span class="label">Limitation:</span><span class="value">⚠️ Smaller municipality base; less national visibility</span>
             <span class="label">Leadership Experience:</span><span class="value">✅ Mayor of Montclair (2020–present); President of NJ Education Association (NJEA)</span>
             <span class="label">Professional Background:</span><span class="value">✅ Public school science teacher; longtime education and labor advocate</span>
             <span class="label">Civic/Advocacy Roles:</span><span class="value">✅ Union leadership, education funding advocate, champion for housing affordability and local development</span>
