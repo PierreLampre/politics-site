@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../../../style.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <script src="../../../app.js" async></script>
+        <title>Inform The Vote</title>
+    </head>
+
+    <body>
+        <div class="menu-wrap">
+            <input type="checkbox" autocomplete='off' class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <div>
+                    <div>
+                        <ul class="links">
+
+                            <li class="link"><a id="home" href="https://www.informthevotenj.com/index.html">Home</a></li>
+                        
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="first">
+                                <label for="first">County Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/commercial_township_committee.html">Commercial Township Committee</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/downe_township_committee.html">Downe Township Committee</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li>
+    
+                                    <!-- <li class="link"><a href="../cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a></li>
+                                    <li class="link"><a href="../cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
+                                    <li class="link"><a href="../cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li>
+                                    <li class="link"><a href="../cc-elections/vineland_city_council_2024.html">Vineland City Council</a></li>
+                                    <li class="link"><a href="../cc-elections/vineland_mayor_2024.html">Vineland Mayor</a></li>                                 -->                           
+                                </div>
+                            </div>
+
+                            <!-- <div class="accordion">
+                                <input type="checkbox" name="accordion" id="second">
+                                <label for="second">School Board Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/lawrence_school_board_2024.html">Lawrence Township School Board</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/vsb_2024.html">Vineland School Board</a></li>
+                                </div>
+                            </div> -->
+
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="third">
+                                <label for="third">Governor and State Elections</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_1.html">State Assembly - 1st Legislative District</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_3.html">State Assembly - 3rd Legislative District</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/governor.html">Governor</a></li>
+    
+                                    <!-- <li class="link"><a href="../cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a></li>
+                                    <li class="link"><a href="../cc-elections/us_senate_2024.html">US Senate, NJ</a></li>
+                                    <li class="link"><a href="../cc-elections/cc_vice_president_2024.html">US Vice President</a></li>
+                                    <li class="link"><a href="../cc-elections/us_president_2024.html">US President</a></li> -->
+                                </div>
+                            </div>
+                            
+
+                            <div class="accordion">
+                                <input type="checkbox" name="accordion" id="fourth">
+                                <label for="fourth">Issues</label>
+                                <div class="nested-burger-links">
+                                    <li class="link"><a href="../../../child_pages/cc-elections/cc_election_issues.html">Cumberland County Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/commercial_township_issues.html">Commercial Township Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/downe_township_issues.html">Downe Township Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/lawrence_township_issues.html">Lawrence Township Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_1_issues.html">State Assembly - Legislative District 1 Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/state_assembly_legislative_district_3_issues.html">State Assembly - Legislative District 3 Issues</a></li>
+                                    <li class="link"><a href="../../../child_pages/cc-elections/governor_issues.html">Governor Issues</a></li>
+    
+    
+                                    <!-- <li class="link"><a href="../cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/millville_city_issues.html">Millville City Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/us_senate_issues.html">US Senate Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/us_vice_president_issues.html">Vice President Issues</a></li>
+                                    <li class="link"><a href="../cc-elections/us_president_issues.html">President Issues</a></li> -->
+                                </div>
+                            </div>
+
+                            <li class="link"><a href="../../../child_pages/get-involved.html">Get Involved</a></li>
+                            <li class="link"><a href="../../../child_pages/events.html">Events</a></li>
+                            <li class="link"><a href="../../../child_pages/resources-archives-and-rabbit-holes.html">Extra Info</a></li>
+                            <li class="link"><a href="../../../child_pages/about.html">About</a></li>
+                            <li class="link"><a href="../../../child_pages/contact.html">Contact</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <dialog id="myModal" class="modal">
+
+             Modal content 
+            <div class="modal-content">
+                <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" class="close">
+                <h4 class="quick-sum">quick summary</h4>
+              <h6 class="page-title">Victoria Lods</h6>
+              <p>
+                Commissioner Lods is running as a challenger against Celeste Riley for the County Clerk seat. She has been involved in politics for decades, having previously held positions 
+                such as Chief of Staff for a State Senator and she was the Executive Director for Habitat for Humanity. She is currently a County Commissioner. At a recent Republican breakfast 
+                meeting, Lods pointed out several things that could be seen as why she is running for the position and how she differentiates herself from the incumbent:
+                <br>
+                1. Competence for the role of County Clerk is important because they are responsible for elections and could make election related errors. The following might be an 
+                example of this: <a href="https://www.facebook.com/groups/781111154116727/?multi_permalinks=850813927146449&ref=share">NJ Globe Article</a>
+                <br>
+                2. It is important for the Clerk to actually show up for work on a regular basis and not focus on peripheral tasks such as ribbon cuttings.
+                <br>
+                3. It is common for administrative politicians to make excuses for why things aren't getting done, like broken printers in the office.
+                <br>       
+                4. Appropriate execution of job duties is important. For example, the current clerk has recused herself from election duties, but has her 
+                picture on election information mailers. So two questions arise: 1. How can she recuse herself from one of her most important duties? 
+                2. Why would her picture appear on mailers that are meant to present neutral voting information (election date, how to vote early, etc.)?
+                <a href="https://www.facebook.com/CumberlandNJGOP/posts/pfbid0RszSXNRUHZDv964QTYP4FpfJxpEWgSYtqD9jbRWuc3cRxfMA7HfNEUhMnKjGKWPCl?rdid=gHXXGCkheo3r6wW0">Cumberland GOP Release</a>
+                <details>
+                    <summary style="cursor:pointer; color:blue; text-decoration:underline;">Mailer Photo 1</summary>
+                            <p>If on desktop, right click the image and select 'open in new tab' for a larger image</p>
+                            <img src="../../../assets/screenshots/electionMailer1.PNG" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
+                </details>
+                <br>
+                <details>
+                    <summary style="cursor:pointer; color:blue; text-decoration:underline;">Mailer Photo 2</summary>
+                            <p>If on desktop, right click the image and select 'open in new tab' for a larger image</p>
+                            <img src="../../../assets/screenshots/electionMailer2.PNG" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
+                </details>
+                <br>
+                <details>
+                    <summary style="cursor:pointer; color:blue; text-decoration:underline;">Mailer Photo 3</summary>
+                            <p>If on desktop, right click the image and select 'open in new tab' for a larger image</p>
+                            <img src="../../../assets/screenshots/electionMailer3.PNG" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
+                </details>
+                <br>
+                When asked in person about what the specific role is of the County Clerk and how she would differentiate herself from the incumbent, she responded "If you don't
+                know what the County Clerk does, that should tell you enough about how the role is being executed.", which I believe implies that the County Clerk should be 
+                acting as the known liason between the public and the government. She also released the following video to help clarify the 
+                role of the clerk:
+                <a href="https://www.facebook.com/reel/360821143737277">Facebook Reel</a>. You might also get some more updates by following the 
+                <a href="https://www.facebook.com/CumberlandNJGOP">Cumberland County GOP facebook group</a> for the remainder of the campaign season.
+
+                Click the x at the top red of this box to go back to the page, then scroll down for more info.
+              </p>
+            </div>
+          
+          </dialog>
+    
+         <img src="../../../assets/lighthouse.jpg" alt="cumberland county symbol" id="jumbotronjawn"> 
+<div class="container">
+
+    <div class="title-info">
+        <h2>Victoria Lods</h2>
+         <div class="running-for">
+             <div class="running-title">Running for: </div>
+             <div class="position">Cumberland County Clerk</div>
+         </div>
+         <div class="incum-or-challenger">
+             <div class="incumbent inactive">Incumbent</div>
+             <div class="challenger active">Challenger</div> 
+         </div>
+     </div>
+     <div class="candidate-pic-box">
+         <img class="cover" src="../../../assets/candidates/Tori Lods.webp" class="candidate-pic">
+         <div class="candidate-pic-box-content">
+             <h4 class="sub-heading">Websites</h4>
+             <div class="website">
+                  <a href="https://www.facebook.com/profile.php?id=61558533437326" target="_blank"><i class="fa-brands fa-facebook" style="color: blue"></i></a>
+                 <!-- <a href="https://www.facebook.com/profile.php?id=61558533437326" target="_blank"><i class="fab fa-facebook-f"></i>Campaign Facebook</a> 
+                 <a href="https://www.ccrrogop.org/cumberlandcountyclerk2024" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Republican Party Campaign Site</button></a>
+                 
+                 <a href="https://www.cumberlandcountynj.gov/Victoria-Groetsch-Lods" target="_blank" rel="noopener noreferrer" class="website-link"><button class="candidate-ext-site">Cumberland County Government Site</button></a>
+                 
+                  <a href="https://www.facebook.com/robert.austino/" target="_blank"><i class="fa-brands fa-square-facebook" style="color: blue"></i></a> 
+             </div>
+
+             <button class="quick-summary-reopen">quick candidate summary</button>
+
+             <div class="election-date">
+                 <p>This election is on November 5th, 2024</p>
+             </div>
+
+             <div class="animal-box">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+                 <img src="../../../assets/candidates/elephant.png" alt="democrt donkey mascot" class="donkey">
+             </div>
+         </div>
+     </div>
+
+    <div class="candidate-agenda">
+
+        <h4 class="sub-heading">individual agenda</h4>
+        <div class="agenda-thesis can-sec">
+            <ul>
+                <li>Ensure election integrity</li>
+                <li>Funding for quality education</li>
+                <li>Quality recreation for children</li>
+                <li>Improve the affordability and quality of the county for future generations</li>
+            </ul>
+        </div>
+        
+        <h4 class="sub-heading">party messaging</h4>
+        <div class="agenda-thesis can-sec">
+            To be clear, with the lack of a proper newspaper providing thorough, professional-level election coverage, both sides of the aisle in *local* 
+            politics seem to be suffering from a lack of clear messaging. This is not to say that they aren't putting forward a lot of effort to message, 
+            but the information is oftentimes scattered across the internet, spoken about at meetings/events that appear partisan or have expensive 
+            sponsorship fees, or mentioned at lengthy meetings most people simply won't attend. Oftentimes people get brief literature like
+            <details>
+                <summary style="cursor:pointer; color:blue; text-decoration:underline;">View Screenshot</summary>
+                        <p>If on desktop, right click the image and select 'open in new tab' for a larger image</p>
+                        <img src="../../../assets/screenshots/ccrroLit.PNG" alt="Screenshot Thumbnail" id="screenshotThumbnail" style="cursor:pointer; width:100%; max-width: 80vw; margin-top: 10px;">
+            </details>
+            . They also might get vague impressions of what local Republicans or Democrats might believe based on what they know about national politics.
+            While we have been able to gather some specific information about Lods run for County Clerk, as shown by the above agenda and our references 
+            to the issues surrounding the ballot design and election mailers from the clerk's office, there is probably a lot more detail that we could go 
+            into about the specifics of the clerk's office and Lods campaign bid.
+            <br>
+            <br>
+            The one general point that the party has made clear regarding the local level, is that the Democrat party has been predominantly in control for 
+            the past 40 odd years, and they have made a mess while doing so, so perhaps it is time to let the Republicans take control for a while so they 
+            can clean it up.
+                    
+        </div>      
+
+        <h4 class="sub-heading">policy positions and issues</h4>
+        <div class="policy-positions can-sec">
+            After reaching out to Commissioner Lods and receiving no response, it is unclear how any policy positions she may have relates to the office of 
+            County Clerk other than she might be more cooperative with the overall Republican party at the county level and therefore might help 
+            them complete tasks more efficiently.          
+            <br>
+            <br>
+            However, there have been some clear issues regarding the clerk's office's handling of the general election ballot design and election information 
+            material coming from the clerk's office... and Lods has made it clear that she will ensure election integrity moving forward if elected.
+        </div>
+
+        <h4 class="sub-heading">experience</h4>
+        <div class="experience can-sec">
+            <ul>
+                <li>Bachelor's degree in Communications and Journalism</li>
+                <li>Former executive director for Cumberland County Habitat for Humanity</li>
+                <li>Member of the Greater Vineland NAACP</li>
+                <li>Served as Chief of Staff to State Senator Nicholas Asselta</li>
+                <li>Current County Commissioner</li>
+            </ul>     
+        </div>
+
+    </div>
+ </div>   
+</body>
+</html> -->
