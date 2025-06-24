@@ -2062,34 +2062,4 @@ viewport size. If you change the desktop size, you have to re-calculate the vari
         font-size: 9px;
     }
 
-    /*social media icons*/
-    .top-social-banner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #ddd;
-        padding: 8px 12px;
-        gap: 16px;
-    }
-
-    .social-label {
-        font-weight: bold;
-        color: #333;
-        font-size: 0.95em;
-    }
-
-    .social-icon-link {
-        display: inline-block;
-        transition: transform 0.2s ease;
-    }
-
-    .social-icon-link:hover {
-        transform: scale(1.1);
-    }
-
-    .social-icon {
-        height: 26px;
-        width: 26px;
-    }
   }
