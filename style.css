@@ -607,6 +607,11 @@ label::before {
     color: var(--itv-black);
 }
 
+.cta-banner3 {
+    background: var(--bg-color);
+    color: var(--itv-black);
+}
+
 .centered {
     display: flex;
     justify-content: center;
@@ -1948,7 +1953,7 @@ viewport size. If you change the desktop size, you have to re-calculate the vari
         display: none;
     }
 
-    .cta-banner, .cta-banner2 {
+    .cta-banner, .cta-banner2, .cta-banner3 {
         padding-top: 56px;
     }
 
