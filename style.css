@@ -1748,6 +1748,14 @@ viewport size. If you change the desktop size, you have to re-calculate the vari
     font-size: clamp(24px, 3vw, 32px);
 }
 
+.cta-banner2, .cta-banner3 {
+    border: 1px solid #ccc;        /* Light gray border */
+    border-radius: 8px;            /* Optional: rounded corners */
+    /*padding: 16px;                 /* Space inside */
+    /*margin-bottom: 24px;           /* Space between sections */
+    /*background-color: #fdfdfd;     /* Optional: subtle background */
+}
+
 /* Responsive Design */
 
 /* Ballot Page */
@@ -1953,7 +1961,7 @@ viewport size. If you change the desktop size, you have to re-calculate the vari
         display: none;
     }
 
-    .cta-banner, .cta-banner2, .cta-banner3 {
+    .cta-banner2{
         padding-top: 56px;
     }
 
