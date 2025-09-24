@@ -1540,6 +1540,10 @@ viewport size. If you change the desktop size, you have to re-calculate the vari
     font-size: 14px;
 }
 
+.calendar {
+    width: 80vw;
+}
+
 /* About Styles */
 
 .main-content-with-box-shadow-about {
