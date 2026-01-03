@@ -1,834 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="style.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora&family=REM:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
-        <link rel="preload" href="assets/blue_court.jpg" as="image" type="image/jpg" />
-        <link rel="apple-touch-icon" href="/assets/homescreenIcon/informSquareLogo.png">
-        <link rel="icon" sizes="512x512" href="/assets/homescreenIcon/informSquareLogo.png">
-        <script src="homepage_scripts.js" async></script>
-        <!-- Begin preview image meta tags -->
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="Inform The Vote NJ">
-        <meta property="og:description" content="Candidate and Issues Information for Cumberland County Elections">
-        <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png">
-        <meta property="og:url" content="https://informthevotenj.com">
-        <!-- End preview image meta tags -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Instructions -->
-         <!-- First copy above 4 lines of code.
-              Paste on any and all pages lacking it in the header
-              Edit content sections appropriately EXCEPT for the image tag
-              Open a new tab and go to -> https://developers.facebook.com/tools/debug/
-              Enter the URL into here
-              Click 'Debug'
-              Under Time Scraped field, click 'Scrape Again'
-              Rinse, repeat
-               -->
+  <title>Inform The Vote NJ — Fire District Elections</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FQD2P8BV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <!-- Fonts (kept simple + respectable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Lora:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
-        gtag('config', 'G-64FQD2P8BV');
-    </script>
-    </head>
+  <link rel="preload" href="assets/blue_court.jpg" as="image" type="image/jpg" />
+  <link rel="apple-touch-icon" href="/assets/homescreenIcon/informSquareLogo.png" />
+  <link rel="icon" sizes="512x512" href="/assets/homescreenIcon/informSquareLogo.png" />
 
+  <!-- Preview image meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Inform The Vote NJ" />
+  <meta property="og:description" content="Fire District Primer + 2026 Election Coverage (Cumberland County)" />
+  <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png" />
+  <meta property="og:url" content="https://informthevotenj.com" />
 
-<body>    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FQD2P8BV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-64FQD2P8BV');
+  </script>
 
-    
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.07);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.62);
+      --border: rgba(255,255,255,0.12);
+      --accent: #ff3b30;    /* “fire” accent */
+      --accent2: #4da3ff;   /* “info” accent */
+      --ok: #2ecc71;
+      --warn: #f1c40f;
+      --bad: #ff6b6b;
 
-    <div class="menu-wrap menu-wrap-homepage">
-        <input type="checkbox" autocomplete='off' id="toggler" class="toggler">
-        <div class="hamburger">
-            <div></div>
+      --max: 1050px;
+      --radius: 16px;
+      --shadow: 0 14px 50px rgba(0,0,0,0.35);
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: "Lora", serif;
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(77,163,255,0.20), transparent 60%),
+        radial-gradient(900px 450px at 85% 10%, rgba(255,59,48,0.16), transparent 60%),
+        linear-gradient(180deg, #0b1220 0%, #0a0f1a 70%, #070b13 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a{ color: #b9dcff; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover{ opacity: 0.9; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 22px 18px 50px; }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-mark{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,59,48,0.95), rgba(77,163,255,0.95));
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      flex: 0 0 auto;
+    }
+    .brand-title{
+      font-family: "Calistoga", serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.4px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .brand-sub{
+      margin: 0;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      margin-top: 2px;
+    }
+    .top-links{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px 14px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+    }
+    .top-links a{
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* Hero */
+    .hero{
+      margin-top: 18px;
+      padding: 26px 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin: 0 0 10px;
+      font-family: "Calistoga", serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      letter-spacing: 0.3px;
+    }
+    .hero p{
+      margin: 0.3rem 0;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+    .pill-row{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .pill b{ color: var(--text); font-weight: 600; }
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(255,59,48,0.14);
+    }
+    .dot.blue{
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(77,163,255,0.14);
+    }
+
+    /* Sections */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 900px){
+      .grid.two{
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+
+    section.card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.24);
+      padding: 18px 18px;
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-family: "Calistoga", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.2px;
+    }
+    section.card p{ margin: 0.55rem 0; color: var(--muted); }
+    .small{ color: var(--muted2); font-size: 0.96rem; }
+    .callout{
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .callout strong{ color: var(--text); }
+    .callout .tag{
+      display:inline-block;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.15);
+      margin-right: 8px;
+    }
+    .tag.ok{ border-color: rgba(46,204,113,0.35); color: rgba(46,204,113,0.95); }
+    .tag.warn{ border-color: rgba(241,196,15,0.35); color: rgba(241,196,15,0.95); }
+    .tag.bad{ border-color: rgba(255,107,107,0.35); color: rgba(255,107,107,0.95); }
+
+    details{
+      margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary:before{
+      content:"▸";
+      display:inline-block;
+      margin-right: 10px;
+      transform: translateY(-1px);
+      color: var(--accent2);
+    }
+    details[open] summary:before{ content:"▾"; color: var(--accent); }
+    details .inside{ margin-top: 10px; color: var(--muted); }
+
+    ul.clean{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    ul.clean li{ margin: 8px 0; }
+
+    /* Meeting list */
+    .meeting{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.12);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .meeting h3{
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+    }
+    .meeting p{ margin: 0.35rem 0; color: var(--muted); }
+    .kv{
+      display:grid;
+      grid-template-columns: 95px 1fr;
+      gap: 6px 10px;
+      margin-top: 8px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .kv b{ color: rgba(255,255,255,0.92); font-weight: 600; }
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin: 14px 0;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 18px 0 0;
+      color: var(--muted2);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.84rem;
+    }
+    .footer-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .icons{
+      display:flex;
+      gap: 12px;
+      align-items:center;
+    }
+    .icons a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      text-decoration:none;
+    }
+    .icons img{ width: 20px; height: 20px; opacity: 0.92; }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP HEADER (no hamburger) -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1 class="brand-title">Inform The Vote NJ</h1>
+          <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
         </div>
-        <div class="menu">
-            <div>
-                <div>
-                    <ul class="links">
-
-                        <li class="link"><a id="home" href="https://www.informthevotenj.com/index.html">Home</a></li>
-                        <!-- <li class="link"><a id="home" href="child_pages/cc-elections/official_ballots_2024.html">Official Ballots</a></li> -->
-
-                        
-                        <div class="accordion">
-                            <input type="checkbox" name="accordion" id="first">
-                            <label for="first">County and Municipal Elections</label>
-                            <div class="nested-burger-links">
-                                <li class="link"><a href="child_pages/cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/fairfield_township_committee.html">Fairfield Township Committee</a></li>
-
-                                <li class="link"><a href="child_pages/cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
-                                <!-- <li class="link"><a href="child_pages/cc-elections/commercial_township_committee.html">Commercial Township Committee</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/downe_township_committee.html">Downe Township Committee</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a></li> -->
-
-                                <!-- <li class="link"><a href="child_pages/cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/vineland_city_council_2024.html">Vineland City Council</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/vineland_mayor_2024.html">Vineland Mayor</a></li>                                 -->
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <input type="checkbox" name="accordion" id="second">
-                            <label for="second">School Board Elections</label>
-                            <div class="nested-burger-links">
-                                <li class="link"><a href="child_pages/cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/hopewell-shiloh_school_board.html">Hopewell-Shiloh School Board</a></li>
-                                
-                                <!-- <li class="link"><a href="child_pages/cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a></li> -->
-                                <li class="link"><a href="child_pages/cc-elections/lawrence_township_school_board.html">Lawrence Township School Board</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/vsb_2024.html">Vineland School Board</a></li>
-                            </div>
-                        </div>
-
-                        <div class="accordion">
-                            <input type="checkbox" name="accordion" id="third">
-                            <label for="third">Governor and State Elections</label>
-                            <div class="nested-burger-links">
-                                <li class="link"><a href="child_pages/cc-elections/state_assembly_legislative_district_1.html">State Assembly - 1st Legislative District</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/state_assembly_legislative_district_3.html">State Assembly - 3rd Legislative District</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/governor.html">Governor</a></li>
-                                <!-- <li class="link"><a href="child_pages/cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_senate_2024.html">US Senate, NJ</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/cc_vice_president_2024.html">US Vice President</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_president_2024.html">US President</a></li> -->
-                            </div>
-                        </div>
-
-                        <!-- <div class="accordion">
-                            <input type="checkbox" name="accordion" id="fourth">
-                            <label for="fourth">Issues</label>
-                            <div class="nested-burger-links">
-                                <li class="link"><a href="child_pages/cc-elections/cc_election_issues.html">Cumberland County Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/fairfield_township_committee.html">Fairfield Township Issues</a></li>
-
-                                <li class="link"><a href="child_pages/cc-elections/millville_city_issues.html">Millville City Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/bridgeton_school_board_issues.html">Bridgeton School Board Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/commercial_school_board_issues.html">Commercial School Board Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/hopewell-shiloh_school_board_Issues.html">Hopewell-Shiloh School Board Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/lawrence_school_board_issues.html">Lawrence School Board Issues</a></li>
-
-                                <li class="link"><a href="child_pages/cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
-
-                                 <li class="link"><a href="child_pages/cc-elections/commercial_township_issues.html">Commercial Township Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/downe_township_issues.html">Downe Township Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/lawrence_township_issues.html">Lawrence Township Issues</a></li>
-
-                                <li class="link"><a href="child_pages/cc-elections/state_assembly_legislative_district_1_issues.html">State Assembly - Legislative District 1 Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/state_assembly_legislative_district_3_issues.html">State Assembly - Legislative District 3 Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/governor_issues.html">Governor Issues</a></li>
-                                 <li class="link"><a href="child_pages/cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/millville_city_issues.html">Millville City Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_senate_issues.html">US Senate Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_vice_president_issues.html">Vice President Issues</a></li>
-                                <li class="link"><a href="child_pages/cc-elections/us_president_issues.html">President Issues</a></li>
-                            </div>
-                        </div> -->
-
-                        <li class="link"><a href="child_pages/get-involved.html">Get Involved</a></li>
-                        <li class="link"><a href="child_pages/events.html">Events</a></li>
-                        <li class="link"><a href="child_pages/resources-archives-and-rabbit-holes.html">Extra Info</a></li>
-                        <li class="link"><a href="child_pages/about.html">About</a></li>
-                        <li class="link"><a href="child_pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <br>
-
-    
-    <h4 class="sub-heading-ballot" style="text-align: center;">Attention First Time Visitors: Suggested Use of This Site</h4>
-
-        <div class="job-description can-sec">
-            <details>
-                <summary style="cursor:pointer; color:blue; text-decoration:underline;">Learn More</summary>
-                <ol style="margin-top:10px; line-height:1.6;">
-                    <li>If this is your first time using this site, you may want to follow the suggested steps.</li>
-                    <br>
-                    <li>If you're on a desktop or laptop computer, use the drop down menu labeled "Elections", literally below this set of instructions, 
-                      to find the election you're interested in. Then continue following suggested steps.</li>
-                    <br>
-                    <li>If you're on a smartphone or iPad, use the red menu in the top left of the screen to find the election you're interested in. Then continue following suggested steps.</li>
-                    <br>
-                    <li>Many pages on desktop and laptop also use the red menu, so look out for it if you need it.</li>
-                    <br>
-                    <li>Remember: This site is a mixture of objective data collection, unexpected press coverage services, and somewhat subjective analysis. A lot of source material is 
-                      provided,so you always have the option of going down the rabbit holes yourselves. We try to be as fair as possible, but it's ultimately up to you what to decide 
-                      what to trust, we're just trying to be helpful.
-                    </li>
-                </ol>
-            </details>
-        </div>
-
-    <!-- <div class="cta-banner">
-        <div class="cta-banner-heading">
-            Primary Season is well under way. Check the elections section for information.
-        </div>
-        <div class="cta-content">
-            <div class="cta-text">
-                 Here is an interview with Democrat Primary candidate for County Commissioner, Larae Smith.
-            </div>
-            <div class="cta-link-box">
-                 <button id ='videoSummary' class="hp-banner-button">Video Summary</button>
-                 <button id='actualVideo' class="hp-banner-button">Video</button>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="cta-banner2">
-        <div class="cta-banner-heading centered">
-            We're Transitioning Into General Election Mode
-        </div>
-        <div class="cta-content centered">
-            <div class="cta-text">
-                The site is being updated — stay connected as the campaign season unfolds. 
-                <br>
-                <br>
-                <details>
-                    <summary style="font-size: 1em; cursor:pointer; color:blue; text-decoration:underline;">Learn More</summary>
-                    As we shift from the primary to the general election season, this site is currently in a transitional phase. Over the next month or so, some pages may still reflect 
-                    outdated primary content, and candidate information for the general election may appear incomplete.
-                    <br>
-                    <br>
-                    This is expected. It’s still early in the season, and many candidates are just beginning to shape their campaigns. We're also waiting on official materials — including 
-                    full candidate lists and contact info from sources like the Millville City Clerk — before building out new pages.
-                    <br>
-                    <br>
-                    While that information trickles in, we’re using this time to raise awareness of the project:
-                    <ul>
-                      <li>We're collecting emails for our new Substack newsletter, where voters can get updates directly in their inbox.</li>
-                      <br>
-                      <li>We're continuing our weekly radio show on 92.1 WVLT every Tuesday from 5–6pm.</li>
-                      <br>
-                      <li>We'll be out at community events like the Cumberland County Fair and other public meetings to keep building trust and visibility.</li>
-                    </ul>
-                    <br>
-                    <br>
-                    Thanks for your patience while the site evolves. If you're new here, now's a great time to subscribe to email updates or catch up on our interviews and candidate 
-                    transparency work so far.
-                </details>
-            </div>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="cta-banner3">
-      <div class="cta-banner-heading centered">
-            📣 Connect with us:
       </div>
 
-        <div class="cta-content centered">
-            <div class="cta-text">
-                <a href="https://www.facebook.com/groups/781111154116727" target="_blank" aria-label="Facebook Group" style="margin-right: 32px">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="height: 30px; width: 30px;">
-                </a>
-                <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" aria-label="YouTube" style="margin-right: 32px">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" style="height: 30px; width: 30px;">
-                </a>
-                <a href="https://informthevotenj.substack.com/subscribe" target="_blank" aria-label="Substack Email Updates" style="margin-right: 32px">
-                    <img src="assets/substackIcon.png" alt="Substack" style="height: 30px; width: 30px;">
-                </a>
-                <a href="https://www.facebook.com/wvltradio" target="_blank" aria-label="WVLT Facebook Site With Livestreams">
-                    <img src="assets/wvltLogo.png" alt="WVLT Facebook" style="height: 30px; width: 30px;">
-                </a>
-            </div>
+      <div class="top-links">
+        <a href="https://www.facebook.com/groups/781111154116727" target="_blank" rel="noreferrer noopener">Facebook Group</a>
+        <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" rel="noreferrer noopener">YouTube</a>
+        <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener">Email Updates</a>
+        <a href="child_pages/contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
 
-            <br>
-            
-            <details>
-                <summary style="font-size: 1em; cursor: pointer; color: blue; text-decoration: underline; text-align: center; font-weight: bold;">Learn More Regarding Multiple Platforms</summary>
-                  <div style="text-align: center; font-weight: bold;">
-                    <p>
-                      When I first started InformTheVoteNJ, it became clear that local election information wasn’t hard to understand — it was just hard to <em>find</em>.
-                    </p>
-                    <p>
-                      Some candidates had websites. Others posted sporadically on social media. A few only spoke during committee meetings. There was no centralized pipeline, and voters were left to piece things together. My goal is to make those connections clearer, easier, and more consistent than when I started — no matter where you like to tune in.
-                    </p>
-                    <h4 style="margin-top: 1.2em;">🧭 Different Tools for Different People</h4>
-                    <br>
-                    <p>
-                      Not everyone uses technology the same way. So instead of expecting voters to all follow one channel, I’m using a mix of formats:
-                    </p>
-                    <br>
-                    <ul>
-                      <li>📬 <strong>Email Newsletters (Substack):</strong> for people who avoid social media</li>
-                      <br>
-                      <li>🎥 <strong>YouTube:</strong> for people who prefer video content and interviews</li>
-                      <br>
-                      <li>💬 <strong>Facebook Group:</strong> for those who like ongoing posts and discussion threads</li>
-                      <br>
-                      <li>📻 <strong>WVLT 92.1 FM Radio:</strong> for those who want to tune in live on the radio, stream on Facebook, or catch prior episodes in the Facebook group</li>
-                      <br>
-                      <li>🌐 <strong>This Website:</strong> for structured, long-term reference</li>
-                    </ul>
-                    <p>Each of these serves a different type of voter — and that’s important.</p>
-                    
-                    <h4 style="margin-top: 1.2em;">📌 The Website Is the Final Destination</h4>
-                    <p>
-                      While it’s great when voters follow along year-round, the reality is: people are busy. Not everyone has time to stay engaged every week. That’s why the website matters.
-                    </p>
-                    <p>
-                      When primary or general elections are near, voters deserve a reliable place to:
-                    </p>
-                    <ul>
-                      <li>Catch up on what happened during the campaign season</li>
-                      <li>Compare candidate messaging with real issue summaries</li>
-                      <li>Make confident, informed choices without going down every rabbit hole</li>
-                    </ul>
-                    <p>
-                      This site is not meant to be a daily newsfeed — it’s meant to be a <strong>voter’s guide</strong>, especially in those final days and 
-                      weeks when decisions are made.
-                    </p>
-                  </div>
-            </details>
+  <main class="wrap">
+
+    <!-- HERO / SLOGAN -->
+    <div class="hero">
+      <h1>Make Firefighting Sexy Again</h1>
+      <p class="small"><b>Learn About Fire Districts and Their Elections.</b> This is a one-page primer to make a confusing, off-cycle election understandable — and to make participation realistic.</p>
+
+      <div class="pill-row">
+        <div class="pill"><span class="dot"></span> <b>Next election:</b> February Fire District Elections</div>
+        <div class="pill"><span class="dot blue"></span> <b>Key issue:</b> turnout often under 2%</div>
+        <div class="pill"><b>Coverage goal:</b> visibility → participation → evidence</div>
+      </div>
+    </div>
+
+    <!-- TOP ROW -->
+    <div class="grid two">
+
+      <!-- What are fire districts -->
+      <section class="card" id="what-are-fire-districts">
+        <h2>1) What are fire districts?</h2>
+        <p>Fire districts are separate local government entities that exist to fund and govern fire protection in a defined area. In practice, they often feel invisible — but they can levy taxes, manage budgets, oversee equipment, and run elections for commissioners.</p>
+
+        <details>
+          <summary>Click to expand: The important part people miss</summary>
+          <div class="inside">
+            <p><strong>Fire districts are not automatic.</strong> They were created because residents petitioned for them — meaning the underlying model assumes the public wanted an active role in fire protection governance and oversight.</p>
+            <p>That premise matters, because if the public stops participating, the structure becomes “government by procedure” instead of “government by consent.”</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Click to expand: What do commissioners actually do?</summary>
+          <div class="inside">
+            <ul class="clean">
+              <li>Approve budgets and tax levy decisions related to fire protection</li>
+              <li>Oversee contracts, purchases, audits, compliance, and public notices</li>
+              <li>Help set direction for how services are staffed and supported (volunteer, paid, hybrid realities)</li>
+              <li>Maintain continuity and decision-making for essential emergency readiness</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- Why elections matter / turnout -->
+      <section class="card" id="why-elections-matter">
+        <h2>2) Why the elections matter (and why turnout matters more)</h2>
+        <p>Fire district elections are the public’s mechanism to choose who sits on these boards. The structural problem is simple: turnout is routinely below <strong>2% of registered voters</strong>.</p>
+
+        <div class="callout">
+          <span class="tag warn">Reality check</span>
+          <strong>When participation is that low, elections stop functioning as meaningful consent.</strong>
+          <p class="small">Even if everything is being run honestly, the system becomes hard to defend: who is it really accountable to?</p>
         </div>
-    </div> -->
 
-    <!-- text summary modal -->
-    <dialog id="Modal1" class="modal">
+        <details>
+          <summary>Click to expand: The uncomfortable question</summary>
+          <div class="inside">
+            <p>If almost nobody participates year after year, it naturally raises a bigger question:</p>
+            <p><strong>“Why do these entities still exist?”</strong></p>
+            <p>That question is not a rhetorical dunk. It’s a governance question — and it should be answered with evidence, not assumptions.</p>
+          </div>
+        </details>
 
-        <div class="modal-content">
-          <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id='close1' class="close">
-          <h4 class="quick-sum">Larae Smith Interview Summary</h4>
-          <h6 class="page-title">Read to get a quick breakdown of the 1.5 hour interview.</h6>
+        <details>
+          <summary>Click to expand: My working theory (and a fair counterpoint)</summary>
+          <div class="inside">
+            <p><strong>Working theory:</strong> the issue is not just “apathy.” It’s also design and communication failure — broken links, unclear schedules, poor visibility, and a culture that assumes nobody shows up.</p>
+            <p><strong>Fair counterpoint:</strong> some districts may function well with a small but consistent core of engaged stakeholders (often firefighters), and they may fear larger electorates would vote without understanding operational realities.</p>
+            <p>Both can be true — which is why participation + documentation is the only honest stress test.</p>
+          </div>
+        </details>
+      </section>
 
-          <div style="padding: 15px 25px; text-align: left;">
-            <p></p>
+    </div>
+
+    <!-- Timeline -->
+    <section class="card" id="timeline">
+      <h2>3) 2026 election timeline (and why “reform first” isn’t realistic for this year)</h2>
+      <p>The fire election schedule is already moving. If someone is pitching “just consolidate districts” or “just abolish them” as if it’s an immediate fix, that likely won’t play out in time to affect this year’s election.</p>
+
+      <div class="callout">
+        <span class="tag ok">Official timeline</span>
+        <strong>New Jersey 2026 Fire Election Chronology:</strong>
+        <p class="small"><a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf</a></p>
+      </div>
+
+      <details>
+        <summary>Click to expand: The practical approach for 2026</summary>
+        <div class="inside">
+          <p>Given the timeline, the more reasonable approach <strong>for this cycle</strong> is to treat these like serious elections:</p>
+          <ul class="clean">
+            <li>Encourage participation and voter awareness</li>
+            <li>Run meet & greets / candidate forums / interviews</li>
+            <li>Write short explainer articles and share meeting info</li>
+            <li>Document who runs, who votes, and what changes (if any)</li>
+          </ul>
+          <p>Then, after the election, we can evaluate the results and ask bigger structural questions with actual evidence.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Get involved + meeting info -->
+    <section class="card" id="get-involved">
+      <h2>4) How to get involved (even if you don’t want to use Facebook)</h2>
+      <p>People love to comment after a big problem. Maintenance and prevention looks like showing up when it’s boring, asking questions early, and keeping meeting information usable.</p>
+
+      <details open>
+        <summary>Click to expand: Meeting information + “Just Google it” reality check</summary>
+        <div class="inside">
+          <p><strong>Primary reference source:</strong>
+            <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">https://cumberlandcountyvotes.com/elections/fire-elections/</a>
+          </p>
+          <p class="small">Note: several links on that page are outdated or incorrect (examples below).</p>
+
+          <div class="hr"></div>
+
+          <div class="meeting">
+            <h3>🔥 Port Norris Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>2nd Thursdays, 7:00 PM</span>
+              <b>Where</b><span>Port Norris Fire Hall — 6858 Brown St, Port Norris, NJ 08349</span>
+              <b>Link</b><span><a href="https://www.portnorrisfire.com/board-of-fire-commissioners/" target="_blank" rel="noreferrer noopener">Board of Fire Commissioners</a></span>
+              <b>Status</b><span><span class="tag warn">Semi-verified</span> Meeting does not appear to have occurred the past two months</span>
+            </div>
           </div>
 
-        </div>
-
-    </dialog>
-
-    <!-- modal box hidden by default -->
-    <dialog id="Modal2" class="modal">
-        <div class="modal-content">
-          <img src="../../../assets/x-icon-33.png" alt="an x icon - click to close the quick summary modal" id='close2' class="close">
-            <div class="modal-video-box">
-                <div class="video-box-sm">
-                    <iframe src="https://www.youtube.com/embed/kEljj_nvLMg?si=KXQT6Wu5-ddtifuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    <h3 class="video-heading-sm">Pignatelli Interview</h3>
-                    <div class="video-sm-desc">
-                        Watch to meet Larae and get a great overview of her platform.
-                    </div>
-                </div>
+          <div class="meeting">
+            <h3>🔥 Mauricetown Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>1st Mondays, 6:30 PM</span>
+              <b>Where</b><span>Mauricetown Fire Company — 9544 Noble Street, Mauricetown, NJ 08329</span>
+              <b>Link</b><span><a href="https://mauricetownfireco.com/" target="_blank" rel="noreferrer noopener">mauricetownfireco.com</a></span>
+              <b>Note</b><span>Well attended meeting, probably mostly by firefighters</span>
             </div>
-        </div>
-    </dialog>
-    
-
-    <!-- jumbotron and nav bar --> 
-    <div class="jumbotron">
-        <nav class="overlay-nav">
-            
-            <div class="home">Inform The Vote</div>
-            <div class="homepage-links-box">
-                <div class="other-links">
-                    <span id='navBoxToggle' class="overlay-nav-link">Elections</span>
-                    <a href="child_pages/events.html" class="overlay-nav-link">Events</a>
-                    <!-- <a href="#" id='navBoxToggle2' class="overlay-nav-link">Issues</a> -->
-                    <a href="child_pages/get-involved.html" class="overlay-nav-link">Get Involed</a>
-                    
-                    <!-- <a href="child_pages/resources-archives-and-rabbit-holes.html" class="overlay-nav-link">Extra Info</a> -->
-                    <a href="child_pages/about.html" class="overlay-nav-link">About</a>
-                    <a href="child_pages/contact.html" class="overlay-nav-link">Contact</a>
-                </div>
-                <div class="nav-buttons-2">
-                    <div class="elections-dropdown-links">
-                        <!-- <a href="child_pages/cc-elections/official_ballots_2024.html">Official Ballots Page</a> -->
-                        <a href="child_pages/cc-elections/cc_county_commissioners_2024.html">Cumberland County Commissioners</a>
-                        <a href="child_pages/cc-elections/fairfield_township_committee.html">Fairfield Township Committee</a>
-
-                        <a href="child_pages/cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a>
-                        <!-- <a href="child_pages/cc-elections/commercial_township_committee.html">Commercial Township Committee</a>
-                        <a href="child_pages/cc-elections/downe_township_committee.html">Downe Township Committee</a>
-                        <a href="child_pages/cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a> -->
-                        <a href="child_pages/cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a>
-                        <a href="child_pages/cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a>
-                        <a href="child_pages/cc-elections/hopewell-shiloh_school_board.html">Hopewell-Shiloh School Board</a>
-                        <a href="child_pages/cc-elections/lawrence_township_school_board.html">Lawrence Township School Board</a>
-
-                        <a href="child_pages/cc-elections/vsb_2024.html">Vineland School Board</a>
-
-                        <a href="child_pages/cc-elections/state_assembly_legislative_district_1.html">State Assembly - 1st Legislative District</a>
-                        <a href="child_pages/cc-elections/state_assembly_legislative_district_3.html">State Assembly - 3rd Legislative District</a>
-                        <a href="child_pages/cc-elections/governor.html">Governor</a>
-
-                        <!-- <a href="child_pages/cc-elections/cc_county_clerk_2024.html">Cumberland County Clerk</a> -->
-                        <!-- <a href="child_pages/cc-elections/millville_commissioners_2024.html">Millville City Commissioners</a>
-                        <a href="child_pages/cc-elections/lawrence_township_committee_2024.html">Lawrence Township Committee</a> -->
-                        <!-- <a href="child_pages/cc-elections/vineland_city_council_2024.html">Vineland City Council</a>
-                        <a href="child_pages/cc-elections/vineland_mayor_2024.html">Vineland Mayor</a>
-                        <a href="child_pages/cc-elections/bridgeton_school_board_2024.html">Bridgeton School Board</a>
-                        <a href="child_pages/cc-elections/commercial_school_board_2024.html">Commercial Township School Board</a>
-                        <a href="child_pages/cc-elections/fairfield_school_board_2024.html">Fairfield Township School Board</a>
-                        <a href="child_pages/cc-elections/lawrence_school_board_2024.html">Lawrence Township School Board</a>
-                        <a href="child_pages/cc-elections/vsb_2024.html">Vineland School Board</a>
-                        <a href="child_pages/cc-elections/house_of_representatives_2024.html">US House of Representatives, NJ's 2nd Congressional District</a>
-                        <a href="child_pages/cc-elections/us_senate_2024.html">US Senate, NJ</a>
-                        <a href="child_pages/cc-elections/cc_vice_president_2024.html">US Vice President</a>
-                        <a href="child_pages/cc-elections/us_president_2024.html">US President</a> -->
-                    </div>
-                </div>
-                <!-- <div class="nav-buttons-3">
-                    <div class="county-dropdown-links">
-                        <a href="child_pages/cc-elections/cc_election_issues.html">Cumberland County Issues</a>
-                        <a href="child_pages/cc-elections/fairfield_township_.html">Cumberland County Issues</a>
-
-                        <a href="child_pages/cc-elections/millville_city_issues.html">Millville City Issues</a>
-                        <a href="child_pages/cc-elections/bridgeton_school_board_issues.html">Bridgeton School Board Issues</a>
-                        <a href="child_pages/cc-elections/commercial_school_board_issues.html">Commercial School Board Issues</a>
-                        <a href="child_pages/cc-elections/hopewell-shiloh_school_board.html">Hopewell-Shiloh School Board Issues</a>
-                        <a href="child_pages/cc-elections/lawrence_school_board_issues.html">Lawrence School Board Issues</a>
-
-                        <a href="child_pages/cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a>
-
-                        <a href="child_pages/cc-elections/commercial_township_issues.html">Commercial Township Issues</a>
-                        <a href="child_pages/cc-elections/downe_township_issues.html">Downe Township Issues</a>
-                        <a href="child_pages/cc-elections/lawrence_township_issues.html">Lawrence Township Issues</a>
-
-                        <a href="child_pages/cc-elections/state_assembly_legislative_district_1_issues.html">State Assembly - Legislative District 1 Issues</a>
-                        <a href="child_pages/cc-elections/state_assembly_legislative_district_3.html">State Assembly - Legislative District 3 Issues</a>
-                        <a href="child_pages/cc-elections/governor_issues.html">Governor Issues</a>
-                         <a href="child_pages/cc-elections/cc_county_clerk_issues.html">County Clerk Issues</a>
-                        <a href="child_pages/cc-elections/millville_city_issues.html">Millville City Issues</a>
-                        <a href="child_pages/cc-elections/vsb_2024_issues.html">Vineland School Board Issues</a>
-                        <a href="child_pages/cc-elections/us_house_of_reps_issues.html">House of Representatives Issues</a>
-                        <a href="child_pages/cc-elections/us_senate_issues.html">US Senate Issues</a>
-                        <a href="child_pages/cc-elections/us_vice_president_issues.html">Vice President Issues</a>
-                        <a href="child_pages/cc-elections/us_president_issues.html">President Issues</a>
-                    </div>
-                </div> -->
-            </div>
-        </nav>
-        <div class="jumbotron-message vertical-align">
-            KNOW WHO YOU ARE VOTING FOR
-        </div>
-    </div>
-
-
-    
-    <!-- videos below jumbotron -->
-    <div class="hp-container">
-        <h3 class="videos-heading">VIDEOS</h3>
-    <div class="hp-video-box">
-
-        <div class="video-box-modal can-sec">
-            <h3 class="video-heading">2025 WVLT Interview With Carolyn Rush</h3>
-      
-            <iframe src="https://www.youtube.com/embed/kD6vtYUuI2Y?si=-kOkwdvtZJf8RGlL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>          
-            
-            <details>
-              <summary style="text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer;">📋 Click here for full interview summary 📋</summary>
-              <br>
-              <br>
-              <div style="padding: 15px 25px; text-align: left;">
-                <p>Carolyn Rush, Democratic candidate for New Jersey’s General Assembly in LD1, joins Steven Solof on the InformTheVoteNJ Radio Hour (WVLT 92.1 FM) for a wide-
-                  ranging discussion on policy, party dynamics, and transparency.
-                  <br>
-                  <br>
-                  This conversation starts by covering the origin story of InformTheVoteNJ.com and the challenges voters face in accessing clear, centralized civic information. 
-                  With that in mind, it then moves on to Rush offering her perspective on NJ REAL and concerns about executive overreach, while also explaining her views on 
-                  taxation, budgeting, and the importance of affordability. She discusses the need for Route 55 expansion, supports potential consolidation of school districts, 
-                  and pushes back on the idea that New Jersey is overregulated. The interview clarifies her views on a controversial social media post linked to the Democratic 
-                  Socialists of America and introduces her framework of “guardrail capitalism” as an alternative to unfettered capitalism or democratic socialism. Additional 
-                  topics include immigration policy, ICE enforcement, and her support for civics education and verified public information sources. Throughout the interview, 
-                  Rush distinguishes her platform from both establishment politics and more radical ideologies—giving voters a clearer understanding of where she stands heading 
-                  into the 2025 General Election.</p>
-              </div>
-            </details>
-            
-            <details>
-              <summary style="text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer;">⏳ Click to view timestamps, topics, and takeaways ⏳</summary>
-              <div class="video-summary" style="margin-top: 1em;">
-                <h2>Interview Summary – Carolyn Rush</h2>
-                <p>This table highlights the key topics covered in the interview, summarizing major takeaways per section.</p>
-                <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-                  <thead>
-                    <tr>
-                      <th style="text-align: left;">Timestamp</th>
-                      <th style="text-align: left;">Topic</th>
-                      <th style="text-align: left;">Key Takeaways</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>0:00</td>
-                      <td>Intro & Origin Story</td>
-                      <td>How this platform started with a sample ballot and turned into a civic education project.</td>
-                    </tr>
-                    <tr>
-                      <td>2:56</td>
-                      <td>Discovering Carolyn Rush’s Campaign</td>
-                      <td>Her candidacy wasn’t easily found, underscoring the value of structured interviews and transparency.</td>
-                    </tr>
-                    <tr>
-                      <td>4:41</td>
-                      <td>DSA Social Media Post & Candidate Labels</td>
-                      <td>Raises concerns over Rush’s social media and her alignment with Democratic Socialists of America.</td>
-                    </tr>
-                    <tr>
-                      <td>6:04</td>
-                      <td>Government Overreach & NJ REAL Policy</td>
-                      <td>Rush critiques Governor Murphy’s executive order on coastal zoning reform as overreach.</td>
-                    </tr>
-                    <tr>
-                      <td>14:04</td>
-                      <td>Taxes & Budgeting Priorities</td>
-                      <td>Supports targeted taxes (e.g., cigarettes, alcohol) and emphasizes tradeoffs in public funding.</td>
-                    </tr>
-                    <tr>
-                      <td>17:00</td>
-                      <td>Route 55 Expansion</td>
-                      <td>Rush supports expansion but calls for engineering and environmental studies before full commitment.</td>
-                    </tr>
-                    <tr>
-                      <td>20:15</td>
-                      <td>Radical Agenda or Necessary Services?</td>
-                      <td>Rush argues that NJ’s regulations and public services are reasonable, not radical.</td>
-                    </tr>
-                    <tr>
-                      <td>23:44</td>
-                      <td>Guardrail Capitalism Explained</td>
-                      <td>Describes herself as a “guardrail capitalist” seeking limits on inequality, not a democratic socialist.</td>
-                    </tr>
-                    <tr>
-                      <td>26:30</td>
-                      <td>CEO-to-Worker Pay Ratios</td>
-                      <td>Wants to explore wage gap caps between executives and frontline workers.</td>
-                    </tr>
-                    <tr>
-                      <td>30:01</td>
-                      <td>Praise for Anti-Establishment Campaigns</td>
-                      <td>Rush supports anti-establishment energy focused on affordability and civic engagement.</td>
-                    </tr>
-                    <tr>
-                      <td>36:09</td>
-                      <td>Electoral College & Senate Abolition?</td>
-                      <td>Doesn’t support abolition but favors reforms like the National Popular Vote Compact.</td>
-                    </tr>
-                    <tr>
-                      <td>41:01</td>
-                      <td>Citizens United & Money in Politics</td>
-                      <td>Would prioritize overturning Citizens United before changing the Constitution’s structure.</td>
-                    </tr>
-                    <tr>
-                      <td>45:21</td>
-                      <td>Immigration & ICE Enforcement</td>
-                      <td>Supports due process for immigrants but doesn’t favor a zero-deportation policy.</td>
-                    </tr>
-                    <tr>
-                      <td>50:00</td>
-                      <td>Protest vs. Agitation</td>
-                      <td>Backs due process advocacy but distances herself from confrontational ICE protests.</td>
-                    </tr>
-                    <tr>
-                      <td>51:02</td>
-                      <td>Public Ownership & Capitalism</td>
-                      <td>Clarifies she does not support abolishing capitalism or full public ownership of industries.</td>
-                    </tr>
-                    <tr>
-                      <td>52:02</td>
-                      <td>Support for Civics Education & Press Reform</td>
-                      <td>Aligns with InformTheVoteNJ’s advocacy for civics education and better local political information.</td>
-                    </tr>
-                    <tr>
-                      <td>54:36</td>
-                      <td>Closing Remarks</td>
-                      <td>Rush confirms her platform will evolve and be accessible through InformTheVoteNJ.com.</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </details>
-            
           </div>
 
-        <div class="video-box-modal can-sec">
-            <h3 class="video-heading">2025 WVLT Interview With Assemblyman McClellan</h3>
-    
-            <iframe src="https://www.youtube.com/embed/RSsZ_Ptp-jo?si=ROEuX1qMfl84TBf3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        
-            <br>
-            <br>
-
-            <details>
-            <summary style="text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer;">📋 Click here for full interview summary 📋</summary>
-            <br>
-            <br>
-            <div style="padding: 15px 25px; text-align: left;">
-              <p>In this episode of the Inform The Vote NJ Radio Hour, Steven Solof speaks with Assemblyman Antwan McClellan, who is running for re-election in New Jersey’s 1st Legislative District. 
-              <br><br>
-              McClellan shares his background in public service, his work with the Cape May County Sheriff’s Office, and his longstanding community involvement through youth sports. The conversation highlights South Jersey’s ongoing struggle for fair investment, with McClellan warning of increasing taxes, executive overreach, and infrastructure neglect—especially regarding Route 55 and NJDEP flood zone regulations.
-              <br><br>
-              McClellan expresses strong support for reintroducing civics education in schools and rebuilding a local press ecosystem, while also exploring the feasibility of county-facilitated voter information systems. Emphasizing transparency, he encourages voters to reach out directly rather than rely on rumors or partisan noise. This interview offers a grounded, community-first perspective on what it means to serve South Jersey effectively.</p>
+          <div class="meeting">
+            <h3>🔥 Laurel Lake Fire District (Commercial Township FD #3)</h3>
+            <div class="kv">
+              <b>When</b><span>2nd Sundays, 4:00 PM</span>
+              <b>Where</b><span>Laurel Lake Volunteer Fire & Rescue Co. — 5436 Battle Lane, Millville, NJ 08332</span>
+              <b>Link</b><span><a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">Correct meeting page</a></span>
+              <b>Status</b><span><span class="tag ok">Verified link</span> County listing link was incorrect</span>
             </div>
-          </details>
+          </div>
 
-          <details>
-            <summary style="text-align: center; font-weight: bold; font-size: 1.1em; cursor: pointer;">⏳ Click to view timestamps, topics, and takeaways ⏳</summary>
-            <div class="video-summary" style="margin-top: 1em;">
-              <h2>Interview Summary – Assemblyman Antwan McClellan</h2>
-              <p>This table highlights the key topics covered in the interview, summarizing major takeaways per section.</p>
-              <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-                <thead>
-                  <tr>
-                    <th style="text-align: left;">Timestamp</th>
-                    <th style="text-align: left;">Topic</th>
-                    <th style="text-align: left;">Key Takeaways</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>0:00–5:20</td>
-                    <td>Intro: Civic Information is Hard to Find</td>
-                    <td>Steven frames the mission of InformTheVoteNJ.com and why structured interviews matter.</td>
-                  </tr>
-                  <tr>
-                    <td>5:21–8:00</td>
-                    <td>Framing the Interview</td>
-                    <td>Clarifies this is a non-confrontational conversation focused on transparency and clarity.</td>
-                  </tr>
-                  <tr>
-                    <td>8:01–16:40</td>
-                    <td>McClellan’s Background</td>
-                    <td>Raised in LD1, long career in public service and law enforcement, deeply involved in the community.</td>
-                  </tr>
-                  <tr>
-                    <td>16:41–24:00</td>
-                    <td>Life Outside Politics</td>
-                    <td>Coaches girls’ basketball, discusses how public service perceptions affect elected officials.</td>
-                  </tr>
-                  <tr>
-                    <td>24:01–26:30</td>
-                    <td>The Case for Civic Engagement</td>
-                    <td>Calls for more accessible information and direct voter-candidate interactions.</td>
-                  </tr>
-                  <tr>
-                    <td>26:31–30:30</td>
-                    <td>General Campaign Themes</td>
-                    <td>Fighting for South Jersey, supporting small business, education, and family values.</td>
-                  </tr>
-                  <tr>
-                    <td>30:31–33:00</td>
-                    <td>Executive Overreach & Taxes</td>
-                    <td>Criticizes Governor Murphy’s tax policies on alcohol, cigarettes, gambling as unfair to working people.</td>
-                  </tr>
-                  <tr>
-                    <td>33:01–36:50</td>
-                    <td>North vs. South Jersey Priorities</td>
-                    <td>Argues that South Jersey often loses out on funding and attention compared to North Jersey.</td>
-                  </tr>
-                  <tr>
-                    <td>36:51–40:50</td>
-                    <td>Infrastructure & Flooding</td>
-                    <td>Cites Route 55 as a broken promise; warns NJDEP flood rules could harm property values and town budgets.</td>
-                  </tr>
-                  <tr>
-                    <td>40:51–44:40</td>
-                    <td>Civics Education</td>
-                    <td>Strongly supports reintroducing civics and local government into the school curriculum.</td>
-                  </tr>
-                  <tr>
-                    <td>44:41–48:40</td>
-                    <td>County-Level Voter Info Systems</td>
-                    <td>Open to the idea but urges cost analysis and coordination with county clerks before implementation.</td>
-                  </tr>
-                  <tr>
-                    <td>48:41–50:30</td>
-                    <td>Rebuilding Local Press</td>
-                    <td>Supports revitalizing regional news outlets; recalls when local TV coverage helped keep people informed.</td>
-                  </tr>
-                  <tr>
-                    <td>50:31–54:10</td>
-                    <td>Closing Discussion</td>
-                    <td>Lighthearted banter about music, Assemblyman Simonsen, and upcoming community events.</td>
-                  </tr>
-                  <tr>
-                    <td>54:11–55:44</td>
-                    <td>Final Thoughts</td>
-                    <td>Encourages direct voter engagement and thanks the audience for staying informed.</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="meeting">
+            <h3>🔥 Downe Township Fire District</h3>
+            <div class="kv">
+              <b>Status</b><span><span class="tag bad">Unverified</span> Likely 1st Mondays, 6:00 PM (based on Nov 2024 minutes)</span>
+              <b>Location</b><span>Unknown</span>
+              <b>Link</b><span><a href="https://www.downetwpbofc.org/.../2024.../66-november-2024" target="_blank" rel="noreferrer noopener">Minutes link (as referenced)</a></span>
             </div>
-          </details>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Dividing Creek Fire District</h3>
+            <div class="kv">
+              <b>Status</b><span><span class="tag bad">Unverified</span> Link on Cumberland County Votes appears to be incorrect</span>
+              <b>Broken</b><span><a href="https://www.dividingcreekfireco.com/" target="_blank" rel="noreferrer noopener">dividingcreekfireco.com</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Leesburg Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>Last Mondays, 6:30 PM</span>
+              <b>Where</b><span>Leesburg Volunteer Fire Department — 550 Main Street, Leesburg, NJ 08327</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/.../Fire-District-1-Leesburg..." target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+              <b>Note</b><span><span class="tag warn">Semi-verified</span> December meeting does not appear to have occurred; I attended November</span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Heislerville Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>3rd Tuesdays, 7:30 PM</span>
+              <b>Where</b><span>Heislerville Fire Company — Main St, Heislerville, NJ 08324</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/.../Fire-District-2..." target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Port Elizabeth Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>1st Tuesdays, 7:00 PM</span>
+              <b>Where</b><span>Port Elizabeth Fire House — 7 Port Elizabeth Cumberland Road, Port Elizabeth, NJ</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/.../Fire-District-3-Port..." target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Cumberland Station 23 Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>3rd Wednesdays, 7:30 PM</span>
+              <b>Where</b><span>Cumberland Volunteer Fire Department — 5272 Route 49, Millville, NJ</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/.../Fire-District-4..." target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="tag warn">Why this matters</span>
+            <p class="small">
+              If even motivated people struggle to find meeting info — broken links, unclear locations, meetings that may not occur as posted —
+              “low participation” stops looking like apathy and starts looking like design and communication failure.
+            </p>
+          </div>
         </div>
+      </details>
 
-
-        <div class="video-box-modal can-sec">
-        <h3 class="video-heading">2025 InformTheVoteNJ Radio Hour With Patricia Clark-Kears</h3>
-
-        <iframe src="https://www.youtube.com/embed/cBvJwQAgihQ?si=1mYNXWTA1ht_ugjz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
-     
-        <br>
-
-        <details style="border: 2px solid #007BFF; border-radius: 5px; padding: 1em; background-color: #E9F5FF;">
-            <summary style="font-weight: bold; color: #007BFF; font-size: 1.1em;">Interview Description</summary>
-                <p>On July 8, 2025, Steven Solof hosted Patricia Clark-Kears, candidate for Millville City Commission, for a full-length radio interview. They discussed her background in small business and social services leadership, detailed her priorities on economic development, public safety, code enforcement, and civic engagement, and explored broader challenges around voter information access and local press coverage.</p>
-
-                <h4>⭐ Key Takeaways</h4>
-                <ul>
-                <li><strong>Accessibility & Responsiveness</strong><br>Patricia emphasizes her commitment to answering residents’ questions, following up personally, and promoting transparency at meetings.</li>
-                <li><strong>Economic Vision</strong><br>She supports hiring qualified professionals to drive redevelopment, clean up brownfields, and pursue grants to fund new projects.</li>
-                <li><strong>Public Safety Priority</strong><br>Patricia believes Millville must fully staff and equip its first responders, proactively maintain vehicles, and improve community relations.</li>
-                <li><strong>Code Enforcement Focus</strong><br>She wants stronger accountability for absentee landlords and clearer responsibility areas for enforcement staff.</li>
-                <li><strong>Civic Information & Culture</strong><br>She fully agrees that more civic education and better information pipelines are necessary so voters don’t feel overwhelmed or disengaged.</li>
-                <li><strong>Collaborative Mindset</strong><br>Throughout the conversation, Patricia repeatedly stressed the importance of working across agencies, administrations, and community organizations to tackle problems.</li>
-                </ul>
-
-                <h4>🕒 Timestamps & Topics</h4>
-                <ul>
-                <li><strong>0:00 – 1:24</strong><br>Intro & Program Disclaimers</li>
-
-                <li><strong>1:24 – 9:27</strong><br>Opening Commentary by Steven Solof
-                <ul>
-                <li>The challenges of gathering civic information</li>
-                <li>The need for more structured candidate engagement</li>
-                <li>Appreciation for Patricia’s early and thorough participation</li>
-                </ul>
-                </li>
-
-                <li><strong>9:27 – 12:01</strong><br>Candidate Introduction
-                <ul>
-                <li>Patricia’s lifelong Millville residency</li>
-                <li>Attendance at nearly every commission meeting since Jan 2022</li>
-                <li>Motivation to run: dissatisfaction with current development and governance culture</li>
-                </ul>
-                </li>
-
-                <li><strong>12:01 – 16:05</strong><br>On Communication & Responsiveness
-                <ul>
-                <li>Frustration with unanswered public questions at meetings</li>
-                <li>Her pledge to follow up with residents and report answers publicly</li>
-                </ul>
-                </li>
-
-                <li><strong>16:05 – 24:32</strong><br>Professional Experience & Qualifications
-                <ul>
-                <li>Early experience in her family’s small business</li>
-                <li>30+ years in social services (progressing to Director of Welfare)</li>
-                <li>Perspective shaped by first-hand exposure to poverty and complex social needs</li>
-                </ul>
-                </li>
-
-                <li><strong>24:32 – 31:20</strong><br>Economic Development Vision
-                <ul>
-                <li>Revitalizing blighted areas like the former glass factory sites</li>
-                <li>Recruiting an experienced Economic Development Director and grant writer</li>
-                <li>Promoting small businesses through introductions at meetings</li>
-                <li>Examples of successful redevelopment in other cities</li>
-                </ul>
-                </li>
-
-                <li><strong>31:20 – 33:04</strong><br>Supporting Small Businesses
-                <ul>
-                <li>Helping new and existing businesses promote their services</li>
-                <li>Building synergy with local content creators and photographers</li>
-                </ul>
-                </li>
-
-                <li><strong>33:04 – 40:53</strong><br>Public Safety & Police Staffing
-                <ul>
-                <li>Acknowledging strained staffing levels in police, fire, EMS</li>
-                <li>Supporting investments in equipment and proactive planning</li>
-                <li>The regional and statewide challenges of ATV/motorbike enforcement</li>
-                <li>Need for intergovernmental collaboration to solve public safety issues</li>
-                </ul>
-                </li>
-
-                <li><strong>40:53 – 43:00</strong><br>Code Enforcement
-                <ul>
-                <li>Advocating for fully staffed, area-specific code enforcement</li>
-                <li>Cracking down on absentee landlords and vacant properties</li>
-                <li>Emphasizing accountability through enforcement and court follow-up</li>
-                </ul>
-                </li>
-
-                <li><strong>43:00 – 53:00</strong><br>Civic Engagement & Information Access
-                <ul>
-                <li>Discussing Steven’s 3 advocacy ideas:
-                <ul>
-                <li>Local civics curriculum in schools</li>
-                <li>Counties (or civic groups) offering structured candidate information</li>
-                <li>Rebuilding local press (print and digital)</li>
-                </ul>
-                </li>
-                <li>Patricia’s support for more civic education, starting as early as 4th grade</li>
-                <li>The importance of consolidated, accessible election information</li>
-                </ul>
-                </li>
-
-                <li><strong>53:00 – 55:41</strong><br>Closing Thoughts & Farewell</li>
-                </ul>
-            </details>
-    </div>
-
-
-    <div class="mission-section">
-        <div class="mission-text">
-            <div class="big-mission-text">
-                VOTE WITH CONFIDENCE
-            </div>
-            <div class="small-mission-text">
-                <p>At Inform the Vote, our mission is to establish a new standard of
-                civic engagement by equipping you—the citizen—with thoroughly 
-                researched, unbiased, and easily digestible information.</p>
-
-                <p>We believe an empowered citizenry is the cornerstone of a 
-                transparent and accountable local government. Yet, in an era 
-                where this should be the norm, both transparency and 
-                accountability often fall short. We're here to challenge this 
-                status quo.</p>
-
-                <p>Our platform is designed to streamline and consolidate the 
-                essential information you need to become an informed voter, 
-                breaking down the barriers that often deter civic participation
-                 in a process that can and should be more straightforward.</p>
-            </div>
+      <details>
+        <summary>Click to expand: Fire districts don’t exist in a vacuum</summary>
+        <div class="inside">
+          <p>Fire districts interact with municipalities, townships, and the county. Bringing fire district topics up at:</p>
+          <ul class="clean">
+            <li>City halls</li>
+            <li>Township committee meetings</li>
+            <li>County commissioner meetings</li>
+          </ul>
+          <p>…is fair game, especially when we’re thinking about mutual aid, shared services, system-wide problems (like Inspira issues), and last year’s county fires.</p>
         </div>
-        <div class="mission-image-box">
-            <img src="assets/mission-img.jpg" alt="" class="mission-img">
-        </div>
-    </div>
+      </details>
+    </section>
 
+    <!-- Articles + interview -->
+    <section class="card" id="coverage">
+      <h2>5) Coverage so far: two articles + the Catalano interview</h2>
+      <p>This section is here so people can catch up quickly without chasing posts across social platforms.</p>
+
+      <details>
+        <summary>Article 1: Why I interviewed a fire district secretary — and what the State Comptroller reports reveal</summary>
+        <div class="inside">
+          <p><a href="https://www.facebook.com/share/p/1TWoJeTANa/" target="_blank" rel="noreferrer noopener">Facebook post link</a></p>
+          <div class="callout">
+            <span class="tag ok">Key point</span>
+            <p class="small">
+              Fire districts are optional, tax-levying entities that assume public participation — yet turnout is routinely under 2%.
+              Audits can improve internal practices, but they cannot substitute for public oversight.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Article 2: Make Firefighting Sexy Again (not just a marketing ploy)</summary>
+        <div class="inside">
+          <p><a href="https://www.facebook.com/share/p/17GVfm3Ebk/" target="_blank" rel="noreferrer noopener">Facebook post link</a></p>
+          <div class="callout">
+            <span class="tag warn">Key point</span>
+            <p class="small">
+              Participation is the only honest stress test. Before jumping to consolidation or abolition theories, try sunlight and engagement first — then evaluate what breaks and what holds.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Interview: Kacy Catalano (YouTube)</summary>
+        <div class="inside">
+          <p><a href="https://www.youtube.com/watch?v=APIHorR0oYs" target="_blank" rel="noreferrer noopener">https://www.youtube.com/watch?v=APIHorR0oYs</a></p>
+          <p class="small">If you watch nothing else, watch this — it adds “texture” that reports and minutes don’t: what the workload actually looks like, why continuity matters, and how governance works when visibility is low.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- What I’m watching next -->
+    <section class="card" id="next">
+      <h2>6) What I’m watching next (and what you can help with)</h2>
+      <p>This isn’t about blaming anyone. It’s about making the system legible enough that the public can decide what they think is reasonable.</p>
+
+      <ul class="clean">
+        <li><strong>Where and how election notices are published</strong> (and whether people can actually find them)</li>
+        <li><strong>Who runs</strong>, and whether candidacy is approachable or “insider-only” by culture</li>
+        <li><strong>Who votes</strong>, and whether anything moves turnout above the usual baseline</li>
+        <li><strong>Whether meetings occur as posted</strong> and whether minutes/agendas are available</li>
+        <li><strong>How districts coordinate with town/county issues</strong> (shared services, mutual aid, emergency system constraints)</li>
+      </ul>
+
+      <div class="callout">
+        <span class="tag ok">Help wanted</span>
+        <p class="small">
+          If you have verified meeting info, candidate info, or official documents (agendas, minutes, notices), send them in. If you can’t find them — that absence is data too.
+        </p>
+      </div>
+    </section>
 
     <footer>
-        <div class="social-icon-box">
-            <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/people/Inform-the-Vote-NJ/61558980497931/" class="social-icon-link">
-                <img src="assets/facebook.svg" alt="facebook icon" class="social-icon fb-icon">
-            </a>
-            <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/@InformTheVoteNJ" class="social-icon-link">
-                <img src="assets/youtube.svg" alt="youtube icon" class="social-icon youtube-icon">
-            </a>
-        </div>
-        <div class="lampe-plug">
-            © 2024 <a href="mailto:pierrelampre@gmail.com" class="webmaster">Lampelights Webcraft</a>
+      <div class="footer-row">
+        <div class="icons">
+          <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/people/Inform-the-Vote-NJ/61558980497931/" aria-label="Inform The Vote NJ Facebook Page">
+            <img src="assets/facebook.svg" alt="Facebook" />
+          </a>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/@InformTheVoteNJ" aria-label="Inform The Vote NJ YouTube">
+            <img src="assets/youtube.svg" alt="YouTube" />
+          </a>
         </div>
 
+        <div>
+          © 2026 InformTheVoteNJ.com • Built for clarity over hype
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <span style="opacity:0.8;">Webmaster:</span>
+        <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a>
+      </div>
     </footer>
-    </div>
+
+  </main>
 </body>
 </html>
