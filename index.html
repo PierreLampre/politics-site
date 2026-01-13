@@ -34,7 +34,6 @@
   <style>
     :root{
       --bg: #0b1220;
-      --card: rgba(255,255,255,0.07);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.72);
       --muted2: rgba(255,255,255,0.62);
@@ -46,8 +45,7 @@
       --radius: 16px;
       --shadow: 0 14px 50px rgba(0,0,0,0.35);
 
-      /* used for anchor offsets */
-      --header-h: 76px; /* approx header height */
+      --header-h: 128px; /* rough; used for scroll margin */
       --scroll-offset: calc(var(--header-h) + 14px);
     }
 
@@ -70,7 +68,7 @@
 
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 18px 18px 50px; }
 
-    /* Sticky Header (contains scrollspy buttons on LEFT now) */
+    /* Sticky Header */
     header{
       position: sticky;
       top: 0;
@@ -85,25 +83,43 @@
       margin: 0 auto;
       padding: 12px 18px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .left-stack{
+    /* Top icon links row */
+    .icon-links{
+      display:flex;
+      justify-content: flex-end;
+      gap: 10px;
+      align-items:center;
+    }
+    .icon-links a{
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+    }
+    .icon-links img,
+    .icon-links svg{
+      width: 20px;
+      height: 20px;
+      opacity: 0.92;
+      display:block;
+    }
+
+    /* Brand row */
+    .brand-row{
       display:flex;
       align-items:center;
       gap: 12px;
       min-width: 0;
     }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 10px;
-      min-width: 0;
-    }
-
     .brand-mark{
       width: 38px;
       height: 38px;
@@ -113,30 +129,40 @@
       border: 1px solid rgba(255,255,255,0.18);
       flex: 0 0 auto;
     }
-
     .brand-title{
       font-family: "Calistoga", serif;
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       letter-spacing: 0.4px;
       margin: 0;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       line-height: 1.1;
     }
-
     .brand-sub{
       margin: 2px 0 0;
       font-family: "Roboto Mono", monospace;
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       color: var(--muted2);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 46ch;
+      max-width: 70ch;
     }
 
-    /* Scrollspy buttons INSIDE header, left side */
+    /* Jump to + scrollspy row */
+    .jump-row{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .jump-label{
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.10);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
     .spy{
       display:flex;
       align-items:center;
@@ -144,7 +170,7 @@
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
       padding: 2px 0;
-      max-width: 420px;
+      max-width: 100%;
     }
     .spy::-webkit-scrollbar{ height: 8px; }
     .spy::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.12); border-radius: 999px; }
@@ -169,26 +195,10 @@
       color: rgba(255,255,255,0.92);
     }
 
-    .top-links{
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px 14px;
-      font-family: "Roboto Mono", monospace;
-      font-size: 0.85rem;
-    }
-    .top-links a{
-      text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
-    }
-
     /* Anchor offset for sticky header */
-    section.card{ scroll-margin-top: var(--scroll-offset); }
+    section.card, section.primer{ scroll-margin-top: var(--scroll-offset); }
 
-    /* Primer (image + summary combined) */
+    /* Primer */
     .primer{
       margin-top: 18px;
       padding: 22px 20px;
@@ -206,6 +216,7 @@
         align-items: start;
       }
     }
+
     .hero-image-header{
       max-width: 240px;
       margin: 0 auto;
@@ -216,11 +227,6 @@
       display: block;
       border-radius: 14px;
       box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-    }
-    @media (max-width: 600px){
-      .hero-image-header{ max-width: 180px; }
-      .brand-sub{ display:none; } /* keeps header tighter on phones */
-      .spy{ max-width: 220px; }
     }
 
     .primer h1{
@@ -236,7 +242,7 @@
     }
     .small{ color: var(--muted2); font-size: 0.96rem; }
 
-    /* Cards / Sections */
+    /* Cards */
     section.card{
       margin-top: 14px;
       border: 1px solid var(--border);
@@ -267,9 +273,10 @@
       font-size: 0.78rem;
       padding: 5px 9px;
       border-radius: 999px;
-      border: 1px solid var(--border);
+      border: 1px solid rgba(255,255,255,0.14);
       background: rgba(0,0,0,0.15);
       margin-right: 8px;
+      color: rgba(255,255,255,0.85);
     }
 
     details{
@@ -303,36 +310,6 @@
     }
     ul.clean li{ margin: 8px 0; }
 
-    .list-grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    @media (min-width: 900px){
-      .list-grid{ grid-template-columns: 1fr 1fr; }
-    }
-    .linkcard{
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(0,0,0,0.12);
-      border-radius: 14px;
-      padding: 12px 12px;
-    }
-    .linkcard h3{
-      margin: 0 0 6px;
-      font-size: 1.00rem;
-      font-family: "Roboto Mono", monospace;
-      font-weight: 700;
-      color: rgba(255,255,255,0.92);
-    }
-    .linkcard p{ margin: 0.25rem 0; color: var(--muted); }
-    .linkcard .meta{
-      margin-top: 6px;
-      font-family: "Roboto Mono", monospace;
-      font-size: 0.82rem;
-      color: var(--muted2);
-    }
-
     footer{
       margin-top: 18px;
       border-top: 1px solid rgba(255,255,255,0.12);
@@ -348,41 +325,68 @@
       align-items:center;
       justify-content: space-between;
     }
-    .icons{
+    .footer-links{
+      margin-top: 10px;
       display:flex;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px 14px;
       align-items:center;
+      justify-content: space-between;
     }
-    .icons a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
+    .footer-links a{
+      text-decoration: none;
       border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 10px;
+      border-radius: 999px;
       background: rgba(255,255,255,0.05);
-      text-decoration:none;
+      color: rgba(255,255,255,0.86);
     }
-    .icons img{ width: 20px; height: 20px; opacity: 0.92; }
+
+    @media (max-width: 650px){
+      :root{ --header-h: 148px; }
+      .brand-sub{ display:none; }
+      .hero-image-header{ max-width: 180px; }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- TOP HEADER (sticky, includes scrollspy on left) -->
+  <!-- HEADER -->
   <header>
     <div class="header-inner">
 
-      <div class="left-stack">
-        <div class="brand">
-          <div class="brand-mark" aria-hidden="true"></div>
-          <div>
-            <h1 class="brand-title">Inform The Vote NJ</h1>
-            <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
-          </div>
-        </div>
+      <!-- very top: icon links -->
+      <div class="icon-links" aria-label="Top links">
+        <a href="https://www.facebook.com/groups/781111154116727" target="_blank" rel="noreferrer noopener" aria-label="Facebook Group">
+          <img src="assets/facebook.svg" alt="Facebook" />
+        </a>
 
+        <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+          <img src="assets/youtube.svg" alt="YouTube" />
+        </a>
+
+        <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener" aria-label="Email Updates">
+          <!-- inline email icon so you don't need a new asset -->
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="none">
+            <path d="M4 6.5h16c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-9c0-.6.4-1 1-1Z" stroke="rgba(255,255,255,0.92)" stroke-width="1.6"/>
+            <path d="M4.5 7.3 12 12.6l7.5-5.3" stroke="rgba(255,255,255,0.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- brand -->
+      <div class="brand-row">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1 class="brand-title">Inform The Vote NJ</h1>
+          <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+        </div>
+      </div>
+
+      <!-- jump to + spy buttons -->
+      <div class="jump-row">
+        <span class="jump-label">Jump to</span>
         <div class="spy" aria-label="Page sections">
           <a class="navbtn" href="#primer" data-target="primer">Primer</a>
           <a class="navbtn" href="#timeline" data-target="timeline">Timeline</a>
@@ -390,19 +394,12 @@
         </div>
       </div>
 
-      <div class="top-links">
-        <a href="https://www.facebook.com/groups/781111154116727" target="_blank" rel="noreferrer noopener">Facebook Group</a>
-        <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" rel="noreferrer noopener">YouTube</a>
-        <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener">Email Updates</a>
-        <a href="child_pages/contact.html">Contact</a>
-      </div>
-
     </div>
   </header>
 
   <main class="wrap">
 
-    <!-- SECTION 1: PRIMER (image + summary combined, no pills) -->
+    <!-- PRIMER -->
     <section class="primer" id="primer">
       <div class="hero-image-header">
         <img
@@ -415,10 +412,9 @@
       <div>
         <h1>Fire District Elections (Cumberland County)</h1>
         <p class="small">
-          A one-page primer focused on one question: <b>how can voters make informed decisions when the timeline is compressed and information is scarce?</b>
+          A one-page primer focused on one practical question: <b>how can voters participate meaningfully when the timeline is compressed and information is inconsistent?</b>
         </p>
 
-        <!-- All collapsibles folded at load: no "open" attributes -->
         <details>
           <summary>Click to expand: The 5-point summary</summary>
           <div class="inside">
@@ -444,25 +440,37 @@
         </details>
 
         <details>
-          <summary>Click to expand: Why the compressed timeline matters</summary>
+          <summary>Click to expand: What I learned the hard way (even the State link changed)</summary>
           <div class="inside">
             <p>
-              In practical terms, the public often has only a small window between candidate filings closing and Election Day.
-              That window has to cover discovery, verification, outreach, publishing, and voter decision-making.
+              A perfect example of why this coverage is difficult: the State fire election chronology link changed. The “old” URL now appears broken, even though the State still hosts the PDF under a new filename.
+              If I weren’t being OCD about verifying everything, I wouldn’t have noticed — and I would’ve kept sharing a dead link.
             </p>
             <div class="callout">
-              <span class="tag">Working assumption</span>
-              <strong>Low turnout isn’t just apathy — it’s also a design and communication failure.</strong>
-              <p class="small">
-                When meeting info is hard to find, links are broken, and candidate information appears late, participation becomes unrealistic for ordinary people.
+              <span class="tag">Old link (broken)</span>
+              <p class="small" style="margin:0.4rem 0;">
+                <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">
+                  https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf
+                </a>
+              </p>
+              <span class="tag">New link (working)</span>
+              <p class="small" style="margin:0.4rem 0;">
+                <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf" target="_blank" rel="noreferrer noopener">
+                  https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf
+                </a>
               </p>
             </div>
+            <p>
+              That may sound small, but it matters: if official links aren’t stable, then “the timeline is known” becomes less true for ordinary residents trying to verify anything.
+              It adds friction — and friction is how turnout stays under 2%.
+            </p>
           </div>
         </details>
+
       </div>
     </section>
 
-    <!-- SECTION 2: TIMELINE (chronology link fixed; collapsible emphasis + forum) -->
+    <!-- TIMELINE -->
     <section class="card" id="timeline">
       <h2>Timeline</h2>
       <p class="small">
@@ -470,30 +478,30 @@
       </p>
 
       <div class="callout">
-        <span class="tag">Official chronology</span>
+        <span class="tag">Official chronology (current)</span>
         <strong>New Jersey 2026 Fire Election Chronology (PDF)</strong>
-        <p class="small">
-          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">
-            https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf
+        <p class="small" style="margin:0.4rem 0 0;">
+          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf" target="_blank" rel="noreferrer noopener">
+            https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf
           </a>
         </p>
       </div>
 
       <details>
-        <summary>Click to expand: What the chronology implies for public awareness</summary>
+        <summary>Click to expand: Why the “known timeline” still creates an unrealistic window</summary>
         <div class="inside">
           <p>
-            As you can see in the official chronology, with petitions filed on <b>January 23rd</b> and then leaving roughly a week for the county to process and publish candidate information,
+            Even when the chronology exists, the practical window is tiny. With petitions filed on <b>January 23rd</b> and then needing processing/publishing time,
             the press and the public may only have <b>2–3 weeks</b> to:
           </p>
           <ul class="clean">
             <li>Identify who is actually running (if anyone)</li>
             <li>Contact candidates and districts for basic information</li>
             <li>Advertise events and explain what fire districts even are</li>
-            <li>Give voters enough time to make a decision before Election Day</li>
+            <li>Give voters time to make a decision before Election Day</li>
           </ul>
           <p>
-            That is a tight window under any conditions — and it’s especially tight after November election fatigue and January reorganization meetings.
+            That’s hard under any conditions — and it’s especially hard after November election fatigue and January reorganization meetings.
           </p>
         </div>
       </details>
@@ -505,7 +513,7 @@
             <b>Saturday, February 7th • 11:00 AM – 1:00 PM • Millville Public Library</b>
           </p>
           <p class="small">
-            Goal: a plain-English explanation of what fire districts do, how these elections work, what the districts need (commissioners, staffing, volunteers),
+            Goal: a plain-English overview of what fire districts do, how these elections work, what the districts need (commissioners, staffing, volunteers),
             and a chance for candidates/commissioners/firefighters to speak directly to the public.
           </p>
           <div class="callout">
@@ -519,54 +527,27 @@
       </details>
 
       <details>
-        <summary>Click to expand: District reference links</summary>
+        <summary>Click to expand: Reference links (condensed)</summary>
         <div class="inside">
-          <p class="small">
-            These links are here so residents can verify information themselves and explore minutes, notices, and meeting pages.
-          </p>
-
-          <div class="list-grid">
-            <div class="linkcard">
-              <h3>Cumberland County Votes — Fire Elections</h3>
-              <p><a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">cumberlandcountyvotes.com/elections/fire-elections</a></p>
-              <p class="meta">County hub page (some links may be outdated)</p>
-            </div>
-
-            <div class="linkcard">
-              <h3>Port Norris Fire District</h3>
-              <p><a href="https://www.portnorrisfire.com/board-of-fire-commissioners/" target="_blank" rel="noreferrer noopener">Board of Fire Commissioners</a></p>
-              <p class="meta">District / company site</p>
-            </div>
-
-            <div class="linkcard">
-              <h3>Mauricetown Fire Company / District</h3>
-              <p><a href="https://mauricetownfireco.com/" target="_blank" rel="noreferrer noopener">mauricetownfireco.com</a></p>
-              <p class="meta">District / company site</p>
-            </div>
-
-            <div class="linkcard">
-              <h3>Laurel Lake Fire District</h3>
-              <p><a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">commercialtwpbofc3.com/home-meetings</a></p>
-              <p class="meta">Meeting page (verified link)</p>
-            </div>
-
-            <div class="linkcard">
-              <h3>Maurice River Township — Fire District Pages</h3>
-              <p><a href="https://mauricerivertwp.org/" target="_blank" rel="noreferrer noopener">mauricerivertwp.org</a></p>
-              <p class="meta">Leesburg / Heislerville / Port Elizabeth / Cumberland Station references</p>
-            </div>
-
-            <div class="linkcard">
-              <h3>Downe BOFC (as referenced)</h3>
-              <p><a href="https://www.downetwpbofc.org/index.php/2024-meetings" target="_blank" rel="noreferrer noopener">downetwpbofc.org • meetings</a></p>
-              <p class="meta">Minutes reference source</p>
-            </div>
-          </div>
+          <ul class="clean">
+            <li>
+              <b>Cumberland County Votes — Fire Elections:</b>
+              <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">
+                https://cumberlandcountyvotes.com/elections/fire-elections/
+              </a>
+            </li>
+            <li>
+              <b>Laurel Lake Fire District meeting page (verified; county listing was inconsistent):</b>
+              <a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">
+                https://www.commercialtwpbofc3.com/home-meetings
+              </a>
+            </li>
+          </ul>
         </div>
       </details>
     </section>
 
-    <!-- SECTION 3: COVERAGE (all folded by default) -->
+    <!-- COVERAGE -->
     <section class="card" id="coverage">
       <h2>Coverage</h2>
       <p class="small">Links to catch up without chasing posts across platforms.</p>
@@ -606,21 +587,13 @@
 
     <footer>
       <div class="footer-row">
-        <div class="icons">
-          <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/people/Inform-the-Vote-NJ/61558980497931/" aria-label="Inform The Vote NJ Facebook Page">
-            <img src="assets/facebook.svg" alt="Facebook" />
-          </a>
-          <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/@InformTheVoteNJ" aria-label="Inform The Vote NJ YouTube">
-            <img src="assets/youtube.svg" alt="YouTube" />
-          </a>
-        </div>
-
         <div>© 2026 InformTheVoteNJ.com • Built for clarity over hype</div>
+        <div><span style="opacity:0.8;">Webmaster:</span> <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a></div>
       </div>
 
-      <div style="margin-top:10px;">
-        <span style="opacity:0.8;">Webmaster:</span>
-        <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a>
+      <!-- Contact link moved to bottom, per your request -->
+      <div class="footer-links">
+        <a href="child_pages/contact.html">Contact</a>
       </div>
     </footer>
 
