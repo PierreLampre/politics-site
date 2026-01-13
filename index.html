@@ -35,25 +35,20 @@
     :root{
       --bg: #0b1220;
       --card: rgba(255,255,255,0.07);
-      --card2: rgba(255,255,255,0.10);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.72);
       --muted2: rgba(255,255,255,0.62);
       --border: rgba(255,255,255,0.12);
       --accent: #ff3b30;
       --accent2: #4da3ff;
-      --ok: #2ecc71;
-      --warn: #f1c40f;
-      --bad: #ff6b6b;
 
       --max: 1050px;
       --radius: 16px;
       --shadow: 0 14px 50px rgba(0,0,0,0.35);
 
-      /* Header heights (for smooth anchor offsets) */
-      --header-h: 72px;      /* approximate */
-      --nav-h: 56px;         /* approximate */
-      --scroll-offset: calc(var(--header-h) + var(--nav-h) + 14px);
+      /* used for anchor offsets */
+      --header-h: 76px; /* approx header height */
+      --scroll-offset: calc(var(--header-h) + 14px);
     }
 
     *{ box-sizing: border-box; }
@@ -75,7 +70,7 @@
 
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 18px 18px 50px; }
 
-    /* Sticky Header */
+    /* Sticky Header (contains scrollspy buttons on LEFT now) */
     header{
       position: sticky;
       top: 0;
@@ -84,83 +79,76 @@
       background: rgba(11,18,32,0.72);
       border-bottom: 1px solid var(--border);
     }
+
     .header-inner{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 14px 18px;
+      padding: 12px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 14px;
     }
-    .brand{
+
+    .left-stack{
       display:flex;
       align-items:center;
       gap: 12px;
       min-width: 0;
     }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 0;
+    }
+
     .brand-mark{
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: 12px;
       background: linear-gradient(135deg, rgba(255,59,48,0.95), rgba(77,163,255,0.95));
       box-shadow: 0 10px 30px rgba(0,0,0,0.35);
       border: 1px solid rgba(255,255,255,0.18);
       flex: 0 0 auto;
     }
+
     .brand-title{
       font-family: "Calistoga", serif;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       letter-spacing: 0.4px;
       margin: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .brand-sub{
-      margin: 0;
-      font-family: "Roboto Mono", monospace;
-      font-size: 0.78rem;
-      color: var(--muted2);
-      margin-top: 2px;
-    }
-    .top-links{
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px 14px;
-      font-family: "Roboto Mono", monospace;
-      font-size: 0.85rem;
-    }
-    .top-links a{
-      text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.05);
+      line-height: 1.1;
     }
 
-    /* Scrollspy / Section Nav */
-    .section-nav{
-      position: sticky;
-      top: 72px; /* sits below header */
-      z-index: 40;
-      backdrop-filter: blur(10px);
-      background: rgba(11,18,32,0.68);
-      border-bottom: 1px solid rgba(255,255,255,0.10);
+    .brand-sub{
+      margin: 2px 0 0;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.76rem;
+      color: var(--muted2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 46ch;
     }
-    .section-nav-inner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 10px 18px;
-      display: flex;
+
+    /* Scrollspy buttons INSIDE header, left side */
+    .spy{
+      display:flex;
+      align-items:center;
       gap: 10px;
-      align-items: center;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      padding: 2px 0;
+      max-width: 420px;
     }
-    .section-nav-inner::-webkit-scrollbar{ height: 8px; }
-    .section-nav-inner::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.12); border-radius: 999px; }
+    .spy::-webkit-scrollbar{ height: 8px; }
+    .spy::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.12); border-radius: 999px; }
+
     .navbtn{
       flex: 0 0 auto;
       text-decoration: none;
@@ -181,66 +169,76 @@
       color: rgba(255,255,255,0.92);
     }
 
-    /* Anchor offset for sticky header + nav */
-    section.card{
-      scroll-margin-top: var(--scroll-offset);
+    .top-links{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px 14px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+    }
+    .top-links a{
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
     }
 
-    /* Hero */
-    .hero{
+    /* Anchor offset for sticky header */
+    section.card{ scroll-margin-top: var(--scroll-offset); }
+
+    /* Primer (image + summary combined) */
+    .primer{
       margin-top: 18px;
-      padding: 26px 22px;
+      padding: 22px 20px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
       box-shadow: var(--shadow);
-    }
-    .hero p{
-      margin: 0.35rem 0;
-      color: var(--muted);
-      max-width: 86ch;
-    }
-    .pill-row{
-      margin-top: 14px;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      font-family: "Roboto Mono", monospace;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-    .pill b{ color: var(--text); font-weight: 600; }
-    .dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(255,59,48,0.14);
-    }
-    .dot.blue{
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(77,163,255,0.14);
-    }
-
-    /* Cards / Sections */
-    .grid{
-      margin-top: 18px;
-      display:grid;
+      display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
     }
+    @media (min-width: 860px){
+      .primer{
+        grid-template-columns: 260px 1fr;
+        align-items: start;
+      }
+    }
+    .hero-image-header{
+      max-width: 240px;
+      margin: 0 auto;
+    }
+    .hero-image-header img{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    }
+    @media (max-width: 600px){
+      .hero-image-header{ max-width: 180px; }
+      .brand-sub{ display:none; } /* keeps header tighter on phones */
+      .spy{ max-width: 220px; }
+    }
 
+    .primer h1{
+      margin: 0 0 8px;
+      font-family: "Calistoga", serif;
+      font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+      letter-spacing: 0.3px;
+    }
+    .primer p{
+      margin: 0.45rem 0;
+      color: var(--muted);
+      max-width: 92ch;
+    }
+    .small{ color: var(--muted2); font-size: 0.96rem; }
+
+    /* Cards / Sections */
     section.card{
+      margin-top: 14px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
       background: rgba(255,255,255,0.06);
@@ -254,7 +252,6 @@
       letter-spacing: 0.2px;
     }
     section.card p{ margin: 0.55rem 0; color: var(--muted); }
-    .small{ color: var(--muted2); font-size: 0.96rem; }
 
     .callout{
       border: 1px solid rgba(255,255,255,0.14);
@@ -274,8 +271,6 @@
       background: rgba(0,0,0,0.15);
       margin-right: 8px;
     }
-    .tag.ok{ border-color: rgba(46,204,113,0.35); color: rgba(46,204,113,0.95); }
-    .tag.warn{ border-color: rgba(241,196,15,0.35); color: rgba(241,196,15,0.95); }
 
     details{
       margin-top: 10px;
@@ -315,9 +310,7 @@
       margin-top: 10px;
     }
     @media (min-width: 900px){
-      .list-grid{
-        grid-template-columns: 1fr 1fr;
-      }
+      .list-grid{ grid-template-columns: 1fr 1fr; }
     }
     .linkcard{
       border: 1px solid rgba(255,255,255,0.12);
@@ -338,22 +331,6 @@
       font-family: "Roboto Mono", monospace;
       font-size: 0.82rem;
       color: var(--muted2);
-    }
-
-    .hero-image-header{
-      max-width: 240px;
-      margin: 0 auto 14px;
-    }
-    .hero-image-header img{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-    }
-    @media (max-width: 600px){
-      .hero-image-header{ max-width: 180px; }
-      .section-nav{ top: 72px; }
     }
 
     footer{
@@ -393,14 +370,23 @@
 
 <body>
 
-  <!-- TOP HEADER -->
+  <!-- TOP HEADER (sticky, includes scrollspy on left) -->
   <header>
     <div class="header-inner">
-      <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div>
-          <h1 class="brand-title">Inform The Vote NJ</h1>
-          <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+
+      <div class="left-stack">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <h1 class="brand-title">Inform The Vote NJ</h1>
+            <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+          </div>
+        </div>
+
+        <div class="spy" aria-label="Page sections">
+          <a class="navbtn" href="#primer" data-target="primer">Primer</a>
+          <a class="navbtn" href="#timeline" data-target="timeline">Timeline</a>
+          <a class="navbtn" href="#coverage" data-target="coverage">Coverage</a>
         </div>
       </div>
 
@@ -410,22 +396,14 @@
         <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener">Email Updates</a>
         <a href="child_pages/contact.html">Contact</a>
       </div>
+
     </div>
   </header>
 
-  <!-- SCROLL MENU (3 sections) -->
-  <nav class="section-nav" aria-label="Section navigation">
-    <div class="section-nav-inner">
-      <a class="navbtn" href="#primer" data-target="primer">Primer</a>
-      <a class="navbtn" href="#links-forum" data-target="links-forum">Timeline • District Links • Forum</a>
-      <a class="navbtn" href="#coverage" data-target="coverage">Our Coverage So Far</a>
-    </div>
-  </nav>
-
   <main class="wrap">
 
-    <!-- HERO -->
-    <div class="hero">
+    <!-- SECTION 1: PRIMER (image + summary combined, no pills) -->
+    <section class="primer" id="primer">
       <div class="hero-image-header">
         <img
           src="assets/makeFireFightingSexyAgain.jpg"
@@ -434,97 +412,117 @@
         />
       </div>
 
-      <p class="small">
-        <b>Learn About Fire Districts and Their Elections.</b>
-        This is a one-page primer to make a confusing, off-cycle election understandable — and to make participation realistic.
-      </p>
+      <div>
+        <h1>Fire District Elections (Cumberland County)</h1>
+        <p class="small">
+          A one-page primer focused on one question: <b>how can voters make informed decisions when the timeline is compressed and information is scarce?</b>
+        </p>
 
-      <div class="pill-row">
-        <div class="pill"><span class="dot"></span> <b>Next election:</b> February fire district elections</div>
-        <div class="pill"><span class="dot blue"></span> <b>Key issue:</b> turnout often under 2%</div>
-        <div class="pill"><b>Coverage goal:</b> visibility → participation → evidence</div>
+        <!-- All collapsibles folded at load: no "open" attributes -->
+        <details>
+          <summary>Click to expand: The 5-point summary</summary>
+          <div class="inside">
+            <p>
+              Fire districts are geographically defined areas responsible for providing fire protection and EMS services,
+              governed by a separate public entity through a board of commissioners that oversees budgets, equipment, facilities, and staffing.
+            </p>
+            <p>
+              Voter awareness appears to be low (consistently less than 2%) due to a combination of factors, including limited public notification that fire districts exist and a compressed election timeline, which leaves little room for public education.
+              Candidate filings often conclude in late January, leaving only a few weeks before February elections for the public and the press to identify candidates, understand district issues, and communicate that information—an unrealistic expectation following the November general election fatigue and January reorganization meetings.
+            </p>
+            <p>
+              The most consistent struggles across districts are recruiting candidates for commissioner seats and maintaining adequate firefighter and EMS staffing levels.
+            </p>
+            <p>
+              Because turnout is so minimal, it is difficult to know precisely what voters are confused about, but explaining what fire districts are, why they matter, and how they fit into county-wide emergency services may be enough to generate baseline interest and participation.
+            </p>
+            <p>
+              The site and forum are intended to function as a stress test of democratic oversight—addressing awareness gaps and turnout—and if participation remains negligible despite these efforts,
+              that outcome itself becomes evidence to evaluate redistricting, consolidation, or a return to municipal governance of emergency services.
+            </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Click to expand: Why the compressed timeline matters</summary>
+          <div class="inside">
+            <p>
+              In practical terms, the public often has only a small window between candidate filings closing and Election Day.
+              That window has to cover discovery, verification, outreach, publishing, and voter decision-making.
+            </p>
+            <div class="callout">
+              <span class="tag">Working assumption</span>
+              <strong>Low turnout isn’t just apathy — it’s also a design and communication failure.</strong>
+              <p class="small">
+                When meeting info is hard to find, links are broken, and candidate information appears late, participation becomes unrealistic for ordinary people.
+              </p>
+            </div>
+          </div>
+        </details>
       </div>
-    </div>
+    </section>
 
-    <!-- SECTION 1: PRIMER (collapsible summary) -->
-    <section class="card" id="primer">
-      <h2>1) Primer (read this first)</h2>
+    <!-- SECTION 2: TIMELINE (chronology link fixed; collapsible emphasis + forum) -->
+    <section class="card" id="timeline">
+      <h2>Timeline</h2>
       <p class="small">
-        If you only have one minute: fire districts levy taxes, oversee emergency readiness, and hold elections —
-        but the public usually has only a few weeks to learn anything before voting.
+        The timeline is the point. Coverage isn’t “late” — it’s structurally squeezed.
       </p>
 
-      <details open>
-        <summary>Click to expand: The 5-point summary</summary>
+      <div class="callout">
+        <span class="tag">Official chronology</span>
+        <strong>New Jersey 2026 Fire Election Chronology (PDF)</strong>
+        <p class="small">
+          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">
+            https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf
+          </a>
+        </p>
+      </div>
+
+      <details>
+        <summary>Click to expand: What the chronology implies for public awareness</summary>
         <div class="inside">
           <p>
-            Fire districts are geographically defined areas responsible for providing fire protection and EMS services,
-            governed by a separate public entity through a board of commissioners that oversees budgets, equipment, facilities, and staffing.
+            As you can see in the official chronology, with petitions filed on <b>January 23rd</b> and then leaving roughly a week for the county to process and publish candidate information,
+            the press and the public may only have <b>2–3 weeks</b> to:
           </p>
+          <ul class="clean">
+            <li>Identify who is actually running (if anyone)</li>
+            <li>Contact candidates and districts for basic information</li>
+            <li>Advertise events and explain what fire districts even are</li>
+            <li>Give voters enough time to make a decision before Election Day</li>
+          </ul>
           <p>
-            Voter awareness appears to be low (consistently less than 2%) due to a combination of factors, including limited public notification that fire districts exist and a compressed election timeline, which leaves little room for public education.
-            Candidate filings often conclude in late January, leaving only a few weeks before February elections for the public and the press to identify candidates, understand district issues, and communicate that information—an unrealistic expectation following the November general election fatigue and January reorganization meetings.
-          </p>
-          <p>
-            The most consistent struggles across districts are recruiting candidates for commissioner seats and maintaining adequate firefighter and EMS staffing levels.
-          </p>
-          <p>
-            Because turnout is so minimal, it is difficult to know precisely what voters are confused about, but explaining what fire districts are, why they matter, and how they fit into county-wide emergency services may be enough to generate baseline interest and participation.
-          </p>
-          <p>
-            The site and forum are intended to function as a stress test of democratic oversight—addressing awareness gaps and turnout—and if participation remains negligible despite these efforts,
-            that outcome itself becomes evidence to evaluate redistricting, consolidation, or a return to municipal governance of emergency services.
+            That is a tight window under any conditions — and it’s especially tight after November election fatigue and January reorganization meetings.
           </p>
         </div>
       </details>
 
       <details>
-        <summary>Click to expand: Why “the compressed timeline” is the real problem</summary>
+        <summary>Click to expand: Candidate / Info Forum — February 7th</summary>
         <div class="inside">
           <p>
-            In practical terms, the public often has only a small window between candidate filings closing and Election Day.
-            That window has to cover discovery, verification, outreach, publishing, and voter decision-making. If nobody is operating fast, coverage defaults to silence.
+            <b>Saturday, February 7th • 11:00 AM – 1:00 PM • Millville Public Library</b>
+          </p>
+          <p class="small">
+            Goal: a plain-English explanation of what fire districts do, how these elections work, what the districts need (commissioners, staffing, volunteers),
+            and a chance for candidates/commissioners/firefighters to speak directly to the public.
           </p>
           <div class="callout">
-            <span class="tag warn">Working assumption</span>
-            <strong>Low turnout isn’t just apathy — it’s also a design and communication failure.</strong>
+            <span class="tag">Participation goal</span>
+            <strong>Visibility → participation → evidence.</strong>
             <p class="small">
-              When meeting info is hard to find, links are broken, and candidate information appears late, “participation” becomes unrealistic for ordinary people.
+              If turnout remains negligible even after basic outreach, that outcome itself becomes useful evidence for evaluating structural changes later.
             </p>
           </div>
         </div>
       </details>
-    </section>
 
-    <!-- SECTION 2: LINKS + FORUM -->
-    <section class="card" id="links-forum">
-      <h2>2) Timeline • District links • Candidate forum</h2>
-
-      <div class="callout">
-        <span class="tag ok">Official timeline</span>
-        <strong>New Jersey 2026 Fire Election Chronology</strong>
-        <p class="small">
-          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">
-            nj.gov • 2026 Fire Election Chronology (PDF)
-          </a>
-        </p>
-      </div>
-
-      <div class="callout">
-        <span class="tag warn">Save the date</span>
-        <strong>Fire District Candidate / Info Forum</strong>
-        <p class="small">
-          <b>Saturday, February 7th • 11:00 AM – 1:00 PM • Millville Public Library</b><br/>
-          Purpose: plain-English explanation of what fire districts do, what the elections mean, and how residents can participate — including staffing and commissioner recruitment.
-        </p>
-      </div>
-
-      <details open>
-        <summary>Click to expand: District websites and reference hubs</summary>
+      <details>
+        <summary>Click to expand: District reference links</summary>
         <div class="inside">
           <p class="small">
             These links are here so residents can verify information themselves and explore minutes, notices, and meeting pages.
-            (If something is broken or outdated, that gap is part of what this project is documenting.)
           </p>
 
           <div class="list-grid">
@@ -553,39 +551,27 @@
             </div>
 
             <div class="linkcard">
-              <h3>Maurice River Twp — Fire District Pages</h3>
+              <h3>Maurice River Township — Fire District Pages</h3>
               <p><a href="https://mauricerivertwp.org/" target="_blank" rel="noreferrer noopener">mauricerivertwp.org</a></p>
-              <p class="meta">Includes Leesburg / Heislerville / Port Elizabeth / Cumberland Station references</p>
+              <p class="meta">Leesburg / Heislerville / Port Elizabeth / Cumberland Station references</p>
             </div>
 
             <div class="linkcard">
-              <h3>Downe Twp BOFC (as referenced)</h3>
+              <h3>Downe BOFC (as referenced)</h3>
               <p><a href="https://www.downetwpbofc.org/index.php/2024-meetings" target="_blank" rel="noreferrer noopener">downetwpbofc.org • meetings</a></p>
               <p class="meta">Minutes reference source</p>
             </div>
           </div>
         </div>
       </details>
-
-      <details>
-        <summary>Click to expand: What “good participation” looks like (short version)</summary>
-        <div class="inside">
-          <ul class="clean">
-            <li>Verified meeting info is easy to find (date, time, address, agenda/minutes)</li>
-            <li>Candidates (if any) have a place to share basic background + priorities</li>
-            <li>Residents have enough lead time to learn and ask questions before voting</li>
-            <li>Districts can clearly describe staffing needs and how the public can help</li>
-          </ul>
-        </div>
-      </details>
     </section>
 
-    <!-- SECTION 3: COVERAGE -->
+    <!-- SECTION 3: COVERAGE (all folded by default) -->
     <section class="card" id="coverage">
-      <h2>3) Our coverage so far</h2>
-      <p class="small">This section is here so people can catch up quickly without chasing posts across platforms.</p>
+      <h2>Coverage</h2>
+      <p class="small">Links to catch up without chasing posts across platforms.</p>
 
-      <details open>
+      <details>
         <summary>Interview: Kacy Catalano (YouTube)</summary>
         <div class="inside">
           <p>
@@ -594,7 +580,7 @@
             </a>
           </p>
           <p class="small">
-            If you watch nothing else, watch this — it adds “texture” that reports and minutes don’t: what the workload actually looks like, why continuity matters, and how governance works when visibility is low.
+            Adds “texture” that reports and minutes don’t: what the workload actually looks like, why continuity matters, and how governance works when visibility is low.
           </p>
         </div>
       </details>
@@ -603,16 +589,8 @@
         <summary>Article 1 (Facebook): Why I interviewed a fire district secretary — and what the State Comptroller reports reveal</summary>
         <div class="inside">
           <p>
-            <a href="https://www.facebook.com/share/p/1TWoJeTANa/" target="_blank" rel="noreferrer noopener">
-              Facebook post link
-            </a>
+            <a href="https://www.facebook.com/share/p/1TWoJeTANa/" target="_blank" rel="noreferrer noopener">Facebook post link</a>
           </p>
-          <div class="callout">
-            <span class="tag ok">Tip</span>
-            <p class="small">
-              If you don’t use Facebook, I can mirror articles on the website—this section will expand as more coverage is posted.
-            </p>
-          </div>
         </div>
       </details>
 
@@ -620,9 +598,7 @@
         <summary>Article 2 (Facebook): Make Firefighting Sexy Again (not just a marketing ploy)</summary>
         <div class="inside">
           <p>
-            <a href="https://www.facebook.com/share/p/17GVfm3Ebk/" target="_blank" rel="noreferrer noopener">
-              Facebook post link
-            </a>
+            <a href="https://www.facebook.com/share/p/17GVfm3Ebk/" target="_blank" rel="noreferrer noopener">Facebook post link</a>
           </p>
         </div>
       </details>
@@ -651,7 +627,7 @@
   </main>
 
   <script>
-    // Simple scrollspy: highlights the nav button for the section in view.
+    // Scrollspy: highlight which section is in view.
     (function(){
       const navBtns = Array.from(document.querySelectorAll('.navbtn'));
       const sections = navBtns
@@ -665,24 +641,17 @@
       };
 
       const obs = new IntersectionObserver((entries) => {
-        // Pick the section most visible
         const visible = entries
           .filter(e => e.isIntersecting)
           .sort((a,b) => (b.intersectionRatio - a.intersectionRatio))[0];
-
-        if (visible && visible.target && visible.target.id) {
-          setActive(visible.target.id);
-        }
+        if (visible && visible.target && visible.target.id) setActive(visible.target.id);
       }, {
         root: null,
-        // Offset for sticky header+nav: push the "active zone" slightly down
         rootMargin: "-35% 0px -55% 0px",
         threshold: [0.12, 0.22, 0.35, 0.5, 0.65]
       });
 
       sections.forEach(s => obs.observe(s));
-
-      // Default active on load
       setActive(sections[0].id);
     })();
   </script>
