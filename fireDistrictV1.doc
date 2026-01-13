@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Inform The Vote NJ — Fire District Elections</title>
+
+  <!-- Fonts (kept simple + respectable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Lora:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="preload" href="assets/blue_court.jpg" as="image" type="image/jpg" />
+  <link rel="apple-touch-icon" href="/assets/homescreenIcon/informSquareLogo.png" />
+  <link rel="icon" sizes="512x512" href="/assets/homescreenIcon/informSquareLogo.png" />
+
+  <!-- Preview image meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Inform The Vote NJ" />
+  <meta property="og:description" content="Fire District Primer + 2026 Election Coverage (Cumberland County)" />
+  <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png" />
+  <meta property="og:url" content="https://informthevotenj.com" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FQD2P8BV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-64FQD2P8BV');
+  </script>
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.07);
+      --card2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.62);
+      --border: rgba(255,255,255,0.12);
+      --accent: #ff3b30;    /* “fire” accent */
+      --accent2: #4da3ff;   /* “info” accent */
+      --ok: #2ecc71;
+      --warn: #f1c40f;
+      --bad: #ff6b6b;
+
+      --max: 1050px;
+      --radius: 16px;
+      --shadow: 0 14px 50px rgba(0,0,0,0.35);
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: "Lora", serif;
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(77,163,255,0.20), transparent 60%),
+        radial-gradient(900px 450px at 85% 10%, rgba(255,59,48,0.16), transparent 60%),
+        linear-gradient(180deg, #0b1220 0%, #0a0f1a 70%, #070b13 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a{ color: #b9dcff; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover{ opacity: 0.9; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 22px 18px 50px; }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-mark{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,59,48,0.95), rgba(77,163,255,0.95));
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      flex: 0 0 auto;
+    }
+    .brand-title{
+      font-family: "Calistoga", serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.4px;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .brand-sub{
+      margin: 0;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      margin-top: 2px;
+    }
+    .top-links{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px 14px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+    }
+    .top-links a{
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* Hero */
+    .hero{
+      margin-top: 18px;
+      padding: 26px 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+    .hero h1{
+      margin: 0 0 10px;
+      font-family: "Calistoga", serif;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      letter-spacing: 0.3px;
+    }
+    .hero p{
+      margin: 0.3rem 0;
+      color: var(--muted);
+      max-width: 78ch;
+    }
+    .pill-row{
+      margin-top: 14px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .pill b{ color: var(--text); font-weight: 600; }
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(255,59,48,0.14);
+    }
+    .dot.blue{
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(77,163,255,0.14);
+    }
+
+    /* Sections */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 900px){
+      .grid.two{
+        grid-template-columns: 1.12fr 0.88fr;
+      }
+    }
+
+    section.card{
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.24);
+      padding: 18px 18px;
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-family: "Calistoga", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.2px;
+    }
+    section.card p{ margin: 0.55rem 0; color: var(--muted); }
+    .small{ color: var(--muted2); font-size: 0.96rem; }
+    .callout{
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .callout strong{ color: var(--text); }
+    .callout .tag{
+      display:inline-block;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.15);
+      margin-right: 8px;
+    }
+    .tag.ok{ border-color: rgba(46,204,113,0.35); color: rgba(46,204,113,0.95); }
+    .tag.warn{ border-color: rgba(241,196,15,0.35); color: rgba(241,196,15,0.95); }
+    .tag.bad{ border-color: rgba(255,107,107,0.35); color: rgba(255,107,107,0.95); }
+
+    details{
+      margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary:before{
+      content:"▸";
+      display:inline-block;
+      margin-right: 10px;
+      transform: translateY(-1px);
+      color: var(--accent2);
+    }
+    details[open] summary:before{ content:"▾"; color: var(--accent); }
+    details .inside{ margin-top: 10px; color: var(--muted); }
+
+    ul.clean{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    ul.clean li{ margin: 8px 0; }
+
+    /* Meeting list */
+    .meeting{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.12);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .meeting h3{
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+      font-family: "Roboto Mono", monospace;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+    }
+    .meeting p{ margin: 0.35rem 0; color: var(--muted); }
+    .kv{
+      display:grid;
+      grid-template-columns: 95px 1fr;
+      gap: 6px 10px;
+      margin-top: 8px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .kv b{ color: rgba(255,255,255,0.92); font-weight: 600; }
+    .hr{
+      height: 1px;
+      background: rgba(255,255,255,0.10);
+      margin: 14px 0;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 18px 0 0;
+      color: var(--muted2);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.84rem;
+    }
+    .footer-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .icons{
+      display:flex;
+      gap: 12px;
+      align-items:center;
+    }
+    .icons a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      text-decoration:none;
+    }
+    .icons img{ width: 20px; height: 20px; opacity: 0.92; }
+
+    .hero-image-header{
+      max-width: 240px;        /* desktop cap */
+      margin: 0 auto 14px;    /* center + spacing */
+    }
+
+    .hero-image-header img{
+      width: 100%;             /* responsive scaling */
+      height: auto;
+      display: block;
+      border-radius: 14px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 600px){
+      .hero-image-header{
+        max-width: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP HEADER (no hamburger) -->
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1 class="brand-title">Inform The Vote NJ</h1>
+          <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+        </div>
+      </div>
+
+      <div class="top-links">
+        <a href="https://www.facebook.com/groups/781111154116727" target="_blank" rel="noreferrer noopener">Facebook Group</a>
+        <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" rel="noreferrer noopener">YouTube</a>
+        <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener">Email Updates</a>
+        <a href="child_pages/contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HERO / SLOGAN -->
+    <div class="hero">
+      <div class="hero-image-header">
+      <img 
+        src="assets/makeFireFightingSexyAgain.jpg"
+        alt="Make Firefighting Sexy Again — Learn About Fire Districts and Their Elections"
+        loading="eager"
+      />
+    </div>
+      <p class="small"><b>Learn About Fire Districts and Their Elections.</b> This is a one-page primer to make a confusing, off-cycle election understandable — and to make participation realistic.</p>
+
+      <div class="pill-row">
+        <div class="pill"><span class="dot"></span> <b>Next election:</b> February 15th, Fire District Elections</div>
+        <div class="pill"><span class="dot blue"></span> <b>Key issue:</b> turnout often under 2%</div>
+        <div class="pill"><b>Coverage goal:</b> visibility → participation → evidence</div>
+      </div>
+    </div>
+
+    <!-- TOP ROW -->
+    <div class="grid two">
+
+      <!-- What are fire districts -->
+      <section class="card" id="what-are-fire-districts">
+        <h2>1) What are fire districts?</h2>
+        <p>Fire districts are separate local government entities that exist to fund and govern fire protection in a defined area. In practice, they often feel invisible — but they can levy taxes, manage budgets, oversee equipment, and run elections for commissioners.</p>
+
+        <details>
+          <summary>Click to expand: The important part people miss</summary>
+          <div class="inside">
+            <p><strong>Fire districts are not automatic.</strong> They were created because residents petitioned for them — meaning the underlying model assumes the public wanted an active role in fire protection governance and oversight.</p>
+            <p>That premise matters, because if the public stops participating, the structure becomes “government by procedure” instead of “government by consent.”</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Click to expand: What do commissioners actually do?</summary>
+          <div class="inside">
+            <ul class="clean">
+              <li>Approve budgets and tax levy decisions related to fire protection</li>
+              <li>Oversee contracts, purchases, audits, compliance, and public notices</li>
+              <li>Help set direction for how services are staffed and supported (volunteer, paid, hybrid realities)</li>
+              <li>Maintain continuity and decision-making for essential emergency readiness</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- Why elections matter / turnout -->
+      <section class="card" id="why-elections-matter">
+        <h2>2) Why the elections matter (and why turnout matters more)</h2>
+        <p>Fire district elections are the public’s mechanism to choose who sits on these boards. The structural problem is simple: turnout is routinely below <strong>2% of registered voters</strong>.</p>
+
+        <div class="callout">
+          <span class="tag warn">Reality check</span>
+          <strong>When participation is that low, elections stop functioning as meaningful consent.</strong>
+          <p class="small">Even if everything is being run honestly, the system becomes hard to defend: who is it really accountable to?</p>
+        </div>
+
+        <details>
+          <summary>Click to expand: The uncomfortable question</summary>
+          <div class="inside">
+            <p>If almost nobody participates year after year, it naturally raises a bigger question:</p>
+            <p><strong>“Why do these entities still exist?”</strong></p>
+            <p>That question is not a rhetorical dunk. It’s a governance question — and it should be answered with evidence, not assumptions.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Click to expand: My working theory (and a fair counterpoint)</summary>
+          <div class="inside">
+            <p><strong>Working theory:</strong> the issue is not just “apathy.” It’s also design and communication failure — broken links, unclear schedules, poor visibility, and a culture that assumes nobody shows up.</p>
+            <p><strong>Fair counterpoint:</strong> some districts may function well with a small but consistent core of engaged stakeholders (often firefighters), and they may fear larger electorates would vote without understanding operational realities.</p>
+            <p>Both can be true — which is why participation + documentation is the only honest stress test.</p>
+          </div>
+        </details>
+      </section>
+
+    </div>
+
+    <!-- Timeline -->
+    <section class="card" id="timeline">
+      <h2>3) 2026 election timeline (and why “reform first” isn’t realistic for this year)</h2>
+      <p>The fire election schedule is already moving. If someone is pitching “just consolidate districts” or “just abolish them” as if it’s an immediate fix, that likely won’t play out in time to affect this year’s election.</p>
+
+      <div class="callout">
+        <span class="tag ok">Official timeline</span>
+        <strong>New Jersey 2026 Fire Election Chronology:</strong>
+        <p class="small"><a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf" target="_blank" rel="noreferrer noopener">https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election.pdf</a></p>
+      </div>
+
+      <details>
+        <summary>Click to expand: The practical approach for 2026</summary>
+        <div class="inside">
+          <p>Given the timeline, the more reasonable approach <strong>for this cycle</strong> is to treat these like serious elections:</p>
+          <ul class="clean">
+            <li>Encourage participation and voter awareness</li>
+            <li>Run meet & greets / candidate forums / interviews</li>
+            <li>Write short explainer articles and share meeting info</li>
+            <li>Document who runs, who votes, and what changes (if any)</li>
+          </ul>
+          <p>Then, after the election, we can evaluate the results and ask bigger structural questions with actual evidence.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Get involved + meeting info -->
+    <section class="card" id="get-involved">
+      <h2>4) How to get involved (even if you don’t want to use Facebook)</h2>
+      <p>People love to comment after a big problem. Maintenance and prevention looks like showing up when it’s boring, asking questions early, and keeping meeting information usable.</p>
+
+      <details open>
+        <summary>Click to expand: Meeting information + “Just Google it” reality check</summary>
+        <div class="inside">
+          <p><strong>Primary reference source:</strong>
+            <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">https://cumberlandcountyvotes.com/elections/fire-elections/</a>
+          </p>
+          <p class="small">Note: several links on that page are outdated or incorrect (examples below).</p>
+
+          <div class="hr"></div>
+
+          <div class="meeting">
+            <h3>🔥 Port Norris Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>2nd Thursdays, 7:00 PM</span>
+              <b>Where</b><span>Port Norris Fire Hall — 6858 Brown St, Port Norris, NJ 08349</span>
+              <b>Link</b><span><a href="https://www.portnorrisfire.com/board-of-fire-commissioners/" target="_blank" rel="noreferrer noopener">Board of Fire Commissioners</a></span>
+              <b>Status</b><span><span class="tag warn">Semi-verified</span> Meeting does not appear to have occurred the past two months</span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Mauricetown Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>1st Mondays, 6:30 PM</span>
+              <b>Where</b><span>Mauricetown Fire Company — 9544 Noble Street, Mauricetown, NJ 08329</span>
+              <b>Link</b><span><a href="https://mauricetownfireco.com/" target="_blank" rel="noreferrer noopener">mauricetownfireco.com</a></span>
+              <b>Note</b><span>Well attended meeting, probably mostly by firefighters</span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Laurel Lake Fire District (Commercial Township FD #3)</h3>
+            <div class="kv">
+              <b>When</b><span>2nd Sundays, 4:00 PM</span>
+              <b>Where</b><span>Laurel Lake Volunteer Fire & Rescue Co. — 5436 Battle Lane, Millville, NJ 08332</span>
+              <b>Link</b><span><a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">Correct meeting page</a></span>
+              <b>Status</b><span><span class="tag ok">Verified link</span> County listing link was incorrect</span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Downe Township Fire District</h3>
+            <div class="kv">
+              <b>Status</b><span><span class="tag bad">Unverified</span> Likely 1st Mondays, 6:00 PM (based on Nov 2024 minutes)</span>
+              <b>Location</b><span>Unknown</span>
+              <b>Link</b><span><a href="https://www.downetwpbofc.org/index.php/2024-meetings" target="_blank" rel="noreferrer noopener">Minutes link (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Dividing Creek Fire District</h3>
+            <div class="kv">
+              <b>Status</b><span><span class="tag bad">Unverified</span> Link on Cumberland County Votes appears to be incorrect</span>
+              <b>Broken</b><span><a href="https://www.dividingcreekfireco.com/" target="_blank" rel="noreferrer noopener">dividingcreekfireco.com</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Leesburg Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>Last Mondays, 6:30 PM</span>
+              <b>Where</b><span>Leesburg Volunteer Fire Department — 550 Main Street, Leesburg, NJ 08327</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/2148/Fire-District-1-Leesburg-Station-26" target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+              <b>Note</b><span><span class="tag warn">Semi-verified</span> December meeting does not appear to have occurred; I attended November</span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Heislerville Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>3rd Tuesdays, 7:30 PM</span>
+              <b>Where</b><span>Heislerville Fire Company — Main St, Heislerville, NJ 08324</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/2153/Fire-District-2-Heislerville-Station-25" target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Port Elizabeth Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>1st Tuesdays, 7:00 PM</span>
+              <b>Where</b><span>Port Elizabeth Fire House — 7 Port Elizabeth Cumberland Road, Port Elizabeth, NJ</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/2154/Fire-District-3-Port-Elizabeth-Station-2" target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="meeting">
+            <h3>🔥 Cumberland Station 23 Fire District</h3>
+            <div class="kv">
+              <b>When</b><span>3rd Wednesdays, 7:30 PM</span>
+              <b>Where</b><span>Cumberland Volunteer Fire Department — 5272 Route 49, Millville, NJ</span>
+              <b>Link</b><span><a href="https://mauricerivertwp.org/2158/Fire-District-4-Cumberland-Station-23" target="_blank" rel="noreferrer noopener">Maurice River twp page (as referenced)</a></span>
+            </div>
+          </div>
+
+          <div class="callout">
+            <span class="tag warn">Why this matters</span>
+            <p class="small">
+              If even motivated people struggle to find meeting info — broken links, unclear locations, meetings that may not occur as posted —
+              “low participation” stops looking like apathy and starts looking like design and communication failure.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Click to expand: Fire districts don’t exist in a vacuum</summary>
+        <div class="inside">
+          <p>Fire districts interact with municipalities, townships, and the county. Bringing fire district topics up at:</p>
+          <ul class="clean">
+            <li>City halls</li>
+            <li>Township committee meetings</li>
+            <li>County commissioner meetings</li>
+          </ul>
+          <p>…is fair game, especially when we’re thinking about mutual aid, shared services, system-wide problems (like Inspira issues), and last year’s county fires.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Articles + interview -->
+    <section class="card" id="coverage">
+      <h2>5) Coverage so far: two articles + the Catalano interview</h2>
+      <p>This section is here so people can catch up quickly without chasing posts across social platforms.</p>
+
+      <details>
+        <summary>Article 1: Why I interviewed a fire district secretary — and what the State Comptroller reports reveal</summary>
+        <div class="inside">
+          <p><a href="https://www.facebook.com/share/p/1TWoJeTANa/" target="_blank" rel="noreferrer noopener">Facebook post link</a></p>
+          <div class="callout">
+            <span class="tag ok">Copy/Pasted Article, for those of you who don't use social media</span>
+            <p class="small">
+              Fire district elections are easy to miss.
+They are not dramatic.
+They are not flashy.
+And they are rarely talked about.
+Yet they are legally required elections that directly affect local taxes, emergency services, public assets, and millions of dollars in public spending. They operate under a statutory framework that assumes public participation — but in practice, very little awareness, entry, or sustained oversight seems to exist.
+This article explains why I have an interview scheduled next Tuesday with Kaycy Catalano, a fire district secretary, and why that conversation matters — not just locally, but structurally.
+Next Tuesday, December 30th, 92.1 WVLT, 5-6pm.
+https://www.facebook.com/wvltradio
+Why this coverage exists at all
+For the past 2.5 years, my work through InformTheVoteNJ.com has partially focused on identifying where local election systems have gaps — not rhetorically, but operationally.
+Fire district elections are obscure. They are a known low-participation area of New Jersey governance, documented by the New Jersey Office of the State Comptroller in a 2014 audit and a subsequent follow-up report.
+https://www.nj.gov/.../report_fire_districts_05_28_2014.pdf
+https://www.nj.gov/.../fire_districtsfollowup_audit...
+That audit examined only three fire districts out of roughly 185 statewide — a small sample. But its relevance lies not in the number of districts audited, but in the conditions under which problems emerged:
+off-cycle February elections,
+extremely low voter turnout,
+minimal public attendance at meetings,
+limited press scrutiny.
+Those same conditions are observable in Cumberland County today. I was literally told at my first meeting that I was the second person from the public to attend in 12 years.
+To be clear, the audit did not claim that every fire district is mismanaged. It demonstrated what can occur when elected governance operates with little meaningful public participation.
+What the Comptroller actually found — and why it matters
+The Comptroller documented voter turnout below 2 percent in all three audited districts — even when voters were approving budgets ranging from $2 million to $25 million.
+This is not a marginal concern.
+At that level of participation:
+elections cease to function as mechanisms of public consent,
+accountability becomes theoretical,
+and governance relies on procedure rather than validation.
+Importantly, the Comptroller’s findings were debated by the districts themselves. Cherry Hill and Woodbridge pushed back on comparisons, compensation analysis, and operational assumptions. That disagreement matters, because it proves the issues are legitimately debatable, not settled facts.
+What was not debated was voter turnout.
+Cherry Hill explicitly acknowledged it as a problem. Woodbridge acknowledged the numbers but opposed moving elections to November as the Comptroller recommended, and despite legislation allowing it, preferring status quo stability over reform.
+That contrast reveals something essential:
+Disagreements over fire district practices fall within ordinary cost–benefit analysis, where elected boards exercise authority to make final decisions. The structural concern arises earlier: whether elections with consistently negligible participation provide sufficient democratic grounding for that authority in the first place.
+Audits without public oversight have limits
+The Comptroller’s follow-up report shows that districts largely implemented fiscal and operational recommendations. But the most democracy-reinforcing recommendation — moving elections to November to increase turnout — was discretionary.
+Only one of three districts adopted it.
+Six years later, the system still allows fire districts to operate with:
+low turnout,
+limited public scrutiny,
+and elections that function more as procedural clearance than democratic choice.
+Audits can improve internal practices.
+They cannot substitute for public oversight.
+That distinction matters deeply for counties like Cumberland, where no comparable audit appears to exist, where similar participation patterns are already visible, and previously drafted bills by then State Senators Beach, Turner, and Van Drew tried to push in the direction of higher voter turnout.
+
+https://www.troysingleton.com/bid_to_hike_2_voter_turnout...
+
+https://pub.njleg.gov/bills/2016/S2500/2002_I1.HTM
+The volunteer question — and the false simplicity of “cost savings”
+The Comptroller also examined volunteer versus paid firefighter models, often framed as a cost-saving opportunity.
+Cherry Hill’s follow-up response is instructive. After evaluation, it rejected expanding volunteer firefighting, citing:
+training requirements (over 200 hours annually),
+call volume,
+population growth,
+ISO rating standards,
+retention challenges,
+and lack of mutual aid capacity.
+This complicates a common narrative.
+Fire protection is essential, dangerous, and expected to function flawlessly — even though much of that readiness is invisible and involves long periods of waiting.
+The issue is not whether firefighters should be busy every moment.
+
+The issue is whether communities are clear about the service model they are choosing.
+What becomes problematic is expecting:
+professional, reliable emergency services
+while
+funding and governing them as if unpaid labor can fill the gap without
+meaningful public involvement in defining those tradeoffs.
+Fire districts are optional — which makes participation essential
+Under New Jersey law (N.J.S.A. 40A:14-70), municipalities do not have to create fire districts. They exist because residents petitioned for them — a deliberate choice to treat fire protection as a publicly governed service with elections, budgets, and voter oversight.
+That structure only makes sense if the public remains meaningfully involved.
+When turnout is persistently low, meetings are sparsely attended, and candidacy itself is difficult to sustain, the foundational premise of the model weakens.
+At that point, a basic question emerges:
+If the public is absent from the governance of an essential service, what purpose are these elections actually serving?
+The election timeline — and the illusion of “early” coverage
+February fire district elections follow a compressed schedule:
+Late December: mail-in ballot eligibility begins
+January 10: commissioners must publish notice of the election (obvious through-line county-wide question: Where again are these required to be published?)
+January 23: nomination petitions are due
+February 21: Election Day
+None of these dates are controversial.
+What is concerning is how little visible time they allow for:
+candidate recruitment,
+public understanding,
+and meaningful deliberation before ballots are cast.
+Claims that coverage is “early” don’t hold up under this timeline.
+By early January, most of the process is already underway.
+How much time is there — really?
+Across Cumberland County, there are roughly eight fire district elections, each with one or two seats potentially open.
+Under healthy participation, that might mean, at minimum, a dozen candidates.
+If that level of engagement materialized Friday (since I'm not going to bother people on Christmas Eve or Christmas Day) — with basic cooperation from candidates and officials — meaningful coverage would be possible.
+Which shifts the question:
+If coverage and engagement are feasible, why do they so rarely occur?
+After years of observation, a pattern emerges:
+the constraint is often not public apathy, but institutional design and cultural expectations that assume disengagement.
+Why this interview, and why now
+That’s why I’m interviewing Kaycy Catalano next Tuesday.
+Among fire district officials I’ve encountered, Kaycy has been notably communicative — willing to explain processes, acknowledge challenges, and discuss voter participation candidly.
+This interview is not about assigning blame.
+It’s about understanding:
+how the system is supposed to function,
+where it has gaps,
+and whether meaningful participation is realistically supported.
+At the time of publishing this draft, I am operating under reasonable assumptions:
+I will begin further outreach on Friday using a list of contacts obtained via OPRA request.
+Eight fire district elections likely cost county taxpayers at least a hundred thousand dollars to administer, if not more. I'll see if I can get official projected costs after Christmas.
+Based on statewide patterns and local observation, turnout is likely to remain under 2 percent without structural change. At one meeting I was told their district gets about 20 votes per year.
+What I’ll be watching next
+As February approaches, I’ll be tracking:
+where and how election notices are published,
+whether candidate recruitment becomes visible,
+when candidacies are disclosed,
+whether required meetings occur and are documented (I have probable cause for this),
+and how clearly voters are informed about budgets and authority.
+Where information exists, it will be shared.
+Where it does not, that absence will be documented.
+Closing thought
+Democracy is not validated by the existence of elections, but by the role those elections actually play.
+When elections that approve multi-million-dollar budgets routinely attract fewer than 2 percent of eligible voters, the issue is not necessarily public apathy — it is probably also institutional design.
+Fire district are easy to ignore because the system surrounding them provides very little space for awareness, discussion, or entry.
+Whether that is acceptable is not a rhetorical question.
+It’s one that deserves to be examined — openly, calmly, and with evidence.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Article 2: Make Firefighting Sexy Again (not just a marketing ploy)</summary>
+        <div class="inside">
+          <p><a href="https://www.facebook.com/share/p/17GVfm3Ebk/" target="_blank" rel="noreferrer noopener">Facebook post link</a></p>
+          <div class="callout">
+            <span class="tag warn">Copy/pasted article, for those of you who don't use social media</span>
+            <p class="small">
+              Make FireFighting Sexy Again (Not Just a Marketing Ploy)
+https://www.youtube.com/watch?v=APIHorR0oYs (interview link)
+What I Learned, What’s at Stake, and Why Participation Is the Only Honest Stress Test From My Interview with Kacy Catalano
+For the past few weeks, I’ve been poking my head into Cumberland County fire districts — reading audits, attending meetings, tracking election timelines, and asking what feels like an increasingly unavoidable question:
+What is the point of an election that almost nobody participates in?
+That question was the backbone of a piece I published ahead of my recent radio interview with Kacy Catalano, Fire District Secretary for Commercial Township Fire District #3 (Laurel Lake). That article laid out the structural concern: fire districts are optional, tax-levying government entities that operate under a framework that assumes public participation — even though, in practice, turnout is routinely under 2 percent.
+Now that the interview has happened, the question is even less abstract.
+We now have a clearer picture of what fire district governance actually looks like from the inside — how much work it requires, how little visibility it receives, and how heavily it depends on a very small number of people quietly carrying the load.
+And most importantly, we now have a near-term decision point: the February fire district elections are approaching.
+Given the reality of the timeline, the most direct and honest path forward is no longer theoretical reform.
+
+It is awareness, participation, and stress-testing the system as it currently exists.
+What the interview clarified — beyond the audits
+The State Comptroller’s reports (2014 audit and follow-up) documented conditions that many people, including myself, suspected but could not easily verify locally:
+February off-cycle elections
+Voter turnout below 2 percent
+Minimal public attendance at meetings
+Little to no press coverage
+What the interview with Kacy Catalano added was texture.
+Not just how fire districts are supposed to work — but how they actually operate when participation is thin and institutional memory is fragile.
+Fire district commissioners, secretaries, and treasurers are responsible for:
+Setting and managing a dedicated fire protection tax rate
+Overseeing contracts, equipment purchases, and audits
+Maintaining compliance with procurement thresholds, public notice laws, and state reporting requirements
+Ensuring emergency services remain functional — even when volunteer capacity is strained
+On paper, some of this looks minimal. One meeting per month. About an hour.
+In reality, that is the bare procedural minimum.
+As Kacy explained during the interview, the moment someone actually tries to understand the system, fix long-standing problems, or modernize basic operations, the time commitment explodes. He described periods where he was at the firehouse until 2 a.m. night after night — not because anyone demanded it, but because unresolved issues don’t fix themselves.
+This is not corruption.
+It’s not laziness.
+It’s not malice.
+It’s a system quietly running on unpriced labor and invisible responsibility.
+The uncomfortable math no one talks about
+One of the most striking revelations from the interview was compensation — not as a scandal, but as a lens.
+In Laurel Lake’s Fire District #3, commissioners are compensated $3,400 per year. That figure is higher than in many other districts, and Kacy openly acknowledged it may warrant future discussion.
+But here’s the math — and it matters:
+Meeting the formal minimum requirements of the role
+~10 hours per year (12 meetings, imperfect attendance)
+→ ~$340 per hour
+Doing more than just attending the monthly meetings
+~35 hours per year
+→ ~$97 per hour
+Working through legacy issues, modernization needs, and institutional learning
+100+ hours per year
+→ ~$34 per hour
+In a county that routinely describes itself as economically strained — and where people frequently say they can’t find meaningful work — this should raise eyebrows. Two seats will be open in district 3. Who needs paid work?
+Not because the compensation is excessive.
+But because Kacy says recruitment is very difficult.
+That contradiction is the point.
+Other districts may compensate less, or only pay the secretary and treasurer. That variation is real and important. But Laurel Lake provides something rare in public governance: a clear case study.
+If even this structure struggles to attract candidates and voters, then the problem is not simply money.
+It’s probably also visibility, design, and culture.
+Why participation is the only honest stress test
+Fire districts are optional under New Jersey law. Municipalities can provide fire services directly. Fire districts exist because residents once chose a model that emphasized:
+Dedicated funding
+Local control
+Elected oversight
+That choice only makes sense if people remain involved.
+When elections draw 20–30 votes per year, the system does not collapse — but it does quietly hollow out. Elections become procedural clearance. Authority becomes inherited by default. Oversight becomes theoretical.
+At that point, debates about consolidation, restructuring, or eliminating elections entirely start to sound less radical — not because people want them, but because the current model is no longer being exercised as designed.
+Before we jump to those conclusions, there is a simpler, more honest test available:
+Try participation first.
+So what do we do now?
+With February elections approaching, the most constructive path forward is not reform — it’s making the elections visible enough to see what happens.
+That means:
+Talking openly about what fire districts are
+Explaining what commissioners actually do
+Making candidacy legible and approachable
+Removing the mystique and silence that surrounds the process
+In Laurel Lake specifically, the message is almost blunt:
+If you care about your community, and you have the time, this is real civic work — and it is not unpaid charity.
+For other districts, where compensation may be lower or nonexistent, the question becomes even sharper:
+Why are we governing essential emergency services through elections that almost no one engages with?
+That question cannot be answered in the abstract.
+It can only be answered by trying to engage — and seeing where it fails.
+“Make Firefighting Sexy Again” (seriously)
+The phrase started half-jokingly during the interview, but it stuck for a reason.
+Fire protection is one of the few services everyone assumes will work flawlessly, even though most of the work happens out of sight — waiting, training, maintaining readiness, responding at inconvenient hours.
+If communities want reliable emergency services, they should not simultaneously treat the governance of those services as an afterthought.
+Making firefighting “sexy” doesn’t mean glorification.
+It means visibility, respect, and civic seriousness.
+It means acknowledging that democracy doesn’t sustain itself through paperwork and elections alone — but through participation that gives those structures meaning.
+Closing thought
+The question is no longer whether fire district elections matter.
+They clearly do.
+The question is whether we are willing, even briefly, to treat them as if they matter — and see what that reveals.
+In the coming months, I’ll continue documenting:
+how these elections are communicated,
+who runs,
+who votes,
+and what happens when sunlight is applied.
+If participation rises, the system may justify itself.
+If it doesn’t, we’ll at least have evidence — not assumptions — to guide what comes next.
+Either way, silence is no longer an acceptable default.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Interview: Kacy Catalano (YouTube)</summary>
+        <div class="inside">
+          <p><a href="https://www.youtube.com/watch?v=APIHorR0oYs" target="_blank" rel="noreferrer noopener">https://www.youtube.com/watch?v=APIHorR0oYs</a></p>
+          <p class="small">If you watch nothing else, watch this — it adds “texture” that reports and minutes don’t: what the workload actually looks like, why continuity matters, and how governance works when visibility is low.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- What I’m watching next -->
+    <section class="card" id="next">
+      <h2>6) What I’m watching next (and what you can help with)</h2>
+      <p>This isn’t about blaming anyone. It’s about making the system legible enough that the public can decide what they think is reasonable.</p>
+
+      <ul class="clean">
+        <li><strong>Where and how election notices are published</strong> (and whether people can actually find them)</li>
+        <li><strong>Who runs</strong>, and whether candidacy is approachable or “insider-only” by culture</li>
+        <li><strong>Who votes</strong>, and whether anything moves turnout above the usual baseline</li>
+        <li><strong>Whether meetings occur as posted</strong> and whether minutes/agendas are available</li>
+        <li><strong>How districts coordinate with town/county issues</strong> (shared services, mutual aid, emergency system constraints)</li>
+      </ul>
+
+      <div class="callout">
+        <span class="tag ok">Help wanted</span>
+        <p class="small">
+          If you have verified meeting info, candidate info, or official documents (agendas, minutes, notices), send them in. If you can’t find them — that absence is data too.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-row">
+        <div class="icons">
+          <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/people/Inform-the-Vote-NJ/61558980497931/" aria-label="Inform The Vote NJ Facebook Page">
+            <img src="assets/facebook.svg" alt="Facebook" />
+          </a>
+          <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/@InformTheVoteNJ" aria-label="Inform The Vote NJ YouTube">
+            <img src="assets/youtube.svg" alt="YouTube" />
+          </a>
+        </div>
+
+        <div>
+          © 2026 InformTheVoteNJ.com • Built for clarity over hype
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <span style="opacity:0.8;">Webmaster:</span>
+        <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a>
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
