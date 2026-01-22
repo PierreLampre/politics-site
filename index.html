@@ -45,7 +45,7 @@
       --radius: 16px;
       --shadow: 0 14px 50px rgba(0,0,0,0.35);
 
-      --header-h: 128px; /* rough; used for scroll margin */
+      --header-h: 128px;
       --scroll-offset: calc(var(--header-h) + 14px);
     }
 
@@ -68,7 +68,6 @@
 
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 18px 18px 50px; }
 
-    /* Sticky Header */
     header{
       position: sticky;
       top: 0;
@@ -87,7 +86,6 @@
       gap: 10px;
     }
 
-    /* Top icon links row */
     .icon-links{
       display:flex;
       justify-content: flex-end;
@@ -113,7 +111,6 @@
       display:block;
     }
 
-    /* Brand row */
     .brand-row{
       display:flex;
       align-items:center;
@@ -147,7 +144,6 @@
       max-width: 70ch;
     }
 
-    /* Jump to + scrollspy row */
     .jump-row{
       display:flex;
       align-items:center;
@@ -195,10 +191,8 @@
       color: rgba(255,255,255,0.92);
     }
 
-    /* Anchor offset for sticky header */
     section.card, section.primer{ scroll-margin-top: var(--scroll-offset); }
 
-    /* Primer */
     .primer{
       margin-top: 18px;
       padding: 22px 20px;
@@ -242,7 +236,6 @@
     }
     .small{ color: var(--muted2); font-size: 0.96rem; }
 
-    /* Cards */
     section.card{
       margin-top: 14px;
       border: 1px solid var(--border);
@@ -277,6 +270,54 @@
       background: rgba(0,0,0,0.15);
       margin-right: 8px;
       color: rgba(255,255,255,0.85);
+    }
+
+    /* Forum highlight */
+    .forum-hero{
+      border: 1px solid rgba(255,59,48,0.28);
+      background:
+        radial-gradient(900px 220px at 15% 0%, rgba(255,59,48,0.18), transparent 55%),
+        radial-gradient(900px 220px at 85% 0%, rgba(77,163,255,0.18), transparent 55%),
+        rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 14px 14px;
+      margin-top: 10px;
+    }
+    .forum-title{
+      font-family: "Calistoga", serif;
+      font-size: 1.25rem;
+      margin: 0 0 6px;
+      letter-spacing: 0.2px;
+    }
+    .forum-meta{
+      margin: 0.25rem 0;
+      color: rgba(255,255,255,0.86);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.9rem;
+    }
+    .btnrow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 12px;
+      border-radius: 999px;
+      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.18);
+      color: rgba(255,255,255,0.92);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.88rem;
+    }
+    .btn:hover{ opacity: 0.92; transform: translateY(-1px); }
+    .btn.primary{
+      border-color: rgba(255,59,48,0.42);
+      background: rgba(255,59,48,0.16);
     }
 
     details{
@@ -367,7 +408,6 @@
         </a>
 
         <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener" aria-label="Email Updates">
-          <!-- inline email icon so you don't need a new asset -->
           <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="none">
             <path d="M4 6.5h16c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-9c0-.6.4-1 1-1Z" stroke="rgba(255,255,255,0.92)" stroke-width="1.6"/>
             <path d="M4.5 7.3 12 12.6l7.5-5.3" stroke="rgba(255,255,255,0.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -389,8 +429,9 @@
         <span class="jump-label">Jump to</span>
         <div class="spy" aria-label="Page sections">
           <a class="navbtn" href="#primer" data-target="primer">Primer</a>
-          <a class="navbtn" href="#timeline" data-target="timeline">Timeline</a>
+          <a class="navbtn" href="#forum" data-target="forum">Forum</a>
           <a class="navbtn" href="#coverage" data-target="coverage">Coverage</a>
+          <a class="navbtn" href="#timeline" data-target="timeline">Timeline</a>
         </div>
       </div>
 
@@ -399,7 +440,7 @@
 
   <main class="wrap">
 
-    <!-- PRIMER -->
+    <!-- 1) PRIMER (keep your 5-point summary first) -->
     <section class="primer" id="primer">
       <div class="hero-image-header">
         <img
@@ -412,7 +453,8 @@
       <div>
         <h1>Fire District Elections (Cumberland County)</h1>
         <p class="small">
-          A one-page primer focused on one practical question: <b>how can voters participate meaningfully when the timeline is compressed and information is inconsistent?</b>
+          A one-page primer focused on one practical question:
+          <b>how can voters participate meaningfully when the timeline is compressed and information is inconsistent?</b>
         </p>
 
         <details>
@@ -430,12 +472,12 @@
               The most consistent struggles across districts are recruiting candidates for commissioner seats and maintaining adequate firefighter and EMS staffing levels.
             </p>
             <p>
-              Because turnout is so minimal, it is difficult to know precisely what voters specifically need to know, but explaining what 
-              fire districts are, why they matter, and how they fit into county-wide emergency services may be enough to generate baseline 
+              Because turnout is so minimal, it is difficult to know precisely what voters specifically need to know, but explaining what
+              fire districts are, why they matter, and how they fit into county-wide emergency services may be enough to generate baseline
               interest and participation.
             </p>
             <p>
-              This site, coverage, and the upcoming candidate's forum on February 7th are intended to function as a stress test of democratic 
+              This site, coverage, and the upcoming candidate's forum on February 7th are intended to function as a stress test of democratic
               oversight—addressing awareness gaps and turnout—and if participation remains negligible despite these efforts,
               that outcome itself becomes evidence to evaluate redistricting, consolidation, or a return to municipal governance of these
               emergency services.
@@ -474,84 +516,67 @@
       </div>
     </section>
 
-    <!-- TIMELINE -->
-    <section class="card" id="timeline">
-      <h2>Timeline</h2>
+    <!-- 2) FORUM (make this the loud section) -->
+    <section class="card" id="forum">
+      <h2>Candidate / Info Forum</h2>
       <p class="small">
-        The timeline is now an important part of the point. Coverage isn’t “late” — it’s structurally squeezed.
+        This is the main public-facing event for fire district awareness and election participation.
+        It’s not a debate — it’s education-first, designed to help residents understand what’s happening and why it matters.
       </p>
 
-      <div class="callout">
-        <span class="tag">Official chronology (current)</span>
-        <strong>New Jersey 2026 Fire Election Chronology (PDF)</strong>
-        <p class="small" style="margin:0.4rem 0 0;">
-          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf" target="_blank" rel="noreferrer noopener">
-            https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf
-          </a>
-        </p>
+      <div class="forum-hero">
+        <p class="forum-title">Millville Public Library — Fire District Forum</p>
+        <p class="forum-meta"><b>Saturday, February 7th</b> • 11:00 AM – 1:00 PM</p>
+        <p class="forum-meta">Millville Public Library • Millville, NJ</p>
+
+        <div class="callout" style="margin-top:12px;">
+          <span class="tag">What to expect</span>
+          <ul class="clean">
+            <li>What fire districts are and how they’re governed</li>
+            <li>What the districts need right now (commissioners, staffing, volunteers)</li>
+            <li>Candidate participation and Q&A (structured, not a circus)</li>
+            <li>How the public can help (recruitment, fundraising, awareness)</li>
+          </ul>
+        </div>
+
+        <div class="callout">
+          <span class="tag">Invitation</span>
+          <p class="small" style="margin:0;">
+            Candidates, commissioners, firefighters, municipal/county officials, and the general public are invited.
+            If you’re involved and want to help shape what’s highlighted, that input is welcome.
+          </p>
+        </div>
+
+        <div class="callout">
+          <span class="tag">Participation note</span>
+          <p class="small" style="margin:0;">
+            Participation is being offered to all candidates and districts. If someone declines or does not respond,
+            that lack of participation becomes part of the public record and the coverage.
+          </p>
+        </div>
+
+        <div class="btnrow" aria-label="Forum actions">
+          <a class="btn primary" href="#coverage">See coverage & updates</a>
+          <a class="btn" href="child_pages/contact.html">Contact / participate</a>
+          <!-- Optional: if you later create a dedicated forum page -->
+          <!-- <a class="btn" href="/fire-forum.html">Forum details</a> -->
+        </div>
       </div>
 
       <details>
-        <summary>Click to expand: Why the “known timeline” still creates an unrealistic window</summary>
-        <div class="inside">
-          <p>
-            Even when the chronology exists, the practical window is tiny. With petitions filed on <b>January 23rd</b> and then needing processing/publishing time,
-            the press and the public may only have <b>2–3 weeks</b> to:
-          </p>
-          <ul class="clean">
-            <li>Identify who is actually running (if anyone)</li>
-            <li>Contact candidates and districts for basic information</li>
-            <li>Advertise events and explain what fire districts even are</li>
-            <li>Give voters time to make a decision before Election Day</li>
-          </ul>
-          <p>
-            That’s hard under any conditions — and it’s especially hard after November election fatigue and January reorganization meetings.
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Click to expand: Candidate / Info Forum — February 7th</summary>
-        <div class="inside">
-          <p>
-            <b>Saturday, February 7th • 11:00 AM – 1:00 PM • Millville Public Library</b>
-          </p>
-          <p class="small">
-            Goal: a plain-English overview of what fire districts do, how these elections work, what the districts need (commissioners, staffing, volunteers),
-            and a chance for candidates/commissioners/firefighters to speak directly to the public.
-          </p>
-          <div class="callout">
-            <span class="tag">Participation goal</span>
-            <strong>Visibility → participation → evidence.</strong>
-            <p class="small">
-              If turnout remains negligible even after all these efforts, that outcome itself becomes useful evidence for evaluating structural changes later.
-            </p>
-          </div>
-        </div>
-      </details>
-
-      <details>
-        <summary>Click to expand: Reference links (condensed)</summary>
+        <summary>Click to expand: If you’re a candidate or commissioner — what I need (now)</summary>
         <div class="inside">
           <ul class="clean">
-            <li>
-              <b>Cumberland County Votes — Fire Elections:</b>
-              <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">
-                https://cumberlandcountyvotes.com/elections/fire-elections/
-              </a>
-            </li>
-            <li>
-              <b>Laurel Lake Fire District site (verified; county listing was inconsistent):</b>
-              <a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">
-                https://www.commercialtwpbofc3.com/home-meetings
-              </a>
-            </li>
+            <li>Candidate names + best contact info (email/phone) as soon as possible</li>
+            <li>Any ballot questions (budget/capital) and plain-language explanations</li>
+            <li>Anything the public should understand about staffing, equipment, mutual aid, EMS</li>
+            <li>Preferred “where to post flyers” locations in your coverage area</li>
           </ul>
         </div>
       </details>
     </section>
 
-    <!-- COVERAGE -->
+    <!-- 3) COVERAGE -->
     <section class="card" id="coverage">
       <h2>Coverage</h2>
       <p class="small">Links to catch up without chasing posts across platforms.</p>
@@ -587,6 +612,70 @@
           </p>
         </div>
       </details>
+
+      <div class="callout">
+        <span class="tag">Tip</span>
+        <p class="small" style="margin:0;">
+          If you have a district meeting schedule, candidate info, or ballot question language, send it in — it helps turn “legal notice” into meaningful notice.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4) TIMELINE (move forum out; keep chronology + squeeze explanation) -->
+    <section class="card" id="timeline">
+      <h2>Timeline</h2>
+      <p class="small">
+        The timeline is now part of the story. Coverage isn’t “late” — it’s structurally squeezed.
+      </p>
+
+      <div class="callout">
+        <span class="tag">Official chronology (current)</span>
+        <strong>New Jersey 2026 Fire Election Chronology (PDF)</strong>
+        <p class="small" style="margin:0.4rem 0 0;">
+          <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf" target="_blank" rel="noreferrer noopener">
+            https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf
+          </a>
+        </p>
+      </div>
+
+      <details>
+        <summary>Click to expand: Why the “known timeline” still creates an unrealistic window</summary>
+        <div class="inside">
+          <p>
+            Even when the chronology exists, the practical window is tiny. With petitions filed on <b>January 23rd</b> and then needing processing/publishing time,
+            the press and the public may only have <b>2–3 weeks</b> to:
+          </p>
+          <ul class="clean">
+            <li>Identify who is actually running (if anyone)</li>
+            <li>Contact candidates and districts for basic information</li>
+            <li>Advertise events and explain what fire districts even are</li>
+            <li>Give voters time to make a decision before Election Day</li>
+          </ul>
+          <p>
+            That’s hard under any conditions — and it’s especially hard after November election fatigue and January reorganization meetings.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Click to expand: Reference links (condensed)</summary>
+        <div class="inside">
+          <ul class="clean">
+            <li>
+              <b>Cumberland County Votes — Fire Elections:</b>
+              <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">
+                https://cumberlandcountyvotes.com/elections/fire-elections/
+              </a>
+            </li>
+            <li>
+              <b>Laurel Lake Fire District site (verified; county listing was inconsistent):</b>
+              <a href="https://www.commercialtwpbofc3.com/home-meetings" target="_blank" rel="noreferrer noopener">
+                https://www.commercialtwpbofc3.com/home-meetings
+              </a>
+            </li>
+          </ul>
+        </div>
+      </details>
     </section>
 
     <footer>
@@ -595,7 +684,6 @@
         <div><span style="opacity:0.8;">Webmaster:</span> <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a></div>
       </div>
 
-      <!-- Contact link moved to bottom, per your request -->
       <div class="footer-links">
         <a href="child_pages/contact.html">Contact</a>
       </div>
