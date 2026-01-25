@@ -68,6 +68,33 @@
 
     .wrap{ max-width: var(--max); margin: 0 auto; padding: 18px 18px 50px; }
 
+    /* Site notice bar */
+    .site-notice{
+      background: rgba(255,59,48,0.14);
+      border-bottom: 1px solid rgba(255,59,48,0.28);
+      color: rgba(255,255,255,0.92);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.82rem;
+    }
+    .site-notice .inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 8px 18px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      gap: 10px;
+      text-align:center;
+    }
+    .site-notice .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,59,48,0.18);
+      flex: 0 0 auto;
+    }
+
     header{
       position: sticky;
       top: 0;
@@ -388,10 +415,80 @@
       .brand-sub{ display:none; }
       .hero-image-header{ max-width: 180px; }
     }
+
+    /* District list */
+    .district-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    @media (min-width: 860px){
+      .district-grid{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .district-box{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.12);
+      border-radius: 14px;
+      padding: 12px 12px;
+    }
+    .district-box h3{
+      margin: 0 0 8px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.86);
+      letter-spacing: 0.2px;
+    }
+    .district-links{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .district-links a{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      padding: 10px 10px;
+      border-radius: 12px;
+      color: rgba(255,255,255,0.9);
+    }
+    .district-links a:hover{ opacity: 0.92; transform: translateY(-1px); }
+    .district-links .sub{
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.68);
+      font-family: "Roboto Mono", monospace;
+    }
+    .pill{
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.18);
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
   </style>
 </head>
 
 <body>
+
+  <!-- SITE NOTICE -->
+  <div class="site-notice" role="status" aria-live="polite">
+    <div class="inner">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Site under construction during the evening of 1/25/26</span>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header>
@@ -429,6 +526,7 @@
         <span class="jump-label">Jump to</span>
         <div class="spy" aria-label="Page sections">
           <a class="navbtn" href="#primer" data-target="primer">Primer</a>
+          <a class="navbtn" href="#districts" data-target="districts">District Pages</a>
           <a class="navbtn" href="#forum" data-target="forum">Forum</a>
           <a class="navbtn" href="#coverage" data-target="coverage">Coverage</a>
           <a class="navbtn" href="#timeline" data-target="timeline">Timeline</a>
@@ -516,6 +614,123 @@
       </div>
     </section>
 
+    <!-- 1.5) DISTRICT PAGES -->
+    <section class="card" id="districts">
+      <h2>District Pages</h2>
+      <p class="small">
+        Each district page will contain: candidates + questionnaire responses (if provided), ballot questions + pros/cons, known district issues,
+        district-specific coverage, and a reference section for county-wide patterns.
+      </p>
+
+      <div class="district-grid">
+        <div class="district-box">
+          <h3>Commercial Township</h3>
+          <ul class="district-links">
+            <li>
+              <a href="fire_districts/commercial-1-port-norris.html">
+                <span>
+                  <strong>Fire District 1</strong><br />
+                  <span class="sub">Port Norris Fire Company</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/commercial-2-mauricetown.html">
+                <span>
+                  <strong>Fire District 2</strong><br />
+                  <span class="sub">Mauricetown Fire Company</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/commercial-3-laurel-lake.html">
+                <span>
+                  <strong>Fire District 3</strong><br />
+                  <span class="sub">Laurel Lake Fire &amp; Rescue</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="district-box">
+          <h3>Downe Township</h3>
+          <ul class="district-links">
+            <li>
+              <a href="fire_districts/downe-1-downe-township.html">
+                <span>
+                  <strong>Fire District 1</strong><br />
+                  <span class="sub">Downe Township Fire &amp; Rescue Company</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/downe-2-dividing-creek.html">
+                <span>
+                  <strong>Fire District 2</strong><br />
+                  <span class="sub">Dividing Creek Fire Company</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="district-box">
+          <h3>Maurice River Township</h3>
+          <ul class="district-links">
+            <li>
+              <a href="fire_districts/maurice-river-1-leesburg-26.html">
+                <span>
+                  <strong>Fire District 1</strong><br />
+                  <span class="sub">Leesburg Station 26</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/maurice-river-2-heislerville-25.html">
+                <span>
+                  <strong>Fire District 2</strong><br />
+                  <span class="sub">Heislerville Station 25</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/maurice-river-3-port-elizabeth-27.html">
+                <span>
+                  <strong>Fire District 3</strong><br />
+                  <span class="sub">Port Elizabeth Station 27</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+            <li>
+              <a href="fire_districts/maurice-river-4-cumberland-23.html">
+                <span>
+                  <strong>Fire District 4</strong><br />
+                  <span class="sub">Cumberland Station 23</span>
+                </span>
+                <span class="pill">Open</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span class="tag">Note</span>
+        <p class="small" style="margin:0;">
+          These pages are being built out now. If a district or candidate doesn’t respond, that absence will be documented on the corresponding district page.
+        </p>
+      </div>
+    </section>
+    
     <!-- 2) FORUM (make this the loud section) -->
     <section class="card" id="forum">
       <h2>Candidate / Info Forum</h2>
