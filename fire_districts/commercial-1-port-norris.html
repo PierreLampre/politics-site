@@ -17,7 +17,7 @@
   <!-- Preview image meta tags -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Port Norris Fire District 1 — Inform The Vote NJ" />
-  <meta property="og:description" content="Candidates, ballot questions, district issues, and coverage — 2026 Fire District Elections (Cumberland County)" />
+  <meta property="og:description" content="Candidates, ballot question, and issues — 2026 Fire District Elections (Cumberland County)" />
   <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png" />
   <meta property="og:url" content="https://informthevotenj.com/fire-district-elections/fire_districts/commercial-1-port-norris.html" />
 
@@ -230,24 +230,6 @@
       grid-template-columns: 1fr;
       gap: 14px;
     }
-    @media (min-width: 860px){
-      .primer{
-        grid-template-columns: 260px 1fr;
-        align-items: start;
-      }
-    }
-
-    .hero-image-header{
-      max-width: 240px;
-      margin: 0 auto;
-    }
-    .hero-image-header img{
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-    }
 
     .primer h1{
       margin: 0 0 8px;
@@ -354,6 +336,51 @@
       background: rgba(255,59,48,0.16);
     }
 
+    /* Simple checklist styling */
+    .checks{
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.84);
+    }
+    .checks li{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.12);
+      padding: 10px 10px;
+      border-radius: 12px;
+    }
+    .checkmark{
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      line-height: 1;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      flex: 0 0 auto;
+    }
+    .checkmark.ok{
+      border-color: rgba(77,163,255,0.35);
+      background: rgba(77,163,255,0.14);
+      color: rgba(255,255,255,0.92);
+    }
+    .checkmark.no{
+      border-color: rgba(255,59,48,0.35);
+      background: rgba(255,59,48,0.12);
+      color: rgba(255,255,255,0.92);
+    }
+
     footer{
       margin-top: 18px;
       border-top: 1px solid rgba(255,255,255,0.12);
@@ -389,7 +416,6 @@
     @media (max-width: 650px){
       :root{ --header-h: 148px; }
       .brand-sub{ display:none; }
-      .hero-image-header{ max-width: 180px; }
     }
   </style>
 </head>
@@ -439,13 +465,11 @@
       <div class="jump-row">
         <span class="jump-label">Jump to</span>
         <div class="spy" aria-label="Page sections">
-          <a class="navbtn" href="#overview" data-target="overview">Overview</a>
+          <a class="navbtn" href="#summary" data-target="summary">Summary</a>
           <a class="navbtn" href="#candidates" data-target="candidates">Candidates</a>
           <a class="navbtn" href="#ballot" data-target="ballot">Ballot Qs</a>
-          <a class="navbtn" href="#issues" data-target="issues">District Issues</a>
+          <a class="navbtn" href="#issues" data-target="issues">Issues</a>
           <a class="navbtn" href="#coverage" data-target="coverage">Coverage</a>
-          <a class="navbtn" href="#county" data-target="county">County-wide</a>
-          <a class="navbtn" href="#back" data-target="back">Back</a>
         </div>
       </div>
 
@@ -454,108 +478,79 @@
 
   <main class="wrap">
 
-    <!-- OVERVIEW -->
-    <section class="primer" id="overview">
-      <div class="hero-image-header">
-        <!-- Reuse an existing hero image for now; swap later if you have district-specific photo -->
-        <img
-          src="../assets/makeFireFightingSexyAgain.jpg"
-          alt="Port Norris Fire District 1 — Fire District Elections"
-          loading="eager"
-        />
-      </div>
-
+    <!-- SUMMARY -->
+    <section class="primer" id="summary">
       <div>
         <h1>Commercial Township Fire District 1 — Port Norris Fire Company</h1>
+
         <p class="small">
-          This page will consolidate district-specific election info: candidates, ballot questions (if any),
-          known issues, and coverage — plus a shared “county-wide issues” section for context.
+          <b>Quick summary:</b> The fire district associated with Port Norris has two seats open for election this year, William Pettit is running for re-election and one more person may be a write-in.
+          There is one known ballot question regarding the purchase of a fire truck and a utility truck.
+          There are a few known issues, some of which are county-wide and a few that are district specific.
         </p>
 
         <div class="btnrow" aria-label="Primary actions">
           <a class="btn primary" href="../index.html">Back to Fire District Elections Index</a>
-          <a class="btn" href="../child_pages/contact.html">Contact / submit info</a>
         </div>
-
-        <div class="callout">
-          <span class="tag">Status</span>
-          <p class="small" style="margin:0;">
-            If candidates/district officials do not respond to outreach, that lack of participation will be noted here as part of the public record.
-          </p>
-        </div>
-
-        <details>
-          <summary>Click to expand: What this page is trying to solve</summary>
-          <div class="inside">
-            <p>
-              Fire district elections have a compressed public window. Even if the official chronology is “known,” the practical ability for voters to learn who is running,
-              what they stand for, and whether there are ballot questions is often limited.
-            </p>
-            <p>
-              The goal here is to make Port Norris FD1 easy to understand in one place — without forcing people to chase meeting minutes, legal notices, or scattered social media posts.
-            </p>
-          </div>
-        </details>
-
-        <details>
-          <summary>Click to expand: Quick Facts (placeholders for now)</summary>
-          <div class="inside">
-            <ul class="clean">
-              <li><b>Township:</b> Commercial Township</li>
-              <li><b>District:</b> Fire District 1</li>
-              <li><b>Company:</b> Port Norris Fire Company</li>
-              <li><b>Election day:</b> February 21, 2026</li>
-              <li><b>Info sources:</b> Candidate filings / district notices / Cumberland County Votes</li>
-            </ul>
-            <p class="small">
-              (As you confirm meeting schedules, commissioners, and ballot language, we’ll plug it in here.)
-            </p>
-          </div>
-        </details>
       </div>
     </section>
 
     <!-- CANDIDATES -->
     <section class="card" id="candidates">
       <h2>Candidates</h2>
-      <p class="small">
-        Candidate names, seats up, and questionnaire responses will be listed here.
-      </p>
+      <p class="small">Each candidate has their own section. Questionnaire responses will be posted as received.</p>
 
       <details open>
-        <summary>Candidate list (TBD)</summary>
+        <summary>William Pettit (running for re-election)</summary>
         <div class="inside">
-          <div class="callout">
-            <span class="tag">Pending</span>
-            <p class="small" style="margin:0;">
-              Candidate names have not been posted here yet. As soon as they’re confirmed, they will appear in this section.
-            </p>
-          </div>
-
           <details>
-            <summary>Questionnaire responses (TBD)</summary>
+            <summary>Questionnaire</summary>
             <div class="inside">
-              <p class="small">
-                When candidates respond, each candidate will get a clearly labeled subsection with direct answers (and any follow-up clarifications).
-              </p>
-              <ul class="clean">
-                <li><b>Candidate A:</b> No response yet</li>
-                <li><b>Candidate B:</b> No response yet</li>
+              <ul class="checks">
+                <li>
+                  <span class="checkmark ok" aria-hidden="true">✓</span>
+                  Outreach sent
+                </li>
+                <li>
+                  <span class="checkmark no" aria-hidden="true">✕</span>
+                  Response received
+                </li>
               </ul>
+
+              <div class="callout">
+                <span class="tag">Status</span>
+                <p class="small" style="margin:0;">
+                  No questionnaire response has been received yet.
+                </p>
+              </div>
             </div>
           </details>
+        </div>
+      </details>
 
+      <details>
+        <summary>Potential write-in (name TBD)</summary>
+        <div class="inside">
           <details>
-            <summary>Participation log (optional, but useful)</summary>
+            <summary>Questionnaire</summary>
             <div class="inside">
-              <ul class="clean">
-                <li><b>Outreach sent:</b> TBD</li>
-                <li><b>Follow-up sent:</b> TBD</li>
-                <li><b>Response received:</b> TBD</li>
+              <ul class="checks">
+                <li>
+                  <span class="checkmark ok" aria-hidden="true">✓</span>
+                  Outreach sent
+                </li>
+                <li>
+                  <span class="checkmark no" aria-hidden="true">✕</span>
+                  Response received
+                </li>
               </ul>
-              <p class="small">
-                (If you want, we can wire this to a simple “last updated” line you maintain manually.)
-              </p>
+
+              <div class="callout">
+                <span class="tag">Status</span>
+                <p class="small" style="margin:0;">
+                  No questionnaire response has been received yet.
+                </p>
+              </div>
             </div>
           </details>
         </div>
@@ -566,70 +561,90 @@
     <section class="card" id="ballot">
       <h2>Ballot Questions</h2>
       <p class="small">
-        If there are ballot questions (budget/capital/etc.), the exact language and a plain-English pros/cons breakdown will be posted here.
+        Each ballot question is posted with the literal language and a plain-English explanation.
       </p>
 
       <details open>
-        <summary>Ballot question language (TBD)</summary>
+        <summary>Ballot Question 1 — Purchase of firetruck + utility vehicle (up to $1,250,000)</summary>
         <div class="inside">
-          <div class="callout">
-            <span class="tag">Pending</span>
-            <p class="small" style="margin:0;">
-              Ballot question language has not been added yet. Once confirmed, this will include the exact text voters will see.
-            </p>
-          </div>
-        </div>
-      </details>
 
-      <details>
-        <summary>Pros / Cons framework (template)</summary>
-        <div class="inside">
-          <p class="small">
-            This section is intentionally structured as a “decision helper,” not a persuasion tool.
-            When ballot language is known, we’ll fill in specifics.
-          </p>
-          <ul class="clean">
-            <li><b>Potential reasons to vote YES:</b> (TBD)</li>
-            <li><b>Potential reasons to vote NO:</b> (TBD)</li>
-            <li><b>What would change if it passes:</b> (TBD)</li>
-            <li><b>What would happen if it fails:</b> (TBD)</li>
-          </ul>
+          <details open>
+            <summary>Literal ballot language</summary>
+            <div class="inside">
+              <p class="small" style="margin:0;">
+                “The legal voters at the annual election of February 21, 2026 shall be asked to approve of the purchase of a firetruck for an amount not exceeding $1,150,000 and a utility vehicle for an amount not exceeding $100,000 and to further authorize the Fire District to undertake the issuance of notes and/or bonds or lease purchase financing relative to the purchase of the vehicles.”
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Plain-English explanation</summary>
+            <div class="inside">
+              <p class="small" style="margin:0;">
+                Is it ok for the fire district to spend <b>$1.25 million</b> on a fire truck and a utility truck?
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Pros / Cons notes (current)</summary>
+            <div class="inside">
+              <ul class="clean">
+                <li>
+                  <b>Pro:</b> It was explained to me that the purchase is in line with the need for new trucks, especially when considering state mandates/standards.
+                </li>
+                <li>
+                  <b>Possible concern:</b> When looking at prior voting results for similar situations, some residents do vote no.
+                </li>
+                <li>
+                  <b>Process note:</b> If any objection to these current spending intentions might result in “no” votes,
+                  the public ought to attend a meeting to discuss any concerns about the intentions.
+                </li>
+              </ul>
+            </div>
+          </details>
+
         </div>
       </details>
     </section>
 
-    <!-- DISTRICT ISSUES -->
+    <!-- ISSUES -->
     <section class="card" id="issues">
-      <h2>Known District Issues</h2>
+      <h2>Issues</h2>
       <p class="small">
-        This section is for district-specific issues (staffing, facilities, equipment needs, mutual aid patterns, etc.).
-        It’s separate from the county-wide issues section on purpose.
+        This section is split into district-specific issues and county-wide issues (which will appear on all district pages).
       </p>
 
       <details open>
-        <summary>Issues list (starter placeholders)</summary>
+        <summary>District-specific issues (Port Norris FD1)</summary>
         <div class="inside">
           <ul class="clean">
-            <li><b>Staffing / recruitment:</b> TBD (confirm district situation)</li>
-            <li><b>Equipment / apparatus needs:</b> TBD</li>
-            <li><b>Facilities:</b> TBD</li>
-            <li><b>Budget pressures:</b> TBD</li>
-            <li><b>Mutual aid / coverage overlap:</b> TBD</li>
+            <li>
+              <b>Website / maintenance backlog:</b> It appears as though the township clerk is on vacation with someone filling in,
+              so website maintenance is backlogged a bit. Hopefully that will clear up in the coming weeks.
+            </li>
+            <li>
+              <b>Levy cap discussion:</b> There was a request to go beyond the 2 percent levy cap for the purchase of a new truck.
+              This does seem to be naturally in line with purchasing essential equipment, even if it technically went beyond the cap.
+            </li>
+            <li>
+              <b>Fundraiser friction (resolved):</b> Mention of friction regarding potentially stopping a few types of fundraisers
+              (as per meeting minutes) seems to have cleared up.
+            </li>
           </ul>
-          <p class="small">
-            As you learn specifics from minutes, interviews, or commissioners/candidates, we’ll replace “TBD” with concrete details.
-          </p>
         </div>
       </details>
 
       <details>
-        <summary>What residents should watch for (decision signals)</summary>
+        <summary>County-wide issues (applies to all districts)</summary>
         <div class="inside">
           <ul class="clean">
-            <li>Do candidates explain priorities in plain language, or just say “support public safety”?</li>
-            <li>Do they acknowledge staffing constraints and volunteer realities?</li>
-            <li>Do they explain tradeoffs: budget vs. equipment vs. staffing?</li>
-            <li>Do they show up in public-facing spaces (forum, interviews, emails)?</li>
+            <li><b>Staffing:</b> Most, if not all, districts need more firefighters and EMS personnel.</li>
+            <li><b>Volunteer model vs affordability:</b> The use of volunteers versus the cost of living and affordability situations should be discussed.</li>
+            <li><b>Turnout:</b> Low voter turnout should be re-discussed, as it calls into question the strength of election processes.</li>
+            <li><b>Visibility gap:</b> Lack of public attendance and press coverage of meetings leaves the public and voters in the dark regarding essential emergency services.</li>
+            <li><b>EMS uncertainty:</b> The ongoing Inspira contract discussions leaves districts in limbo about how to handle EMS coverage on a long term vision.</li>
+            <li><b>Radio programming:</b> The lack of a radio programmer hinders inter-county communication during mutual aid endeavors.</li>
           </ul>
         </div>
       </details>
@@ -639,16 +654,16 @@
     <section class="card" id="coverage">
       <h2>Coverage</h2>
       <p class="small">
-        District-specific coverage links live here, so people don’t have to chase posts across platforms.
+        District-specific coverage links live here (posts, interviews, meeting notes, etc.).
       </p>
 
       <details open>
         <summary>Coverage log (TBD)</summary>
         <div class="inside">
           <div class="callout">
-            <span class="tag">Add links here</span>
+            <span class="tag">Placeholder</span>
             <p class="small" style="margin:0;">
-              When you publish anything specifically about Port Norris FD1, add it here (Facebook posts, YouTube interviews, meeting notes, etc.).
+              Add links here as you publish district-specific coverage.
             </p>
           </div>
 
@@ -656,89 +671,6 @@
             <li><b>Post / article:</b> TBD</li>
             <li><b>Interview:</b> TBD</li>
             <li><b>Meeting coverage:</b> TBD</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>How to submit info</summary>
-        <div class="inside">
-          <p class="small">
-            If you’re a candidate, commissioner, firefighter, or resident with relevant info (meeting schedule, ballot language, candidates, district needs),
-            send it through the contact page:
-            <a href="../child_pages/contact.html">Contact / participate</a>.
-          </p>
-        </div>
-      </details>
-    </section>
-
-    <!-- COUNTY-WIDE ISSUES -->
-    <section class="card" id="county">
-      <h2>County-wide Fire District Issues (Context)</h2>
-      <p class="small">
-        This is intentionally repeated across every district page so voters understand “Port Norris” in the bigger picture.
-      </p>
-
-      <details open>
-        <summary>Click to expand: The recurring county-wide patterns</summary>
-        <div class="inside">
-          <ul class="clean">
-            <li><b>Awareness & turnout:</b> historically very low; public notice ≠ meaningful notice</li>
-            <li><b>Compressed timeline:</b> filings late January → election mid/late February</li>
-            <li><b>Recruitment:</b> commissioner seats and staffing are persistent challenges</li>
-            <li><b>Interconnected services:</b> fire/EMS systems overlap across districts and municipalities</li>
-            <li><b>Accountability gap:</b> when turnout is tiny, oversight becomes fragile</li>
-          </ul>
-          <p class="small">
-            If this “stress test” produces negligible participation even with active outreach, that outcome becomes evidence to evaluate consolidation,
-            redistricting, or alternative governance models — because democracy requires usable information and some baseline participation.
-          </p>
-        </div>
-      </details>
-
-      <details>
-        <summary>Reference links</summary>
-        <div class="inside">
-          <ul class="clean">
-            <li>
-              <b>Cumberland County Votes — Fire Elections:</b>
-              <a href="https://cumberlandcountyvotes.com/elections/fire-elections/" target="_blank" rel="noreferrer noopener">
-                https://cumberlandcountyvotes.com/elections/fire-elections/
-              </a>
-            </li>
-            <li>
-              <b>NJ 2026 Fire Election Chronology (PDF):</b>
-              <a href="https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf" target="_blank" rel="noreferrer noopener">
-                https://www.nj.gov/state/elections/assets/pdf/chrons/2026-chron-fire-election-0113.pdf
-              </a>
-            </li>
-          </ul>
-        </div>
-      </details>
-    </section>
-
-    <!-- BACK -->
-    <section class="card" id="back">
-      <h2>Back / Navigation</h2>
-      <p class="small">Return to the hub, or jump to another district.</p>
-
-      <div class="btnrow" aria-label="Navigation actions">
-        <a class="btn primary" href="../index.html">Back to Fire District Elections Index</a>
-        <a class="btn" href="commercial-2-mauricetown.html">Next: Mauricetown (Commercial FD2)</a>
-      </div>
-
-      <details>
-        <summary>Optional: quick district switch links</summary>
-        <div class="inside">
-          <ul class="clean">
-            <li><a href="commercial-2-mauricetown.html">Commercial FD2 — Mauricetown</a></li>
-            <li><a href="commercial-3-laurel-lake.html">Commercial FD3 — Laurel Lake</a></li>
-            <li><a href="downe-1-downe-township.html">Downe FD1 — Downe Township F&amp;R</a></li>
-            <li><a href="downe-2-dividing-creek.html">Downe FD2 — Dividing Creek</a></li>
-            <li><a href="maurice-river-1-leesburg-26.html">MRT FD1 — Leesburg (26)</a></li>
-            <li><a href="maurice-river-2-heislerville-25.html">MRT FD2 — Heislerville (25)</a></li>
-            <li><a href="maurice-river-3-port-elizabeth-27.html">MRT FD3 — Port Elizabeth (27)</a></li>
-            <li><a href="maurice-river-4-cumberland-23.html">MRT FD4 — Cumberland (23)</a></li>
           </ul>
         </div>
       </details>
@@ -752,7 +684,6 @@
 
       <div class="footer-links">
         <a href="../index.html">Fire District Elections Index</a>
-        <a href="../child_pages/contact.html">Contact</a>
       </div>
     </footer>
 
