@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Port Norris Fire Company - Fire District 1 Election in Commercial Township</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Lora:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" href="/assets/homescreenIcon/informSquareLogo.png" />
+  <link rel="icon" sizes="512x512" href="/assets/homescreenIcon/informSquareLogo.png" />
+
+  <!-- Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Port Norris Fire Company — Inform The Vote NJ" />
+  <meta property="og:description" content="Candidates, ballot status, and issues — 2026 Fire District Elections (Cumberland County)" />
+  <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png" />
+  <meta property="og:url" content="https://informthevotenj.com/fire_districts/commercial-1-port-norris.html" />
+
+  <style>
+    /* --- identical styling to other district pages --- */
+    :root{
+      --bg:#0b1220;--text:rgba(255,255,255,.92);--muted:rgba(255,255,255,.72);
+      --muted2:rgba(255,255,255,.62);--border:rgba(255,255,255,.12);
+      --accent:#ff3b30;--accent2:#4da3ff;--max:1050px;
+      --radius:16px;--shadow:0 14px 50px rgba(0,0,0,.35);
+      --header-h:128px;--scroll-offset:calc(var(--header-h) + 14px);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Lora",serif;color:var(--text);line-height:1.55;
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(77,163,255,.20), transparent 60%),
+        radial-gradient(900px 450px at 85% 10%, rgba(255,59,48,.16), transparent 60%),
+        linear-gradient(180deg,#0b1220 0%,#0a0f1a 70%,#070b13 100%);
+    }
+    a{color:#b9dcff;text-decoration:underline;text-underline-offset:3px}
+    .wrap{max-width:var(--max);margin:0 auto;padding:18px 18px 50px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+      background:rgba(11,18,32,.72);border-bottom:1px solid var(--border)}
+    .header-inner{max-width:var(--max);margin:0 auto;padding:12px 18px;
+      display:flex;flex-direction:column;gap:10px}
+    .brand-row{display:flex;gap:12px;align-items:center}
+    .brand-mark{width:38px;height:38px;border-radius:12px;
+      background:linear-gradient(135deg,rgba(255,59,48,.95),rgba(77,163,255,.95))}
+    .brand-title{font-family:"Calistoga",serif;font-size:1.18rem;margin:0}
+    .brand-sub{font-family:"Roboto Mono",monospace;font-size:.78rem;color:var(--muted2)}
+    .header-actions{display:flex;justify-content:flex-end}
+    .homebtn{
+      font-family:"Roboto Mono",monospace;font-size:.84rem;
+      padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);
+      background:rgba(0,0,0,.18);color:rgba(255,255,255,.92);text-decoration:none
+    }
+    .jump-row{display:flex;gap:10px;flex-wrap:wrap}
+    .jump-label{font-family:"Roboto Mono",monospace;font-size:.78rem;color:var(--muted2)}
+    .spy{display:flex;gap:10px;overflow-x:auto}
+    .navbtn{
+      font-family:"Roboto Mono",monospace;font-size:.84rem;
+      padding:8px 12px;border-radius:999px;border:1px solid var(--border);
+      background:rgba(255,255,255,.05);color:rgba(255,255,255,.86);
+      text-decoration:none
+    }
+    section.primer,section.card{scroll-margin-top:var(--scroll-offset)}
+    .primer{
+      margin-top:18px;padding:22px 20px;border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04))
+    }
+    .primer h1{font-family:"Calistoga",serif;margin:0 0 8px}
+    .small{color:var(--muted2)}
+    section.card{
+      margin-top:14px;padding:18px;border:1px solid var(--border);
+      border-radius:var(--radius);background:rgba(255,255,255,.06)
+    }
+    section.card h2{font-family:"Calistoga",serif;margin:0 0 10px}
+    details{margin-top:10px;border:1px solid rgba(255,255,255,.12);
+      border-radius:14px;padding:10px 12px;background:rgba(255,255,255,.04)}
+    summary{cursor:pointer;font-weight:700;list-style:none}
+    summary:before{content:"▸";margin-right:10px;color:var(--accent2)}
+    details[open] summary:before{content:"▾";color:var(--accent)}
+    ul.clean{margin:10px 0 0 18px;color:var(--muted)}
+    .checks{list-style:none;padding:0;margin:10px 0;display:flex;flex-direction:column;gap:8px;
+      font-family:"Roboto Mono",monospace;font-size:.88rem}
+    .checks li{display:flex;gap:10px;padding:10px;border-radius:12px;
+      background:rgba(0,0,0,.12);border:1px solid rgba(255,255,255,.10)}
+    .checkmark{width:24px;height:24px;border-radius:8px;display:flex;
+      align-items:center;justify-content:center;font-weight:800}
+    .checkmark.ok{background:rgba(77,163,255,.14)}
+    .checkmark.no{background:rgba(255,59,48,.12)}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand-row">
+      <div class="brand-mark"></div>
+      <div>
+        <h1 class="brand-title">Inform The Vote NJ</h1>
+        <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <a class="homebtn" href="../index.html">Home</a>
+    </div>
+
+    <div class="jump-row">
+      <span class="jump-label">Jump to</span>
+      <div class="spy">
+        <a class="navbtn" href="#summary">Summary</a>
+        <a class="navbtn" href="#candidates">Candidates</a>
+        <a class="navbtn" href="#ballot">Ballot Qs</a>
+        <a class="navbtn" href="#issues">Issues</a>
+        <a class="navbtn" href="#coverage">Coverage</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- SUMMARY -->
+<section class="primer" id="summary">
+  <h1>Port Norris Fire Company — Commercial Township Fire District 1</h1>
+  <p class="small">
+    <b>Quick summary:</b> Port Norris Fire District 1 appears to have <b>two open commissioner seats</b>,
+    with <b>Robert Goodheart</b> and <b>Guy Fabreze</b> running (spelling to be confirmed).
+    These seats appear to be unfilled at the moment, echoing broader concerns that fire districts
+    often struggle to recruit candidates for commissioner positions.
+    There are no confirmed ballot questions this year; a previously discussed LOSAP-related question
+    appears to have been pushed to next year’s election.
+    I may be able to gather additional information and hand over questionnaires at the next scheduled
+    meeting on <b>February 12</b>.
+  </p>
+</section>
+
+<!-- CANDIDATES -->
+<section class="card" id="candidates">
+  <h2>Candidates</h2>
+
+  <details>
+    <summary>Robert Goodheart</summary>
+    <ul class="checks">
+      <li><span class="checkmark ok">✓</span> Outreach planned / in-person delivery expected (Feb 12)</li>
+      <li><span class="checkmark no">✕</span> Response received</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>Guy Fabreze</summary>
+    <ul class="checks">
+      <li><span class="checkmark ok">✓</span> Outreach planned / in-person delivery expected (Feb 12)</li>
+      <li><span class="checkmark no">✕</span> Response received</li>
+    </ul>
+  </details>
+</section>
+
+<!-- BALLOT -->
+<section class="card" id="ballot">
+  <h2>Ballot Questions</h2>
+
+  <details>
+    <summary>No ballot questions confirmed for 2026</summary>
+    <p class="small">
+      A ballot question related to LOSAP was discussed previously, but it appears to have been
+      deferred to next year’s election cycle.
+    </p>
+  </details>
+</section>
+
+<!-- ISSUES -->
+<section class="card" id="issues">
+  <h2>Issues</h2>
+
+  <details>
+    <summary>District-specific issues (Port Norris FD1)</summary>
+    <ul class="clean">
+      <li><b>Volunteer recruitment:</b> There was extensive discussion about difficulty recruiting enough volunteers.
+        I was even provided a lawn sign to help raise awareness.</li>
+      <li><b>Commissioner recruitment:</b> The two open seats highlight an ongoing challenge
+        in finding residents willing to serve as fire district commissioners.</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary>County-wide issues (applies to all districts)</summary>
+    <ul class="clean">
+      <li>Firefighter and EMS staffing shortages</li>
+      <li>Volunteer model vs cost-of-living pressures</li>
+      <li>Extremely low voter turnout</li>
+      <li>Limited public visibility and press coverage</li>
+      <li>EMS uncertainty related to Inspira contracts</li>
+      <li>Radio communication limitations during mutual aid</li>
+    </ul>
+  </details>
+</section>
+
+<!-- COVERAGE -->
+<section class="card" id="coverage">
+  <h2>Coverage</h2>
+
+  <details>
+    <summary>Coverage log</summary>
+    <ul class="clean">
+      <li><b>Volunteer outreach:</b> Provided a lawn sign to assist with recruitment efforts.</li>
+      <li><b>Next meeting:</b> February 12 — plan to distribute questionnaires and confirm election details.</li>
+      <li><b>Interviews / posts:</b> TBD</li>
+    </ul>
+  </details>
+</section>
+
+</main>
+
+</body>
+</html>
