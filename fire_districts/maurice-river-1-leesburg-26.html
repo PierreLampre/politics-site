@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Leesburg Station 26 - Fire District 1 Election in Maurice River Township</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Lora:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="apple-touch-icon" href="/assets/homescreenIcon/informSquareLogo.png" />
+  <link rel="icon" sizes="512x512" href="/assets/homescreenIcon/informSquareLogo.png" />
+
+  <!-- Preview image meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Leesburg Station 26 — Inform The Vote NJ" />
+  <meta property="og:description" content="Candidates, ballot questions, and issues — 2026 Fire District Elections (Cumberland County)" />
+  <meta property="og:image" content="https://informthevotenj.com/assets/candidates/homePageMetaTagLogo.png" />
+  <meta property="og:url" content="https://informthevotenj.com/fire_districts/maurice-river-1-leesburg-26.html" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FQD2P8BV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-64FQD2P8BV');
+  </script>
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.62);
+      --border: rgba(255,255,255,0.12);
+      --accent: #ff3b30;
+      --accent2: #4da3ff;
+
+      --max: 1050px;
+      --radius: 16px;
+      --shadow: 0 14px 50px rgba(0,0,0,0.35);
+
+      --header-h: 128px;
+      --scroll-offset: calc(var(--header-h) + 14px);
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ margin:0; padding:0; }
+    html{ scroll-behavior: smooth; }
+
+    body{
+      font-family: "Lora", serif;
+      background:
+        radial-gradient(1200px 500px at 15% 0%, rgba(77,163,255,0.20), transparent 60%),
+        radial-gradient(900px 450px at 85% 10%, rgba(255,59,48,0.16), transparent 60%),
+        linear-gradient(180deg, #0b1220 0%, #0a0f1a 70%, #070b13 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a{ color: #b9dcff; text-decoration: underline; text-underline-offset: 3px; }
+    a:hover{ opacity: 0.9; }
+
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 18px 18px 50px; }
+
+    /* Site notice bar */
+    .site-notice{
+      background: rgba(255,59,48,0.14);
+      border-bottom: 1px solid rgba(255,59,48,0.28);
+      color: rgba(255,255,255,0.92);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.82rem;
+    }
+    .site-notice .inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 8px 18px;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      gap: 10px;
+      text-align:center;
+    }
+    .site-notice .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px rgba(255,59,48,0.18);
+      flex: 0 0 auto;
+    }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(11,18,32,0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .icon-links{
+      display:flex;
+      justify-content: flex-end;
+      gap: 10px;
+      align-items:center;
+    }
+    .icon-links a{
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      text-decoration:none;
+    }
+    .icon-links img,
+    .icon-links svg{
+      width: 20px;
+      height: 20px;
+      opacity: 0.92;
+      display:block;
+    }
+
+    .brand-row{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .brand-mark{
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,59,48,0.95), rgba(77,163,255,0.95));
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.18);
+      flex: 0 0 auto;
+    }
+    .brand-title{
+      font-family: "Calistoga", serif;
+      font-size: 1.18rem;
+      letter-spacing: 0.4px;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .brand-sub{
+      margin: 2px 0 0;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 70ch;
+    }
+
+    .header-actions{
+      display:flex;
+      justify-content: flex-end;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .homebtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      text-decoration:none;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.18);
+      color: rgba(255,255,255,0.92);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+    .homebtn:hover{ opacity: 0.92; transform: translateY(-1px); }
+
+    .jump-row{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .jump-label{
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--muted2);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.10);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .spy{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 2px 0;
+      max-width: 100%;
+    }
+    .spy::-webkit-scrollbar{ height: 8px; }
+    .spy::-webkit-scrollbar-thumb{ background: rgba(255,255,255,0.12); border-radius: 999px; }
+
+    .navbtn{
+      flex: 0 0 auto;
+      text-decoration: none;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.84rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.86);
+      white-space: nowrap;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+    }
+    .navbtn:hover{ transform: translateY(-1px); }
+    .navbtn.active{
+      border-color: rgba(255,59,48,0.45);
+      background: rgba(255,59,48,0.10);
+      color: rgba(255,255,255,0.92);
+    }
+
+    section.card, section.primer{ scroll-margin-top: var(--scroll-offset); }
+
+    .primer{
+      margin-top: 18px;
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .primer h1{
+      margin: 0 0 8px;
+      font-family: "Calistoga", serif;
+      font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+      letter-spacing: 0.3px;
+    }
+    .primer p{
+      margin: 0.45rem 0;
+      color: var(--muted);
+      max-width: 92ch;
+    }
+    .small{ color: var(--muted2); font-size: 0.96rem; }
+
+    section.card{
+      margin-top: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.24);
+      padding: 18px 18px;
+    }
+    section.card h2{
+      margin: 0 0 10px;
+      font-family: "Calistoga", serif;
+      font-size: 1.35rem;
+      letter-spacing: 0.2px;
+    }
+    section.card p{ margin: 0.55rem 0; color: var(--muted); }
+
+    .callout{
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 10px;
+    }
+    .callout strong{ color: var(--text); }
+    .callout .tag{
+      display:inline-block;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.78rem;
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(0,0,0,0.15);
+      margin-right: 8px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    details{
+      margin-top: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      padding: 10px 12px;
+    }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: rgba(255,255,255,0.88);
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display:none; }
+    summary:before{
+      content:"▸";
+      display:inline-block;
+      margin-right: 10px;
+      transform: translateY(-1px);
+      color: var(--accent2);
+    }
+    details[open] summary:before{ content:"▾"; color: var(--accent); }
+    details .inside{ margin-top: 10px; color: var(--muted); }
+
+    ul.clean{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: var(--muted);
+    }
+    ul.clean li{ margin: 8px 0; }
+
+    /* checklist */
+    .checks{
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
+      display:flex;
+      flex-direction: column;
+      gap: 8px;
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.84);
+    }
+    .checks li{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(0,0,0,0.12);
+      padding: 10px 10px;
+      border-radius: 12px;
+    }
+    .checkmark{
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 800;
+      line-height: 1;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+      flex: 0 0 auto;
+    }
+    .checkmark.ok{
+      border-color: rgba(77,163,255,0.35);
+      background: rgba(77,163,255,0.14);
+      color: rgba(255,255,255,0.92);
+    }
+    .checkmark.no{
+      border-color: rgba(255,59,48,0.35);
+      background: rgba(255,59,48,0.12);
+      color: rgba(255,255,255,0.92);
+    }
+
+    footer{
+      margin-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 18px 0 0;
+      color: var(--muted2);
+      font-family: "Roboto Mono", monospace;
+      font-size: 0.84rem;
+    }
+    .footer-row{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px 16px;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .footer-links{
+      margin-top: 10px;
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items:center;
+      justify-content: space-between;
+    }
+    .footer-links a{
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.86);
+    }
+
+    @media (max-width: 650px){
+      :root{ --header-h: 148px; }
+      .brand-sub{ display:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SITE NOTICE -->
+  <div class="site-notice" role="status" aria-live="polite">
+    <div class="inner">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Site under construction during the evening of 1/25/26</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-inner">
+
+      <div class="icon-links" aria-label="Top links">
+        <a href="https://www.facebook.com/groups/781111154116727" target="_blank" rel="noreferrer noopener" aria-label="Facebook Group">
+          <img src="../assets/facebook.svg" alt="Facebook" />
+        </a>
+
+        <a href="https://www.youtube.com/@InformTheVoteNJ" target="_blank" rel="noreferrer noopener" aria-label="YouTube">
+          <img src="../assets/youtube.svg" alt="YouTube" />
+        </a>
+
+        <a href="https://informthevotenj.substack.com/subscribe" target="_blank" rel="noreferrer noopener" aria-label="Email Updates">
+          <svg viewBox="0 0 24 24" role="img" aria-hidden="true" fill="none">
+            <path d="M4 6.5h16c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1v-9c0-.6.4-1 1-1Z" stroke="rgba(255,255,255,0.92)" stroke-width="1.6"/>
+            <path d="M4.5 7.3 12 12.6l7.5-5.3" stroke="rgba(255,255,255,0.92)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="brand-row">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div>
+          <h1 class="brand-title">Inform The Vote NJ</h1>
+          <p class="brand-sub">Cumberland County civic information, coverage, and public accountability</p>
+        </div>
+      </div>
+
+      <div class="header-actions" aria-label="Header actions">
+        <a class="homebtn" href="../index.html" aria-label="Home (Fire District Elections Index)">Home</a>
+      </div>
+
+      <div class="jump-row">
+        <span class="jump-label">Jump to</span>
+        <div class="spy" aria-label="Page sections">
+          <a class="navbtn" href="#summary" data-target="summary">Summary</a>
+          <a class="navbtn" href="#candidates" data-target="candidates">Candidates</a>
+          <a class="navbtn" href="#ballot" data-target="ballot">Ballot Qs</a>
+          <a class="navbtn" href="#issues" data-target="issues">Issues</a>
+          <a class="navbtn" href="#coverage" data-target="coverage">Coverage</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- SUMMARY -->
+    <section class="primer" id="summary">
+      <div>
+        <h1>Leesburg Station 26 — Maurice River Township Fire District 1 Election</h1>
+
+        <p class="small">
+          <b>Quick summary:</b> I attended one district meeting on <b>November 24</b>, where I was told two gentlemen
+          (<b>Corey</b> and <b>Rob</b>) would be up for re-election.
+          I handed over business cards to encourage participation with my project, but I have not received communication from them.
+          The meeting in December did not appear to occur as expected. I may be able to get more information at tomorrow night’s meeting,
+          weather permitting. No known ballot questions or district-specific issues came up at the November meeting.
+        </p>
+      </div>
+    </section>
+
+    <!-- CANDIDATES -->
+    <section class="card" id="candidates">
+      <h2>Candidates</h2>
+      <p class="small">
+        Candidate information is currently based on in-person meeting notes from November 24 and is not fully confirmed through official posting.
+      </p>
+
+      <details>
+        <summary>Corey (reported as up for re-election — last name not confirmed)</summary>
+        <div class="inside">
+          <div class="callout">
+            <span class="tag">Questionnaire</span>
+            <ul class="checks">
+              <li><span class="checkmark ok" aria-hidden="true">✓</span> Business card / outreach handed over</li>
+              <li><span class="checkmark no" aria-hidden="true">✕</span> Response received</li>
+            </ul>
+            <p class="small" style="margin:10px 0 0;">
+              Name and candidacy details will be updated when confirmed.
+            </p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Rob (reported as up for re-election — last name not confirmed)</summary>
+        <div class="inside">
+          <div class="callout">
+            <span class="tag">Questionnaire</span>
+            <ul class="checks">
+              <li><span class="checkmark ok" aria-hidden="true">✓</span> Business card / outreach handed over</li>
+              <li><span class="checkmark no" aria-hidden="true">✕</span> Response received</li>
+            </ul>
+            <p class="small" style="margin:10px 0 0;">
+              Name and candidacy details will be updated when confirmed.
+            </p>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- BALLOT QUESTIONS -->
+    <section class="card" id="ballot">
+      <h2>Ballot Questions</h2>
+      <p class="small">
+        Each ballot question is posted with the literal language and a plain-English explanation.
+      </p>
+
+      <details>
+        <summary>No ballot questions currently known</summary>
+        <div class="inside">
+          <p class="small" style="margin:0;">
+            No ballot questions were raised at the November 24 meeting. This will be re-checked at the next meeting and/or through district confirmation.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ISSUES -->
+    <section class="card" id="issues">
+      <h2>Issues</h2>
+      <p class="small">
+        This section is split into district-specific issues and county-wide issues (which will appear on all district pages).
+      </p>
+
+      <details>
+        <summary>District-specific issues (Leesburg / Maurice River FD1)</summary>
+        <div class="inside">
+          <p class="small" style="margin:0;">
+            No district-specific issues stood out at the November 24 meeting. This section will be expanded if issues come up in future meetings or documents.
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>County-wide issues (applies to all districts)</summary>
+        <div class="inside">
+          <ul class="clean">
+            <li><b>Staffing:</b> Most, if not all, districts need more firefighters and EMS personnel.</li>
+            <li><b>Volunteer model vs affordability:</b> The use of volunteers versus the cost of living and affordability situations should be discussed.</li>
+            <li><b>Turnout:</b> Low voter turnout should be re-discussed, as it calls into question the strength of election processes.</li>
+            <li><b>Visibility gap:</b> Lack of public attendance and press coverage of meetings leaves the public and voters in the dark regarding essential emergency services.</li>
+            <li><b>Legal Notice vs Meaningful Notice:</b> Traditionally, public meetings across the county only needed to be advertised in one or two newspapers. As the digital age takes over, there is a push to publish on websites, but is that enough? Vineland's current data center issue and low awareness in fire districts suggest more advertising could be done.</li>
+            <li><b>EMS uncertainty:</b> The ongoing Inspira contract discussions leaves districts in limbo about how to handle EMS coverage on a long term vision.</li>
+            <li><b>Radio programming:</b> The lack of a radio programmer hinders inter-county communication during mutual aid endeavors.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- COVERAGE -->
+    <section class="card" id="coverage">
+      <h2>Coverage</h2>
+      <p class="small">
+        District-specific coverage links live here (posts, interviews, meeting notes, etc.).
+      </p>
+
+      <details>
+        <summary>Coverage log</summary>
+        <div class="inside">
+          <ul class="clean">
+            <li><b>Post / article:</b> TBD</li>
+            <li><b>Interview:</b> TBD</li>
+            <li><b>Meeting coverage:</b> Attended the district meeting on <b>November 24</b>. The December meeting did not appear to occur as expected.
+              Planning to seek updates at tomorrow night’s meeting, weather permitting.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <footer>
+      <div class="footer-row">
+        <div>© 2026 InformTheVoteNJ.com • Built for clarity over hype</div>
+        <div><span style="opacity:0.8;">Webmaster:</span> <a href="mailto:pierrelampre@gmail.com">Lampelights Webcraft</a></div>
+      </div>
+
+      <div class="footer-links">
+        <a href="../index.html">Fire District Elections Index</a>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Scrollspy: highlight which section is in view.
+    (function(){
+      const navBtns = Array.from(document.querySelectorAll('.navbtn'));
+      const sections = navBtns
+        .map(btn => document.getElementById(btn.dataset.target))
+        .filter(Boolean);
+
+      if (!('IntersectionObserver' in window) || sections.length === 0) return;
+
+      const setActive = (id) => {
+        navBtns.forEach(b => b.classList.toggle('active', b.dataset.target === id));
+      };
+
+      const obs = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a,b) => (b.intersectionRatio - a.intersectionRatio))[0];
+        if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+      }, {
+        root: null,
+        rootMargin: "-35% 0px -55% 0px",
+        threshold: [0.12, 0.22, 0.35, 0.5, 0.65]
+      });
+
+      sections.forEach(s => obs.observe(s));
+      setActive(sections[0].id);
+    })();
+  </script>
+
+</body>
+</html>
